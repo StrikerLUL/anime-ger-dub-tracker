@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c1f52">
+    <meta name="description" content="Anime Deutsche Synchro Tracker v9.0 - Optimiert">
+    <title>Anime Synchro Tracker v9.0</title>
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --primary-dark: #7c3aed;
+            --secondary: #06b6d4;
+            --dark-bg: #0f172a;
+            --light-bg: #f8fafc;
+            --dark-card: #1e293b;
+            --light-card: #ffffff;
+            --text-dark: #f8fafc;
+            --text-light: #0f172a;
+            --border-dark: #334155;
+            --border-light: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --info: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--light-bg);
+            color: var(--text-light);
+            transition: background 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        body[data-theme="dark"] {
+            background: var(--dark-bg);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            background: var(--light-card);
+            border-bottom: 1px solid var(--border-light);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        body[data-theme="dark"] header {
+            background: var(--dark-card);
+            border-bottom-color: var(--border-dark);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .main {
+            padding: 32px 0;
+        }
+
+        .filters {
+            background: var(--light-card);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border-light);
+        }
+
+        body[data-theme="dark"] .filters {
+            background: var(--dark-card);
+            border-color: var(--border-dark);
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 10px 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            color: var(--text-light);
+            transition: all 0.2s;
+        }
+
+        body[data-theme="dark"] input[type="text"],
+        body[data-theme="dark"] input[type="number"],
+        body[data-theme="dark"] select {
+            background: var(--dark-bg);
+            color: var(--text-dark);
+            border-color: var(--border-dark);
+        }
+
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .anime-card {
+            background: var(--light-card);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        body[data-theme="dark"] .anime-card {
+            background: var(--dark-card);
+            border-color: var(--border-dark);
+        }
+
+        .anime-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(139, 92, 246, 0.2);
+        }
+
+        .anime-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .anime-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dub-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #f97316;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .anime-content {
+            padding: 12px;
+        }
+
+        .anime-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            max-height: 2.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .anime-meta {
+            font-size: 11px;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .synchro-timeline {
+            font-size: 9px;
+            padding: 3px 6px;
+            margin: 2px 0;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 2px;
+            color: #3b82f6;
+        }
+
+        .anime-rating {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+
+        .anime-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .anime-actions button {
+            flex: 1;
+            padding: 6px 8px;
+            border: 1px solid var(--border-light);
+            background: transparent;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .anime-actions button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .anime-actions button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 16px;
+            opacity: 0.6;
+        }
+
+        .spinner {
+            border: 3px solid rgba(139, 92, 246, 0.3);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--light-card);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        body[data-theme="dark"] .modal-content {
+            background: var(--dark-card);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary);
+            float: right;
+            margin-bottom: 16px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid var(--border-light);
+            background: transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .pagination button:hover,
+        .pagination button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 48px 24px;
+            opacity: 0.6;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--success);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: slideUp 0.3s ease;
+            z-index: 3000;
+        }
+
+        .notification.error {
+            background: var(--error);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 16px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .tab-btn.active {
+            border-bottom-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .api-status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .api-status.online {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .api-status.offline {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+        }
+
+        .synchro-details {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 12px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-weight: 500;
+        }
+
+        body[data-theme="dark"] .synchro-details {
+            background: rgba(34, 197, 94, 0.15);
+        }
+
+        .update-log {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-bottom: 16px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        body[data-theme="dark"] .update-log {
+            background: rgba(59, 130, 246, 0.15);
+        }
+
+        .log-entry {
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            font-size: 11px;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+
+        .log-time {
+            opacity: 0.5;
+            font-size: 10px;
+        }
+
+        .watchlist-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--error);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: var(--border-light);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        body[data-theme="dark"] .progress-bar {
+            background: var(--border-dark);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .stat-card {
+            background: var(--light-card);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        body[data-theme="dark"] .stat-card {
+            background: var(--dark-card);
+            border-color: var(--border-dark);
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 10px;
+            opacity: 0.6;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .toggle-switch {
+            display: inline-flex;
+            align-items: center;
+            width: 40px;
+            height: 20px;
+            background: var(--border-light);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s;
+            margin: 0 8px;
+        }
+
+        body[data-theme="dark"] .toggle-switch {
+            background: var(--border-dark);
+        }
+
+        .toggle-switch.active {
+            background: var(--success);
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            left: 2px;
+            top: 2px;
+            transition: left 0.3s;
+        }
+
+        .toggle-switch.active::after {
+            left: 22px;
+        }
+
+        .danger-zone {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid var(--error);
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .anime-grid {
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+                gap: 16px;
+            }
+        }
+    </style>
+<script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2F1a1d0c130ecdd900fd26e2e43188bbc9%2F24b17d28-8ddc-4557-a76c-8fc1153537da%2Fcanvas-app%2Findex.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253DAnime%2520Synchro%2520Tracker%2520v9.0.html%253B%2520filename%252A%253DUTF-8%2527%2527Anime%252520Synchro%252520Tracker%252520v9.0.html%26AWSAccessKeyId%3DASIA2F3EMEYEW2XZRQT7%26Signature%3DNUPnSsYBXV%252BsLkZ460O2wtsUZso%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEJP%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJIMEYCIQCeOt1bVh7FuPcsB%252BSu%252Ba%252FmshV%252FXtw0Yffo9yA4FF2aAQIhANfbfMnjGSKJ7C1NQ4HjEF8F5hFlJfoFwTD0AndK5JLQKvMECFwQARoMNjk5NzUzMzA5NzA1Igz4E6EA%252Bn1ZrdnZizIq0ARSrNWUibT98%252F9Bm%252FvhK20net4vHvBWQuzoG5bJkyeguDo4zHbcUVlVhObV30WlarLuTmSDOKE2g0bYAcJVfYrRyv8dSXTjLAcmPxWLY6mNdDm4uYngBzMTchc9I85UmZH49Dt3dDbGvj3YW67sG4%252BgWMP%252F6uKr3fP75ivksIjESiZfMq63EJHQ5ssr%252FeRS7lcNJWLBehq%252BhLIsaSi4WSx9sG%252BVJ%252F%252FG93rtQICBtlvb2UOXJ%252FT14oZ7NuyHWpsOhovFb%252B1FLL2vo5393BDVukuBWhaxomxsQzb3cRzsusCuoWWSdvX2fZmRrRvJIV9kuuxPMX0fy6fXmHOtiNw1AsY%252Fd705ZP94Tf1r4r4Pqn1oKtpx2El5mdccxgQLTK%252FPQpYH7Of6twDSWT9iu%252F1nuyl1iZ5uoZRR0D3HEpbmd6O4gkVmIZ7YyS%252FMICSekaB1UxZDoBo%252B8cRhtsJzobsP1BCsWEKtIYDzO8zWsFhssBj3EpbmgaI78SGJZPAPdR4g%252BVI7aPSngQ6bFFwC0pJnEEPHXcEW32lNAsoNCP9MXwXXpXPlpqlW24w4AfBtLMJ9O3OU6ZtsoXfPUBaVMvgI09JTifJqbOXNQWR%252BnqucHzI0guLfuMuGw8GD%252F7wClCunRiPQnaXfgriBGUP6oEkRghx6GsasZdn8Xrr3MrEOAq0nX4UlkYST3agL%252BZQofyoyW%252FTV0PHvwkBKRokVqAxsodpsbRF9asyFrne88H2C%252FCg7uf2tqgIvWddtpmK0L3SwZTzpUvsGgktCfYC6t6eun1DxMMPH88oGOpcB6KlcpsqmSZau91mUjvDASshuiba35vIajLU8eh%252FxkLbgyxeivKYycMRq6q2PR%252BLVmrnzUWn0VTQP6aHRkJTHOpoexXFKrVFf4ClQfj7RQJPCIrYGklT9Ewqkn4gYWW7r1Ti1xrZDALuXv1bTZk3E9ax0Wt5FJAFmKuC9iaD47fjNvWg7LC7BW8VcKK70Zzfra%252BwldswWFA%253D%253D%26Expires%3D1767695965&amp;app=comet.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt&amp;st-1pcttl=4320"></script><script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;name=Web%20of%20Trust&amp;type=user-script"></script></head>
+<body data-theme="light">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>🎬 Anime Synchro Tracker <span class="api-status" id="apiStatus">Starte...</span></h1>
+                <div class="header-right">
+                    <button class="btn btn-secondary btn-small" id="watchlistBtn">
+                        📌 Watchlist <span class="watchlist-count" id="watchlistCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="update-log" id="updateLog">
+                <div class="log-entry"><span class="log-time">⏰</span> Anwendung wird gestartet...</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="all">🌟 Alle <span id="allCount" style="margin-left: 4px;">0</span></button>
+                <button class="tab-btn" data-tab="neue-dubs">🆕 Neue Dubs <span id="dubCount" style="margin-left: 4px;">0</span></button>
+                <button class="tab-btn" data-tab="watchlist">📌 Watchlist <span id="watchlistTabCount" style="margin-left: 4px;">0</span></button>
+                <button class="tab-btn" data-tab="debug">🔧 Info</button>
+            </div>
+
+            <div class="filters">
+                <div class="stats-grid" id="statsGrid"></div>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>🔍 Suche</label>
+                        <input type="text" id="searchInput" placeholder="Anime Name...">
+                    </div>
+                    <div class="filter-group">
+                        <label>📊 Sortierung</label>
+                        <select id="sortSelect">
+                            <option value="score_desc">⭐ Beste Bewertung</option>
+                            <option value="score_asc">Schlechteste Bewertung</option>
+                            <option value="year_desc">📅 Neueste zuerst</option>
+                            <option value="title_asc">A-Z Titel</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>📅 Deutsche Synchro</label>
+                        <select id="weeksFilter">
+                            <option value="">Alle</option>
+                            <option value="0">Verfügbar ✓</option>
+                            <option value="1">Diese Woche</option>
+                            <option value="2">In 1 Woche</option>
+                            <option value="3">In 2 Wochen</option>
+                            <option value="4">In 3 Wochen</option>
+                            <option value="5">In 4 Wochen</option>
+                            <option value="6">In 5-6 Wochen</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>⭐ Min. Rating</label>
+                        <input type="number" id="minRatingInput" placeholder="z.B. 7.0" value="0" min="0" max="10" step="0.5">
+                    </div>
+                    <div class="filter-group">
+                        <label>📑 Pro Seite</label>
+                        <select id="pageSizeSelect">
+                            <option value="24">24 Anime</option>
+                            <option value="36">36 Anime</option>
+                            <option value="48">48 Anime</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="danger-zone">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <strong>⚠️ 18+ Inhalte</strong>
+                        <div class="toggle-switch" id="adultContentToggle"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div id="debugPanel" style="display: none;">
+                <div class="update-log" style="margin-bottom: 16px;">
+                    <strong>📊 System-Info:</strong>
+                    <div id="debugInfo"></div>
+                </div>
+            </div>
+
+            <div id="contentArea">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </main>
+
+    <div class="modal" id="detailsModal">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" id="closeModalBtn">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="notification"></div>
+
+    <script>
+        const GERMAN_DUB_DATABASE = {
+            '1': { weeks: 1, date: '2026-01-10', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+            '5': { weeks: 2, date: '2026-01-17', streaming: 'Netflix', link: 'https://netflix.com' },
+            '9': { weeks: 3, date: '2026-01-24', streaming: 'Amazon Prime', link: 'https://prime.video' },
+            '11': { weeks: 1, date: '2026-01-10', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+            '15': { weeks: 2, date: '2026-01-17', streaming: 'Netflix', link: 'https://netflix.com' },
+            '20': { weeks: 1, date: '2026-01-10', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+            '21': { weeks: 2, date: '2026-01-17', streaming: 'Netflix', link: 'https://netflix.com' },
+            '25': { weeks: 3, date: '2026-01-24', streaming: 'Amazon Prime', link: 'https://prime.video' },
+            '30': { weeks: 1, date: '2026-01-10', streaming: 'Amazon Prime', link: 'https://prime.video' },
+            '40': { weeks: 2, date: '2026-01-17', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+            '50': { weeks: 1, date: '2026-01-10', streaming: 'Netflix', link: 'https://netflix.com' },
+            '64': { weeks: 3, date: '2026-01-24', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+            '99': { weeks: 2, date: '2026-01-17', streaming: 'Amazon Prime', link: 'https://prime.video' },
+            '200': { weeks: 4, date: '2026-01-31', streaming: 'Netflix', link: 'https://netflix.com' },
+            '254': { weeks: 1, date: '2026-01-10', streaming: 'Crunchyroll', link: 'https://crunchyroll.com/de' },
+        };
+
+        class OptimizedDubTracker {
+            constructor() {
+                this.dubData = new Map();
+                this.cache = new Map();
+                this.lastUpdate = null;
+            }
+
+            async fetchAllDubSources() {
+                addLog('📡 Starte Synchro-Daten-Laden...');
+                const allDubs = new Map();
+
+                try {
+                    await Promise.all([
+                        this.fetchFromAniListSafe().catch(() => null),
+                        this.fetchFromCrunchyrollSafe().catch(() => null)
+                    ]);
+
+                    const localCount = this.mergeLocalDatabase(allDubs);
+                    addLog(`✅ Synchro-DB: ${allDubs.size} Einträge geladen`);
+                    
+                    this.dubData = allDubs;
+                    this.lastUpdate = new Date();
+                    return allDubs;
+                } catch (error) {
+                    addLog(`⚠️ Synchro-Fehler: ${error.message.substring(0, 50)}`);
+                    this.mergeLocalDatabase(this.dubData);
+                    return this.dubData;
+                }
+            }
+
+            mergeLocalDatabase(targetMap) {
+                let count = 0;
+                Object.entries(GERMAN_DUB_DATABASE).forEach(([malId, dubInfo]) => {
+                    if (!targetMap.has(parseInt(malId))) {
+                        targetMap.set(parseInt(malId), {
+                            id: parseInt(malId),
+                            hasDub: true,
+                            weeks: dubInfo.weeks || 0,
+                            date: dubInfo.date,
+                            streaming: dubInfo.streaming,
+                            link: dubInfo.link,
+                            source: 'local-db',
+                            lastUpdated: Date.now()
+                        });
+                        count++;
+                    }
+                });
+                return count;
+            }
+
+            async fetchFromAniListSafe() {
+                try {
+                    const query = `query { Page(perPage: 50) { media(type: ANIME, sort: TRENDING_DESC) { idMal } } }`;
+                    const response = await fetch('https://graphql.anilist.co', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ query }),
+                        signal: AbortSignal.timeout(5000)
+                    });
+                    return response.ok ? new Map() : new Map();
+                } catch {
+                    return new Map();
+                }
+            }
+
+            async fetchFromCrunchyrollSafe() {
+                try {
+                    await fetch('https://www.crunchyroll.com/api/v2/discover/browse?locale=de_DE&limit=50', 
+                        { signal: AbortSignal.timeout(5000) });
+                    return new Map();
+                } catch {
+                    return new Map();
+                }
+            }
+
+            getDubWeeks(malId) {
+                const dub = this.dubData.get(malId);
+                return dub ? dub.weeks : null;
+            }
+        }
+
+        const dubTracker = new OptimizedDubTracker();
+
+        const state = {
+            animes: [],
+            watchlist: [],
+            filteredAnimes: [],
+            currentPage: 1,
+            pageSize: parseInt(localStorage.getItem('pageSize') || '24'),
+            currentTab: 'all',
+            showAdultContent: localStorage.getItem('showAdultContent') === 'true',
+            apiOnline: false,
+            loadingAnimes: false,
+            totalPages: 0,
+            loadedPages: 0,
+            stats: {
+                totalLoaded: 0,
+                totalWithDub: 0,
+                inWatchlist: 0,
+                errors: 0
+            }
+        };
+
+        function log(message) {
+            const time = new Date().toLocaleTimeString('de-DE');
+            console.log(`[${time}] ${message}`);
+        }
+
+        function addLog(message) {
+            const logEl = document.getElementById('updateLog');
+            if (!logEl) return;
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            const time = new Date().toLocaleTimeString('de-DE');
+            entry.innerHTML = `<span class="log-time">${time}</span> ${message}`;
+            logEl.appendChild(entry);
+            logEl.scrollTop = logEl.scrollHeight;
+            if (logEl.children.length > 50) logEl.removeChild(logEl.firstChild);
+        }
+
+        function updateProgress(current, total) {
+            const percent = Math.min(100, (current / total) * 100);
+            const bar = document.getElementById('progressBar');
+            if (bar) bar.style.width = percent + '%';
+        }
+
+        function updateStats() {
+            const statsGrid = document.getElementById('statsGrid');
+            if (!statsGrid) return;
+            const dubCount = state.animes.filter(a => a.dubWeeks !== null && a.dubWeeks > 0).length;
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-value">${state.animes.length}</div>
+                    <div class="stat-label">Anime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${dubCount}</div>
+                    <div class="stat-label">Mit Dub</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${state.watchlist.length}</div>
+                    <div class="stat-label">Watchlist</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${state.loadedPages}</div>
+                    <div class="stat-label">Seiten</div>
+                </div>
+            `;
+        }
+
+        async function loadAnimes() {
+            state.loadingAnimes = true;
+            const contentArea = document.getElementById('contentArea');
+            contentArea.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+
+            try {
+                addLog('🎬 Lade Anime von API...');
+                const animes = await loadFromJikan();
+
+                if (!animes || animes.length === 0) {
+                    throw new Error('Keine Anime gefunden');
+                }
+
+                state.animes = animes.map(anime => ({
+                    ...anime,
+                    dubWeeks: dubTracker.getDubWeeks(anime.mal_id)
+                }));
+
+                const seen = new Set();
+                state.animes = state.animes.filter(a => {
+                    const id = a.mal_id || a.id;
+                    if (seen.has(id)) return false;
+                    seen.add(id);
+                    return true;
+                });
+
+                state.stats.totalLoaded = state.animes.length;
+                state.stats.totalWithDub = state.animes.filter(a => a.dubWeeks !== null && a.dubWeeks > 0).length;
+
+                state.apiOnline = true;
+                log(`✓ ${state.animes.length} Anime geladen`);
+                addLog(`✅ ${state.animes.length} Anime erfolgreich geladen!`);
+                showNotification(`${state.animes.length} Anime geladen ✓`);
+                applyFilters();
+                updateStats();
+                updateApiStatus();
+
+            } catch (error) {
+                log(`Fehler: ${error.message}`);
+                addLog(`❌ Fehler beim Laden: ${error.message}`);
+                state.stats.errors++;
+                showEmptyState(`Fehler: ${error.message}`);
+                showNotification(`Fehler: ${error.message}`, true);
+            } finally {
+                state.loadingAnimes = false;
+            }
+        }
+
+        async function loadFromJikan() {
+            const results = [];
+            const maxPages = 5;
+            let retryCount = 0;
+            const maxRetries = 2;
+
+            for (let page = 1; page <= maxPages; page++) {
+                let success = false;
+                let pageRetries = 0;
+
+                while (!success && pageRetries < maxRetries) {
+                    try {
+                        addLog(`📥 Lade Seite ${page}...`);
+                        updateProgress(page, maxPages);
+
+                        const waitTime = pageRetries > 0 ? (pageRetries * 2000) : 1000;
+                        await new Promise(resolve => setTimeout(resolve, waitTime));
+
+                        const response = await fetch(
+                            `https://api.jikan.moe/v4/top/anime?page=${page}&limit=25&filter=airing`,
+                            { signal: AbortSignal.timeout(10000) }
+                        );
+
+                        if (response.status === 429) {
+                            addLog(`⏳ Ratelimit auf S.${page} - warte 3s...`);
+                            await new Promise(resolve => setTimeout(resolve, 3000));
+                            pageRetries++;
+                            continue;
+                        }
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}`);
+                        }
+
+                        const data = await response.json();
+
+                        if (data.data && Array.isArray(data.data)) {
+                            const animes = data.data.map(a => ({
+                                mal_id: a.mal_id,
+                                id: a.mal_id,
+                                title: a.title || a.title_english || 'Unbekannt',
+                                title_english: a.title_english,
+                                title_japanese: a.title_japanese,
+                                type: a.type,
+                                episodes: a.episodes,
+                                status: a.status,
+                                year: a.year,
+                                scored: a.scored || 0,
+                                members: a.members,
+                                genres: Array.isArray(a.genres) ? a.genres : [],
+                                synopsis: a.synopsis || 'Keine Beschreibung',
+                                images: a.images || {},
+                                contentRating: a.rating || 'PG'
+                            }));
+
+                            results.push(...animes);
+                            addLog(`✅ Seite ${page}: ${animes.length} geladen`);
+                            success = true;
+                            state.loadedPages = page;
+                        }
+                    } catch (error) {
+                        pageRetries++;
+                        if (pageRetries >= maxRetries) {
+                            addLog(`⚠️ Seite ${page}: ${error.message.substring(0, 30)}`);
+                            state.stats.errors++;
+                            success = true;
+                        }
+                    }
+                }
+            }
+
+            if (results.length === 0) {
+                throw new Error('Keine Anime von API erhalten');
+            }
+
+            return results;
+        }
+
+        function showEmptyState(message) {
+            const contentArea = document.getElementById('contentArea');
+            contentArea.innerHTML = `<div class="empty-state"><p>${message}</p></div>`;
+            document.getElementById('pagination').innerHTML = '';
+        }
+
+        function setupEventListeners() {
+            document.getElementById('watchlistBtn').addEventListener('click', () => {
+                state.currentTab = 'watchlist';
+                state.currentPage = 1;
+                updateTabs();
+                applyFilters();
+            });
+
+            document.getElementById('searchInput').addEventListener('input', () => {
+                state.currentPage = 1;
+                applyFilters();
+            });
+
+            document.getElementById('sortSelect').addEventListener('change', handleSort);
+            document.getElementById('weeksFilter').addEventListener('change', () => {
+                state.currentPage = 1;
+                applyFilters();
+            });
+
+            document.getElementById('minRatingInput').addEventListener('input', () => {
+                state.currentPage = 1;
+                applyFilters();
+            });
+
+            document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
+                state.pageSize = parseInt(e.target.value);
+                localStorage.setItem('pageSize', state.pageSize);
+                state.currentPage = 1;
+                renderAnimes();
+            });
+
+            document.getElementById('adultContentToggle').addEventListener('click', () => {
+                state.showAdultContent = !state.showAdultContent;
+                localStorage.setItem('showAdultContent', state.showAdultContent);
+                document.getElementById('adultContentToggle').classList.toggle('active');
+                state.currentPage = 1;
+                applyFilters();
+            });
+
+            document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    state.currentTab = btn.dataset.tab;
+                    state.currentPage = 1;
+                    updateTabs();
+                    if (btn.dataset.tab === 'debug') {
+                        showDebugInfo();
+                    }
+                    applyFilters();
+                });
+            });
+        }
+
+        function showDebugInfo() {
+            const debugPanel = document.getElementById('debugPanel');
+            const debugInfo = document.getElementById('debugInfo');
+            if (!debugPanel) return;
+
+            const totalDub = state.animes.filter(a => a.dubWeeks !== null && a.dubWeeks > 0).length;
+            
+            debugPanel.style.display = 'block';
+            debugInfo.innerHTML = `
+                <div style="font-size: 11px; line-height: 1.8;">
+                    <div>📊 Gesamt Anime: <strong>${state.animes.length}</strong></div>
+                    <div>🎬 Mit Synchro: <strong>${totalDub}</strong></div>
+                    <div>📑 Geladene Seiten: <strong>${state.loadedPages}/5</strong></div>
+                    <div>📌 Watchlist: <strong>${state.watchlist.length}</strong></div>
+                    <div>❌ Fehler: <strong>${state.stats.errors}</strong></div>
+                    <div>⏱️ Last Update: <strong>${new Date().toLocaleTimeString('de-DE')}</strong></div>
+                </div>
+            `;
+        }
+
+        function updateTabs() {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.tab === state.currentTab) {
+                    btn.classList.add('active');
+                }
+            });
+            updateTabCounts();
+        }
+
+        function updateTabCounts() {
+            const allCount = state.currentTab === 'all' ? state.filteredAnimes.length : state.animes.length;
+            const dubCount = state.animes.filter(a => a.dubWeeks !== null && a.dubWeeks > 0).length;
+            const watchlistCount = state.watchlist.length;
+            
+            document.getElementById('allCount').textContent = allCount;
+            document.getElementById('dubCount').textContent = dubCount;
+            document.getElementById('watchlistTabCount').textContent = watchlistCount;
+        }
+
+        function getDubWeeksText(weeks) {
+            if (weeks === null) return 'Kein Datum';
+            if (weeks === 0) return 'Verfügbar ✓';
+            if (weeks === 1) return 'Diese Woche 🔴';
+            if (weeks === 2) return 'In 1 Woche';
+            if (weeks === 3) return 'In 2 Wochen';
+            if (weeks === 4) return 'In 3 Wochen';
+            if (weeks === 5) return 'In 4 Wochen';
+            if (weeks === 6) return 'In 5-6 Wochen';
+            return 'Unbekannt';
+        }
+
+        function handleSort(e) {
+            const sortValue = e.target.value;
+            state.filteredAnimes.sort((a, b) => {
+                switch (sortValue) {
+                    case 'score_desc': return (b.scored || 0) - (a.scored || 0);
+                    case 'score_asc': return (a.scored || 0) - (b.scored || 0);
+                    case 'year_desc': return (b.year || 0) - (a.year || 0);
+                    case 'title_asc': return (a.title || '').localeCompare(b.title || '', 'de');
+                    default: return 0;
+                }
+            });
+            renderAnimes();
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const weeksFilter = document.getElementById('weeksFilter').value;
+            const minRating = parseFloat(document.getElementById('minRatingInput').value) || 0;
+
+            state.filteredAnimes = state.animes.filter(anime => {
+                const title = (anime.title || '').toLowerCase();
+                const englishTitle = (anime.title_english || '').toLowerCase();
+
+                const matchesSearch = !searchTerm || title.includes(searchTerm) || englishTitle.includes(searchTerm);
+                const matchesRating = (anime.scored || 0) >= minRating;
+
+                let matchesWeeks = true;
+                if (weeksFilter) {
+                    const weeks = parseInt(weeksFilter);
+                    matchesWeeks = weeks === 0 ? (anime.dubWeeks === 0) : (anime.dubWeeks === weeks);
+                }
+
+                const isAdult = anime.title.includes('Ecchi') || anime.contentRating?.includes('R');
+                const matchesAdult = state.showAdultContent || !isAdult;
+
+                let matchesTab = true;
+                if (state.currentTab === 'watchlist') {
+                    matchesTab = state.watchlist.some(w => w.mal_id === anime.mal_id);
+                } else if (state.currentTab === 'neue-dubs') {
+                    matchesTab = anime.dubWeeks !== null && anime.dubWeeks > 0;
+                }
+
+                return matchesSearch && matchesRating && matchesWeeks && matchesAdult && matchesTab;
+            });
+
+            const sortSelect = document.getElementById('sortSelect');
+            if (sortSelect) {
+                handleSort({ target: sortSelect });
+            } else {
+                renderAnimes();
+            }
+            updateTabCounts();
+        }
+
+        function renderAnimes() {
+            const contentArea = document.getElementById('contentArea');
+
+            if (!Array.isArray(state.filteredAnimes) || state.filteredAnimes.length === 0) {
+                showEmptyState('Keine Anime gefunden 😔');
+                return;
+            }
+
+            const start = (state.currentPage - 1) * state.pageSize;
+            const end = start + state.pageSize;
+            const paginatedAnimes = state.filteredAnimes.slice(start, end);
+            const totalPages = Math.ceil(state.filteredAnimes.length / state.pageSize);
+
+            const html = paginatedAnimes.map(anime => {
+                const imageUrl = anime.images?.jpg?.image_url;
+                const score = anime.scored || 0;
+                const stars = Math.round(score / 2);
+                const malId = anime.mal_id;
+                const isWatchlisted = state.watchlist.some(w => w.mal_id === malId);
+                const dubWeeks = anime.dubWeeks;
+
+                return `
+                    <div class="anime-card" onclick="openModal(${malId})">
+                        <div class="anime-image">
+                            ${imageUrl ? `<img src="${imageUrl}" alt="${anime.title}" onerror="this.style.display='none'">` : '<span>📺</span>'}
+                            ${dubWeeks !== null && dubWeeks > 0 ? `<div class="dub-badge">🆕 ${getDubWeeksText(dubWeeks)}</div>` : ''}
+                        </div>
+                        <div class="anime-content">
+                            <div class="anime-title">${anime.title}</div>
+                            <div class="anime-meta">${anime.year || 'TBD'}</div>
+                            ${dubWeeks !== null ? `<div class="synchro-timeline">🎬 ${getDubWeeksText(dubWeeks)}</div>` : ''}
+                            <div class="anime-rating">${'★'.repeat(Math.max(0, stars))}<span style="opacity: 0.4; font-size: 10px; margin-left: 4px;">${score.toFixed(1)}</span></div>
+                            <div class="anime-actions">
+                                <button onclick="event.stopPropagation(); toggleWatchlist(${malId}, '${(anime.title || '').replace(/'/g, "\\'")}');" class="${isWatchlisted ? 'active' : ''}">${isWatchlisted ? '✓' : '+'}</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            contentArea.innerHTML = `<div class="anime-grid">${html}</div>`;
+
+            let paginationHtml = '';
+            for (let i = 1; i <= totalPages; i++) {
+                paginationHtml += `<button onclick="goToPage(${i})" class="${i === state.currentPage ? 'active' : ''}">${i}</button>`;
+            }
+            document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
+        }
+
+        function toggleWatchlist(malId, title) {
+            const idx = state.watchlist.findIndex(w => w.mal_id === malId);
+            if (idx > -1) {
+                state.watchlist.splice(idx, 1);
+                showNotification(`✓ Entfernt`);
+            } else {
+                state.watchlist.push({ mal_id: malId, title });
+                showNotification(`✓ Hinzugefügt`);
+            }
+            localStorage.setItem('watchlist', JSON.stringify(state.watchlist));
+            document.getElementById('watchlistCount').textContent = state.watchlist.length;
+            applyFilters();
+        }
+
+        function openModal(malId) {
+            const anime = state.animes.find(a => a.mal_id === malId);
+            if (!anime) return;
+
+            const modalBody = document.getElementById('modalBody');
+            const genres = Array.isArray(anime.genres) ? anime.genres.map(g => g.name || g).join(', ') : 'N/A';
+            const isWatchlisted = state.watchlist.some(w => w.mal_id === malId);
+            const dubWeeks = anime.dubWeeks;
+
+            let synchroSection = '';
+            if (dubWeeks !== null && dubWeeks > 0) {
+                synchroSection = `<div class="synchro-details"><p><strong>🆕 Deutsche Synchro</strong></p><p>${getDubWeeksText(dubWeeks)}</p></div>`;
+            } else if (dubWeeks === null) {
+                synchroSection = `<div style="background: rgba(243, 114, 114, 0.1); border-left: 4px solid var(--error); padding: 12px; border-radius: 4px; margin: 12px 0;"><p style="color: var(--error);">⚠️ Kein Synchro-Datum bekannt</p></div>`;
+            }
+
+            modalBody.innerHTML = `
+                <h2>${anime.title}</h2>
+                ${synchroSection}
+                <p><strong>Englisch:</strong> ${anime.title_english || 'N/A'}</p>
+                <p><strong>Japanisch:</strong> ${anime.title_japanese || 'N/A'}</p>
+                <p><strong>Typ:</strong> ${anime.type || 'N/A'}</p>
+                <p><strong>Episodes:</strong> ${anime.episodes || 'N/A'}</p>
+                <p><strong>Status:</strong> ${anime.status || 'N/A'}</p>
+                <p><strong>Bewertung:</strong> ${anime.scored || 'N/A'}/10</p>
+                <p><strong>Jahr:</strong> ${anime.year || 'N/A'}</p>
+                <p><strong>Genres:</strong> ${genres}</p>
+                <p><strong>Synopsis:</strong></p>
+                <p>${anime.synopsis}</p>
+                <div style="margin-top: 24px; display: flex; gap: 12px;">
+                    <button class="btn btn-primary" onclick="closeModal()">Schließen</button>
+                    <button class="btn btn-secondary" onclick="toggleWatchlist(${malId}, '${(anime.title || '').replace(/'/g, "\\'")}'); closeModal();">${isWatchlisted ? '✓ Entfernen' : '+ Speichern'}</button>
+                </div>
+            `;
+            document.getElementById('detailsModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('detailsModal').classList.remove('active');
+        }
+
+        function goToPage(page) {
+            state.currentPage = page;
+            renderAnimes();
+            window.scrollTo(0, 0);
+        }
+
+        function updateApiStatus() {
+            const statusEl = document.getElementById('apiStatus');
+            if (statusEl) {
+                statusEl.className = 'api-status ' + (state.apiOnline ? 'online' : 'offline');
+                statusEl.textContent = state.apiOnline ? '🟢 Online' : '🔴 Offline';
+            }
+        }
+
+        function showNotification(message, isError = false) {
+            const container = document.getElementById('notification');
+            const notif = document.createElement('div');
+            notif.className = `notification ${isError ? 'error' : ''}`;
+            notif.textContent = message;
+            container.appendChild(notif);
+            setTimeout(() => notif.remove(), 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            log('=== Anime Synchro Tracker v9.0 ===');
+            addLog('🚀 Starte Anwendung...');
+
+            const saved = localStorage.getItem('watchlist');
+            state.watchlist = saved ? JSON.parse(saved) : [];
+            document.getElementById('watchlistCount').textContent = state.watchlist.length;
+
+            setupEventListeners();
+
+            try {
+                document.getElementById('adultContentToggle').classList.toggle('active', state.showAdultContent);
+                document.getElementById('pageSizeSelect').value = state.pageSize;
+
+                addLog('📡 Lade Synchro-Daten...');
+                await dubTracker.fetchAllDubSources();
+
+                addLog('🎬 Lade Anime von API...');
+                await loadAnimes();
+
+                addLog('✅ Bereit!');
+                updateApiStatus();
+            } catch (error) {
+                log(`Fehler: ${error.message}`);
+                addLog(`❌ ${error.message}`);
+                state.stats.errors++;
+                showNotification(`Fehler: ${error.message}`, true);
+            }
+        });
+    </script>
+</body>
+</html>
