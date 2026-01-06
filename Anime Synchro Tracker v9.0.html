@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2c1f52">
-    <meta name="description" content="Anime Deutsche Synchro Tracker v9.0 - Optimiert">
-    <title>Anime Synchro Tracker v9.0</title>
+    <meta name="theme-color" content="#8b5cf6">
+    <meta name="description" content="Anime Deutsche Synchro Tracker v9.0 Enhanced - Track German dubbed anime with advanced features">
+    <title>Anime Synchro Tracker v9.0 Enhanced</title>
     <style>
         :root {
             --primary: #8b5cf6;
@@ -186,6 +186,14 @@
             border-color: var(--border-dark);
         }
 
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
         .anime-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -248,6 +256,19 @@
             gap: 4px;
             align-items: center;
             animation: pulse 2s infinite;
+        }
+
+        .adult-badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: #ef4444;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         @keyframes pulse {
@@ -607,6 +628,7 @@
             position: relative;
             transition: background 0.3s;
             margin: 0 8px;
+            border: none;
         }
 
         body[data-theme="dark"] .toggle-switch {
@@ -641,6 +663,63 @@
             margin-top: 16px;
         }
 
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--warning);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .warning-box p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .debug-panel {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        body[data-theme="dark"] .debug-panel {
+            background: rgba(59, 130, 246, 0.15);
+        }
+
+        .debug-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .debug-item {
+            background: var(--light-card);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        body[data-theme="dark"] .debug-item {
+            background: var(--dark-card);
+            border-color: var(--border-dark);
+        }
+
+        .debug-label {
+            opacity: 0.6;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .debug-value {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
         @media (max-width: 768px) {
             .filters-grid {
                 grid-template-columns: 1fr;
@@ -650,14 +729,22 @@
                 grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
                 gap: 16px;
             }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
         }
     </style>
-<script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2F1a1d0c130ecdd900fd26e2e43188bbc9%2F24b17d28-8ddc-4557-a76c-8fc1153537da%2Fcanvas-app%2Findex.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253DAnime%2520Synchro%2520Tracker%2520v9.0.html%253B%2520filename%252A%253DUTF-8%2527%2527Anime%252520Synchro%252520Tracker%252520v9.0.html%26AWSAccessKeyId%3DASIA2F3EMEYEW2XZRQT7%26Signature%3DNUPnSsYBXV%252BsLkZ460O2wtsUZso%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEJP%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJIMEYCIQCeOt1bVh7FuPcsB%252BSu%252Ba%252FmshV%252FXtw0Yffo9yA4FF2aAQIhANfbfMnjGSKJ7C1NQ4HjEF8F5hFlJfoFwTD0AndK5JLQKvMECFwQARoMNjk5NzUzMzA5NzA1Igz4E6EA%252Bn1ZrdnZizIq0ARSrNWUibT98%252F9Bm%252FvhK20net4vHvBWQuzoG5bJkyeguDo4zHbcUVlVhObV30WlarLuTmSDOKE2g0bYAcJVfYrRyv8dSXTjLAcmPxWLY6mNdDm4uYngBzMTchc9I85UmZH49Dt3dDbGvj3YW67sG4%252BgWMP%252F6uKr3fP75ivksIjESiZfMq63EJHQ5ssr%252FeRS7lcNJWLBehq%252BhLIsaSi4WSx9sG%252BVJ%252F%252FG93rtQICBtlvb2UOXJ%252FT14oZ7NuyHWpsOhovFb%252B1FLL2vo5393BDVukuBWhaxomxsQzb3cRzsusCuoWWSdvX2fZmRrRvJIV9kuuxPMX0fy6fXmHOtiNw1AsY%252Fd705ZP94Tf1r4r4Pqn1oKtpx2El5mdccxgQLTK%252FPQpYH7Of6twDSWT9iu%252F1nuyl1iZ5uoZRR0D3HEpbmd6O4gkVmIZ7YyS%252FMICSekaB1UxZDoBo%252B8cRhtsJzobsP1BCsWEKtIYDzO8zWsFhssBj3EpbmgaI78SGJZPAPdR4g%252BVI7aPSngQ6bFFwC0pJnEEPHXcEW32lNAsoNCP9MXwXXpXPlpqlW24w4AfBtLMJ9O3OU6ZtsoXfPUBaVMvgI09JTifJqbOXNQWR%252BnqucHzI0guLfuMuGw8GD%252F7wClCunRiPQnaXfgriBGUP6oEkRghx6GsasZdn8Xrr3MrEOAq0nX4UlkYST3agL%252BZQofyoyW%252FTV0PHvwkBKRokVqAxsodpsbRF9asyFrne88H2C%252FCg7uf2tqgIvWddtpmK0L3SwZTzpUvsGgktCfYC6t6eun1DxMMPH88oGOpcB6KlcpsqmSZau91mUjvDASshuiba35vIajLU8eh%252FxkLbgyxeivKYycMRq6q2PR%252BLVmrnzUWn0VTQP6aHRkJTHOpoexXFKrVFf4ClQfj7RQJPCIrYGklT9Ewqkn4gYWW7r1Ti1xrZDALuXv1bTZk3E9ax0Wt5FJAFmKuC9iaD47fjNvWg7LC7BW8VcKK70Zzfra%252BwldswWFA%253D%253D%26Expires%3D1767695965&amp;app=comet.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt&amp;st-1pcttl=4320"></script><script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;name=Web%20of%20Trust&amp;type=user-script"></script></head>
+<script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2F4285c1b33b2c6b20a3cf644914653f1f%2Fc8113b65-37d2-4df4-80d1-884b354a4603%2Fcanvas-app%2Findex.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253DAnime%2520Synchro%2520Tracker%2520v9.0%2520Enhanced.html%253B%2520filename%252A%253DUTF-8%2527%2527Anime%252520Synchro%252520Tracker%252520v9.0%252520Enhanced.html%26AWSAccessKeyId%3DASIA2F3EMEYE2SA4MJG7%26Signature%3DHJENx9%252Fz%252BVa1jCGEON1wkR7i8hI%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEJP%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJGMEQCIBTVwyYBBHV5opwJG1s0s4VmJxEBH03PUErvveKiai1eAiBK7Cz%252BROlmYICZBOzFCLr2F8GmaoFdFFGoS92pgz2JoirzBAhbEAEaDDY5OTc1MzMwOTcwNSIMArSlney9AJz%252B%252BIQIKtAEd0FQOsEqvCrlq6jyQE0AVCyu8ndd4AsycwnCIgoepPdtce%252FY3wo46FbvOTUjfLeAz%252FyXp%252B6eOP7s6F9v8917eWy8qKNhaImX7w90uuXbIyi8UWubI9hR%252FJ4VKKcRqOXrJ9%252BrZH7tQvj57Ku67IYfDiFf28VomBLQcpFdPQuG%252BVRfdAaZ9TtYg1EPHTWek5kKhlCT3FDeVT8HpSnMrbRoU16ZL0FUpZnOBIzBfPgX%252BjCZY%252BhE%252FjzTA%252Fi7laRyfsmVzPwVRtadikw7vbsdIRu%252B7IvAXdCi1i8MiD2VlCe6APR1d9eSmIhnV%252BFVEuLmJKITRrqg6uc80lQdq4U%252Fgf89VEUJWUPmTHQh6BjTI%252Bu5l4NdKkqrn90uTHxP75kfY5TCWg%252BfgHOjnN%252BsRN1LFCkkC0ycqznXW6oe7SwJosoRumIN8GwxrAYqHNOlQ4l5UECRw6kaTnEe8NjuYVXA3wEcpAfA3HwJz3o557k2SNUS6ywk9AZfelEEADCveLSW3scSYR%252BVbTkP5mJCQWvUUcsTnciyN7%252FGpj1Ue3feckofZSkX29Z%252Bee%252FGclfWi5Ire5Uopev3FeriEnM3yUcehzkkZE4XS6XAkThMyK%252FCSmfz2g7jikJHRYZdOSYsowcpR5t9my04Gyk%252B8%252FxfvEEFGyIAZKlz7kzVeDrUMWhaK83QOL4zioGwpJx7HaO0iFs82gJ%252FLfcI7LH4MJQ0BJoMtZhakHqCUQsyJMMl6Xx6V%252FW8d7FJ2i9cnZi474GLWu%252BukdzI6RkaJZ3RG16uplc3lzQhjTD1vvPKBjqZAbkqvr%252BAx3hv1xDLRpIsTZ8dmGadIeZ0MipREgmtgqBmla90%252BcyBSe%252BfAtB8sxqSS1eIXdN9mnu234fRoSSnOS%252FGXyTu7KI9ex4%252FcJ5isO2fp63m7%252BUIR%252FO9KPMwyZj5%252F3RbXiSuyYOAESrmj3ZUWkJogGCrkSTyndAzJQ86mkVCAC79gU6j7CS8Aim%252BDa%252F8yfskJNySW8Ev%252BA%253D%253D%26Expires%3D1767697031&amp;app=comet.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt&amp;st-1pcttl=4320"></script><script type="text/javascript" nonce="aeb28a4656f34fdc871ed87fd60" src="//injections.adguard.org?ts=1767694613111&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;name=Web%20of%20Trust&amp;type=user-script"></script></head>
 <body data-theme="light">
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>🎬 Anime Synchro Tracker <span class="api-status" id="apiStatus">Starte...</span></h1>
+                <h1>🎬 Anime Synchro Tracker <span class="api-status" id="apiStatus">Loading...</span></h1>
                 <div class="header-right">
                     <button class="btn btn-secondary btn-small" id="watchlistBtn">
                         📌 Watchlist <span class="watchlist-count" id="watchlistCount">0</span>
@@ -669,8 +756,12 @@
 
     <main class="main">
         <div class="container">
+            <div class="warning-box">
+                <p>⚠️ <strong>Beta Status:</strong> This project is in active development. Some features may not work perfectly. <strong><a href="#" onclick="alert('Join our Discord community for support!')">Join Discord</a></strong> to help improve it!</p>
+            </div>
+
             <div class="update-log" id="updateLog">
-                <div class="log-entry"><span class="log-time">⏰</span> Anwendung wird gestartet...</div>
+                <div class="log-entry"><span class="log-time">⏰</span> Starting application...</div>
             </div>
 
             <div class="progress-bar">
@@ -678,8 +769,8 @@
             </div>
 
             <div class="tabs">
-                <button class="tab-btn active" data-tab="all">🌟 Alle <span id="allCount" style="margin-left: 4px;">0</span></button>
-                <button class="tab-btn" data-tab="neue-dubs">🆕 Neue Dubs <span id="dubCount" style="margin-left: 4px;">0</span></button>
+                <button class="tab-btn active" data-tab="all">🌟 All <span id="allCount" style="margin-left: 4px;">0</span></button>
+                <button class="tab-btn" data-tab="neue-dubs">🆕 New Dubs <span id="dubCount" style="margin-left: 4px;">0</span></button>
                 <button class="tab-btn" data-tab="watchlist">📌 Watchlist <span id="watchlistTabCount" style="margin-left: 4px;">0</span></button>
                 <button class="tab-btn" data-tab="debug">🔧 Info</button>
             </div>
@@ -689,37 +780,37 @@
                 
                 <div class="filters-grid">
                     <div class="filter-group">
-                        <label>🔍 Suche</label>
-                        <input type="text" id="searchInput" placeholder="Anime Name...">
+                        <label>🔍 Search</label>
+                        <input type="text" id="searchInput" placeholder="Anime name...">
                     </div>
                     <div class="filter-group">
-                        <label>📊 Sortierung</label>
+                        <label>📊 Sort</label>
                         <select id="sortSelect">
-                            <option value="score_desc">⭐ Beste Bewertung</option>
-                            <option value="score_asc">Schlechteste Bewertung</option>
-                            <option value="year_desc">📅 Neueste zuerst</option>
-                            <option value="title_asc">A-Z Titel</option>
+                            <option value="score_desc">⭐ Best Rating</option>
+                            <option value="score_asc">Lowest Rating</option>
+                            <option value="year_desc">📅 Newest First</option>
+                            <option value="title_asc">A-Z Title</option>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label>📅 Deutsche Synchro</label>
+                        <label>📅 Dub Status</label>
                         <select id="weeksFilter">
-                            <option value="">Alle</option>
-                            <option value="0">Verfügbar ✓</option>
-                            <option value="1">Diese Woche</option>
-                            <option value="2">In 1 Woche</option>
-                            <option value="3">In 2 Wochen</option>
-                            <option value="4">In 3 Wochen</option>
-                            <option value="5">In 4 Wochen</option>
-                            <option value="6">In 5-6 Wochen</option>
+                            <option value="">All</option>
+                            <option value="0">Available ✓</option>
+                            <option value="1">This Week</option>
+                            <option value="2">In 1 Week</option>
+                            <option value="3">In 2 Weeks</option>
+                            <option value="4">In 3 Weeks</option>
+                            <option value="5">In 4 Weeks</option>
+                            <option value="6">In 5-6 Weeks</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label>⭐ Min. Rating</label>
-                        <input type="number" id="minRatingInput" placeholder="z.B. 7.0" value="0" min="0" max="10" step="0.5">
+                        <input type="number" id="minRatingInput" placeholder="e.g. 7.0" value="0" min="0" max="10" step="0.5">
                     </div>
                     <div class="filter-group">
-                        <label>📑 Pro Seite</label>
+                        <label>📑 Per Page</label>
                         <select id="pageSizeSelect">
                             <option value="24">24 Anime</option>
                             <option value="36">36 Anime</option>
@@ -730,16 +821,17 @@
 
                 <div class="danger-zone">
                     <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                        <strong>⚠️ 18+ Inhalte</strong>
-                        <div class="toggle-switch" id="adultContentToggle"></div>
+                        <strong>⚠️ Show 18+ Content</strong>
+                        <button class="toggle-switch" id="adultContentToggle" type="button" onclick="toggleAdultContent()"></button>
                     </label>
+                    <p style="font-size: 11px; opacity: 0.6; margin-top: 8px;">📌 Displays anime with mature content (Ecchi, R-rated)</p>
                 </div>
             </div>
 
             <div id="debugPanel" style="display: none;">
-                <div class="update-log" style="margin-bottom: 16px;">
-                    <strong>📊 System-Info:</strong>
-                    <div id="debugInfo"></div>
+                <div class="debug-panel">
+                    <strong>🔧 System Information</strong>
+                    <div class="debug-grid" id="debugInfo"></div>
                 </div>
             </div>
 
@@ -789,7 +881,7 @@
             }
 
             async fetchAllDubSources() {
-                addLog('📡 Starte Synchro-Daten-Laden...');
+                addLog('📡 Loading sync data...');
                 const allDubs = new Map();
 
                 try {
@@ -799,13 +891,13 @@
                     ]);
 
                     const localCount = this.mergeLocalDatabase(allDubs);
-                    addLog(`✅ Synchro-DB: ${allDubs.size} Einträge geladen`);
+                    addLog(`✅ Dub DB: ${allDubs.size} entries loaded`);
                     
                     this.dubData = allDubs;
                     this.lastUpdate = new Date();
                     return allDubs;
                 } catch (error) {
-                    addLog(`⚠️ Synchro-Fehler: ${error.message.substring(0, 50)}`);
+                    addLog(`⚠️ Sync error: ${error.message.substring(0, 50)}`);
                     this.mergeLocalDatabase(this.dubData);
                     return this.dubData;
                 }
@@ -880,7 +972,8 @@
                 totalLoaded: 0,
                 totalWithDub: 0,
                 inWatchlist: 0,
-                errors: 0
+                errors: 0,
+                apiErrorCount: 0
             }
         };
 
@@ -914,11 +1007,11 @@
             statsGrid.innerHTML = `
                 <div class="stat-card">
                     <div class="stat-value">${state.animes.length}</div>
-                    <div class="stat-label">Anime</div>
+                    <div class="stat-label">Total Anime</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${dubCount}</div>
-                    <div class="stat-label">Mit Dub</div>
+                    <div class="stat-label">With Dub</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${state.watchlist.length}</div>
@@ -926,7 +1019,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${state.loadedPages}</div>
-                    <div class="stat-label">Seiten</div>
+                    <div class="stat-label">Pages</div>
                 </div>
             `;
         }
@@ -937,16 +1030,17 @@
             contentArea.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
 
             try {
-                addLog('🎬 Lade Anime von API...');
+                addLog('🎬 Loading anime from API...');
                 const animes = await loadFromJikan();
 
                 if (!animes || animes.length === 0) {
-                    throw new Error('Keine Anime gefunden');
+                    throw new Error('No anime found');
                 }
 
                 state.animes = animes.map(anime => ({
                     ...anime,
-                    dubWeeks: dubTracker.getDubWeeks(anime.mal_id)
+                    dubWeeks: dubTracker.getDubWeeks(anime.mal_id),
+                    isAdult: anime.title.includes('Ecchi') || anime.contentRating?.includes('R')
                 }));
 
                 const seen = new Set();
@@ -961,19 +1055,19 @@
                 state.stats.totalWithDub = state.animes.filter(a => a.dubWeeks !== null && a.dubWeeks > 0).length;
 
                 state.apiOnline = true;
-                log(`✓ ${state.animes.length} Anime geladen`);
-                addLog(`✅ ${state.animes.length} Anime erfolgreich geladen!`);
-                showNotification(`${state.animes.length} Anime geladen ✓`);
+                log(`✓ ${state.animes.length} anime loaded`);
+                addLog(`✅ ${state.animes.length} anime successfully loaded!`);
+                showNotification(`${state.animes.length} anime loaded ✓`);
                 applyFilters();
                 updateStats();
                 updateApiStatus();
 
             } catch (error) {
-                log(`Fehler: ${error.message}`);
-                addLog(`❌ Fehler beim Laden: ${error.message}`);
+                log(`Error: ${error.message}`);
+                addLog(`❌ Load error: ${error.message}`);
                 state.stats.errors++;
-                showEmptyState(`Fehler: ${error.message}`);
-                showNotification(`Fehler: ${error.message}`, true);
+                showEmptyState(`Error: ${error.message}`);
+                showNotification(`Error: ${error.message}`, true);
             } finally {
                 state.loadingAnimes = false;
             }
@@ -991,7 +1085,7 @@
 
                 while (!success && pageRetries < maxRetries) {
                     try {
-                        addLog(`📥 Lade Seite ${page}...`);
+                        addLog(`📥 Loading page ${page}...`);
                         updateProgress(page, maxPages);
 
                         const waitTime = pageRetries > 0 ? (pageRetries * 2000) : 1000;
@@ -1003,7 +1097,7 @@
                         );
 
                         if (response.status === 429) {
-                            addLog(`⏳ Ratelimit auf S.${page} - warte 3s...`);
+                            addLog(`⏳ Rate limit on page ${page} - waiting 3s...`);
                             await new Promise(resolve => setTimeout(resolve, 3000));
                             pageRetries++;
                             continue;
@@ -1019,7 +1113,7 @@
                             const animes = data.data.map(a => ({
                                 mal_id: a.mal_id,
                                 id: a.mal_id,
-                                title: a.title || a.title_english || 'Unbekannt',
+                                title: a.title || a.title_english || 'Unknown',
                                 title_english: a.title_english,
                                 title_japanese: a.title_japanese,
                                 type: a.type,
@@ -1029,20 +1123,20 @@
                                 scored: a.scored || 0,
                                 members: a.members,
                                 genres: Array.isArray(a.genres) ? a.genres : [],
-                                synopsis: a.synopsis || 'Keine Beschreibung',
+                                synopsis: a.synopsis || 'No description',
                                 images: a.images || {},
                                 contentRating: a.rating || 'PG'
                             }));
 
                             results.push(...animes);
-                            addLog(`✅ Seite ${page}: ${animes.length} geladen`);
+                            addLog(`✅ Page ${page}: ${animes.length} loaded`);
                             success = true;
                             state.loadedPages = page;
                         }
                     } catch (error) {
                         pageRetries++;
                         if (pageRetries >= maxRetries) {
-                            addLog(`⚠️ Seite ${page}: ${error.message.substring(0, 30)}`);
+                            addLog(`⚠️ Page ${page}: ${error.message.substring(0, 30)}`);
                             state.stats.errors++;
                             success = true;
                         }
@@ -1051,7 +1145,7 @@
             }
 
             if (results.length === 0) {
-                throw new Error('Keine Anime von API erhalten');
+                throw new Error('No anime from API');
             }
 
             return results;
@@ -1094,14 +1188,6 @@
                 renderAnimes();
             });
 
-            document.getElementById('adultContentToggle').addEventListener('click', () => {
-                state.showAdultContent = !state.showAdultContent;
-                localStorage.setItem('showAdultContent', state.showAdultContent);
-                document.getElementById('adultContentToggle').classList.toggle('active');
-                state.currentPage = 1;
-                applyFilters();
-            });
-
             document.getElementById('closeModalBtn').addEventListener('click', closeModal);
 
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1126,13 +1212,29 @@
             
             debugPanel.style.display = 'block';
             debugInfo.innerHTML = `
-                <div style="font-size: 11px; line-height: 1.8;">
-                    <div>📊 Gesamt Anime: <strong>${state.animes.length}</strong></div>
-                    <div>🎬 Mit Synchro: <strong>${totalDub}</strong></div>
-                    <div>📑 Geladene Seiten: <strong>${state.loadedPages}/5</strong></div>
-                    <div>📌 Watchlist: <strong>${state.watchlist.length}</strong></div>
-                    <div>❌ Fehler: <strong>${state.stats.errors}</strong></div>
-                    <div>⏱️ Last Update: <strong>${new Date().toLocaleTimeString('de-DE')}</strong></div>
+                <div class="debug-item">
+                    <div class="debug-label">Total Anime</div>
+                    <div class="debug-value">${state.animes.length}</div>
+                </div>
+                <div class="debug-item">
+                    <div class="debug-label">With Sync</div>
+                    <div class="debug-value">${totalDub}</div>
+                </div>
+                <div class="debug-item">
+                    <div class="debug-label">Pages Loaded</div>
+                    <div class="debug-value">${state.loadedPages}/5</div>
+                </div>
+                <div class="debug-item">
+                    <div class="debug-label">Watchlist</div>
+                    <div class="debug-value">${state.watchlist.length}</div>
+                </div>
+                <div class="debug-item">
+                    <div class="debug-label">Errors</div>
+                    <div class="debug-value">${state.stats.errors}</div>
+                </div>
+                <div class="debug-item">
+                    <div class="debug-label">Last Update</div>
+                    <div class="debug-value">${new Date().toLocaleTimeString('de-DE')}</div>
                 </div>
             `;
         }
@@ -1158,15 +1260,15 @@
         }
 
         function getDubWeeksText(weeks) {
-            if (weeks === null) return 'Kein Datum';
-            if (weeks === 0) return 'Verfügbar ✓';
-            if (weeks === 1) return 'Diese Woche 🔴';
-            if (weeks === 2) return 'In 1 Woche';
-            if (weeks === 3) return 'In 2 Wochen';
-            if (weeks === 4) return 'In 3 Wochen';
-            if (weeks === 5) return 'In 4 Wochen';
-            if (weeks === 6) return 'In 5-6 Wochen';
-            return 'Unbekannt';
+            if (weeks === null) return 'No Date';
+            if (weeks === 0) return 'Available ✓';
+            if (weeks === 1) return 'This Week 🔴';
+            if (weeks === 2) return 'In 1 Week';
+            if (weeks === 3) return 'In 2 Weeks';
+            if (weeks === 4) return 'In 3 Weeks';
+            if (weeks === 5) return 'In 4 Weeks';
+            if (weeks === 6) return 'In 5-6 Weeks';
+            return 'Unknown';
         }
 
         function handleSort(e) {
@@ -1176,11 +1278,19 @@
                     case 'score_desc': return (b.scored || 0) - (a.scored || 0);
                     case 'score_asc': return (a.scored || 0) - (b.scored || 0);
                     case 'year_desc': return (b.year || 0) - (a.year || 0);
-                    case 'title_asc': return (a.title || '').localeCompare(b.title || '', 'de');
+                    case 'title_asc': return (a.title || '').localeCompare(b.title || '', 'en');
                     default: return 0;
                 }
             });
             renderAnimes();
+        }
+
+        function toggleAdultContent() {
+            state.showAdultContent = !state.showAdultContent;
+            localStorage.setItem('showAdultContent', state.showAdultContent);
+            document.getElementById('adultContentToggle').classList.toggle('active');
+            state.currentPage = 1;
+            applyFilters();
         }
 
         function applyFilters() {
@@ -1201,8 +1311,7 @@
                     matchesWeeks = weeks === 0 ? (anime.dubWeeks === 0) : (anime.dubWeeks === weeks);
                 }
 
-                const isAdult = anime.title.includes('Ecchi') || anime.contentRating?.includes('R');
-                const matchesAdult = state.showAdultContent || !isAdult;
+                const matchesAdult = state.showAdultContent || !anime.isAdult;
 
                 let matchesTab = true;
                 if (state.currentTab === 'watchlist') {
@@ -1227,7 +1336,7 @@
             const contentArea = document.getElementById('contentArea');
 
             if (!Array.isArray(state.filteredAnimes) || state.filteredAnimes.length === 0) {
-                showEmptyState('Keine Anime gefunden 😔');
+                showEmptyState('No anime found 😔');
                 return;
             }
 
@@ -1248,6 +1357,7 @@
                     <div class="anime-card" onclick="openModal(${malId})">
                         <div class="anime-image">
                             ${imageUrl ? `<img src="${imageUrl}" alt="${anime.title}" onerror="this.style.display='none'">` : '<span>📺</span>'}
+                            ${anime.isAdult ? '<div class="adult-badge">18+</div>' : ''}
                             ${dubWeeks !== null && dubWeeks > 0 ? `<div class="dub-badge">🆕 ${getDubWeeksText(dubWeeks)}</div>` : ''}
                         </div>
                         <div class="anime-content">
@@ -1276,10 +1386,10 @@
             const idx = state.watchlist.findIndex(w => w.mal_id === malId);
             if (idx > -1) {
                 state.watchlist.splice(idx, 1);
-                showNotification(`✓ Entfernt`);
+                showNotification(`✓ Removed`);
             } else {
                 state.watchlist.push({ mal_id: malId, title });
-                showNotification(`✓ Hinzugefügt`);
+                showNotification(`✓ Added`);
             }
             localStorage.setItem('watchlist', JSON.stringify(state.watchlist));
             document.getElementById('watchlistCount').textContent = state.watchlist.length;
@@ -1297,27 +1407,27 @@
 
             let synchroSection = '';
             if (dubWeeks !== null && dubWeeks > 0) {
-                synchroSection = `<div class="synchro-details"><p><strong>🆕 Deutsche Synchro</strong></p><p>${getDubWeeksText(dubWeeks)}</p></div>`;
+                synchroSection = `<div class="synchro-details"><p><strong>🆕 German Synchronization</strong></p><p>${getDubWeeksText(dubWeeks)}</p></div>`;
             } else if (dubWeeks === null) {
-                synchroSection = `<div style="background: rgba(243, 114, 114, 0.1); border-left: 4px solid var(--error); padding: 12px; border-radius: 4px; margin: 12px 0;"><p style="color: var(--error);">⚠️ Kein Synchro-Datum bekannt</p></div>`;
+                synchroSection = `<div style="background: rgba(243, 114, 114, 0.1); border-left: 4px solid var(--error); padding: 12px; border-radius: 4px; margin: 12px 0;"><p style="color: var(--error);">⚠️ No sync date known</p></div>`;
             }
 
             modalBody.innerHTML = `
                 <h2>${anime.title}</h2>
                 ${synchroSection}
-                <p><strong>Englisch:</strong> ${anime.title_english || 'N/A'}</p>
-                <p><strong>Japanisch:</strong> ${anime.title_japanese || 'N/A'}</p>
-                <p><strong>Typ:</strong> ${anime.type || 'N/A'}</p>
+                <p><strong>English:</strong> ${anime.title_english || 'N/A'}</p>
+                <p><strong>Japanese:</strong> ${anime.title_japanese || 'N/A'}</p>
+                <p><strong>Type:</strong> ${anime.type || 'N/A'}</p>
                 <p><strong>Episodes:</strong> ${anime.episodes || 'N/A'}</p>
                 <p><strong>Status:</strong> ${anime.status || 'N/A'}</p>
-                <p><strong>Bewertung:</strong> ${anime.scored || 'N/A'}/10</p>
-                <p><strong>Jahr:</strong> ${anime.year || 'N/A'}</p>
+                <p><strong>Rating:</strong> ${anime.scored || 'N/A'}/10</p>
+                <p><strong>Year:</strong> ${anime.year || 'N/A'}</p>
                 <p><strong>Genres:</strong> ${genres}</p>
                 <p><strong>Synopsis:</strong></p>
                 <p>${anime.synopsis}</p>
                 <div style="margin-top: 24px; display: flex; gap: 12px;">
-                    <button class="btn btn-primary" onclick="closeModal()">Schließen</button>
-                    <button class="btn btn-secondary" onclick="toggleWatchlist(${malId}, '${(anime.title || '').replace(/'/g, "\\'")}'); closeModal();">${isWatchlisted ? '✓ Entfernen' : '+ Speichern'}</button>
+                    <button class="btn btn-primary" onclick="closeModal()">Close</button>
+                    <button class="btn btn-secondary" onclick="toggleWatchlist(${malId}, '${(anime.title || '').replace(/'/g, "\\'")}'); closeModal();">${isWatchlisted ? '✓ Remove' : '+ Save'}</button>
                 </div>
             `;
             document.getElementById('detailsModal').classList.add('active');
@@ -1351,8 +1461,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
-            log('=== Anime Synchro Tracker v9.0 ===');
-            addLog('🚀 Starte Anwendung...');
+            log('=== Anime Synchro Tracker v9.0 Enhanced ===');
+            addLog('🚀 Starting application...');
 
             const saved = localStorage.getItem('watchlist');
             state.watchlist = saved ? JSON.parse(saved) : [];
@@ -1364,19 +1474,19 @@
                 document.getElementById('adultContentToggle').classList.toggle('active', state.showAdultContent);
                 document.getElementById('pageSizeSelect').value = state.pageSize;
 
-                addLog('📡 Lade Synchro-Daten...');
+                addLog('📡 Loading sync data...');
                 await dubTracker.fetchAllDubSources();
 
-                addLog('🎬 Lade Anime von API...');
+                addLog('🎬 Loading anime from API...');
                 await loadAnimes();
 
-                addLog('✅ Bereit!');
+                addLog('✅ Ready!');
                 updateApiStatus();
             } catch (error) {
-                log(`Fehler: ${error.message}`);
+                log(`Error: ${error.message}`);
                 addLog(`❌ ${error.message}`);
                 state.stats.errors++;
-                showNotification(`Fehler: ${error.message}`, true);
+                showNotification(`Error: ${error.message}`, true);
             }
         });
     </script>
