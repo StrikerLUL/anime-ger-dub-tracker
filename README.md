@@ -56,7 +56,7 @@ cp anime-synchro-tracker.html /var/www/html/
 ### Option 3: Local Development
 ```bash
 # Clone or download the repository
-git clone https://github.com/yourusername/anime-synchro-tracker.git
+git clone https://github.com/StrikerLUL/anime-ger-dub-tracker.git
 cd anime-synchro-tracker
 
 # Serve locally (requires Python or Node.js)
