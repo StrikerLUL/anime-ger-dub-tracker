@@ -214,27 +214,6 @@ Found a bug or have a suggestion? **Please join our Discord community!**
 - 📝 **Documentation** - Improve documentation
 - 🌍 **Translations** - Support multiple languages
 
-### Discord Server
-**👉 [Your Discord Invite Link Here]**
-
-On the Discord server you'll find:
-- Active developers and testers
-- Quick help with problems
-- Community events and updates
-- Code reviews and discussions
-- Friendly community members
-
-### Suggestions for Improvement
-- Add more anime sources and APIs
-- Support for multiple languages
-- Export watchlist feature (CSV/JSON)
-- Enhanced dark mode
-- Desktop/mobile app versions
-- More reliable dub data collection
-- Email notifications for new dubs
-- User accounts & cloud sync
-- Better error handling and recovery
-- Community-driven dub date updates
 
 ## 📧 Support
 
