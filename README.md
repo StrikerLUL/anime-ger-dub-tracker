@@ -282,9 +282,6 @@ Das Projekt generiert automatisch Daten wie:
 - Der Server läuft nur **lokal** (localhost:5000)
 - Keine externen APIs werden kontaktiert (außer anisearch.de zum Scraping)
 
-## 📄 Lizenz
-
-Dieses Projekt ist unter der **MIT License** lizenziert. Siehe [LICENSE](LICENSE) für Details.
 
 ## 🤝 Beitragen
 
@@ -296,37 +293,6 @@ Beiträge sind willkommen! Bitte:
 4. **Push** zum Branch (`git push origin feature/AmazingFeature`)
 5. Öffne einen **Pull Request**
 
-## 📝 Changelog
-
-### Version 2.1
-- ✅ Import-Fehler behoben
-- ✅ Automatische Abhängigkeits-Installation
-- ✅ Verbesserte Fehlerbehandlung
-- ✅ JSON/JS Datenexport
-
-### Version 2.0
-- ✅ Flask API-Integration
-- ✅ Caching-System
-- ✅ HTML-Frontend Integration
-
-## ❓ FAQ
-
-**F: Wie oft werden die Daten aktualisiert?**  
-A: Die Daten werden beim Starten des Skripts aktualisiert. Für automatische Aktualisierung kannst du den Server mit einem Scheduler neu starten.
-
-**F: Kann ich dies in eine bestehende Website integrieren?**  
-A: Ja! Nutze die `/api/anime-data` API-Endpoint oder lade die generierten `anime_data.json`/`anime_data.js` Dateien.
-
-**F: Funktioniert dies auf meinem VPS/Server?**  
-A: Ja! Stelle nur sicher, dass Python 3.7+ installiert ist und konfiguriere einen geeigneten Port.
-
-## 📞 Support & Kontakt
-
-Für Fragen oder Probleme:
-- **Issues öffnen:** [GitHub Issues](https://github.com/yourusername/anisearch-tracker/issues)
-- **Diskussionen:** [GitHub Discussions](https://github.com/yourusername/anisearch-tracker/discussions)
-
----
 
 **Made with ❤️ for Anime Fans**
 
