@@ -1,17 +1,48 @@
 # Anisearch.de Anime Synchronisations-Tracker
 
+> ⚠️ **HINWEIS: Projekt in Entwicklung**
+> 
+> Dieser Code befindet sich noch in aktiver Entwicklung. Features, Dokumentation und die API können sich ändern. Aktuelle Bugs und Unvollständigkeiten sollten erwartet werden. Wenn ihr Bugs entdeckt oder Verbesserungsvorschläge habt, bitte über Issues berichten!
+
 Ein vollständig integriertes Python-Backend und HTML-Frontend-Projekt zur Verfolgung von deutschen Anime-Synchronisationen auf [anisearch.de](https://www.anisearch.de).
 
 ## 📋 Inhaltsverzeichnis
 
-- [Funktionen](#funktionen)
-- [Anforderungen](#anforderungen)
-- [Installation](#installation)
-- [Verwendung](#verwendung)
-- [Projektstruktur](#projektstruktur)
-- [API-Dokumentation](#api-dokumentation)
-- [Technologie-Stack](#technologie-stack)
+- [Status](#-status)
+- [Funktionen](#-funktionen)
+- [Anforderungen](#-anforderungen)
+- [Installation](#-installation)
+- [Verwendung](#-verwendung)
+- [Projektstruktur](#-projektstruktur)
+- [API-Dokumentation](#-api-dokumentation)
+- [Technologie-Stack](#-technologie-stack)
 - [Lizenz](#lizenz)
+
+## 🚧 Status
+
+**Aktueller Entwicklungsstand:** Early Development (WIP - Work in Progress)
+
+### Was ist fertig ✅
+- Basis-Backend mit Flask
+- HTML-Frontend-Interface
+- Anime-Daten Scraping (kommend/aktuell)
+- JSON/JavaScript Datenexport
+- Grundlegende Filterung und Suche
+
+### Was ist noch in Arbeit 🔄
+- Fehlerbehandlung optimieren
+- Performance-Verbesserungen
+- Unit Tests
+- Deployment-Dokumentation
+- Docker-Unterstützung
+- Caching-Strategien
+- Frontend-Optimierungen
+
+### Bekannte Probleme 🐛
+- Scraping kann bei Änderungen auf anisearch.de brechen
+- Rate-Limiting ist nicht implementiert
+- Keine Real-Time-Updates
+- Mobile-View könnte verbessert werden
 
 ## ✨ Funktionen
 
@@ -195,7 +226,7 @@ Serveert die lokal gespeicherte JSON-Datei.
 ## 💻 Technologie-Stack
 
 | Komponente | Technologie |
-|-----------|------------|
+|-----------|--------------|
 | **Backend** | Python 3.7+ |
 | **Web-Framework** | Flask 2.0+ |
 | **HTML-Parsing** | BeautifulSoup4 |
@@ -228,6 +259,7 @@ Serveert die lokal gespeicherte JSON-Datei.
 - **Rate-Limiting:** Das Skript enthält kein Rate-Limiting - verwenden Sie es verantwortungsvoll
 - **Fehlerbehandlung:** Bei Scraping-Fehlern wird automatisch auf Demo-Daten ausgewichen
 - **Daten-Aktualität:** Die Daten werden beim Skriptstart aktualisiert, nicht in Echtzeit
+- **Instabilität:** Da das Projekt noch in Entwicklung ist, sollten Bugs und Breaking Changes erwartet werden
 
 ## 🐛 Troubleshooting
 
@@ -245,6 +277,9 @@ app.run(debug=False, host='localhost', port=5001)  # Anderer Port
 
 ### Problem: "HTML-Datei nicht gefunden"
 **Lösung:** Stelle sicher, dass `index.html` im gleichen Verzeichnis wie `scrape_anisearch_fixed.py` liegt.
+
+### Problem: Scraping funktioniert nicht
+**Lösung:** anisearch.de könnte das HTML-Layout geändert haben. Bitte öffne ein GitHub Issue mit Details zur fehlgeschlagenen Scraping-Operation.
 
 ## 📊 Beispiel-Daten
 
@@ -282,7 +317,6 @@ Das Projekt generiert automatisch Daten wie:
 - Der Server läuft nur **lokal** (localhost:5000)
 - Keine externen APIs werden kontaktiert (außer anisearch.de zum Scraping)
 
-
 ## 🤝 Beitragen
 
 Beiträge sind willkommen! Bitte:
@@ -293,6 +327,11 @@ Beiträge sind willkommen! Bitte:
 4. **Push** zum Branch (`git push origin feature/AmazingFeature`)
 5. Öffne einen **Pull Request**
 
+### Für Entwickler
+Wenn ihr das Projekt forken möchtet um zu helfen:
+- Achtet auf die bekannten Probleme (siehe Status-Sektion)
+- Bitte testet gründlich, bevor ihr PRs öffnet
+- Schreibt gerne Issues für neue Features oder Bugs die ihr findet
 
 **Made with ❤️ for Anime Fans**
 
