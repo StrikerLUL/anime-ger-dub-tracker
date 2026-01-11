@@ -23,7 +23,7 @@ Ein vollständig integriertes Python-Backend und HTML-Frontend-Projekt zur Verfo
 - ✅ **Fallback-Mechanismus** - Demo-Daten bei Scraping-Fehlern
 - ✅ **Caching** - In-Memory-Daten für schnelle API-Responses
 
-### Frontend (`index.html`)
+### Frontend (`index.html`)   (Anime Synchro Tracker v11.0.1)
 - 🎨 **Responsive Web-Interface** mit modernes HTML5/CSS3 Design
 - 📱 **Mobile-friendly** Datentabellen und Filter
 - 🔍 **Live-Suche** und Filterung von Anime-Einträgen
