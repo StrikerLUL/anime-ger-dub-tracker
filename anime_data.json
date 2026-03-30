@@ -1,15 +1,6 @@
 {
   "kommende": [
     {
-      "id": 4583,
-      "title": "Hakaba Kitaro: Der Junge vom Friedhof",
-      "url": "https://www.anisearch.de/anime/4583,hakaba-kitaro-der-junge-vom-friedhof",
-      "image": "https://cdn.anisearch.de/images/anime/cover/4/4583_400.webp",
-      "info": "TV-Serie, 11 (2008)",
-      "year": 2008,
-      "type": "TV-Serie"
-    },
-    {
       "id": 5278,
       "title": "Strike Witches 2",
       "url": "https://www.anisearch.de/anime/5278,strike-witches-2",
@@ -359,9 +350,27 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
+    },
+    {
+      "id": 20366,
+      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
+      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
+      "info": "TV-Serie, 19 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
+    {
+      "id": 21293,
+      "title": "Dandelion",
+      "url": "https://www.anisearch.de/anime/21293,dandelion",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21293_400.webp",
+      "info": "Web, 7 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
     {
       "id": 18686,
       "title": "Fist of the North Star: Hokuto No Ken",
@@ -710,21 +719,21 @@
       "url": "https://www.anisearch.de/anime/18266,to-your-eternity-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18266_400.webp",
       "info": "TV-Serie, 22 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19726,
-      "title": "Pass the Monster Meat, Milady!",
-      "url": "https://www.anisearch.de/anime/19726,pass-the-monster-meat-milady",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19726_400.webp",
-      "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
     {
+      "id": 21293,
+      "title": "Dandelion",
+      "url": "https://www.anisearch.de/anime/21293,dandelion",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21293_400.webp",
+      "info": "Web, 7 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 18686,
       "title": "Fist of the North Star: Hokuto No Ken",
       "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
@@ -1074,18 +1083,9 @@
       "info": "TV-Serie, 22 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19726,
-      "title": "Pass the Monster Meat, Milady!",
-      "url": "https://www.anisearch.de/anime/19726,pass-the-monster-meat-milady",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19726_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-03-29T06:56:48.418319Z",
+  "timestamp": "2026-03-30T07:20:05.971563Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
