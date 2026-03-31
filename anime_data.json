@@ -253,6 +253,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 18998,
+      "title": "Dorohedoro: Staffel 2",
+      "url": "https://www.anisearch.de/anime/18998,dorohedoro-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18998_400.webp",
+      "info": "Web, 12 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 20893,
       "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
       "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
@@ -348,15 +357,6 @@
       "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20366,
-      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
-      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
-      "info": "TV-Serie, 19 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -1085,7 +1085,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-03-30T07:20:05.971563Z",
+  "timestamp": "2026-03-31T07:10:11.611642Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
