@@ -28,6 +28,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 9632,
+      "title": "Futari Ecchi (OVA)",
+      "url": "https://www.anisearch.de/anime/9632,futari-ecchi-ova",
+      "image": "https://cdn.anisearch.de/images/anime/cover/9/9632_400.webp",
+      "info": "OVA, 3 (2014)",
+      "year": 2014,
+      "type": "OVA"
+    },
+    {
       "id": 9748,
       "title": "Kamisama Kiss: Staffel 2",
       "url": "https://www.anisearch.de/anime/9748,kamisama-kiss-staffel-2",
@@ -38,8 +47,8 @@
     },
     {
       "id": 10279,
-      "title": "Doukyusei -Classmates-",
-      "url": "https://www.anisearch.de/anime/10279,doukyusei-classmates",
+      "title": "Doukyusei: Verliebt in meinen Mitschüler",
+      "url": "https://www.anisearch.de/anime/10279,doukyusei-verliebt-in-meinen-mitschueler",
       "image": "https://cdn.anisearch.de/images/anime/cover/10/10279_400.webp",
       "info": "Film, 1 (2016)",
       "year": 2016,
@@ -154,15 +163,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20193,
-      "title": "Chuhai Lips: Canned Flavor of Married Women",
-      "url": "https://www.anisearch.de/anime/20193,chuhai-lips-canned-flavor-of-married-women",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20193_400.webp",
-      "info": "Web, 8 (2025)",
-      "year": 2025,
-      "type": "Web"
-    },
-    {
       "id": 19121,
       "title": "Call of the Night: Season 2",
       "url": "https://www.anisearch.de/anime/19121,call-of-the-night-season-2",
@@ -179,15 +179,6 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20718,
-      "title": "Chuhai Lips: Canned Flavor of Married Women - Nach der Nacht, die ich mit meiner Tante verbrachte",
-      "url": "https://www.anisearch.de/anime/20718,chuhai-lips-canned-flavor-of-married-women-nach-der-nacht-die-ich-mit-meiner-tante-verbrachte",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20718_400.webp",
-      "info": "Web, 1 (2025)",
-      "year": 2025,
-      "type": "Web"
     },
     {
       "id": 19764,
@@ -1085,7 +1076,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-03T07:01:32.754835Z",
+  "timestamp": "2026-04-04T06:53:20.319502Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
