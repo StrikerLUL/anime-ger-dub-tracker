@@ -271,24 +271,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20717,
-      "title": "Daemons of the Shadow Realm",
-      "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19776,
-      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20461,
       "title": "Mistress Kanan Is Devilishly Easy",
       "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
@@ -381,6 +363,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20717,
+      "title": "Daemons of the Shadow Realm",
+      "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19776,
+      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20917,
       "title": "Dr. Stone: Science Future - Cour 3",
       "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
@@ -692,24 +692,6 @@
       "url": "https://www.anisearch.de/anime/19601,may-i-ask-for-one-final-thing",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19601_400.webp",
       "info": "TV-Serie, 13 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19698,
-      "title": "My Hero Academia: Final Season",
-      "url": "https://www.anisearch.de/anime/19698,my-hero-academia-final-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19698_400.webp",
-      "info": "TV-Serie, 11 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19469,
-      "title": "Sanda",
-      "url": "https://www.anisearch.de/anime/19469,sanda",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19469_400.webp",
-      "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
     }
@@ -743,6 +725,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20717,
+      "title": "Daemons of the Shadow Realm",
+      "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19776,
+      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20917,
       "title": "Dr. Stone: Science Future - Cour 3",
       "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
@@ -1056,27 +1056,9 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19698,
-      "title": "My Hero Academia: Final Season",
-      "url": "https://www.anisearch.de/anime/19698,my-hero-academia-final-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19698_400.webp",
-      "info": "TV-Serie, 11 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19469,
-      "title": "Sanda",
-      "url": "https://www.anisearch.de/anime/19469,sanda",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19469_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-04T06:53:20.319502Z",
+  "timestamp": "2026-04-05T06:58:27.333535Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
