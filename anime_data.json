@@ -280,15 +280,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 21198,
-      "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
-      "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 17281,
       "title": "Atelier of Witch Hat",
       "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
@@ -363,6 +354,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21198,
+      "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
+      "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20717,
       "title": "Daemons of the Shadow Realm",
       "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
@@ -683,15 +683,6 @@
       "url": "https://www.anisearch.de/anime/19989,ranma-1-2-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19989_400.webp",
       "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19601,
-      "title": "May I Ask for One Final Thing?",
-      "url": "https://www.anisearch.de/anime/19601,may-i-ask-for-one-final-thing",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19601_400.webp",
-      "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie"
     }
@@ -725,6 +716,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21198,
+      "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
+      "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20717,
       "title": "Daemons of the Shadow Realm",
       "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
@@ -1047,18 +1047,9 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19601,
-      "title": "May I Ask for One Final Thing?",
-      "url": "https://www.anisearch.de/anime/19601,may-i-ask-for-one-final-thing",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19601_400.webp",
-      "info": "TV-Serie, 13 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-05T06:58:27.333535Z",
+  "timestamp": "2026-04-06T07:22:20.062186Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
