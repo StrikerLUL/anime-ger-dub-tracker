@@ -289,15 +289,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20366,
-      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
-      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
-      "info": "TV-Serie, 19 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20904,
       "title": "Rent-a-Girlfriend: Staffel 5",
       "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
@@ -336,6 +327,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20366,
+      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
+      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
+      "info": "TV-Serie, 19 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19486,
       "title": "Rooster Fighter",
       "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
@@ -364,8 +364,8 @@
     },
     {
       "id": 20717,
-      "title": "Daemons of the Shadow Realm",
-      "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
+      "title": "Das Band der Unterwelt",
+      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
@@ -664,15 +664,6 @@
       "title": "Ninja vs. Gokudo",
       "url": "https://www.anisearch.de/anime/20214,ninja-vs-gokudo",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20214_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20183,
-      "title": "My Status as an Assassin Obviously Exceeds the Hero’s",
-      "url": "https://www.anisearch.de/anime/20183,my-status-as-an-assassin-obviously-exceeds-the-heros",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20183_400.webp",
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
@@ -698,6 +689,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20366,
+      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
+      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
+      "info": "TV-Serie, 19 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19486,
       "title": "Rooster Fighter",
       "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
@@ -726,8 +726,8 @@
     },
     {
       "id": 20717,
-      "title": "Daemons of the Shadow Realm",
-      "url": "https://www.anisearch.de/anime/20717,daemons-of-the-shadow-realm",
+      "title": "Das Band der Unterwelt",
+      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
@@ -1029,18 +1029,9 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20183,
-      "title": "My Status as an Assassin Obviously Exceeds the Hero’s",
-      "url": "https://www.anisearch.de/anime/20183,my-status-as-an-assassin-obviously-exceeds-the-heros",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20183_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-09T07:14:24.973140Z",
+  "timestamp": "2026-04-10T07:19:27.078193Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
