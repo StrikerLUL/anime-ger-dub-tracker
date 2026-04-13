@@ -91,15 +91,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 15931,
-      "title": "Virgin Road: Die Henkerin und ihre Art zu leben",
-      "url": "https://www.anisearch.de/anime/15931,virgin-road-die-henkerin-und-ihre-art-zu-leben",
-      "image": "https://cdn.anisearch.de/images/anime/cover/15/15931_400.webp",
-      "info": "TV-Serie, 12 (2022)",
-      "year": 2022,
-      "type": "TV-Serie"
-    },
-    {
       "id": 15989,
       "title": "Bocchi the Rock!",
       "url": "https://www.anisearch.de/anime/15989,bocchi-the-rock",
@@ -235,15 +226,6 @@
       "type": "Film"
     },
     {
-      "id": 19638,
-      "title": "Wistoria: Wand and Sword - Staffel 2",
-      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19569,
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
@@ -311,6 +293,15 @@
       "title": "The Warrior Princess and the Barbaric King",
       "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19638,
+      "title": "Wistoria: Wand and Sword - Staffel 2",
+      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -1040,7 +1031,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-12T07:07:04.407682Z",
+  "timestamp": "2026-04-13T07:52:55.633679Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
