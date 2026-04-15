@@ -83,8 +83,8 @@ flask>=2.0.0             # Web-Framework
 
 ### 1. Repository klonen
 ```bash
-git clone https://github.com/StrikerLUL/anime-ger-dub-tracker-WORK-IN-PROGRESS.git
-cd anime-ger-dub-tracker-WORK-IN-PROGRESS
+git clone https://github.com/StrikerLUL/anime-ger-dub-tracker.git
+cd anime-ger-dub-tracker
 ```
 
 ### 2. Python-Environment erstellen (optional aber empfohlen)
