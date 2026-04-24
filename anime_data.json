@@ -235,15 +235,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20893,
-      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
-      "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19633,
       "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
       "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
@@ -336,20 +327,20 @@
       "type": "TV-Serie"
     },
     {
+      "id": 17281,
+      "title": "Atelier of Witch Hat",
+      "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19486,
       "title": "Rooster Fighter",
       "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19486_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 17281,
-      "title": "Witch Hat Atelier",
-      "url": "https://www.anisearch.de/anime/17281,witch-hat-atelier",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
-      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -406,6 +397,15 @@
       "info": "Web, 11 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 20893,
+      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
+      "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 20466,
@@ -655,15 +655,6 @@
       "title": "Campfire Cooking in Another World with My Absurd Skill: Staffel 2",
       "url": "https://www.anisearch.de/anime/18809,campfire-cooking-in-another-world-with-my-absurd-skill-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18809_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20214,
-      "title": "Ninja vs. Gokudo",
-      "url": "https://www.anisearch.de/anime/20214,ninja-vs-gokudo",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20214_400.webp",
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
@@ -698,20 +689,20 @@
       "type": "TV-Serie"
     },
     {
+      "id": 17281,
+      "title": "Atelier of Witch Hat",
+      "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19486,
       "title": "Rooster Fighter",
       "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19486_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 17281,
-      "title": "Witch Hat Atelier",
-      "url": "https://www.anisearch.de/anime/17281,witch-hat-atelier",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
-      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -768,6 +759,15 @@
       "info": "Web, 11 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 20893,
+      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
+      "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 20466,
@@ -1020,18 +1020,9 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20214,
-      "title": "Ninja vs. Gokudo",
-      "url": "https://www.anisearch.de/anime/20214,ninja-vs-gokudo",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20214_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-23T07:26:47.539864Z",
+  "timestamp": "2026-04-24T07:52:52.496779Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
