@@ -244,15 +244,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 18911,
-      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
-      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20461,
       "title": "Mistress Kanan Is Devilishly Easy",
       "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
@@ -354,6 +345,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 18911,
+      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
+      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20717,
       "title": "Das Band der Unterwelt",
       "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
@@ -646,15 +646,6 @@
       "title": "One-Punch Man: Staffel 3",
       "url": "https://www.anisearch.de/anime/17618,one-punch-man-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/17/17618_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18809,
-      "title": "Campfire Cooking in Another World with My Absurd Skill: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18809,campfire-cooking-in-another-world-with-my-absurd-skill-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18809_400.webp",
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
@@ -716,6 +707,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 18911,
+      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
+      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20717,
       "title": "Das Band der Unterwelt",
       "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
@@ -1011,18 +1011,9 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
-    },
-    {
-      "id": 18809,
-      "title": "Campfire Cooking in Another World with My Absurd Skill: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18809,campfire-cooking-in-another-world-with-my-absurd-skill-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18809_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-25T07:06:06.094555Z",
+  "timestamp": "2026-04-26T07:20:26.049355Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
