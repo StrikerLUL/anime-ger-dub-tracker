@@ -235,24 +235,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 19633,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20461,
-      "title": "Mistress Kanan Is Devilishly Easy",
-      "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20461_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20938,
       "title": "Marriagetoxin",
       "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
@@ -336,6 +318,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20461,
+      "title": "Mistress Kanan Is Devilishly Easy",
+      "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20461_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 21198,
       "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
       "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
@@ -367,6 +358,15 @@
       "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
       "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19633,
+      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -631,24 +631,6 @@
       "info": "Web, 9 (2025)",
       "year": 2025,
       "type": "Web"
-    },
-    {
-      "id": 20871,
-      "title": "Tatsuki Fujimoto 17–26",
-      "url": "https://www.anisearch.de/anime/20871,tatsuki-fujimoto-17-26",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20871_400.webp",
-      "info": "Film, 8 (2025)",
-      "year": 2025,
-      "type": "Film"
-    },
-    {
-      "id": 17618,
-      "title": "One-Punch Man: Staffel 3",
-      "url": "https://www.anisearch.de/anime/17618,one-punch-man-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17618_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
@@ -698,6 +680,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20461,
+      "title": "Mistress Kanan Is Devilishly Easy",
+      "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20461_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 21198,
       "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
       "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
@@ -729,6 +720,15 @@
       "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
       "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19633,
+      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -993,27 +993,9 @@
       "info": "Web, 9 (2025)",
       "year": 2025,
       "type": "Web"
-    },
-    {
-      "id": 20871,
-      "title": "Tatsuki Fujimoto 17–26",
-      "url": "https://www.anisearch.de/anime/20871,tatsuki-fujimoto-17-26",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20871_400.webp",
-      "info": "Film, 8 (2025)",
-      "year": 2025,
-      "type": "Film"
-    },
-    {
-      "id": 17618,
-      "title": "One-Punch Man: Staffel 3",
-      "url": "https://www.anisearch.de/anime/17618,one-punch-man-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17618_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-04-26T07:20:26.049355Z",
+  "timestamp": "2026-04-27T08:11:26.927320Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
