@@ -154,15 +154,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 19627,
-      "title": "Yandere Dark Elf: She Chased Me All the Way from Another World!",
-      "url": "https://www.anisearch.de/anime/19627,yandere-dark-elf-she-chased-me-all-the-way-from-another-world",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19627_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19121,
       "title": "Call of the Night: Season 2",
       "url": "https://www.anisearch.de/anime/19121,call-of-the-night-season-2",
@@ -995,7 +986,7 @@
       "type": "Web"
     }
   ],
-  "timestamp": "2026-04-27T08:11:26.927320Z",
+  "timestamp": "2026-04-28T08:12:52.569768Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
