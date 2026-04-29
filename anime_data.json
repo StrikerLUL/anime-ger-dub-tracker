@@ -46,6 +46,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 10076,
+      "title": "Sound! Euphonium",
+      "url": "https://www.anisearch.de/anime/10076,sound-euphonium",
+      "image": "https://cdn.anisearch.de/images/anime/cover/10/10076_400.webp",
+      "info": "TV-Serie, 13 (2015)",
+      "year": 2015,
+      "type": "TV-Serie"
+    },
+    {
       "id": 10279,
       "title": "Doukyusei: Verliebt in meinen Mitschüler",
       "url": "https://www.anisearch.de/anime/10279,doukyusei-verliebt-in-meinen-mitschueler",
@@ -168,15 +177,6 @@
       "url": "https://www.anisearch.de/anime/19045,nukitashi-welcome-to-love-island",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19045_400.webp",
       "info": "TV-Serie, 11 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19764,
-      "title": "My Gift Lvl 9999 Unlimited Gacha: Backstabbed in a Backwater Dungeon, I’m Out for Revenge!",
-      "url": "https://www.anisearch.de/anime/19764,my-gift-lvl-9999-unlimited-gacha-backstabbed-in-a-backwater-dungeon-im-out-for-revenge",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19764_400.webp",
-      "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
     },
@@ -986,7 +986,7 @@
       "type": "Web"
     }
   ],
-  "timestamp": "2026-04-28T08:12:52.569768Z",
+  "timestamp": "2026-04-29T08:06:31.714108Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
