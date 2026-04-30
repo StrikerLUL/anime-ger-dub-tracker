@@ -226,24 +226,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20938,
-      "title": "Marriagetoxin",
-      "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20904,
-      "title": "Rent-a-Girlfriend: Staffel 5",
-      "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20904_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19669,
       "title": "The Warrior Princess and the Barbaric King",
       "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
@@ -291,6 +273,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20904,
+      "title": "Rent-a-Girlfriend: Staffel 5",
+      "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20904_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20938,
+      "title": "Marriagetoxin",
+      "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 17281,
       "title": "Atelier of Witch Hat",
       "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
@@ -433,6 +433,15 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    },
+    {
+      "id": 20379,
+      "title": "Medalist: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20379_400.webp",
+      "info": "TV-Serie, 9 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 21004,
@@ -595,33 +604,6 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film"
-    },
-    {
-      "id": 20983,
-      "title": "Jujutsu Kaisen: Execution",
-      "url": "https://www.anisearch.de/anime/20983,jujutsu-kaisen-execution",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20983_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film"
-    },
-    {
-      "id": 16886,
-      "title": "Disney Twisted-Wonderland: Die Serie - Episode of Heartslabyul",
-      "url": "https://www.anisearch.de/anime/16886,disney-twisted-wonderland-die-serie-episode-of-heartslabyul",
-      "image": "https://cdn.anisearch.de/images/anime/cover/16/16886_400.webp",
-      "info": "Web, 8 (2025)",
-      "year": 2025,
-      "type": "Web"
-    },
-    {
-      "id": 19922,
-      "title": "Star Wars: Visions Volume 3",
-      "url": "https://www.anisearch.de/anime/19922,star-wars-visions-volume-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19922_400.webp",
-      "info": "Web, 9 (2025)",
-      "year": 2025,
-      "type": "Web"
     }
   ],
   "abgeschlossen": [
@@ -653,6 +635,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20904,
+      "title": "Rent-a-Girlfriend: Staffel 5",
+      "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20904_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20938,
+      "title": "Marriagetoxin",
+      "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 17281,
       "title": "Atelier of Witch Hat",
       "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
@@ -795,6 +795,15 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    },
+    {
+      "id": 20379,
+      "title": "Medalist: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20379_400.webp",
+      "info": "TV-Serie, 9 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 21004,
@@ -957,36 +966,9 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film"
-    },
-    {
-      "id": 20983,
-      "title": "Jujutsu Kaisen: Execution",
-      "url": "https://www.anisearch.de/anime/20983,jujutsu-kaisen-execution",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20983_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film"
-    },
-    {
-      "id": 16886,
-      "title": "Disney Twisted-Wonderland: Die Serie - Episode of Heartslabyul",
-      "url": "https://www.anisearch.de/anime/16886,disney-twisted-wonderland-die-serie-episode-of-heartslabyul",
-      "image": "https://cdn.anisearch.de/images/anime/cover/16/16886_400.webp",
-      "info": "Web, 8 (2025)",
-      "year": 2025,
-      "type": "Web"
-    },
-    {
-      "id": 19922,
-      "title": "Star Wars: Visions Volume 3",
-      "url": "https://www.anisearch.de/anime/19922,star-wars-visions-volume-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19922_400.webp",
-      "info": "Web, 9 (2025)",
-      "year": 2025,
-      "type": "Web"
     }
   ],
-  "timestamp": "2026-04-29T08:06:31.714108Z",
+  "timestamp": "2026-04-30T08:10:00.045663Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
