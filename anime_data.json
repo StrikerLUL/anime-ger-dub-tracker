@@ -208,28 +208,10 @@
       "type": "Film"
     },
     {
-      "id": 20872,
-      "title": "Assassination Classroom: Our Time - The Movie",
-      "url": "https://www.anisearch.de/anime/20872,assassination-classroom-our-time-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20872_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
       "id": 19569,
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19669,
-      "title": "The Warrior Princess and the Barbaric King",
-      "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -264,6 +246,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19669,
+      "title": "The Warrior Princess and the Barbaric King",
+      "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20366,
       "title": "Re:Zero - Starting Life in Another World: Staffel 4",
       "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
@@ -397,6 +388,15 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
+    },
+    {
+      "id": 20872,
+      "title": "Assassination Classroom: Our Time - The Movie",
+      "url": "https://www.anisearch.de/anime/20872,assassination-classroom-our-time-the-movie",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20872_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
     },
     {
       "id": 20466,
@@ -586,24 +586,6 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20852,
-      "title": "Record of Ragnarok: Staffel 3",
-      "url": "https://www.anisearch.de/anime/20852,record-of-ragnarok-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20852_400.webp",
-      "info": "Web, 15 (2025)",
-      "year": 2025,
-      "type": "Web"
-    },
-    {
-      "id": 20000,
-      "title": "Scarlet",
-      "url": "https://www.anisearch.de/anime/20000,scarlet",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20000_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film"
     }
   ],
   "abgeschlossen": [
@@ -626,6 +608,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19669,
+      "title": "The Warrior Princess and the Barbaric King",
+      "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20366,
       "title": "Re:Zero - Starting Life in Another World: Staffel 4",
       "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
@@ -759,6 +750,15 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
+    },
+    {
+      "id": 20872,
+      "title": "Assassination Classroom: Our Time - The Movie",
+      "url": "https://www.anisearch.de/anime/20872,assassination-classroom-our-time-the-movie",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20872_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
     },
     {
       "id": 20466,
@@ -948,27 +948,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20852,
-      "title": "Record of Ragnarok: Staffel 3",
-      "url": "https://www.anisearch.de/anime/20852,record-of-ragnarok-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20852_400.webp",
-      "info": "Web, 15 (2025)",
-      "year": 2025,
-      "type": "Web"
-    },
-    {
-      "id": 20000,
-      "title": "Scarlet",
-      "url": "https://www.anisearch.de/anime/20000,scarlet",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20000_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film"
     }
   ],
-  "timestamp": "2026-04-30T08:10:00.045663Z",
+  "timestamp": "2026-05-01T08:05:38.796136Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
