@@ -199,15 +199,6 @@
       "type": "Film"
     },
     {
-      "id": 19634,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Der Film - Die Tränen des azurblauen Meeres",
-      "url": "https://www.anisearch.de/anime/19634,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-der-film-die-tranen-des-azurblauen-meeres",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19634_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
       "id": 19569,
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
@@ -228,6 +219,15 @@
   ],
   "aktuelle": [
     {
+      "id": 21118,
+      "title": "My Hero Academia: More",
+      "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21118_400.webp",
+      "info": "TV-Spezial, 1 (2026)",
+      "year": 2026,
+      "type": "TV-Spezial"
+    },
+    {
       "id": 21293,
       "title": "Dandelion",
       "url": "https://www.anisearch.de/anime/21293,dandelion",
@@ -313,6 +313,15 @@
       "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
       "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20808,
+      "title": "Akane-banashi",
+      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -415,6 +424,15 @@
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 19634,
+      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Der Film - Die Tränen des azurblauen Meeres",
+      "url": "https://www.anisearch.de/anime/19634,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-der-film-die-tranen-des-azurblauen-meeres",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19634_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
     },
     {
       "id": 19175,
@@ -557,39 +575,21 @@
       "url": "https://www.anisearch.de/anime/18483,golden-kamuy-final-season",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18483_400.webp",
       "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20687,
-      "title": "My Hero Academia: Vigilantes Staffel 2",
-      "url": "https://www.anisearch.de/anime/20687,my-hero-academia-vigilantes-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20687_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19267,
-      "title": "Hana-Kimi",
-      "url": "https://www.anisearch.de/anime/19267,hana-kimi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19267_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18551,
-      "title": "Sentenced to Be a Hero",
-      "url": "https://www.anisearch.de/anime/18551,sentenced-to-be-a-hero",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18551_400.webp",
-      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
     {
+      "id": 21118,
+      "title": "My Hero Academia: More",
+      "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21118_400.webp",
+      "info": "TV-Spezial, 1 (2026)",
+      "year": 2026,
+      "type": "TV-Spezial"
+    },
+    {
       "id": 21293,
       "title": "Dandelion",
       "url": "https://www.anisearch.de/anime/21293,dandelion",
@@ -675,6 +675,15 @@
       "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
       "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20808,
+      "title": "Akane-banashi",
+      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -777,6 +786,15 @@
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 19634,
+      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Der Film - Die Tränen des azurblauen Meeres",
+      "url": "https://www.anisearch.de/anime/19634,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-der-film-die-tranen-des-azurblauen-meeres",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19634_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
     },
     {
       "id": 19175,
@@ -921,36 +939,9 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20687,
-      "title": "My Hero Academia: Vigilantes Staffel 2",
-      "url": "https://www.anisearch.de/anime/20687,my-hero-academia-vigilantes-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20687_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19267,
-      "title": "Hana-Kimi",
-      "url": "https://www.anisearch.de/anime/19267,hana-kimi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19267_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18551,
-      "title": "Sentenced to Be a Hero",
-      "url": "https://www.anisearch.de/anime/18551,sentenced-to-be-a-hero",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18551_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-02T07:23:46.634714Z",
+  "timestamp": "2026-05-03T07:52:47.299042Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
