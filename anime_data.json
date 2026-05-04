@@ -206,15 +206,6 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19638,
-      "title": "Wistoria: Wand and Sword - Staffel 2",
-      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -235,6 +226,15 @@
       "info": "Web, 7 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 19638,
+      "title": "Wistoria: Wand and Sword - Staffel 2",
+      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 18686,
@@ -566,15 +566,6 @@
       "url": "https://www.anisearch.de/anime/19568,shiboyugi-das-phantom-madchen-im-spiel-des-todes",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19568_400.webp",
       "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18483,
-      "title": "Golden Kamuy: Final Season",
-      "url": "https://www.anisearch.de/anime/18483,golden-kamuy-final-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18483_400.webp",
-      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -599,6 +590,15 @@
       "type": "Web"
     },
     {
+      "id": 19638,
+      "title": "Wistoria: Wand and Sword - Staffel 2",
+      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 18686,
       "title": "Fist of the North Star: Hokuto No Ken",
       "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
@@ -930,18 +930,9 @@
       "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 18483,
-      "title": "Golden Kamuy: Final Season",
-      "url": "https://www.anisearch.de/anime/18483,golden-kamuy-final-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18483_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-03T07:52:47.299042Z",
+  "timestamp": "2026-05-04T08:22:09.453719Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
