@@ -946,12 +946,21 @@
         };
 
         // ─── Globaler State ──────────────────────────────────────────────
+        function getSafePageSize() {
+            try {
+                return parseInt(localStorage.getItem('premiumPageSize') || '24');
+            } catch (e) {
+                console.warn('LocalStorage nicht verfügbar', e);
+                return 24;
+            }
+        }
+
         const state = {
             animes: [],
             watchlist: [],
             filteredAnimes: [],
             currentPage: 1,
-            pageSize: parseInt(localStorage.getItem('premiumPageSize') || '24'),
+            pageSize: getSafePageSize(),
             currentTab: 'alle',
             dataSource: 'none',  // 'live' | 'cache' | 'demo'
             lastUpdate: null,
@@ -1150,37 +1159,51 @@
         }
 
         async function initializeAnimes() {
-            addLog('📡 Verbinde mit Server...');
+            try {
+                addLog('📡 Verbinde mit Server...');
 
-            // Quelle 1: Live-Server
-            const serverData = await loadFromServer();
-            if (serverData && (serverData.kommende || serverData.aktuelle)) {
-                applyDataToState(serverData, 'live');
-                startPolling();
-                return;
+                // Quelle 1: Live-Server
+                const serverData = await loadFromServer();
+                if (serverData && (serverData.kommende || serverData.aktuelle)) {
+                    applyDataToState(serverData, 'live');
+                    startPolling();
+                    return;
+                }
+
+                // Quelle 2: Gecachte JSON-Datei
+                addLog('⚠️ Server nicht verfügbar – versuche gecachte Daten...');
+                const cachedData = await loadFromCachedJson();
+                if (cachedData && (cachedData.kommende || cachedData.aktuelle)) {
+                    const age = cachedData.timestamp
+                        ? new Date(cachedData.timestamp).toLocaleString('de-DE')
+                        : 'unbekannt';
+                    addLog(`💾 Gecachte Daten geladen (Stand: ${age})`);
+                    applyDataToState(cachedData, 'cache');
+                    startPolling();  // Im Hintergrund auf Server warten
+                    return;
+                }
+
+                // Quelle 3: Demo-Daten
+                addLog('✨ Kein Server & kein Cache – nutze Demo-Datenbank');
+                applyDataToState({
+                    kommende:      KOMMENDE_DUBS,
+                    aktuelle:      AKTUELLE_DUBS,
+                    abgeschlossen: []
+                }, 'demo');
+                startPolling();  // Auf Server warten
+            } catch (err) {
+                console.error('Kritischer Fehler bei der Initialisierung:', err);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align:center;padding:40px;">
+                            <h2 style="font-family: var(--font-display); margin-bottom: 16px;">Es ist ein Fehler aufgetreten</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 24px;">Die Anwendung konnte nicht geladen werden.</p>
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
+                        </div>
+                    `;
+                }
             }
-
-            // Quelle 2: Gecachte JSON-Datei
-            addLog('⚠️ Server nicht verfügbar – versuche gecachte Daten...');
-            const cachedData = await loadFromCachedJson();
-            if (cachedData && (cachedData.kommende || cachedData.aktuelle)) {
-                const age = cachedData.timestamp
-                    ? new Date(cachedData.timestamp).toLocaleString('de-DE')
-                    : 'unbekannt';
-                addLog(`💾 Gecachte Daten geladen (Stand: ${age})`);
-                applyDataToState(cachedData, 'cache');
-                startPolling();  // Im Hintergrund auf Server warten
-                return;
-            }
-
-            // Quelle 3: Demo-Daten
-            addLog('✨ Kein Server & kein Cache – nutze Demo-Datenbank');
-            applyDataToState({
-                kommende:      KOMMENDE_DUBS,
-                aktuelle:      AKTUELLE_DUBS,
-                abgeschlossen: []
-            }, 'demo');
-            startPolling();  // Auf Server warten
         }
 
         // ─── Auto-Polling ─────────────────────────────────────────────
@@ -1389,7 +1412,11 @@
                 state.watchlist.push({ id, title });
                 showNotification(`Gemerkt: ${title}`);
             }
-            localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
+            try {
+                localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
+            } catch (e) {
+                console.warn('LocalStorage nicht verfügbar', e);
+            }
             if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
             updateStats();
             
@@ -1505,8 +1532,13 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('premiumWatchlist');
-            state.watchlist = saved ? JSON.parse(saved) : [];
+            try {
+                const saved = localStorage.getItem('premiumWatchlist');
+                state.watchlist = saved ? JSON.parse(saved) : [];
+            } catch (e) {
+                console.warn('LocalStorage nicht verfügbar', e);
+                state.watchlist = [];
+            }
 
             document.getElementById('searchInput').addEventListener('input', applyFilters);
             document.getElementById('sortSelect').addEventListener('change', applyFilters);
@@ -1514,7 +1546,11 @@
             document.getElementById('formatSelect').addEventListener('change', applyFilters);
             document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
                 state.pageSize = parseInt(e.target.value) || 24;
-                localStorage.setItem('premiumPageSize', state.pageSize);
+                try {
+                    localStorage.setItem('premiumPageSize', state.pageSize);
+                } catch (err) {
+                    console.warn('LocalStorage nicht verfügbar', err);
+                }
                 applyFilters();
             });
 
