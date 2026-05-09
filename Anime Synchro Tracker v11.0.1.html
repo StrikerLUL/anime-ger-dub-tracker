@@ -1508,6 +1508,28 @@
             const saved = localStorage.getItem('premiumWatchlist');
             state.watchlist = saved ? JSON.parse(saved) : [];
 
+            // Keyboard Shortcuts
+            document.addEventListener('keydown', (e) => {
+                // Ignore if user is typing in an input or select
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+                    if (e.key === 'Escape') {
+                        e.target.blur();
+                    }
+                    return;
+                }
+
+                if (e.key === '/') {
+                    e.preventDefault();
+                    const searchInput = document.getElementById('searchInput');
+                    if (searchInput) {
+                        searchInput.focus();
+                        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+
             document.getElementById('searchInput').addEventListener('input', applyFilters);
             document.getElementById('sortSelect').addEventListener('change', applyFilters);
             document.getElementById('yearSelect').addEventListener('change', applyFilters);
