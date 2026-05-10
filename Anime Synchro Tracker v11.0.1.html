@@ -1220,18 +1220,23 @@
         function startPolling() {
             if (state.pollTimer) return;
             state.pollTimer = setInterval(async () => {
-                const prev = state.dataSource;
-                const serverData = await loadFromServer();
-                if (serverData && (serverData.kommende || serverData.aktuelle)) {
-                    if (prev !== 'live' || serverData.scraping !== undefined) {
-                        applyDataToState(serverData, 'live');
+                try {
+                    const prev = state.dataSource;
+                    const serverData = await loadFromServer();
+                    if (serverData && (serverData.kommende || serverData.aktuelle)) {
+                        if (prev !== 'live' || serverData.scraping !== undefined) {
+                            applyDataToState(serverData, 'live');
+                        }
+                    } else if (prev === 'live') {
+                        // Server weg – zurück auf Cache oder Demo
+                        addLog('⚠️ Server-Verbindung verloren – Auto-Reconnect aktiv...');
+                        const cached = await loadFromCachedJson();
+                        if (cached) applyDataToState(cached, 'cache');
+                        else applyDataToState({ kommende: KOMMENDE_DUBS, aktuelle: AKTUELLE_DUBS, abgeschlossen: [] }, 'demo');
                     }
-                } else if (prev === 'live') {
-                    // Server weg – zurück auf Cache oder Demo
-                    addLog('⚠️ Server-Verbindung verloren – Auto-Reconnect aktiv...');
-                    const cached = await loadFromCachedJson();
-                    if (cached) applyDataToState(cached, 'cache');
-                    else applyDataToState({ kommende: KOMMENDE_DUBS, aktuelle: AKTUELLE_DUBS, abgeschlossen: [] }, 'demo');
+                } catch (error) {
+                    console.error('Fehler beim Auto-Polling:', error);
+                    addLog('❌ Fehler beim Aktualisieren der Daten im Hintergrund.');
                 }
             }, CONFIG.POLL_INTERVAL_MS);
         }
@@ -1332,86 +1337,102 @@
             const contentArea = document.getElementById('contentArea');
             if (!contentArea) return;
             
-            if (state.filteredAnimes.length === 0) {
+            try {
+                if (state.filteredAnimes.length === 0) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.7;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display);">Keine Animes gefunden</h2>
+                            <p>Versuche einen anderen Suchbegriff oder Tab.</p>
+                        </div>`;
+                    document.getElementById('pagination').innerHTML = '';
+                    return;
+                }
+
+                const start = (state.currentPage - 1) * state.pageSize;
+                const end = start + state.pageSize;
+                const paginated = state.filteredAnimes.slice(start, end);
+                const totalPages = Math.ceil(state.filteredAnimes.length / state.pageSize);
+
+                const html = paginated.map(anime => {
+                    const isWatchlisted = state.watchlist.some(w => w.id === anime.id);
+                    const isCurrent = anime.type === 'aktuell';
+
+                    const isAbgeschlossen = anime.type === 'abgeschlossen';
+                    const tagClass = isCurrent ? 'tag-aktuell' : isAbgeschlossen ? '' : 'tag-kommend';
+                    const tagText  = isCurrent ? '🔥 Kürzlich' : isAbgeschlossen ? '✅ Abgeschlossen' : '⏱️ Bald';
+                    const highLightClass = isCurrent ? 'recent' : 'soon';
+                    const tagStyle = isAbgeschlossen ? 'background:rgba(34,197,94,0.8);color:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;gap:4px;' : '';
+
+                    // Use real cover image from anisearch CDN, fallback to gradient bg
+                    const imgHtml = anime.image
+                        ? `<img src="${anime.image}" alt="${anime.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:12px 12px 0 0;" onerror="this.style.display='none'" />`
+                        : getAbstractBg(anime.id);
+
+                    return `
+                        <div class="anime-card" onclick="openModal('${anime.id}')">
+                            <div class="anime-image">
+                                ${imgHtml}
+                                <div class="floating-tags">
+                                    ${isAbgeschlossen
+                                        ? `<span style="${tagStyle}">${tagText}</span>`
+                                        : `<span class="tag-status ${tagClass}">${tagText}</span>`
+                                    }
+                                    <span class="episodes-badge">${anime.episodes} EP</span>
+                                </div>
+                            </div>
+                            <div class="anime-content">
+                                <div class="anime-title">${anime.title}</div>
+                                <div class="anime-meta">
+                                    <span>📅 ${anime.year}</span> • <span>📺 ${anime.format}</span>
+                                </div>
+                                <div class="anime-meta" style="margin-top:-6px;">
+                                    <span>${anime.type === 'aktuell' ? anime.info || 'Laufend' : anime.info || 'Geplant'}</span>
+                                </div>
+
+                                <div class="time-highlight ${isAbgeschlossen ? 'recent' : highLightClass}">
+                                    ${isCurrent ? '🟢 Synchronisation verfügbar' : isAbgeschlossen ? '✅ Deutsche Synchro abgeschlossen' : '⏳ Bald verfügbar'}
+                                </div>
+
+                                <div class="anime-actions">
+                                    <button onclick="event.stopPropagation(); toggleWatchlist('${anime.id}', '${anime.title}');" class="${isWatchlisted ? 'active' : ''}">
+                                        ${isWatchlisted ? '✓ In Watchlist' : '+ Watchlist'}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                contentArea.innerHTML = `<div class="anime-grid">${html}</div>`;
+
+                // Pagination
+                let paginationHtml = '';
+                // limit visible pages for huge lists
+                const maxPages = Math.min(totalPages, 7);
+                for (let i = 1; i <= maxPages; i++) {
+                    paginationHtml += `<button onclick="goToPage(${i})" class="${i === state.currentPage ? 'active' : ''}">${i}</button>`;
+                }
+                if (totalPages > maxPages) paginationHtml += `<button disabled>...</button><button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+
+                document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
+            } catch (error) {
+                console.error("Ein Fehler ist beim Rendern aufgetreten:", error);
                 contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.7;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line>
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
                         </svg>
-                        <h2 style="font-family: var(--font-display);">Keine Animes gefunden</h2>
-                        <p>Versuche einen anderen Suchbegriff oder Tab.</p>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, das hat nicht geklappt!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
                     </div>`;
                 document.getElementById('pagination').innerHTML = '';
-                return;
             }
-
-            const start = (state.currentPage - 1) * state.pageSize;
-            const end = start + state.pageSize;
-            const paginated = state.filteredAnimes.slice(start, end);
-            const totalPages = Math.ceil(state.filteredAnimes.length / state.pageSize);
-
-            const html = paginated.map(anime => {
-                const isWatchlisted = state.watchlist.some(w => w.id === anime.id);
-                const isCurrent = anime.type === 'aktuell';
-                
-                const isAbgeschlossen = anime.type === 'abgeschlossen';
-                const tagClass = isCurrent ? 'tag-aktuell' : isAbgeschlossen ? '' : 'tag-kommend';
-                const tagText  = isCurrent ? '🔥 Kürzlich' : isAbgeschlossen ? '✅ Abgeschlossen' : '⏱️ Bald';
-                const highLightClass = isCurrent ? 'recent' : 'soon';
-                const tagStyle = isAbgeschlossen ? 'background:rgba(34,197,94,0.8);color:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;gap:4px;' : '';
-
-                // Use real cover image from anisearch CDN, fallback to gradient bg
-                const imgHtml = anime.image
-                    ? `<img src="${anime.image}" alt="${anime.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:12px 12px 0 0;" onerror="this.style.display='none'" />`
-                    : getAbstractBg(anime.id);
-
-                return `
-                    <div class="anime-card" onclick="openModal('${anime.id}')">
-                        <div class="anime-image">
-                            ${imgHtml}
-                            <div class="floating-tags">
-                                ${isAbgeschlossen
-                                    ? `<span style="${tagStyle}">${tagText}</span>`
-                                    : `<span class="tag-status ${tagClass}">${tagText}</span>`
-                                }
-                                <span class="episodes-badge">${anime.episodes} EP</span>
-                            </div>
-                        </div>
-                        <div class="anime-content">
-                            <div class="anime-title">${anime.title}</div>
-                            <div class="anime-meta">
-                                <span>📅 ${anime.year}</span> • <span>📺 ${anime.format}</span>
-                            </div>
-                            <div class="anime-meta" style="margin-top:-6px;">
-                                <span>${anime.type === 'aktuell' ? anime.info || 'Laufend' : anime.info || 'Geplant'}</span>
-                            </div>
-                            
-                            <div class="time-highlight ${isAbgeschlossen ? 'recent' : highLightClass}">
-                                ${isCurrent ? '🟢 Synchronisation verfügbar' : isAbgeschlossen ? '✅ Deutsche Synchro abgeschlossen' : '⏳ Bald verfügbar'}
-                            </div>
-
-                            <div class="anime-actions">
-                                <button onclick="event.stopPropagation(); toggleWatchlist('${anime.id}', '${anime.title}');" class="${isWatchlisted ? 'active' : ''}">
-                                    ${isWatchlisted ? '✓ In Watchlist' : '+ Watchlist'}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-            
-            contentArea.innerHTML = `<div class="anime-grid">${html}</div>`;
-
-            // Pagination
-            let paginationHtml = '';
-            // limit visible pages for huge lists
-            const maxPages = Math.min(totalPages, 7); 
-            for (let i = 1; i <= maxPages; i++) {
-                paginationHtml += `<button onclick="goToPage(${i})" class="${i === state.currentPage ? 'active' : ''}">${i}</button>`;
-            }
-            if (totalPages > maxPages) paginationHtml += `<button disabled>...</button><button onclick="goToPage(${totalPages})">${totalPages}</button>`;
-            
-            document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
         }
 
         // Just a helper to generate unique looking abstract backgrounds for images since we don't have URLs
