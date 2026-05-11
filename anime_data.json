@@ -197,15 +197,6 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 19569,
-      "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
-      "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -376,6 +367,15 @@
       "title": "The Ramparts of Ice",
       "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19569,
+      "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
+      "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -557,15 +557,6 @@
       "url": "https://www.anisearch.de/anime/19295,darwins-incident",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19295_400.webp",
       "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19568,
-      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes",
-      "url": "https://www.anisearch.de/anime/19568,shiboyugi-das-phantom-madchen-im-spiel-des-todes",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19568_400.webp",
-      "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -743,6 +734,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19569,
+      "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
+      "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 18998,
       "title": "Dorohedoro: Staffel 2",
       "url": "https://www.anisearch.de/anime/18998,dorohedoro-staffel-2",
@@ -921,18 +921,9 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19568,
-      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes",
-      "url": "https://www.anisearch.de/anime/19568,shiboyugi-das-phantom-madchen-im-spiel-des-todes",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19568_400.webp",
-      "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-10T08:01:16.380559Z",
+  "timestamp": "2026-05-11T09:30:08.876568Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
