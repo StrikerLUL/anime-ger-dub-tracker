@@ -794,6 +794,40 @@
         .scraping-indicator.visible { display: inline-flex; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
 
+        /* Tooltip */
+        .anime-tooltip {
+            position: fixed;
+            background: var(--bg-accent);
+            border: 1px solid var(--glass-border-highlight);
+            border-radius: 12px;
+            padding: 16px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            color: var(--text-main);
+            font-family: var(--font-body);
+        }
+
+        .anime-tooltip h3 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .anime-tooltip .tooltip-detail {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         @media (max-width: 768px) {
             .header-content { flex-direction: column; align-items: flex-start; }
             .header-right { width: 100%; justify-content: space-between; }
@@ -1372,7 +1406,12 @@
                         : getAbstractBg(anime.id);
 
                     return `
-                        <div class="anime-card" onclick="openModal('${anime.id}')">
+                        <div class="anime-card" onclick="openModal('${anime.id}')"
+                             data-title="${anime.title ? anime.title.replace(/"/g, '&quot;') : ''}"
+                             data-format="${anime.format || ''}"
+                             data-episodes="${anime.episodes || ''}"
+                             data-status="${anime.info || anime.status || ''}"
+                             data-year="${anime.year || ''}">
                             <div class="anime-image">
                                 ${imgHtml}
                                 <div class="floating-tags">
@@ -1640,6 +1679,58 @@
                 applyFilters();
             });
 
+            // Tooltip Logic
+            const tooltip = document.getElementById('animeTooltip');
+            let currentCard = null;
+
+            document.body.addEventListener('mouseover', (e) => {
+                const card = e.target.closest('.anime-card');
+                if (card && currentCard !== card) {
+                    currentCard = card;
+                    const title = card.dataset.title || 'Unbekannt';
+                    const format = card.dataset.format || '?';
+                    const episodes = card.dataset.episodes || '?';
+                    const status = card.dataset.status || '?';
+                    const year = card.dataset.year || '?';
+
+                    tooltip.innerHTML = `
+                        <h3>${title}</h3>
+                        <div class="tooltip-detail"><span>📺</span> Format: ${format}</div>
+                        <div class="tooltip-detail"><span>🎬</span> Episoden: ${episodes}</div>
+                        <div class="tooltip-detail"><span>📅</span> Jahr: ${year}</div>
+                        <div class="tooltip-detail"><span>ℹ️</span> Status: ${status}</div>
+                    `;
+                    tooltip.style.opacity = '1';
+                }
+            });
+
+            document.body.addEventListener('mousemove', (e) => {
+                if (currentCard && tooltip.style.opacity === '1') {
+                    const offset = 15;
+                    let left = e.clientX + offset;
+                    let top = e.clientY + offset;
+
+                    const rect = tooltip.getBoundingClientRect();
+                    if (left + rect.width > window.innerWidth) {
+                        left = e.clientX - rect.width - offset;
+                    }
+                    if (top + rect.height > window.innerHeight) {
+                        top = e.clientY - rect.height - offset;
+                    }
+
+                    tooltip.style.left = `${left}px`;
+                    tooltip.style.top = `${top}px`;
+                }
+            });
+
+            document.body.addEventListener('mouseout', (e) => {
+                const card = e.target.closest('.anime-card');
+                if (card && !card.contains(e.relatedTarget)) {
+                    currentCard = null;
+                    tooltip.style.opacity = '0';
+                }
+            });
+
             document.getElementById('refreshBtn').addEventListener('click', () => {
                 addLog('🔄 Manueller Resync...');
                 manualRefresh();
@@ -1726,5 +1817,6 @@ GitHub: https://github.com/StrikerLUL/anime-ger-dub-tracker.git
 
 
 -->
+    <div id="animeTooltip" class="anime-tooltip"></div>
 </body>
 </html>
