@@ -201,6 +201,15 @@
   ],
   "aktuelle": [
     {
+      "id": 20916,
+      "title": "Devil May Cry: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20916_400.webp",
+      "info": "Web, 8 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 21118,
       "title": "My Hero Academia: More",
       "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
@@ -548,21 +557,21 @@
       "url": "https://www.anisearch.de/anime/18987,jujutsu-kaisen-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18987_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19295,
-      "title": "Darwin’s Incident",
-      "url": "https://www.anisearch.de/anime/19295,darwins-incident",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19295_400.webp",
-      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
     {
+      "id": 20916,
+      "title": "Devil May Cry: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20916_400.webp",
+      "info": "Web, 8 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 21118,
       "title": "My Hero Academia: More",
       "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
@@ -912,18 +921,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19295,
-      "title": "Darwin’s Incident",
-      "url": "https://www.anisearch.de/anime/19295,darwins-incident",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19295_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-12T08:30:47.373137Z",
+  "timestamp": "2026-05-13T08:37:22.771061Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
