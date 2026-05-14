@@ -1372,7 +1372,7 @@
                         : getAbstractBg(anime.id);
 
                     return `
-                        <div class="anime-card" onclick="openModal('${anime.id}')">
+                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)">
                             <div class="anime-image">
                                 ${imgHtml}
                                 <div class="floating-tags">
