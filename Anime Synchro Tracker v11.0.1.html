@@ -742,6 +742,55 @@
         .api-status.offline { background: rgba(239, 68, 68, 0.15);  color: #f87171; }
         .api-status.loading { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
 
+        /* Tooltip */
+        .global-tooltip {
+            position: fixed;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0;
+            display: none;
+            background: var(--bg-accent);
+            border: 1px solid var(--glass-border-highlight);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
+            backdrop-filter: blur(12px);
+            max-width: 300px;
+            color: var(--text-main);
+            transition: opacity 0.2s ease, transform 0.1s ease-out;
+            transform: translate(0, 10px);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .global-tooltip.visible {
+            opacity: 1;
+            display: block;
+            transform: translate(0, 0);
+        }
+
+        .global-tooltip h4 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+            background: linear-gradient(135deg, #e8b0ff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .global-tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .global-tooltip-label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
         /* Offline Info Banner */
         .offline-banner {
             display: none;
@@ -927,6 +976,7 @@
     </div>
 
     <div id="notification"></div>
+    <div id="globalTooltip" class="global-tooltip"></div>
 
     <script>
         // ─── Konfiguration ───────────────────────────────────────────────
@@ -1372,7 +1422,7 @@
                         : getAbstractBg(anime.id);
 
                     return `
-                        <div class="anime-card" onclick="openModal('${anime.id}')">
+                        <div class="anime-card" onclick="openModal('${anime.id}')" onmouseenter="showTooltip(event, '${anime.id}')" onmouseleave="hideTooltip()" onmousemove="moveTooltip(event)">
                             <div class="anime-image">
                                 ${imgHtml}
                                 <div class="floating-tags">
@@ -1512,6 +1562,69 @@
 
         function closeModal() {
             document.getElementById('detailsModal').classList.remove('active');
+        }
+
+        let tooltipHideTimeout;
+
+        function showTooltip(event, id) {
+            clearTimeout(tooltipHideTimeout);
+            const anime = state.animes.find(a => a.id === id);
+            if (!anime) return;
+
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip) return;
+
+            let infoHtml = `<h4>${anime.title}</h4>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
+
+            if (anime.info) {
+                infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+            }
+
+            tooltip.innerHTML = infoHtml;
+            tooltip.style.display = 'block';
+
+            // force reflow before opacity
+            void tooltip.offsetWidth;
+            tooltip.classList.add('visible');
+
+            moveTooltip(event);
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip) return;
+            tooltip.classList.remove('visible');
+            // wait for transition before display:none
+            tooltipHideTimeout = setTimeout(() => {
+                tooltip.style.display = 'none';
+            }, 200);
+        }
+
+        function moveTooltip(event) {
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip || tooltip.style.display === 'none') return;
+
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const margin = 15;
+
+            let top = event.clientY + 20;
+            let left = event.clientX + 20;
+
+            // Check boundaries
+            if (left + tooltipRect.width > window.innerWidth - margin) {
+                left = event.clientX - tooltipRect.width - 20;
+            }
+
+            if (top + tooltipRect.height > window.innerHeight - margin) {
+                top = event.clientY - tooltipRect.height - 20;
+            }
+
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
         }
 
         function goToPage(page) {
