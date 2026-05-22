@@ -154,15 +154,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 19259,
-      "title": "Kakushite! Makina-san!!",
-      "url": "https://www.anisearch.de/anime/19259,kakushite-makina-san",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19259_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19121,
       "title": "Call of the Night: Season 2",
       "url": "https://www.anisearch.de/anime/19121,call-of-the-night-season-2",
@@ -923,7 +914,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-21T09:26:32.717572Z",
+  "timestamp": "2026-05-22T08:52:52.600237Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
