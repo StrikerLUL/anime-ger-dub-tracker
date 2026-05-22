@@ -951,6 +951,8 @@
                 return parseInt(localStorage.getItem('premiumPageSize') || '24');
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                // Cannot call showNotification here since DOM might not be fully loaded,
+                // and it's called during state initialization.
                 return 24;
             }
         }
@@ -1029,7 +1031,10 @@
                     if (data.error) return null;  // Server da, aber Daten noch nicht bereit
                     return data;
                 }
-            } catch (e) { /* Server offline */ }
+            } catch (e) {
+                /* Server offline */
+                showNotification('Fehler beim Verbinden mit dem Server');
+            }
             return null;
         }
 
@@ -1045,7 +1050,10 @@
                             return data;
                         }
                     }
-                } catch (e) { /* GitHub nicht erreichbar */ }
+                } catch (e) {
+                    /* GitHub nicht erreichbar */
+                    showNotification('Fehler beim Laden der gecachten Daten');
+                }
             }
 
             // Quelle B: Lokale anime_data.json (via Flask-Server oder selber Domain)
@@ -1058,7 +1066,10 @@
                         return data;
                     }
                 }
-            } catch (e) { /* kein Server */ }
+            } catch (e) {
+                /* kein Server */
+                showNotification('Fehler beim Laden der gecachten Daten');
+            }
             return null;
         }
 
@@ -1248,7 +1259,10 @@
                 await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
                 addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
                 document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } catch(e) { /* kein Server */ }
+            } catch(e) {
+                /* kein Server */
+                showNotification('Fehler beim manuellen Refresh');
+            }
             await initializeAnimes();
         }
 
@@ -1299,6 +1313,7 @@
                 localStorage.setItem('premiumTab', state.currentTab);
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Speichern der Filter');
             }
 
             let result = state.animes.filter(anime => {
@@ -1456,6 +1471,7 @@
                 localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Speichern der Watchlist');
             }
             if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
             updateStats();
@@ -1601,6 +1617,7 @@
                 }
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Laden der Einstellungen');
                 state.watchlist = [];
             }
 
@@ -1636,6 +1653,7 @@
                     localStorage.setItem('premiumPageSize', state.pageSize);
                 } catch (err) {
                     console.warn('LocalStorage nicht verfügbar', err);
+                    showNotification('Fehler beim Speichern der Seitengröße');
                 }
                 applyFilters();
             });
