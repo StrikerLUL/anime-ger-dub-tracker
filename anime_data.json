@@ -10,6 +10,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 6356,
+      "title": "Inazuma Eleven: The Movie - Team Oger greift an",
+      "url": "https://www.anisearch.de/anime/6356,inazuma-eleven-the-movie-team-oger-greift-an",
+      "image": "https://cdn.anisearch.de/images/anime/cover/6/6356_400.webp",
+      "info": "Film, 1 (2010)",
+      "year": 2010,
+      "type": "Film"
+    },
+    {
       "id": 7582,
       "title": "Good Luck Girl!",
       "url": "https://www.anisearch.de/anime/7582,good-luck-girl",
@@ -914,7 +923,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-22T08:52:52.600237Z",
+  "timestamp": "2026-05-23T08:09:45.636363Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
