@@ -1102,79 +1102,98 @@
         // ─── Datenladen & Initialisierung ─────────────────────────────
 
         function applyDataToState(data, source) {
-            const kommendeData      = data.kommende      || [];
-            const aktuelleData      = data.aktuelle      || [];
-            const abgeschlossenData = data.abgeschlossen || [];
+            try {
+                const kommendeData      = data.kommende      || [];
+                const aktuelleData      = data.aktuelle      || [];
+                const abgeschlossenData = data.abgeschlossen || [];
 
-            const allAnimes = [
-                ...kommendeData.map((a, i)      => normalizeAnime(a, i, 'kommend')),
-                ...aktuelleData.map((a, i)      => normalizeAnime(a, i, 'aktuell')),
-                ...abgeschlossenData.map((a, i) => normalizeAnime(a, i, 'abgeschlossen')),
-            ];
+                const allAnimes = [
+                    ...kommendeData.map((a, i)      => normalizeAnime(a, i, 'kommend')),
+                    ...aktuelleData.map((a, i)      => normalizeAnime(a, i, 'aktuell')),
+                    ...abgeschlossenData.map((a, i) => normalizeAnime(a, i, 'abgeschlossen')),
+                ];
 
-            const prevSource = state.dataSource;
-            state.animes     = allAnimes;
-            state.dataSource = source;
-            state.lastUpdate = new Date().toLocaleString('de-DE');
-            state.hasAbgeschlossen = abgeschlossenData.length > 0;
+                const prevSource = state.dataSource;
+                state.animes     = allAnimes;
+                state.dataSource = source;
+                state.lastUpdate = new Date().toLocaleString('de-DE');
+                state.hasAbgeschlossen = abgeschlossenData.length > 0;
 
-            // Dynamisch Jahr und Format Dropdowns befüllen
-            const yearSelect = document.getElementById('yearSelect');
-            const formatSelect = document.getElementById('formatSelect');
-            if (yearSelect && formatSelect && allAnimes.length > 0) {
-                const years = [...new Set(allAnimes.map(a => a.year).filter(y => y > 0))].sort((a,b) => b - a);
-                const formats = [...new Set(allAnimes.map(a => a.format).filter(Boolean))].sort();
+                // Dynamisch Jahr und Format Dropdowns befüllen
+                const yearSelect = document.getElementById('yearSelect');
+                const formatSelect = document.getElementById('formatSelect');
+                if (yearSelect && formatSelect && allAnimes.length > 0) {
+                    const years = [...new Set(allAnimes.map(a => a.year).filter(y => y > 0))].sort((a,b) => b - a);
+                    const formats = [...new Set(allAnimes.map(a => a.format).filter(Boolean))].sort();
 
-                let savedYear = null;
-                let savedFormat = null;
-                try {
-                    savedYear = localStorage.getItem('premiumYear');
-                    savedFormat = localStorage.getItem('premiumFormat');
-                } catch (e) {
-                    // Ignore
+                    let savedYear = null;
+                    let savedFormat = null;
+                    try {
+                        savedYear = localStorage.getItem('premiumYear');
+                        savedFormat = localStorage.getItem('premiumFormat');
+                    } catch (e) {
+                        // Ignore
+                    }
+
+                    const currYear = savedYear !== null ? savedYear : yearSelect.value;
+                    const currFormat = savedFormat !== null ? savedFormat : formatSelect.value;
+
+                    yearSelect.innerHTML = '<option value="all">Alle Jahre</option>' +
+                        years.map(y => `<option value="${y}">${y}</option>`).join('');
+                    formatSelect.innerHTML = '<option value="all">Alle Formate</option>' +
+                        formats.map(f => `<option value="${f}">${f}</option>`).join('');
+
+                    if (currYear === 'all' || years.includes(parseInt(currYear))) yearSelect.value = currYear;
+                    if (currFormat === 'all' || formats.includes(currFormat)) formatSelect.value = currFormat;
                 }
 
-                const currYear = savedYear !== null ? savedYear : yearSelect.value;
-                const currFormat = savedFormat !== null ? savedFormat : formatSelect.value;
+                // Zeige/Verstecke Abgeschlossen-Tab
+                const tabAbs = document.getElementById('tabAbgeschlossen');
+                if (tabAbs) tabAbs.style.display = state.hasAbgeschlossen ? '' : 'none';
 
-                yearSelect.innerHTML = '<option value="all">Alle Jahre</option>' + 
-                    years.map(y => `<option value="${y}">${y}</option>`).join('');
-                formatSelect.innerHTML = '<option value="all">Alle Formate</option>' + 
-                    formats.map(f => `<option value="${f}">${f}</option>`).join('');
+                applyFilters();
+                updateStats();
+                updateApiStatus();
+                updateOfflineBanner();
 
-                if (currYear === 'all' || years.includes(parseInt(currYear))) yearSelect.value = currYear;
-                if (currFormat === 'all' || formats.includes(currFormat)) formatSelect.value = currFormat;
-            }
-
-            // Zeige/Verstecke Abgeschlossen-Tab
-            const tabAbs = document.getElementById('tabAbgeschlossen');
-            if (tabAbs) tabAbs.style.display = state.hasAbgeschlossen ? '' : 'none';
-
-            applyFilters();
-            updateStats();
-            updateApiStatus();
-            updateOfflineBanner();
-
-            if (prevSource !== source) {
-                const ts = data.timestamp
-                    ? new Date(data.timestamp).toLocaleString('de-DE')
-                    : '';
-                const msgs = {
-                    live:   `🌐 Live-Daten: ${kommendeData.length} geplant · ${aktuelleData.length} aktuell · ${abgeschlossenData.length} abgeschl.`,
-                    github: `🐙 GitHub Actions Daten (${ts}): ${allAnimes.length} Anime`,
-                    cache:  `💾 Gecachte Daten: ${allAnimes.length} Anime (Starte Server für Live-Daten)`,
-                    demo:   `✨ Demo-Modus – ${allAnimes.length} Animes`
-                };
-                addLog(msgs[source] || '');
-                if (source === 'live' && prevSource !== 'live') {
-                    showNotification('🔴 Live-Daten von anisearch.de geladen! 🎉');
+                if (prevSource !== source) {
+                    const ts = data.timestamp
+                        ? new Date(data.timestamp).toLocaleString('de-DE')
+                        : '';
+                    const msgs = {
+                        live:   `🌐 Live-Daten: ${kommendeData.length} geplant · ${aktuelleData.length} aktuell · ${abgeschlossenData.length} abgeschl.`,
+                        github: `🐙 GitHub Actions Daten (${ts}): ${allAnimes.length} Anime`,
+                        cache:  `💾 Gecachte Daten: ${allAnimes.length} Anime (Starte Server für Live-Daten)`,
+                        demo:   `✨ Demo-Modus – ${allAnimes.length} Animes`
+                    };
+                    addLog(msgs[source] || '');
+                    if (source === 'live' && prevSource !== 'live') {
+                        showNotification('🔴 Live-Daten von anisearch.de geladen! 🎉');
+                    }
                 }
-            }
 
-            if (data.scraping) {
-                document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } else {
-                document.getElementById('scrapingIndicator')?.classList.remove('visible');
+                if (data.scraping) {
+                    document.getElementById('scrapingIndicator')?.classList.add('visible');
+                } else {
+                    document.getElementById('scrapingIndicator')?.classList.remove('visible');
+                }
+            } catch (err) {
+                console.error("Kritischer Fehler in applyDataToState:", err);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist bei der Datenverarbeitung aufgetreten!</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten leider nicht verarbeitet werden.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                    document.getElementById('pagination').innerHTML = '';
+                }
             }
         }
 
@@ -1586,6 +1605,36 @@
                 }
             });
         }
+
+        // Globale Fehlerbehandlung für unvorhergesehene Abstürze
+        function renderGlobalError(errorMsg) {
+            const contentArea = document.getElementById('contentArea');
+            if (!contentArea) return;
+
+            contentArea.innerHTML = `
+                <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                        <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein unerwarteter Fehler ist aufgetreten!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anwendung konnte leider nicht weiter ausgeführt werden. Bitte lade die Seite neu.</p>
+                    <p style="color: var(--text-muted); font-size: 12px; margin-bottom: 20px;">Details: ${errorMsg}</p>
+                    <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                        🔄 Seite neu laden
+                    </button>
+                </div>`;
+            document.getElementById('pagination').innerHTML = '';
+        }
+
+        window.addEventListener('error', (event) => {
+            console.error('Ungefangener Fehler:', event.error || event.message);
+            renderGlobalError(event.message || 'Unbekannter Fehler');
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unbehandeltes Promise Reject:', event.reason);
+            renderGlobalError(event.reason?.message || 'Unbekannter Fehler bei Netzwerk/API');
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             try {
