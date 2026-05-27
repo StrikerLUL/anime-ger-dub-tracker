@@ -10,6 +10,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 6356,
+      "title": "Inazuma Eleven: The Movie - Team Oger greift an",
+      "url": "https://www.anisearch.de/anime/6356,inazuma-eleven-the-movie-team-oger-greift-an",
+      "image": "https://cdn.anisearch.de/images/anime/cover/6/6356_400.webp",
+      "info": "Film, 1 (2010)",
+      "year": 2010,
+      "type": "Film"
+    },
+    {
       "id": 7582,
       "title": "Good Luck Girl!",
       "url": "https://www.anisearch.de/anime/7582,good-luck-girl",
@@ -154,15 +163,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 19259,
-      "title": "Kakushite! Makina-san!!",
-      "url": "https://www.anisearch.de/anime/19259,kakushite-makina-san",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19259_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19121,
       "title": "Call of the Night: Season 2",
       "url": "https://www.anisearch.de/anime/19121,call-of-the-night-season-2",
@@ -197,186 +197,195 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    }
+  ],
+  "aktuelle": [
+    {
+      "id": 20916,
+      "title": "Devil May Cry: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20916_400.webp",
+      "info": "Web, 8 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
+      "id": 21118,
+      "title": "My Hero Academia: More",
+      "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21118_400.webp",
+      "info": "TV-Spezial, 1 (2026)",
+      "year": 2026,
+      "type": "TV-Spezial"
+    },
+    {
+      "id": 21293,
+      "title": "Dandelion",
+      "url": "https://www.anisearch.de/anime/21293,dandelion",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21293_400.webp",
+      "info": "Web, 7 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
+      "id": 19638,
+      "title": "Wistoria: Wand and Sword - Staffel 2",
+      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 18686,
+      "title": "Fist of the North Star: Hokuto No Ken",
+      "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18686_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19669,
+      "title": "The Warrior Princess and the Barbaric King",
+      "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20366,
+      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
+      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
+      "info": "TV-Serie, 19 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20904,
+      "title": "Rent-a-Girlfriend: Staffel 5",
+      "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20904_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20938,
+      "title": "Marriagetoxin",
+      "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 17281,
+      "title": "Atelier of Witch Hat",
+      "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19486,
+      "title": "Rooster Fighter",
+      "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19486_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20461,
+      "title": "Mistress Kanan Is Devilishly Easy",
+      "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20461_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21198,
+      "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
+      "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20808,
+      "title": "Akane-banashi",
+      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 18911,
+      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
+      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20717,
+      "title": "Das Band der Unterwelt",
+      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19776,
+      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19633,
+      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
+      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
+      "info": "TV-Serie, 24 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20917,
+      "title": "Dr. Stone: Science Future - Cour 3",
+      "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20917_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20149,
+      "title": "The Ramparts of Ice",
+      "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 19569,
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    }
-  ],
-  "aktuelle": [
-    {
-      "id": 21118,
-      "title": "My Hero Academia: More",
-      "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21118_400.webp",
-      "info": "TV-Spezial, 1 (2026)",
-      "year": 2026,
-      "type": "TV-Spezial"
-    },
-    {
-      "id": 21293,
-      "title": "Dandelion",
-      "url": "https://www.anisearch.de/anime/21293,dandelion",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21293_400.webp",
-      "info": "Web, 7 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 19638,
-      "title": "Wistoria: Wand and Sword - Staffel 2",
-      "url": "https://www.anisearch.de/anime/19638,wistoria-wand-and-sword-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19638_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18686,
-      "title": "Fist of the North Star: Hokuto No Ken",
-      "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18686_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19669,
-      "title": "The Warrior Princess and the Barbaric King",
-      "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19669_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20366,
-      "title": "Re:Zero - Starting Life in Another World: Staffel 4",
-      "url": "https://www.anisearch.de/anime/20366,re-zero-starting-life-in-another-world-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20366_400.webp",
-      "info": "TV-Serie, 19 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20904,
-      "title": "Rent-a-Girlfriend: Staffel 5",
-      "url": "https://www.anisearch.de/anime/20904,rent-a-girlfriend-staffel-5",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20904_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20938,
-      "title": "Marriagetoxin",
-      "url": "https://www.anisearch.de/anime/20938,marriagetoxin",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20938_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 17281,
-      "title": "Atelier of Witch Hat",
-      "url": "https://www.anisearch.de/anime/17281,atelier-of-witch-hat",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17281_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19486,
-      "title": "Rooster Fighter",
-      "url": "https://www.anisearch.de/anime/19486,rooster-fighter",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19486_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20461,
-      "title": "Mistress Kanan Is Devilishly Easy",
-      "url": "https://www.anisearch.de/anime/20461,mistress-kanan-is-devilishly-easy",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20461_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 21198,
-      "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
-      "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20808,
-      "title": "Akane-banashi",
-      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18911,
-      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
-      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20717,
-      "title": "Das Band der Unterwelt",
-      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19776,
-      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19633,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20917,
-      "title": "Dr. Stone: Science Future - Cour 3",
-      "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20917_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20149,
-      "title": "The Ramparts of Ice",
-      "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -548,30 +557,21 @@
       "url": "https://www.anisearch.de/anime/18987,jujutsu-kaisen-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18987_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19295,
-      "title": "Darwin’s Incident",
-      "url": "https://www.anisearch.de/anime/19295,darwins-incident",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19295_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19568,
-      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes",
-      "url": "https://www.anisearch.de/anime/19568,shiboyugi-das-phantom-madchen-im-spiel-des-todes",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19568_400.webp",
-      "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
     {
+      "id": 20916,
+      "title": "Devil May Cry: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20916_400.webp",
+      "info": "Web, 8 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 21118,
       "title": "My Hero Academia: More",
       "url": "https://www.anisearch.de/anime/21118,my-hero-academia-more",
@@ -739,6 +739,15 @@
       "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
       "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19569,
+      "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
+      "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
+      "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -912,27 +921,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19295,
-      "title": "Darwin’s Incident",
-      "url": "https://www.anisearch.de/anime/19295,darwins-incident",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19295_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19568,
-      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes",
-      "url": "https://www.anisearch.de/anime/19568,shiboyugi-das-phantom-madchen-im-spiel-des-todes",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19568_400.webp",
-      "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-10T08:01:16.380559Z",
+  "timestamp": "2026-05-27T09:34:27.821094Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
