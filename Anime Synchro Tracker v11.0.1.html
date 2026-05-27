@@ -742,6 +742,55 @@
         .api-status.offline { background: rgba(239, 68, 68, 0.15);  color: #f87171; }
         .api-status.loading { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
 
+        /* Tooltip */
+        .global-tooltip {
+            position: fixed;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0;
+            display: none;
+            background: var(--bg-accent);
+            border: 1px solid var(--glass-border-highlight);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
+            backdrop-filter: blur(12px);
+            max-width: 300px;
+            color: var(--text-main);
+            transition: opacity 0.2s ease, transform 0.1s ease-out;
+            transform: translate(0, 10px);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .global-tooltip.visible {
+            opacity: 1;
+            display: block;
+            transform: translate(0, 0);
+        }
+
+        .global-tooltip h4 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+            background: linear-gradient(135deg, #e8b0ff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .global-tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .global-tooltip-label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
         /* Offline Info Banner */
         .offline-banner {
             display: none;
@@ -793,6 +842,40 @@
         }
         .scraping-indicator.visible { display: inline-flex; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+        /* Tooltip */
+        .anime-tooltip {
+            position: fixed;
+            background: var(--bg-accent);
+            border: 1px solid var(--glass-border-highlight);
+            border-radius: 12px;
+            padding: 16px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            color: var(--text-main);
+            font-family: var(--font-body);
+        }
+
+        .anime-tooltip h3 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .anime-tooltip .tooltip-detail {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
         @media (max-width: 768px) {
             .header-content { flex-direction: column; align-items: flex-start; }
@@ -927,6 +1010,7 @@
     </div>
 
     <div id="notification"></div>
+    <div id="globalTooltip" class="global-tooltip"></div>
 
     <script>
         // ─── Global Error Handling ─────────────────────────────────────────
@@ -1055,11 +1139,12 @@
         async function loadFromServer() {
             try {
                 const response = await fetchWithTimeout(CONFIG.API_ENDPOINT, CONFIG.FETCH_TIMEOUT_MS);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.error) return null;  // Server da, aber Daten noch nicht bereit
-                    return data;
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
                 }
+                const data = await response.json();
+                if (data.error) return null;  // Server da, aber Daten noch nicht bereit
+                return data;
             } catch (e) {
                 /* Server offline */
                 showNotification('Fehler beim Verbinden mit dem Server');
@@ -1072,12 +1157,13 @@
             if (CONFIG.GITHUB_RAW_URL) {
                 try {
                     const response = await fetchWithTimeout(CONFIG.GITHUB_RAW_URL, 8000);
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data.kommende || data.aktuelle) {
-                            data.source = 'github';
-                            return data;
-                        }
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    if (data.kommende || data.aktuelle) {
+                        data.source = 'github';
+                        return data;
                     }
                 } catch (e) {
                     /* GitHub nicht erreichbar */
@@ -1088,12 +1174,13 @@
             // Quelle B: Lokale anime_data.json (via Flask-Server oder selber Domain)
             try {
                 const response = await fetchWithTimeout(CONFIG.SERVER_URL + '/' + CONFIG.JSON_CACHE, 3000);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.kommende || data.aktuelle) {
-                        data.source = 'cache';
-                        return data;
-                    }
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.kommende || data.aktuelle) {
+                    data.source = 'cache';
+                    return data;
                 }
             } catch (e) {
                 /* kein Server */
@@ -1217,6 +1304,28 @@
                             <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
                         </div>
                     `;
+                console.error("Kritischer Fehler in applyDataToState:", err);
+            } catch (error) {
+                console.error("Fehler in applyDataToState:", error);
+                console.error("Fehler beim Verarbeiten der Anime-Daten:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist bei der Datenverarbeitung aufgetreten!</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten leider nicht verarbeitet werden.</p>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Verarbeitung der Daten.</p>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Daten</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten nicht korrekt verarbeitet werden. Bitte versuche es später erneut.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                    document.getElementById('pagination').innerHTML = '';
                 }
             }
         }
@@ -1299,7 +1408,10 @@
             addLog('🔄 Manueller Refresh...');
             // Trigger Server-Scrape falls vorhanden
             try {
-                await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
                 addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
                 document.getElementById('scrapingIndicator')?.classList.add('visible');
             } catch(e) {
@@ -1348,6 +1460,15 @@
                 const sortVal     = document.getElementById('sortSelect').value;
                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
+                localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
+                localStorage.setItem('premiumSortVal', sortVal);
+                localStorage.setItem('premiumYear', selectedYear);
+                localStorage.setItem('premiumFormat', selectedFormat);
+                localStorage.setItem('premiumTab', state.currentTab);
+            } catch (e) {
+                console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Speichern der Filter');
+            }
 
                 try {
                     localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
@@ -1401,6 +1522,21 @@
                             <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
                         </div>
                     `;
+            } catch (error) {
+                console.error("Fehler beim Anwenden der Filter:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Filtern</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es ist ein Problem beim Anwenden der Filter aufgetreten. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
                 }
             }
         }
@@ -1443,7 +1579,17 @@
                         ? `<img src="${anime.image}" alt="${anime.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:12px 12px 0 0;" onerror="this.style.display='none'" />`
                         : getAbstractBg(anime.id);
 
+                    // Note: Escaping title to avoid tooltip breaking
+                    const tooltipText = `Titel: ${anime.title.replace(/"/g, '&quot;')}&#10;Jahr: ${anime.year}&#10;Format: ${anime.format}&#10;Episoden: ${anime.episodes}&#10;Status: ${anime.status}`;
                     return `
+                        <div class="anime-card" onclick="openModal('${anime.id}')" onmouseenter="showTooltip(event, '${anime.id}')" onmouseleave="hideTooltip()" onmousemove="moveTooltip(event)">
+                        <div class="anime-card" onclick="openModal('${anime.id}')"
+                             data-title="${anime.title ? anime.title.replace(/"/g, '&quot;') : ''}"
+                             data-format="${anime.format || ''}"
+                             data-episodes="${anime.episodes || ''}"
+                             data-status="${anime.info || anime.status || ''}"
+                             data-year="${anime.year || ''}">
+                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${tooltipText}">
                         <div class="anime-card" onclick="openModal('${anime.id}')" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)">
                             <div class="anime-image">
                                 ${imgHtml}
@@ -1516,15 +1662,47 @@
         }
 
         function toggleWatchlist(id, title) {
-            const idx = state.watchlist.findIndex(w => w.id === id);
-            if (idx > -1) {
-                state.watchlist.splice(idx, 1);
-                showNotification(`Entfernt: ${title}`);
-            } else {
-                state.watchlist.push({ id, title });
-                showNotification(`Gemerkt: ${title}`);
-            }
             try {
+                const idx = state.watchlist.findIndex(w => w.id === id);
+                if (idx > -1) {
+                    state.watchlist.splice(idx, 1);
+                    showNotification(`Entfernt: ${title}`);
+                } else {
+                    state.watchlist.push({ id, title });
+                    showNotification(`Gemerkt: ${title}`);
+                }
+                try {
+                    localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
+                } catch (e) {
+                    console.warn('LocalStorage nicht verfügbar', e);
+                }
+                if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
+                updateStats();
+
+                const btn = event.currentTarget;
+                if (idx > -1) {
+                    btn.classList.remove('active');
+                    btn.innerHTML = '+ Watchlist';
+                } else {
+                    btn.classList.add('active');
+                    btn.innerHTML = '✓ In Watchlist';
+                }
+            } catch (error) {
+                console.error("Fehler beim Aktualisieren der Watchlist:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler mit der Watchlist</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Speichern deiner Watchlist. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
                 localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
@@ -1587,6 +1765,69 @@
             document.getElementById('detailsModal').classList.remove('active');
         }
 
+        let tooltipHideTimeout;
+
+        function showTooltip(event, id) {
+            clearTimeout(tooltipHideTimeout);
+            const anime = state.animes.find(a => a.id === id);
+            if (!anime) return;
+
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip) return;
+
+            let infoHtml = `<h4>${anime.title}</h4>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
+            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
+
+            if (anime.info) {
+                infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+            }
+
+            tooltip.innerHTML = infoHtml;
+            tooltip.style.display = 'block';
+
+            // force reflow before opacity
+            void tooltip.offsetWidth;
+            tooltip.classList.add('visible');
+
+            moveTooltip(event);
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip) return;
+            tooltip.classList.remove('visible');
+            // wait for transition before display:none
+            tooltipHideTimeout = setTimeout(() => {
+                tooltip.style.display = 'none';
+            }, 200);
+        }
+
+        function moveTooltip(event) {
+            const tooltip = document.getElementById('globalTooltip');
+            if (!tooltip || tooltip.style.display === 'none') return;
+
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const margin = 15;
+
+            let top = event.clientY + 20;
+            let left = event.clientX + 20;
+
+            // Check boundaries
+            if (left + tooltipRect.width > window.innerWidth - margin) {
+                left = event.clientX - tooltipRect.width - 20;
+            }
+
+            if (top + tooltipRect.height > window.innerHeight - margin) {
+                top = event.clientY - tooltipRect.height - 20;
+            }
+
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
+        }
+
         function goToPage(page) {
             state.currentPage = page;
             renderAnimes();
@@ -1643,6 +1884,70 @@
                 }
             });
         }
+
+        // Globale Fehlerbehandlung für unvorhergesehene Abstürze
+        function renderGlobalError(errorMsg) {
+            const contentArea = document.getElementById('contentArea');
+            if (!contentArea) return;
+
+            contentArea.innerHTML = `
+                <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                        <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein unerwarteter Fehler ist aufgetreten!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anwendung konnte leider nicht weiter ausgeführt werden. Bitte lade die Seite neu.</p>
+                    <p style="color: var(--text-muted); font-size: 12px; margin-bottom: 20px;">Details: ${errorMsg}</p>
+                    <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                        🔄 Seite neu laden
+                    </button>
+                </div>`;
+            document.getElementById('pagination').innerHTML = '';
+        }
+
+        window.addEventListener('error', (event) => {
+            console.error('Ungefangener Fehler:', event.error || event.message);
+            renderGlobalError(event.message || 'Unbekannter Fehler');
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unbehandeltes Promise Reject:', event.reason);
+            renderGlobalError(event.reason?.message || 'Unbekannter Fehler bei Netzwerk/API');
+        window.addEventListener('error', function(e) {
+            const contentArea = document.getElementById('contentArea');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem: ${e.message || 'Unbekannter Fehler'}</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
+                    </div>`;
+                document.getElementById('pagination').innerHTML = '';
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            const contentArea = document.getElementById('contentArea');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Netzwerk- oder API-Fehler!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Abrufen der Daten: ${e.reason || 'Unbekannter Fehler'}</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
+                    </div>`;
+                document.getElementById('pagination').innerHTML = '';
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             try {
@@ -1713,6 +2018,58 @@
                     showNotification('Fehler beim Speichern der Seitengröße');
                 }
                 applyFilters();
+            });
+
+            // Tooltip Logic
+            const tooltip = document.getElementById('animeTooltip');
+            let currentCard = null;
+
+            document.body.addEventListener('mouseover', (e) => {
+                const card = e.target.closest('.anime-card');
+                if (card && currentCard !== card) {
+                    currentCard = card;
+                    const title = card.dataset.title || 'Unbekannt';
+                    const format = card.dataset.format || '?';
+                    const episodes = card.dataset.episodes || '?';
+                    const status = card.dataset.status || '?';
+                    const year = card.dataset.year || '?';
+
+                    tooltip.innerHTML = `
+                        <h3>${title}</h3>
+                        <div class="tooltip-detail"><span>📺</span> Format: ${format}</div>
+                        <div class="tooltip-detail"><span>🎬</span> Episoden: ${episodes}</div>
+                        <div class="tooltip-detail"><span>📅</span> Jahr: ${year}</div>
+                        <div class="tooltip-detail"><span>ℹ️</span> Status: ${status}</div>
+                    `;
+                    tooltip.style.opacity = '1';
+                }
+            });
+
+            document.body.addEventListener('mousemove', (e) => {
+                if (currentCard && tooltip.style.opacity === '1') {
+                    const offset = 15;
+                    let left = e.clientX + offset;
+                    let top = e.clientY + offset;
+
+                    const rect = tooltip.getBoundingClientRect();
+                    if (left + rect.width > window.innerWidth) {
+                        left = e.clientX - rect.width - offset;
+                    }
+                    if (top + rect.height > window.innerHeight) {
+                        top = e.clientY - rect.height - offset;
+                    }
+
+                    tooltip.style.left = `${left}px`;
+                    tooltip.style.top = `${top}px`;
+                }
+            });
+
+            document.body.addEventListener('mouseout', (e) => {
+                const card = e.target.closest('.anime-card');
+                if (card && !card.contains(e.relatedTarget)) {
+                    currentCard = null;
+                    tooltip.style.opacity = '0';
+                }
             });
 
             document.getElementById('refreshBtn').addEventListener('click', () => {
@@ -1801,5 +2158,6 @@ GitHub: https://github.com/StrikerLUL/anime-ger-dub-tracker.git
 
 
 -->
+    <div id="animeTooltip" class="anime-tooltip"></div>
 </body>
 </html>
