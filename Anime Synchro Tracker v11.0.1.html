@@ -1430,7 +1430,10 @@
                         ? `<img src="${anime.image}" alt="${anime.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:12px 12px 0 0;" onerror="this.style.display='none'" />`
                         : getAbstractBg(anime.id);
 
+                    // Note: Escaping title to avoid tooltip breaking
+                    const tooltipText = `Titel: ${anime.title.replace(/"/g, '&quot;')}&#10;Jahr: ${anime.year}&#10;Format: ${anime.format}&#10;Episoden: ${anime.episodes}&#10;Status: ${anime.status}`;
                     return `
+                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${tooltipText}">
                         <div class="anime-card" onclick="openModal('${anime.id}')" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)">
                             <div class="anime-image">
                                 ${imgHtml}
