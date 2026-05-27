@@ -10,6 +10,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 6356,
+      "title": "Inazuma Eleven: The Movie - Team Oger greift an",
+      "url": "https://www.anisearch.de/anime/6356,inazuma-eleven-the-movie-team-oger-greift-an",
+      "image": "https://cdn.anisearch.de/images/anime/cover/6/6356_400.webp",
+      "info": "Film, 1 (2010)",
+      "year": 2010,
+      "type": "Film"
+    },
+    {
       "id": 7582,
       "title": "Good Luck Girl!",
       "url": "https://www.anisearch.de/anime/7582,good-luck-girl",
@@ -150,15 +159,6 @@
       "url": "https://www.anisearch.de/anime/19712,yaiba-samurai-legend",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19712_400.webp",
       "info": "TV-Serie, 24 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19259,
-      "title": "Kakushite! Makina-san!!",
-      "url": "https://www.anisearch.de/anime/19259,kakushite-makina-san",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19259_400.webp",
-      "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
     },
@@ -385,7 +385,7 @@
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -747,7 +747,7 @@
       "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -923,7 +923,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-13T08:37:22.771061Z",
+  "timestamp": "2026-05-27T09:34:27.821094Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
