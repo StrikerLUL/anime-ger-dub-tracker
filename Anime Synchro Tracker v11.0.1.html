@@ -1013,6 +1013,35 @@
     <div id="globalTooltip" class="global-tooltip"></div>
 
     <script>
+        // ─── Global Error Handling ─────────────────────────────────────────
+        function showGlobalError(errorMsg) {
+            console.error(errorMsg);
+            const contentArea = document.getElementById('contentArea');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Ausführung der Anwendung.</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
+                    </div>`;
+            }
+            const pagination = document.getElementById('pagination');
+            if (pagination) pagination.innerHTML = '';
+        }
+
+        window.addEventListener('error', function(e) {
+            showGlobalError(e.error || e.message);
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            showGlobalError(e.reason);
+        });
+
         // ─── Konfiguration ───────────────────────────────────────────────
         const CONFIG = {
             SERVER_URL:       'http://localhost:5000',
@@ -1265,6 +1294,16 @@
                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
                 }
             } catch (err) {
+                console.error('Fehler bei applyDataToState:', err);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align:center;padding:40px;">
+                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Datenverarbeitungsfehler</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Verarbeiten der empfangenen Anime-Daten.</p>
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
+                        </div>
+                    `;
                 console.error("Kritischer Fehler in applyDataToState:", err);
             } catch (error) {
                 console.error("Fehler in applyDataToState:", error);
@@ -1439,6 +1478,7 @@
                     localStorage.setItem('premiumTab', state.currentTab);
                 } catch (e) {
                     console.warn('LocalStorage nicht verfügbar', e);
+                    showNotification('Fehler beim Speichern der Filter');
                 }
 
                 let result = state.animes.filter(anime => {
@@ -1471,6 +1511,17 @@
                 state.filteredAnimes = result;
                 state.currentPage = 1;
                 renderAnimes();
+            } catch (err) {
+                console.error('Fehler bei applyFilters:', err);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align:center;padding:40px;">
+                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Filterfehler</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Anwenden der Filter.</p>
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
+                        </div>
+                    `;
             } catch (error) {
                 console.error("Fehler beim Anwenden der Filter:", error);
                 const contentArea = document.getElementById('contentArea');
