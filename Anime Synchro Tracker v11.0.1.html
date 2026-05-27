@@ -985,6 +985,8 @@
                 return parseInt(localStorage.getItem('premiumPageSize') || '24');
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                // Cannot call showNotification here since DOM might not be fully loaded,
+                // and it's called during state initialization.
                 return 24;
             }
         }
@@ -1063,7 +1065,10 @@
                     if (data.error) return null;  // Server da, aber Daten noch nicht bereit
                     return data;
                 }
-            } catch (e) { /* Server offline */ }
+            } catch (e) {
+                /* Server offline */
+                showNotification('Fehler beim Verbinden mit dem Server');
+            }
             return null;
         }
 
@@ -1079,7 +1084,10 @@
                             return data;
                         }
                     }
-                } catch (e) { /* GitHub nicht erreichbar */ }
+                } catch (e) {
+                    /* GitHub nicht erreichbar */
+                    showNotification('Fehler beim Laden der gecachten Daten');
+                }
             }
 
             // Quelle B: Lokale anime_data.json (via Flask-Server oder selber Domain)
@@ -1092,7 +1100,10 @@
                         return data;
                     }
                 }
-            } catch (e) { /* kein Server */ }
+            } catch (e) {
+                /* kein Server */
+                showNotification('Fehler beim Laden der gecachten Daten');
+            }
             return null;
         }
 
@@ -1125,79 +1136,97 @@
         // ─── Datenladen & Initialisierung ─────────────────────────────
 
         function applyDataToState(data, source) {
-            const kommendeData      = data.kommende      || [];
-            const aktuelleData      = data.aktuelle      || [];
-            const abgeschlossenData = data.abgeschlossen || [];
+            try {
+                const kommendeData      = data.kommende      || [];
+                const aktuelleData      = data.aktuelle      || [];
+                const abgeschlossenData = data.abgeschlossen || [];
 
-            const allAnimes = [
-                ...kommendeData.map((a, i)      => normalizeAnime(a, i, 'kommend')),
-                ...aktuelleData.map((a, i)      => normalizeAnime(a, i, 'aktuell')),
-                ...abgeschlossenData.map((a, i) => normalizeAnime(a, i, 'abgeschlossen')),
-            ];
+                const allAnimes = [
+                    ...kommendeData.map((a, i)      => normalizeAnime(a, i, 'kommend')),
+                    ...aktuelleData.map((a, i)      => normalizeAnime(a, i, 'aktuell')),
+                    ...abgeschlossenData.map((a, i) => normalizeAnime(a, i, 'abgeschlossen')),
+                ];
 
-            const prevSource = state.dataSource;
-            state.animes     = allAnimes;
-            state.dataSource = source;
-            state.lastUpdate = new Date().toLocaleString('de-DE');
-            state.hasAbgeschlossen = abgeschlossenData.length > 0;
+                const prevSource = state.dataSource;
+                state.animes     = allAnimes;
+                state.dataSource = source;
+                state.lastUpdate = new Date().toLocaleString('de-DE');
+                state.hasAbgeschlossen = abgeschlossenData.length > 0;
 
-            // Dynamisch Jahr und Format Dropdowns befüllen
-            const yearSelect = document.getElementById('yearSelect');
-            const formatSelect = document.getElementById('formatSelect');
-            if (yearSelect && formatSelect && allAnimes.length > 0) {
-                const years = [...new Set(allAnimes.map(a => a.year).filter(y => y > 0))].sort((a,b) => b - a);
-                const formats = [...new Set(allAnimes.map(a => a.format).filter(Boolean))].sort();
+                // Dynamisch Jahr und Format Dropdowns befüllen
+                const yearSelect = document.getElementById('yearSelect');
+                const formatSelect = document.getElementById('formatSelect');
+                if (yearSelect && formatSelect && allAnimes.length > 0) {
+                    const years = [...new Set(allAnimes.map(a => a.year).filter(y => y > 0))].sort((a,b) => b - a);
+                    const formats = [...new Set(allAnimes.map(a => a.format).filter(Boolean))].sort();
 
-                let savedYear = null;
-                let savedFormat = null;
-                try {
-                    savedYear = localStorage.getItem('premiumYear');
-                    savedFormat = localStorage.getItem('premiumFormat');
-                } catch (e) {
-                    // Ignore
+                    let savedYear = null;
+                    let savedFormat = null;
+                    try {
+                        savedYear = localStorage.getItem('premiumYear');
+                        savedFormat = localStorage.getItem('premiumFormat');
+                    } catch (e) {
+                        // Ignore
+                    }
+
+                    const currYear = savedYear !== null ? savedYear : yearSelect.value;
+                    const currFormat = savedFormat !== null ? savedFormat : formatSelect.value;
+
+                    yearSelect.innerHTML = '<option value="all">Alle Jahre</option>' +
+                        years.map(y => `<option value="${y}">${y}</option>`).join('');
+                    formatSelect.innerHTML = '<option value="all">Alle Formate</option>' +
+                        formats.map(f => `<option value="${f}">${f}</option>`).join('');
+
+                    if (currYear === 'all' || years.includes(parseInt(currYear))) yearSelect.value = currYear;
+                    if (currFormat === 'all' || formats.includes(currFormat)) formatSelect.value = currFormat;
                 }
 
-                const currYear = savedYear !== null ? savedYear : yearSelect.value;
-                const currFormat = savedFormat !== null ? savedFormat : formatSelect.value;
+                // Zeige/Verstecke Abgeschlossen-Tab
+                const tabAbs = document.getElementById('tabAbgeschlossen');
+                if (tabAbs) tabAbs.style.display = state.hasAbgeschlossen ? '' : 'none';
 
-                yearSelect.innerHTML = '<option value="all">Alle Jahre</option>' + 
-                    years.map(y => `<option value="${y}">${y}</option>`).join('');
-                formatSelect.innerHTML = '<option value="all">Alle Formate</option>' + 
-                    formats.map(f => `<option value="${f}">${f}</option>`).join('');
+                applyFilters();
+                updateStats();
+                updateApiStatus();
+                updateOfflineBanner();
 
-                if (currYear === 'all' || years.includes(parseInt(currYear))) yearSelect.value = currYear;
-                if (currFormat === 'all' || formats.includes(currFormat)) formatSelect.value = currFormat;
-            }
-
-            // Zeige/Verstecke Abgeschlossen-Tab
-            const tabAbs = document.getElementById('tabAbgeschlossen');
-            if (tabAbs) tabAbs.style.display = state.hasAbgeschlossen ? '' : 'none';
-
-            applyFilters();
-            updateStats();
-            updateApiStatus();
-            updateOfflineBanner();
-
-            if (prevSource !== source) {
-                const ts = data.timestamp
-                    ? new Date(data.timestamp).toLocaleString('de-DE')
-                    : '';
-                const msgs = {
-                    live:   `🌐 Live-Daten: ${kommendeData.length} geplant · ${aktuelleData.length} aktuell · ${abgeschlossenData.length} abgeschl.`,
-                    github: `🐙 GitHub Actions Daten (${ts}): ${allAnimes.length} Anime`,
-                    cache:  `💾 Gecachte Daten: ${allAnimes.length} Anime (Starte Server für Live-Daten)`,
-                    demo:   `✨ Demo-Modus – ${allAnimes.length} Animes`
-                };
-                addLog(msgs[source] || '');
-                if (source === 'live' && prevSource !== 'live') {
-                    showNotification('🔴 Live-Daten von anisearch.de geladen! 🎉');
+                if (prevSource !== source) {
+                    const ts = data.timestamp
+                        ? new Date(data.timestamp).toLocaleString('de-DE')
+                        : '';
+                    const msgs = {
+                        live:   `🌐 Live-Daten: ${kommendeData.length} geplant · ${aktuelleData.length} aktuell · ${abgeschlossenData.length} abgeschl.`,
+                        github: `🐙 GitHub Actions Daten (${ts}): ${allAnimes.length} Anime`,
+                        cache:  `💾 Gecachte Daten: ${allAnimes.length} Anime (Starte Server für Live-Daten)`,
+                        demo:   `✨ Demo-Modus – ${allAnimes.length} Animes`
+                    };
+                    addLog(msgs[source] || '');
+                    if (source === 'live' && prevSource !== 'live') {
+                        showNotification('🔴 Live-Daten von anisearch.de geladen! 🎉');
+                    }
                 }
-            }
 
-            if (data.scraping) {
-                document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } else {
-                document.getElementById('scrapingIndicator')?.classList.remove('visible');
+                if (data.scraping) {
+                    document.getElementById('scrapingIndicator')?.classList.add('visible');
+                } else {
+                    document.getElementById('scrapingIndicator')?.classList.remove('visible');
+                }
+            } catch (error) {
+                console.error("Fehler beim Verarbeiten der Anime-Daten:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Daten</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten nicht korrekt verarbeitet werden. Bitte versuche es später erneut.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
             }
         }
 
@@ -1282,7 +1311,10 @@
                 await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
                 addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
                 document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } catch(e) { /* kein Server */ }
+            } catch(e) {
+                /* kein Server */
+                showNotification('Fehler beim manuellen Refresh');
+            }
             await initializeAnimes();
         }
 
@@ -1319,13 +1351,12 @@
         }
 
         function applyFilters() {
-            const searchInput = document.getElementById('searchInput');
-            const searchTerm  = (searchInput?.value || '').toLowerCase();
-            const sortVal     = document.getElementById('sortSelect').value;
-            const selectedYear = document.getElementById('yearSelect')?.value || 'all';
-            const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
-
             try {
+                const searchInput = document.getElementById('searchInput');
+                const searchTerm  = (searchInput?.value || '').toLowerCase();
+                const sortVal     = document.getElementById('sortSelect').value;
+                const selectedYear = document.getElementById('yearSelect')?.value || 'all';
+                const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
                 localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
                 localStorage.setItem('premiumSortVal', sortVal);
                 localStorage.setItem('premiumYear', selectedYear);
@@ -1333,38 +1364,66 @@
                 localStorage.setItem('premiumTab', state.currentTab);
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Speichern der Filter');
             }
 
-            let result = state.animes.filter(anime => {
-                const title        = (anime.title || '').toLowerCase();
-                const matchesSearch = !searchTerm || title.includes(searchTerm);
-                let matchesTab = true;
-
-                if (state.currentTab === 'kommende-dubs')       matchesTab = anime.type === 'kommend';
-                else if (state.currentTab === 'aktuelle-dubs')  matchesTab = anime.type === 'aktuell';
-                else if (state.currentTab === 'abgeschlossene-dubs') matchesTab = anime.type === 'abgeschlossen';
-                else if (state.currentTab === 'watchlist')      matchesTab = state.watchlist.some(w => w.id === anime.id);
-
-                const matchesYear = selectedYear === 'all' || anime.year === parseInt(selectedYear);
-                const matchesFormat = selectedFormat === 'all' || anime.format === selectedFormat;
-
-                return matchesSearch && matchesTab && matchesYear && matchesFormat;
-            });
-
-            // Sorting
-            result.sort((a, b) => {
-                switch (sortVal) {
-                    case 'title_asc': return (a.title || '').localeCompare(b.title || '', 'de');
-                    case 'title_desc': return (b.title || '').localeCompare(a.title || '', 'de');
-                    case 'year_desc': return (b.year || 0) - (a.year || 0);
-                    case 'year_asc': return (a.year || 0) - (b.year || 0);
-                    default: return 0;
+                try {
+                    localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
+                    localStorage.setItem('premiumSortVal', sortVal);
+                    localStorage.setItem('premiumYear', selectedYear);
+                    localStorage.setItem('premiumFormat', selectedFormat);
+                    localStorage.setItem('premiumTab', state.currentTab);
+                } catch (e) {
+                    console.warn('LocalStorage nicht verfügbar', e);
                 }
-            });
 
-            state.filteredAnimes = result;
-            state.currentPage = 1;
-            renderAnimes();
+                let result = state.animes.filter(anime => {
+                    const title        = (anime.title || '').toLowerCase();
+                    const matchesSearch = !searchTerm || title.includes(searchTerm);
+                    let matchesTab = true;
+
+                    if (state.currentTab === 'kommende-dubs')       matchesTab = anime.type === 'kommend';
+                    else if (state.currentTab === 'aktuelle-dubs')  matchesTab = anime.type === 'aktuell';
+                    else if (state.currentTab === 'abgeschlossene-dubs') matchesTab = anime.type === 'abgeschlossen';
+                    else if (state.currentTab === 'watchlist')      matchesTab = state.watchlist.some(w => w.id === anime.id);
+
+                    const matchesYear = selectedYear === 'all' || anime.year === parseInt(selectedYear);
+                    const matchesFormat = selectedFormat === 'all' || anime.format === selectedFormat;
+
+                    return matchesSearch && matchesTab && matchesYear && matchesFormat;
+                });
+
+                // Sorting
+                result.sort((a, b) => {
+                    switch (sortVal) {
+                        case 'title_asc': return (a.title || '').localeCompare(b.title || '', 'de');
+                        case 'title_desc': return (b.title || '').localeCompare(a.title || '', 'de');
+                        case 'year_desc': return (b.year || 0) - (a.year || 0);
+                        case 'year_asc': return (a.year || 0) - (b.year || 0);
+                        default: return 0;
+                    }
+                });
+
+                state.filteredAnimes = result;
+                state.currentPage = 1;
+                renderAnimes();
+            } catch (error) {
+                console.error("Fehler beim Anwenden der Filter:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Filtern</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es ist ein Problem beim Anwenden der Filter aufgetreten. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
+            }
         }
 
         function renderAnimes() {
@@ -1405,6 +1464,8 @@
                         ? `<img src="${anime.image}" alt="${anime.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;border-radius:12px 12px 0 0;" onerror="this.style.display='none'" />`
                         : getAbstractBg(anime.id);
 
+                    // Note: Escaping title to avoid tooltip breaking
+                    const tooltipText = `Titel: ${anime.title.replace(/"/g, '&quot;')}&#10;Jahr: ${anime.year}&#10;Format: ${anime.format}&#10;Episoden: ${anime.episodes}&#10;Status: ${anime.status}`;
                     return `
                         <div class="anime-card" onclick="openModal('${anime.id}')"
                              data-title="${anime.title ? anime.title.replace(/"/g, '&quot;') : ''}"
@@ -1412,6 +1473,8 @@
                              data-episodes="${anime.episodes || ''}"
                              data-status="${anime.info || anime.status || ''}"
                              data-year="${anime.year || ''}">
+                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${tooltipText}">
+                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)">
                             <div class="anime-image">
                                 ${imgHtml}
                                 <div class="floating-tags">
@@ -1483,18 +1546,51 @@
         }
 
         function toggleWatchlist(id, title) {
-            const idx = state.watchlist.findIndex(w => w.id === id);
-            if (idx > -1) {
-                state.watchlist.splice(idx, 1);
-                showNotification(`Entfernt: ${title}`);
-            } else {
-                state.watchlist.push({ id, title });
-                showNotification(`Gemerkt: ${title}`);
-            }
             try {
+                const idx = state.watchlist.findIndex(w => w.id === id);
+                if (idx > -1) {
+                    state.watchlist.splice(idx, 1);
+                    showNotification(`Entfernt: ${title}`);
+                } else {
+                    state.watchlist.push({ id, title });
+                    showNotification(`Gemerkt: ${title}`);
+                }
+                try {
+                    localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
+                } catch (e) {
+                    console.warn('LocalStorage nicht verfügbar', e);
+                }
+                if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
+                updateStats();
+
+                const btn = event.currentTarget;
+                if (idx > -1) {
+                    btn.classList.remove('active');
+                    btn.innerHTML = '+ Watchlist';
+                } else {
+                    btn.classList.add('active');
+                    btn.innerHTML = '✓ In Watchlist';
+                }
+            } catch (error) {
+                console.error("Fehler beim Aktualisieren der Watchlist:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler mit der Watchlist</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Speichern deiner Watchlist. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
                 localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Speichern der Watchlist');
             }
             if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
             updateStats();
@@ -1640,6 +1736,7 @@
                 }
             } catch (e) {
                 console.warn('LocalStorage nicht verfügbar', e);
+                showNotification('Fehler beim Laden der Einstellungen');
                 state.watchlist = [];
             }
 
@@ -1675,6 +1772,7 @@
                     localStorage.setItem('premiumPageSize', state.pageSize);
                 } catch (err) {
                     console.warn('LocalStorage nicht verfügbar', err);
+                    showNotification('Fehler beim Speichern der Seitengröße');
                 }
                 applyFilters();
             });
