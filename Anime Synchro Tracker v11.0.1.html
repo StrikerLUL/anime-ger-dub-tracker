@@ -1110,11 +1110,12 @@
         async function loadFromServer() {
             try {
                 const response = await fetchWithTimeout(CONFIG.API_ENDPOINT, CONFIG.FETCH_TIMEOUT_MS);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.error) return null;  // Server da, aber Daten noch nicht bereit
-                    return data;
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
                 }
+                const data = await response.json();
+                if (data.error) return null;  // Server da, aber Daten noch nicht bereit
+                return data;
             } catch (e) {
                 /* Server offline */
                 showNotification('Fehler beim Verbinden mit dem Server');
@@ -1127,12 +1128,13 @@
             if (CONFIG.GITHUB_RAW_URL) {
                 try {
                     const response = await fetchWithTimeout(CONFIG.GITHUB_RAW_URL, 8000);
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data.kommende || data.aktuelle) {
-                            data.source = 'github';
-                            return data;
-                        }
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    if (data.kommende || data.aktuelle) {
+                        data.source = 'github';
+                        return data;
                     }
                 } catch (e) {
                     /* GitHub nicht erreichbar */
@@ -1143,12 +1145,13 @@
             // Quelle B: Lokale anime_data.json (via Flask-Server oder selber Domain)
             try {
                 const response = await fetchWithTimeout(CONFIG.SERVER_URL + '/' + CONFIG.JSON_CACHE, 3000);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.kommende || data.aktuelle) {
-                        data.source = 'cache';
-                        return data;
-                    }
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.kommende || data.aktuelle) {
+                    data.source = 'cache';
+                    return data;
                 }
             } catch (e) {
                 /* kein Server */
@@ -1262,6 +1265,7 @@
                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
                 }
             } catch (error) {
+                console.error("Fehler in applyDataToState:", error);
                 console.error("Fehler beim Verarbeiten der Anime-Daten:", error);
                 const contentArea = document.getElementById('contentArea');
                 if (contentArea) {
@@ -1270,12 +1274,15 @@
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
                                 <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
                             </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Verarbeitung der Daten.</p>
                             <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Daten</h2>
                             <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten nicht korrekt verarbeitet werden. Bitte versuche es später erneut.</p>
                             <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
                                 🔄 Seite neu laden
                             </button>
                         </div>`;
+                    document.getElementById('pagination').innerHTML = '';
                 }
             }
         }
@@ -1358,7 +1365,10 @@
             addLog('🔄 Manueller Refresh...');
             // Trigger Server-Scrape falls vorhanden
             try {
-                await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
                 addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
                 document.getElementById('scrapingIndicator')?.classList.add('visible');
             } catch(e) {
@@ -1819,6 +1829,42 @@
                 }
             });
         }
+
+        window.addEventListener('error', function(e) {
+            const contentArea = document.getElementById('contentArea');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem: ${e.message || 'Unbekannter Fehler'}</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
+                    </div>`;
+                document.getElementById('pagination').innerHTML = '';
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            const contentArea = document.getElementById('contentArea');
+            if (contentArea) {
+                contentArea.innerHTML = `
+                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Netzwerk- oder API-Fehler!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Abrufen der Daten: ${e.reason || 'Unbekannter Fehler'}</p>
+                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                            🔄 Seite neu laden
+                        </button>
+                    </div>`;
+                document.getElementById('pagination').innerHTML = '';
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             try {
