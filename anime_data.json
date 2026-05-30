@@ -64,15 +64,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 10279,
-      "title": "Doukyusei: Verliebt in meinen Mitschüler",
-      "url": "https://www.anisearch.de/anime/10279,doukyusei-verliebt-in-meinen-mitschueler",
-      "image": "https://cdn.anisearch.de/images/anime/cover/10/10279_400.webp",
-      "info": "Film, 1 (2016)",
-      "year": 2016,
-      "type": "Film"
-    },
-    {
       "id": 13018,
       "title": "Servamp: Alice in the Garden",
       "url": "https://www.anisearch.de/anime/13018,servamp-alice-in-the-garden",
@@ -123,6 +114,15 @@
       "url": "https://www.anisearch.de/anime/17739,my-love-story-with-yamada-kun-at-lv999",
       "image": "https://cdn.anisearch.de/images/anime/cover/17/17739_400.webp",
       "info": "TV-Serie, 13 (2023)",
+      "year": 2023,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 17799,
+      "title": "The Most Heretical Last Boss Queen: From Villainess to Savior",
+      "url": "https://www.anisearch.de/anime/17799,the-most-heretical-last-boss-queen-from-villainess-to-savior",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17799_400.webp",
+      "info": "TV-Serie, 12 (2023)",
       "year": 2023,
       "type": "TV-Serie"
     },
@@ -194,6 +194,15 @@
       "title": "Labyrinth",
       "url": "https://www.anisearch.de/anime/20694,labyrinth",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20694_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
+      "id": 21094,
+      "title": "Milky Subway: The Galactic Express - The Movie",
+      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
@@ -376,7 +385,7 @@
       "title": "The Ramparts of Ice",
       "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -738,7 +747,7 @@
       "title": "The Ramparts of Ice",
       "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -923,7 +932,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-29T09:41:47.644325Z",
+  "timestamp": "2026-05-30T08:21:05.445403Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
