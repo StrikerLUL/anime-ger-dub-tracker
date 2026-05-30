@@ -1304,27 +1304,6 @@
                             <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
                         </div>
                     `;
-                console.error("Kritischer Fehler in applyDataToState:", err);
-            } catch (error) {
-                console.error("Fehler in applyDataToState:", error);
-                console.error("Fehler beim Verarbeiten der Anime-Daten:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist bei der Datenverarbeitung aufgetreten!</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten leider nicht verarbeitet werden.</p>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Verarbeitung der Daten.</p>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Daten</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anime-Daten konnten nicht korrekt verarbeitet werden. Bitte versuche es später erneut.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
                     document.getElementById('pagination').innerHTML = '';
                 }
             }
@@ -1422,35 +1401,53 @@
         }
 
         function updateStats() {
-            const statsGrid = document.getElementById('statsGrid');
-            if (!statsGrid) return;
-            const kommendeCount      = state.animes.filter(a => a.type === 'kommend').length;
-            const aktuelleCount      = state.animes.filter(a => a.type === 'aktuell').length;
-            const abgeschlossenCount = state.animes.filter(a => a.type === 'abgeschlossen').length;
-            const abgeschlossenCard  = abgeschlossenCount > 0 ? `
-                <div class="stat-card">
-                    <div class="stat-value" style="background:linear-gradient(135deg,#86efac,#22c55e);-webkit-background-clip:text;">${abgeschlossenCount}</div>
-                    <div class="stat-label">Abgeschlossen</div>
-                </div>` : '';
-            statsGrid.innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-value">${state.animes.length}</div>
-                    <div class="stat-label">Gesamt Animes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value glow-primary">${kommendeCount}</div>
-                    <div class="stat-label">Bald verfügbar</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value glow-secondary">${aktuelleCount}</div>
-                    <div class="stat-label">Kürzlich erschienen</div>
-                </div>
-                ${abgeschlossenCard}
-                <div class="stat-card">
-                    <div class="stat-value">${state.watchlist.length}</div>
-                    <div class="stat-label">In Watchlist</div>
-                </div>
-            `;
+            try {
+                const statsGrid = document.getElementById('statsGrid');
+                if (!statsGrid) return;
+                const kommendeCount      = state.animes.filter(a => a.type === 'kommend').length;
+                const aktuelleCount      = state.animes.filter(a => a.type === 'aktuell').length;
+                const abgeschlossenCount = state.animes.filter(a => a.type === 'abgeschlossen').length;
+                const abgeschlossenCard  = abgeschlossenCount > 0 ? `
+                    <div class="stat-card">
+                        <div class="stat-value" style="background:linear-gradient(135deg,#86efac,#22c55e);-webkit-background-clip:text;">${abgeschlossenCount}</div>
+                        <div class="stat-label">Abgeschlossen</div>
+                    </div>` : '';
+                statsGrid.innerHTML = `
+                    <div class="stat-card">
+                        <div class="stat-value">${state.animes.length}</div>
+                        <div class="stat-label">Gesamt Animes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value glow-primary">${kommendeCount}</div>
+                        <div class="stat-label">Bald verfügbar</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value glow-secondary">${aktuelleCount}</div>
+                        <div class="stat-label">Kürzlich erschienen</div>
+                    </div>
+                    ${abgeschlossenCard}
+                    <div class="stat-card">
+                        <div class="stat-value">${state.watchlist.length}</div>
+                        <div class="stat-label">In Watchlist</div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error("Fehler beim Aktualisieren der Statistiken:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Statistiken</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren der Daten. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
+            }
         }
 
         function applyFilters() {
@@ -1460,15 +1457,6 @@
                 const sortVal     = document.getElementById('sortSelect').value;
                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
-                localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
-                localStorage.setItem('premiumSortVal', sortVal);
-                localStorage.setItem('premiumYear', selectedYear);
-                localStorage.setItem('premiumFormat', selectedFormat);
-                localStorage.setItem('premiumTab', state.currentTab);
-            } catch (e) {
-                console.warn('LocalStorage nicht verfügbar', e);
-                showNotification('Fehler beim Speichern der Filter');
-            }
 
                 try {
                     localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
@@ -1522,21 +1510,6 @@
                             <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
                         </div>
                     `;
-            } catch (error) {
-                console.error("Fehler beim Anwenden der Filter:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Filtern</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es ist ein Problem beim Anwenden der Filter aufgetreten. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
                 }
             }
         }
@@ -1582,15 +1555,12 @@
                     // Note: Escaping title to avoid tooltip breaking
                     const tooltipText = `Titel: ${anime.title.replace(/"/g, '&quot;')}&#10;Jahr: ${anime.year}&#10;Format: ${anime.format}&#10;Episoden: ${anime.episodes}&#10;Status: ${anime.status}`;
                     return `
-                        <div class="anime-card" onclick="openModal('${anime.id}')" onmouseenter="showTooltip(event, '${anime.id}')" onmouseleave="hideTooltip()" onmousemove="moveTooltip(event)">
-                        <div class="anime-card" onclick="openModal('${anime.id}')"
+                        <div class="anime-card" onclick="openModal('${anime.id}')" onmouseenter="showTooltip(event, '${anime.id}')" onmouseleave="hideTooltip()" onmousemove="moveTooltip(event)" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)"
                              data-title="${anime.title ? anime.title.replace(/"/g, '&quot;') : ''}"
                              data-format="${anime.format || ''}"
                              data-episodes="${anime.episodes || ''}"
                              data-status="${anime.info || anime.status || ''}"
                              data-year="${anime.year || ''}">
-                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${tooltipText}">
-                        <div class="anime-card" onclick="openModal('${anime.id}')" title="${anime.title} (${anime.year} | ${anime.type} | ${anime.episodes} Episoden)">
                             <div class="anime-image">
                                 ${imgHtml}
                                 <div class="floating-tags">
@@ -1675,6 +1645,7 @@
                     localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
                 } catch (e) {
                     console.warn('LocalStorage nicht verfügbar', e);
+                    showNotification('Fehler beim Speichern der Watchlist');
                 }
                 if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
                 updateStats();
@@ -1697,68 +1668,71 @@
                                 <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
                             </svg>
                             <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler mit der Watchlist</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Speichern deiner Watchlist. Bitte lade die Seite neu.</p>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren deiner Watchlist. Bitte lade die Seite neu.</p>
                             <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
                                 🔄 Seite neu laden
                             </button>
                         </div>`;
                 }
-                localStorage.setItem('premiumWatchlist', JSON.stringify(state.watchlist));
-            } catch (e) {
-                console.warn('LocalStorage nicht verfügbar', e);
-                showNotification('Fehler beim Speichern der Watchlist');
-            }
-            if (state.currentTab === 'watchlist') applyFilters(); // refresh if inside watchlist tab
-            updateStats();
-            
-            const btn = event.currentTarget;
-            if (idx > -1) {
-                btn.classList.remove('active');
-                btn.innerHTML = '+ Watchlist';
-            } else {
-                btn.classList.add('active');
-                btn.innerHTML = '✓ In Watchlist';
             }
         }
 
         function openModal(id) {
-            const anime = state.animes.find(a => a.id === id);
-            if (!anime) return;
-            
-            const isWatchlisted = state.watchlist.some(w => w.id === id);
-            const isCurrent = anime.type === 'aktuell';
-            const hlClass = isCurrent ? 'time-highlight recent' : 'time-highlight soon';
-            
-            const modalBody = document.getElementById('modalBody');
-            const coverImg = anime.image
-                ? `<img src="${anime.image}" alt="${anime.title}" style="width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-bottom:20px;" onerror="this.style.display='none'" />`
-                : '';
-            const anisearchLink = anime.anisearchUrl
-                ? `<a href="${anime.anisearchUrl}" target="_blank" rel="noopener" class="btn btn-glass" style="text-decoration:none;">🔗 Auf AniSearch</a>`
-                : '';
-            modalBody.innerHTML = `
-                ${coverImg}
-                <h2 style="font-family: var(--font-display); font-size: 24px; margin-bottom: 8px;">${anime.title}</h2>
-                <div style="color: var(--text-muted); margin-bottom: 24px;">Release: ${anime.year} | ${anime.info || anime.status}</div>
+            try {
+                const anime = state.animes.find(a => a.id === id);
+                if (!anime) return;
                 
-                <div class="${hlClass}" style="margin-bottom: 30px; padding: 16px; font-size: 15px;">
-                    <strong>${isCurrent ? '🟢 Deutsche Synchronisation verfügbar' : '⏳ Deutsche Synchronisation geplant'}</strong>
-                    <br/><small style="opacity:0.8;">Quelle: anisearch.de (Automatisch aktualisiert)</small>
-                </div>
+                const isWatchlisted = state.watchlist.some(w => w.id === id);
+                const isCurrent = anime.type === 'aktuell';
+                const hlClass = isCurrent ? 'time-highlight recent' : 'time-highlight soon';
                 
-                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 30px;">
-                    Synchronisations-Daten werden automatisch von anisearch.de abgerufen und regelmäßig aktualisiert.
-                </p>
+                const modalBody = document.getElementById('modalBody');
+                const coverImg = anime.image
+                    ? `<img src="${anime.image}" alt="${anime.title}" style="width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-bottom:20px;" onerror="this.style.display='none'" />`
+                    : '';
+                const anisearchLink = anime.anisearchUrl
+                    ? `<a href="${anime.anisearchUrl}" target="_blank" rel="noopener" class="btn btn-glass" style="text-decoration:none;">🔗 Auf AniSearch</a>`
+                    : '';
+                modalBody.innerHTML = `
+                    ${coverImg}
+                    <h2 style="font-family: var(--font-display); font-size: 24px; margin-bottom: 8px;">${anime.title}</h2>
+                    <div style="color: var(--text-muted); margin-bottom: 24px;">Release: ${anime.year} | ${anime.info || anime.status}</div>
 
-                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <button class="btn btn-primary" style="flex: 1; justify-content: center;" onclick="toggleWatchlist('${id}', '${anime.title}'); closeModal();">
-                        ${isWatchlisted ? 'Aus Watchlist entfernen' : 'Zur Watchlist hinzufügen'}
-                    </button>
-                    ${anisearchLink}
-                    <button class="btn btn-glass" onclick="closeModal()">Schließen</button>
-                </div>
-            `;
-            document.getElementById('detailsModal').classList.add('active');
+                    <div class="${hlClass}" style="margin-bottom: 30px; padding: 16px; font-size: 15px;">
+                        <strong>${isCurrent ? '🟢 Deutsche Synchronisation verfügbar' : '⏳ Deutsche Synchronisation geplant'}</strong>
+                        <br/><small style="opacity:0.8;">Quelle: anisearch.de (Automatisch aktualisiert)</small>
+                    </div>
+
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 30px;">
+                        Synchronisations-Daten werden automatisch von anisearch.de abgerufen und regelmäßig aktualisiert.
+                    </p>
+
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <button class="btn btn-primary" style="flex: 1; justify-content: center;" onclick="toggleWatchlist('${id}', '${anime.title}'); closeModal();">
+                            ${isWatchlisted ? 'Aus Watchlist entfernen' : 'Zur Watchlist hinzufügen'}
+                        </button>
+                        ${anisearchLink}
+                        <button class="btn btn-glass" onclick="closeModal()">Schließen</button>
+                    </div>
+                `;
+                document.getElementById('detailsModal').classList.add('active');
+            } catch (error) {
+                console.error("Fehler beim Öffnen des Modals:", error);
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Details</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Öffnen der Anime-Details. Bitte lade die Seite neu.</p>
+                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                                🔄 Seite neu laden
+                            </button>
+                        </div>`;
+                }
+            }
         }
 
         function closeModal() {
@@ -1913,40 +1887,6 @@
         window.addEventListener('unhandledrejection', (event) => {
             console.error('Unbehandeltes Promise Reject:', event.reason);
             renderGlobalError(event.reason?.message || 'Unbekannter Fehler bei Netzwerk/API');
-        window.addEventListener('error', function(e) {
-            const contentArea = document.getElementById('contentArea');
-            if (contentArea) {
-                contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem: ${e.message || 'Unbekannter Fehler'}</p>
-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                            🔄 Seite neu laden
-                        </button>
-                    </div>`;
-                document.getElementById('pagination').innerHTML = '';
-            }
-        });
-
-        window.addEventListener('unhandledrejection', function(e) {
-            const contentArea = document.getElementById('contentArea');
-            if (contentArea) {
-                contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Netzwerk- oder API-Fehler!</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Abrufen der Daten: ${e.reason || 'Unbekannter Fehler'}</p>
-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                            🔄 Seite neu laden
-                        </button>
-                    </div>`;
-                document.getElementById('pagination').innerHTML = '';
-            }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
