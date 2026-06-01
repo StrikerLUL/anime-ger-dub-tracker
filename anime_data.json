@@ -197,15 +197,6 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 21094,
-      "title": "Milky Subway: The Galactic Express - The Movie",
-      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
     }
   ],
   "aktuelle": [
@@ -471,6 +462,15 @@
       "type": "Film"
     },
     {
+      "id": 21094,
+      "title": "Milky Subway: The Galactic Express - The Movie",
+      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 20379,
       "title": "Medalist: Staffel 2",
       "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
@@ -556,15 +556,6 @@
       "title": "Trigun Stargaze",
       "url": "https://www.anisearch.de/anime/18323,trigun-stargaze",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18323_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18987,
-      "title": "Jujutsu Kaisen: Staffel 3",
-      "url": "https://www.anisearch.de/anime/18987,jujutsu-kaisen-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18987_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -833,6 +824,15 @@
       "type": "Film"
     },
     {
+      "id": 21094,
+      "title": "Milky Subway: The Galactic Express - The Movie",
+      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 20379,
       "title": "Medalist: Staffel 2",
       "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
@@ -921,18 +921,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 18987,
-      "title": "Jujutsu Kaisen: Staffel 3",
-      "url": "https://www.anisearch.de/anime/18987,jujutsu-kaisen-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18987_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-05-31T08:37:42.872675Z",
+  "timestamp": "2026-06-01T11:15:44.666589Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
