@@ -1192,27 +1192,44 @@
         // ─── Normalisierung ───────────────────────────────────────────
 
         function normalizeAnime(raw, index, type) {
-            const isScraperFormat = raw.info !== undefined;
-            return {
-                ...raw,
-                format: raw.type || raw.format || 'Unbekannt',
-                id: raw.id ? `${type}_${raw.id}` : `${type}_${index}`,
-                type: type,
-                episodes: raw.episodes || (isScraperFormat
-                    ? (raw.info?.match(/(\d+)\s*Episode/)?.[1] || '?')
-                    : '?'),
-                year: raw.year || new Date().getFullYear(),
-                status: isScraperFormat
-                    ? (type === 'aktuell' ? 'Laufend' : type === 'abgeschlossen' ? 'Abgeschlossen' : 'Geplant')
-                    : (raw.status || 'Geplant'),
-                timeLabel: isScraperFormat
-                    ? (type === 'kommend' ? 'Demnächst' : type === 'abgeschlossen' ? 'Abgeschlossen' : 'Aktuell')
-                    : (type === 'kommend'
-                        ? `In ${raw.dub_weeks || Math.floor(Math.random()*4)+1} Wochen`
-                        : `Vor ${raw.days_ago || Math.floor(Math.random()*20)+1} Tagen`),
-                image: raw.image || '',
-                anisearchUrl: raw.url || '',
-            };
+            try {
+                const isScraperFormat = raw.info !== undefined;
+                return {
+                    ...raw,
+                    format: raw.type || raw.format || 'Unbekannt',
+                    id: raw.id ? `${type}_${raw.id}` : `${type}_${index}`,
+                    type: type,
+                    episodes: raw.episodes || (isScraperFormat
+                        ? (raw.info?.match(/(\d+)\s*Episode/)?.[1] || '?')
+                        : '?'),
+                    year: raw.year || new Date().getFullYear(),
+                    status: isScraperFormat
+                        ? (type === 'aktuell' ? 'Laufend' : type === 'abgeschlossen' ? 'Abgeschlossen' : 'Geplant')
+                        : (raw.status || 'Geplant'),
+                    timeLabel: isScraperFormat
+                        ? (type === 'kommend' ? 'Demnächst' : type === 'abgeschlossen' ? 'Abgeschlossen' : 'Aktuell')
+                        : (type === 'kommend'
+                            ? `In ${raw.dub_weeks || Math.floor(Math.random()*4)+1} Wochen`
+                            : `Vor ${raw.days_ago || Math.floor(Math.random()*20)+1} Tagen`),
+                    image: raw.image || '',
+                    anisearchUrl: raw.url || '',
+                };
+            } catch (e) {
+                console.error("Fehler beim Normalisieren der Anime-Daten:", e);
+                showGlobalError("Ein unerwarteter Fehler ist beim Verarbeiten der Anime-Daten aufgetreten. Bitte lade die Seite neu.");
+                return {
+                    id: `${type}_${index}`,
+                    title: 'Fehlerhaftes Anime',
+                    type: type,
+                    format: 'Unbekannt',
+                    episodes: '?',
+                    year: new Date().getFullYear(),
+                    status: 'Fehler',
+                    timeLabel: 'Fehler',
+                    image: '',
+                    anisearchUrl: ''
+                };
+            }
         }
 
         // ─── Datenladen & Initialisierung ─────────────────────────────
