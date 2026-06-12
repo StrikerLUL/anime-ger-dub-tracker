@@ -197,6 +197,15 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    },
+    {
+      "id": 20864,
+      "title": "Detektiv Conan: Der gefallene Engel des Highways",
+      "url": "https://www.anisearch.de/anime/20864,detektiv-conan-der-gefallene-engel-des-highways",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20864_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
     }
   ],
   "aktuelle": [
@@ -923,7 +932,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-06-11T10:13:09.168214Z",
+  "timestamp": "2026-06-12T10:00:28.374141Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
