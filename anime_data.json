@@ -28,15 +28,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 7944,
-      "title": "Kamisama Kiss",
-      "url": "https://www.anisearch.de/anime/7944,kamisama-kiss",
-      "image": "https://cdn.anisearch.de/images/anime/cover/7/7944_400.webp",
-      "info": "TV-Serie, 13 (2012)",
-      "year": 2012,
-      "type": "TV-Serie"
-    },
-    {
       "id": 9632,
       "title": "Futari Ecchi (OVA)",
       "url": "https://www.anisearch.de/anime/9632,futari-ecchi-ova",
@@ -932,7 +923,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-06-15T11:51:39.089613Z",
+  "timestamp": "2026-06-16T10:59:24.933916Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
