@@ -29,8 +29,8 @@
     },
     {
       "id": 9632,
-      "title": "Futari Ecchi (OVA)",
-      "url": "https://www.anisearch.de/anime/9632,futari-ecchi-ova",
+      "title": "Manga Love Story: The One And Only Step Up Love Story",
+      "url": "https://www.anisearch.de/anime/9632,manga-love-story-the-one-and-only-step-up-love-story",
       "image": "https://cdn.anisearch.de/images/anime/cover/9/9632_400.webp",
       "info": "OVA, 3 (2014)",
       "year": 2014,
@@ -190,6 +190,15 @@
       "type": "Film"
     },
     {
+      "id": 19245,
+      "title": "A New Dawn",
+      "url": "https://www.anisearch.de/anime/19245,a-new-dawn",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19245_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 20864,
       "title": "Detektiv Conan: Der gefallene Engel des Highways",
       "url": "https://www.anisearch.de/anime/20864,detektiv-conan-der-gefallene-engel-des-highways",
@@ -197,6 +206,33 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    },
+    {
+      "id": 20259,
+      "title": "Black Torch",
+      "url": "https://www.anisearch.de/anime/20259,black-torch",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20259_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19443,
+      "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
+      "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 16391,
+      "title": "Saga of Tanya the Evil: Staffel 2",
+      "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -923,7 +959,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-06-18T10:19:21.239584Z",
+  "timestamp": "2026-06-19T10:17:03.358279Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
