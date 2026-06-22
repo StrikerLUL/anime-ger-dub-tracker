@@ -1759,31 +1759,35 @@
         let tooltipHideTimeout;
 
         function showTooltip(event, id) {
-            clearTimeout(tooltipHideTimeout);
-            const anime = state.animes.find(a => a.id === id);
-            if (!anime) return;
+            try {
+                clearTimeout(tooltipHideTimeout);
+                const anime = state.animes.find(a => a.id === id);
+                if (!anime) return;
 
-            const tooltip = document.getElementById('globalTooltip');
-            if (!tooltip) return;
+                const tooltip = document.getElementById('globalTooltip');
+                if (!tooltip) return;
 
-            let infoHtml = `<h4>${anime.title}</h4>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
+                let infoHtml = `<h4>${anime.title}</h4>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
 
-            if (anime.info) {
-                infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+                if (anime.info) {
+                    infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+                }
+
+                tooltip.innerHTML = infoHtml;
+                tooltip.style.display = 'block';
+
+                // force reflow before opacity
+                void tooltip.offsetWidth;
+                tooltip.classList.add('visible');
+
+                moveTooltip(event);
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Anzeigen des Tooltips aufgetreten."); console.error("Fehler beim Anzeigen des Tooltips:", error);
             }
-
-            tooltip.innerHTML = infoHtml;
-            tooltip.style.display = 'block';
-
-            // force reflow before opacity
-            void tooltip.offsetWidth;
-            tooltip.classList.add('visible');
-
-            moveTooltip(event);
         }
 
         function hideTooltip() {
@@ -1797,83 +1801,108 @@
         }
 
         function moveTooltip(event) {
-            const tooltip = document.getElementById('globalTooltip');
-            if (!tooltip || tooltip.style.display === 'none') return;
+            try {
+                const tooltip = document.getElementById('globalTooltip');
+                if (!tooltip || tooltip.style.display === 'none') return;
 
-            const tooltipRect = tooltip.getBoundingClientRect();
-            const margin = 15;
+                const tooltipRect = tooltip.getBoundingClientRect();
+                const margin = 15;
 
-            let top = event.clientY + 20;
-            let left = event.clientX + 20;
+                let top = event.clientY + 20;
+                let left = event.clientX + 20;
 
-            // Check boundaries
-            if (left + tooltipRect.width > window.innerWidth - margin) {
-                left = event.clientX - tooltipRect.width - 20;
+                // Check boundaries
+                if (left + tooltipRect.width > window.innerWidth - margin) {
+                    left = event.clientX - tooltipRect.width - 20;
+                }
+
+                if (top + tooltipRect.height > window.innerHeight - margin) {
+                    top = event.clientY - tooltipRect.height - 20;
+                }
+
+                tooltip.style.top = top + 'px';
+                tooltip.style.left = left + 'px';
+            } catch (error) {
+                console.error("Fehler beim Bewegen des Tooltips:", error);
             }
-
-            if (top + tooltipRect.height > window.innerHeight - margin) {
-                top = event.clientY - tooltipRect.height - 20;
-            }
-
-            tooltip.style.top = top + 'px';
-            tooltip.style.left = left + 'px';
         }
 
         function goToPage(page) {
-            state.currentPage = page;
-            renderAnimes();
-            window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
+            try {
+                state.currentPage = page;
+                renderAnimes();
+                window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
+            } catch (error) {
+                console.error("Fehler bei der Pagination:", error);
+                showGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
+            }
         }
 
         function updateApiStatus() {
-            const statusEl = document.getElementById('apiStatus');
-            if (!statusEl) return;
-            const configs = {
-                live:   { cls: 'online',  dot: '#34d399', label: 'Live · anisearch.de' },
-                github: { cls: 'cached',  dot: '#60a5fa', label: '🐙 GitHub Actions' },
-                cache:  { cls: 'cached',  dot: '#fbbf24', label: 'Gecachte Daten' },
-                demo:   { cls: 'offline', dot: '#f87171', label: 'Demo-Modus' },
-                none:   { cls: 'loading', dot: '#93c5fd', label: 'Verbinde...' },
-            };
-            const cfg = configs[state.dataSource] || configs.none;
-            statusEl.className = 'api-status ' + cfg.cls;
-            statusEl.innerHTML = `<span style="display:inline-block;width:8px;height:8px;background:${cfg.dot};border-radius:50%"></span> ${cfg.label}`;
+            try {
+                const statusEl = document.getElementById('apiStatus');
+                if (!statusEl) return;
+                const configs = {
+                    live:   { cls: 'online',  dot: '#34d399', label: 'Live · anisearch.de' },
+                    github: { cls: 'cached',  dot: '#60a5fa', label: '🐙 GitHub Actions' },
+                    cache:  { cls: 'cached',  dot: '#fbbf24', label: 'Gecachte Daten' },
+                    demo:   { cls: 'offline', dot: '#f87171', label: 'Demo-Modus' },
+                    none:   { cls: 'loading', dot: '#93c5fd', label: 'Verbinde...' },
+                };
+                const cfg = configs[state.dataSource] || configs.none;
+                statusEl.className = 'api-status ' + cfg.cls;
+                statusEl.innerHTML = `<span style="display:inline-block;width:8px;height:8px;background:${cfg.dot};border-radius:50%"></span> ${cfg.label}`;
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren des API-Status aufgetreten."); console.error("Fehler beim Aktualisieren des API-Status:", error);
+            }
         }
 
         function updateOfflineBanner() {
-            const banner = document.getElementById('offlineBanner');
-            if (!banner) return;
-            if (state.dataSource === 'demo') {
-                banner.classList.add('visible');
-            } else {
-                banner.classList.remove('visible');
+            try {
+                const banner = document.getElementById('offlineBanner');
+                if (!banner) return;
+                if (state.dataSource === 'demo') {
+                    banner.classList.add('visible');
+                } else {
+                    banner.classList.remove('visible');
+                }
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren des Banners aufgetreten."); console.error("Fehler beim Aktualisieren des Offline-Banners:", error);
             }
         }
 
         function showNotification(message) {
-            const container = document.getElementById('notification');
-            if (!container) return;
-            const notif = document.createElement('div');
-            notif.className = `notification`;
-            notif.innerHTML = `
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                ${message}
-            `;
-            container.appendChild(notif);
-            setTimeout(() => {
-                notif.style.opacity = '0';
-                notif.style.transform = 'translateY(20px)';
-                setTimeout(() => notif.remove(), 300);
-            }, 4000);
+            try {
+                const container = document.getElementById('notification');
+                if (!container) return;
+                const notif = document.createElement('div');
+                notif.className = `notification`;
+                notif.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    ${message}
+                `;
+                container.appendChild(notif);
+                setTimeout(() => {
+                    notif.style.opacity = '0';
+                    notif.style.transform = 'translateY(20px)';
+                    setTimeout(() => notif.remove(), 300);
+                }, 4000);
+            } catch (error) {
+                showGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
+            }
         }
 
         function updateTabs() {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.tab === state.currentTab) {
-                    btn.classList.add('active');
-                }
-            });
+            try {
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.tab === state.currentTab) {
+                        btn.classList.add('active');
+                    }
+                });
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren der Tabs aufgetreten."); console.error("Fehler beim Aktualisieren der Tabs:", error);
+            }
         }
 
         // Globale Fehlerbehandlung für unvorhergesehene Abstürze
