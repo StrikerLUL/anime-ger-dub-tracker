@@ -1311,18 +1311,7 @@
                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
                 }
             } catch (err) {
-                console.error('Fehler bei applyDataToState:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Datenverarbeitungsfehler</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Verarbeiten der empfangenen Anime-Daten.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                    document.getElementById('pagination').innerHTML = '';
-                }
+                showGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
             }
         }
 
@@ -1360,17 +1349,7 @@
                 }, 'demo');
                 startPolling();  // Auf Server warten
             } catch (err) {
-                console.error('Kritischer Fehler bei der Initialisierung:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px;">Es ist ein Fehler aufgetreten</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Die Anwendung konnte nicht geladen werden.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                }
+                showGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
             }
         }
 
@@ -1449,21 +1428,7 @@
                     </div>
                 `;
             } catch (error) {
-                console.error("Fehler beim Aktualisieren der Statistiken:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Statistiken</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren der Daten. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
             }
         }
 
@@ -1517,17 +1482,7 @@
                 state.currentPage = 1;
                 renderAnimes();
             } catch (err) {
-                console.error('Fehler bei applyFilters:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Filterfehler</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Anwenden der Filter.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                }
+                showGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
             }
         }
 
@@ -1624,19 +1579,7 @@
 
                 document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
             } catch (error) {
-                console.error("Ein Fehler ist beim Rendern aufgetreten:", error);
-                contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, das hat nicht geklappt!</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.</p>
-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                            🔄 Seite neu laden
-                        </button>
-                    </div>`;
-                document.getElementById('pagination').innerHTML = '';
+                showGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
             }
         }
 
@@ -1676,21 +1619,7 @@
                     btn.innerHTML = '✓ In Watchlist';
                 }
             } catch (error) {
-                console.error("Fehler beim Aktualisieren der Watchlist:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler mit der Watchlist</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren deiner Watchlist. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
             }
         }
 
@@ -1734,21 +1663,7 @@
                 `;
                 document.getElementById('detailsModal').classList.add('active');
             } catch (error) {
-                console.error("Fehler beim Öffnen des Modals:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Details</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Öffnen der Anime-Details. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
             }
         }
 
@@ -1910,34 +1825,50 @@
             try {
                 const saved = localStorage.getItem('premiumWatchlist');
                 state.watchlist = saved ? JSON.parse(saved) : [];
+            } catch (e) {
+                console.warn('LocalStorage Watchlist Fehler', e);
+                showNotification('Fehler beim Laden der Watchlist');
+                state.watchlist = [];
+            }
 
+            try {
                 const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
                 if (savedSearchTerm !== null) {
                     const searchInput = document.getElementById('searchInput');
                     if (searchInput) searchInput.value = savedSearchTerm;
                 }
+            } catch (e) {
+                console.warn('LocalStorage Suchbegriff Fehler', e);
+            }
 
+            try {
                 const savedSortVal = localStorage.getItem('premiumSortVal');
                 if (savedSortVal !== null) {
                     const sortSelect = document.getElementById('sortSelect');
                     if (sortSelect) sortSelect.value = savedSortVal;
                 }
+            } catch (e) {
+                console.warn('LocalStorage Sortierung Fehler', e);
+            }
 
+            try {
                 const savedTab = localStorage.getItem('premiumTab');
                 if (savedTab !== null) {
                     state.currentTab = savedTab;
                     updateTabs();
                 }
+            } catch (e) {
+                console.warn('LocalStorage Tab Fehler', e);
+            }
 
+            try {
                 const savedPageSize = localStorage.getItem('premiumPageSize');
                 if (savedPageSize !== null) {
                     const pageSizeSelect = document.getElementById('pageSizeSelect');
                     if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
                 }
             } catch (e) {
-                console.warn('LocalStorage nicht verfügbar', e);
-                showNotification('Fehler beim Laden der Einstellungen');
-                state.watchlist = [];
+                console.warn('LocalStorage Seitengröße Fehler', e);
             }
 
             // Keyboard Shortcuts
