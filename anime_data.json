@@ -136,6 +136,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19716,
+      "title": "The Beginning After the End",
+      "url": "https://www.anisearch.de/anime/19716,the-beginning-after-the-end",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19716_400.webp",
+      "info": "TV-Serie, 12 (2025)",
+      "year": 2025,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19768,
       "title": "Anne Shirley",
       "url": "https://www.anisearch.de/anime/19768,anne-shirley",
@@ -208,6 +217,15 @@
       "type": "Film"
     },
     {
+      "id": 21327,
+      "title": "Hana-Kimi Staffel 2",
+      "url": "https://www.anisearch.de/anime/21327,hana-kimi-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21327_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20259,
       "title": "Black Torch",
       "url": "https://www.anisearch.de/anime/20259,black-torch",
@@ -226,10 +244,82 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19951,
+      "title": "Skeleton Knight in Another World Staffel 2",
+      "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21357,
+      "title": "You and I Are Polar Opposites: Staffel 2",
+      "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19292,
+      "title": "The Ghost in the Shell",
+      "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19292_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20894,
+      "title": "Clevatess: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 16391,
       "title": "Saga of Tanya the Evil: Staffel 2",
       "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 17984,
+      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20658,
+      "title": "Vom Landei zum Schwertheiligen II",
+      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21171,
+      "title": "Tomb Raider King",
+      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20297,
+      "title": "Though I Am an Inept Villainess",
+      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -959,7 +1049,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-06-26T08:54:34.125384Z",
+  "timestamp": "2026-06-27T08:29:09.316749Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
