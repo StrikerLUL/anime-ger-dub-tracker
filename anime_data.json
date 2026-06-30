@@ -327,6 +327,33 @@
   ],
   "aktuelle": [
     {
+      "id": 21226,
+      "title": "Thunder 3",
+      "url": "https://www.anisearch.de/anime/21226,thunder-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21226_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 13774,
+      "title": "Sparks of Tomorrow",
+      "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
+      "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21361,
+      "title": "Baki-Dou: The Invincible Samurai (Teil 2)",
+      "url": "https://www.anisearch.de/anime/21361,baki-dou-the-invincible-samurai-teil-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21361_400.webp",
+      "info": "Web, 12 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 20916,
       "title": "Devil May Cry: Staffel 2",
       "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
@@ -655,33 +682,6 @@
       "title": "You and I Are Polar Opposites",
       "url": "https://www.anisearch.de/anime/19963,you-and-i-are-polar-opposites",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19963_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19600,
-      "title": "Dark Moon: The Blood Altar",
-      "url": "https://www.anisearch.de/anime/19600,dark-moon-the-blood-altar",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19600_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19465,
-      "title": "Fire Force: Staffel 3 (Cour 2)",
-      "url": "https://www.anisearch.de/anime/19465,fire-force-staffel-3-cour-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19465_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18323,
-      "title": "Trigun Stargaze",
-      "url": "https://www.anisearch.de/anime/18323,trigun-stargaze",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18323_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -689,6 +689,33 @@
   ],
   "abgeschlossen": [
     {
+      "id": 21226,
+      "title": "Thunder 3",
+      "url": "https://www.anisearch.de/anime/21226,thunder-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21226_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 13774,
+      "title": "Sparks of Tomorrow",
+      "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
+      "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21361,
+      "title": "Baki-Dou: The Invincible Samurai (Teil 2)",
+      "url": "https://www.anisearch.de/anime/21361,baki-dou-the-invincible-samurai-teil-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21361_400.webp",
+      "info": "Web, 12 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 20916,
       "title": "Devil May Cry: Staffel 2",
       "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
@@ -1020,36 +1047,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19600,
-      "title": "Dark Moon: The Blood Altar",
-      "url": "https://www.anisearch.de/anime/19600,dark-moon-the-blood-altar",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19600_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19465,
-      "title": "Fire Force: Staffel 3 (Cour 2)",
-      "url": "https://www.anisearch.de/anime/19465,fire-force-staffel-3-cour-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19465_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18323,
-      "title": "Trigun Stargaze",
-      "url": "https://www.anisearch.de/anime/18323,trigun-stargaze",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18323_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-06-29T10:29:35.637514Z",
+  "timestamp": "2026-06-30T09:22:28.519411Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
