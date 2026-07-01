@@ -1866,6 +1866,13 @@
                     showNotification('Fehler beim Laden der Watchlist');
                     state.watchlist = [];
                 const saved = localStorage.getItem('premiumWatchlist');
+                try {
+                    state.watchlist = saved ? JSON.parse(saved) : [];
+                } catch (parseError) {
+                    console.error('Fehler beim Parsen der Watchlist:', parseError);
+                    showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
+                    state.watchlist = [];
+                }
                 state.watchlist = saved ? JSON.parse(saved) : [];
             } catch (e) {
                 console.warn('LocalStorage Watchlist Fehler', e);
