@@ -1311,18 +1311,7 @@
                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
                 }
             } catch (err) {
-                console.error('Fehler bei applyDataToState:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Datenverarbeitungsfehler</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Verarbeiten der empfangenen Anime-Daten.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                    document.getElementById('pagination').innerHTML = '';
-                }
+                showGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
             }
         }
 
@@ -1360,17 +1349,7 @@
                 }, 'demo');
                 startPolling();  // Auf Server warten
             } catch (err) {
-                console.error('Kritischer Fehler bei der Initialisierung:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px;">Es ist ein Fehler aufgetreten</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Die Anwendung konnte nicht geladen werden.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                }
+                showGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
             }
         }
 
@@ -1401,20 +1380,27 @@
         }
 
         async function manualRefresh() {
-            addLog('🔄 Manueller Refresh...');
-            // Trigger Server-Scrape falls vorhanden
             try {
-                const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
-                if (!response.ok) {
-                    throw new Error(`HTTP Error: ${response.status}`);
+                addLog('🔄 Manueller Refresh...');
+                // Trigger Server-Scrape falls vorhanden
+                try {
+                    const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
+                    document.getElementById('scrapingIndicator')?.classList.add('visible');
+                } catch(e) {
+                    /* kein Server */
+                    showNotification('Fehler beim manuellen Refresh');
                 }
-                addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
-                document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } catch(e) {
-                /* kein Server */
-                showNotification('Fehler beim manuellen Refresh');
+                await initializeAnimes();
+            } catch (err) {
+                console.error("Fehler beim manuellen Refresh", err);
+                showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
+            } catch (error) {
+                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
             }
-            await initializeAnimes();
         }
 
         function updateStats() {
@@ -1449,21 +1435,7 @@
                     </div>
                 `;
             } catch (error) {
-                console.error("Fehler beim Aktualisieren der Statistiken:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Statistiken</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren der Daten. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
             }
         }
 
@@ -1475,13 +1447,11 @@
                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
 
-                try {
-                    localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
-                    localStorage.setItem('premiumSortVal', sortVal);
-                    localStorage.setItem('premiumYear', selectedYear);
-                    localStorage.setItem('premiumFormat', selectedFormat);
-                    localStorage.setItem('premiumTab', state.currentTab);
-                } catch (e) {
+                try { localStorage.setItem('premiumSearchTerm', searchInput?.value || ''); } catch (e) { console.warn('LocalStorage error', e); }
+                try { localStorage.setItem('premiumSortVal', sortVal); } catch (e) { console.warn('LocalStorage error', e); }
+                try { localStorage.setItem('premiumYear', selectedYear); } catch (e) { console.warn('LocalStorage error', e); }
+                try { localStorage.setItem('premiumFormat', selectedFormat); } catch (e) { console.warn('LocalStorage error', e); }
+                try { localStorage.setItem('premiumTab', state.currentTab); } catch (e) {
                     console.warn('LocalStorage nicht verfügbar', e);
                     showNotification('Fehler beim Speichern der Filter');
                 }
@@ -1517,17 +1487,7 @@
                 state.currentPage = 1;
                 renderAnimes();
             } catch (err) {
-                console.error('Fehler bei applyFilters:', err);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align:center;padding:40px;">
-                            <h2 style="font-family: var(--font-display); margin-bottom: 16px; color: #ef4444;">Filterfehler</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 24px;">Es gab ein Problem beim Anwenden der Filter.</p>
-                            <button class="btn btn-primary" onclick="location.reload()" style="margin: 0 auto;">Neu laden</button>
-                        </div>
-                    `;
-                }
+                showGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
             }
         }
 
@@ -1624,19 +1584,7 @@
 
                 document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
             } catch (error) {
-                console.error("Ein Fehler ist beim Rendern aufgetreten:", error);
-                contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, das hat nicht geklappt!</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.</p>
-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                            🔄 Seite neu laden
-                        </button>
-                    </div>`;
-                document.getElementById('pagination').innerHTML = '';
+                showGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
             }
         }
 
@@ -1676,21 +1624,7 @@
                     btn.innerHTML = '✓ In Watchlist';
                 }
             } catch (error) {
-                console.error("Fehler beim Aktualisieren der Watchlist:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler mit der Watchlist</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Aktualisieren deiner Watchlist. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
             }
         }
 
@@ -1734,21 +1668,7 @@
                 `;
                 document.getElementById('detailsModal').classList.add('active');
             } catch (error) {
-                console.error("Fehler beim Öffnen des Modals:", error);
-                const contentArea = document.getElementById('contentArea');
-                if (contentArea) {
-                    contentArea.innerHTML = `
-                        <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                                <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Fehler beim Laden der Details</h2>
-                            <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem beim Öffnen der Anime-Details. Bitte lade die Seite neu.</p>
-                            <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                                🔄 Seite neu laden
-                            </button>
-                        </div>`;
-                }
+                showGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
             }
         }
 
@@ -1759,31 +1679,35 @@
         let tooltipHideTimeout;
 
         function showTooltip(event, id) {
-            clearTimeout(tooltipHideTimeout);
-            const anime = state.animes.find(a => a.id === id);
-            if (!anime) return;
+            try {
+                clearTimeout(tooltipHideTimeout);
+                const anime = state.animes.find(a => a.id === id);
+                if (!anime) return;
 
-            const tooltip = document.getElementById('globalTooltip');
-            if (!tooltip) return;
+                const tooltip = document.getElementById('globalTooltip');
+                if (!tooltip) return;
 
-            let infoHtml = `<h4>${anime.title}</h4>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
-            infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
+                let infoHtml = `<h4>${anime.title}</h4>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Typ:</span> <span>${anime.format || 'Unbekannt'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Jahr:</span> <span>${anime.year || 'Unbekannt'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Episoden:</span> <span>${anime.episodes || '?'}</span></div>`;
+                infoHtml += `<div class="global-tooltip-row"><span class="global-tooltip-label">Status:</span> <span>${anime.status || 'Unbekannt'}</span></div>`;
 
-            if (anime.info) {
-                infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+                if (anime.info) {
+                    infoHtml += `<div style="margin-top: 8px; font-size: 11px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">${anime.info}</div>`;
+                }
+
+                tooltip.innerHTML = infoHtml;
+                tooltip.style.display = 'block';
+
+                // force reflow before opacity
+                void tooltip.offsetWidth;
+                tooltip.classList.add('visible');
+
+                moveTooltip(event);
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Anzeigen des Tooltips aufgetreten."); console.error("Fehler beim Anzeigen des Tooltips:", error);
             }
-
-            tooltip.innerHTML = infoHtml;
-            tooltip.style.display = 'block';
-
-            // force reflow before opacity
-            void tooltip.offsetWidth;
-            tooltip.classList.add('visible');
-
-            moveTooltip(event);
         }
 
         function hideTooltip() {
@@ -1797,83 +1721,108 @@
         }
 
         function moveTooltip(event) {
-            const tooltip = document.getElementById('globalTooltip');
-            if (!tooltip || tooltip.style.display === 'none') return;
+            try {
+                const tooltip = document.getElementById('globalTooltip');
+                if (!tooltip || tooltip.style.display === 'none') return;
 
-            const tooltipRect = tooltip.getBoundingClientRect();
-            const margin = 15;
+                const tooltipRect = tooltip.getBoundingClientRect();
+                const margin = 15;
 
-            let top = event.clientY + 20;
-            let left = event.clientX + 20;
+                let top = event.clientY + 20;
+                let left = event.clientX + 20;
 
-            // Check boundaries
-            if (left + tooltipRect.width > window.innerWidth - margin) {
-                left = event.clientX - tooltipRect.width - 20;
+                // Check boundaries
+                if (left + tooltipRect.width > window.innerWidth - margin) {
+                    left = event.clientX - tooltipRect.width - 20;
+                }
+
+                if (top + tooltipRect.height > window.innerHeight - margin) {
+                    top = event.clientY - tooltipRect.height - 20;
+                }
+
+                tooltip.style.top = top + 'px';
+                tooltip.style.left = left + 'px';
+            } catch (error) {
+                console.error("Fehler beim Bewegen des Tooltips:", error);
             }
-
-            if (top + tooltipRect.height > window.innerHeight - margin) {
-                top = event.clientY - tooltipRect.height - 20;
-            }
-
-            tooltip.style.top = top + 'px';
-            tooltip.style.left = left + 'px';
         }
 
         function goToPage(page) {
-            state.currentPage = page;
-            renderAnimes();
-            window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
+            try {
+                state.currentPage = page;
+                renderAnimes();
+                window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
+            } catch (error) {
+                console.error("Fehler bei der Pagination:", error);
+                showGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
+            }
         }
 
         function updateApiStatus() {
-            const statusEl = document.getElementById('apiStatus');
-            if (!statusEl) return;
-            const configs = {
-                live:   { cls: 'online',  dot: '#34d399', label: 'Live · anisearch.de' },
-                github: { cls: 'cached',  dot: '#60a5fa', label: '🐙 GitHub Actions' },
-                cache:  { cls: 'cached',  dot: '#fbbf24', label: 'Gecachte Daten' },
-                demo:   { cls: 'offline', dot: '#f87171', label: 'Demo-Modus' },
-                none:   { cls: 'loading', dot: '#93c5fd', label: 'Verbinde...' },
-            };
-            const cfg = configs[state.dataSource] || configs.none;
-            statusEl.className = 'api-status ' + cfg.cls;
-            statusEl.innerHTML = `<span style="display:inline-block;width:8px;height:8px;background:${cfg.dot};border-radius:50%"></span> ${cfg.label}`;
+            try {
+                const statusEl = document.getElementById('apiStatus');
+                if (!statusEl) return;
+                const configs = {
+                    live:   { cls: 'online',  dot: '#34d399', label: 'Live · anisearch.de' },
+                    github: { cls: 'cached',  dot: '#60a5fa', label: '🐙 GitHub Actions' },
+                    cache:  { cls: 'cached',  dot: '#fbbf24', label: 'Gecachte Daten' },
+                    demo:   { cls: 'offline', dot: '#f87171', label: 'Demo-Modus' },
+                    none:   { cls: 'loading', dot: '#93c5fd', label: 'Verbinde...' },
+                };
+                const cfg = configs[state.dataSource] || configs.none;
+                statusEl.className = 'api-status ' + cfg.cls;
+                statusEl.innerHTML = `<span style="display:inline-block;width:8px;height:8px;background:${cfg.dot};border-radius:50%"></span> ${cfg.label}`;
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren des API-Status aufgetreten."); console.error("Fehler beim Aktualisieren des API-Status:", error);
+            }
         }
 
         function updateOfflineBanner() {
-            const banner = document.getElementById('offlineBanner');
-            if (!banner) return;
-            if (state.dataSource === 'demo') {
-                banner.classList.add('visible');
-            } else {
-                banner.classList.remove('visible');
+            try {
+                const banner = document.getElementById('offlineBanner');
+                if (!banner) return;
+                if (state.dataSource === 'demo') {
+                    banner.classList.add('visible');
+                } else {
+                    banner.classList.remove('visible');
+                }
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren des Banners aufgetreten."); console.error("Fehler beim Aktualisieren des Offline-Banners:", error);
             }
         }
 
         function showNotification(message) {
-            const container = document.getElementById('notification');
-            if (!container) return;
-            const notif = document.createElement('div');
-            notif.className = `notification`;
-            notif.innerHTML = `
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                ${message}
-            `;
-            container.appendChild(notif);
-            setTimeout(() => {
-                notif.style.opacity = '0';
-                notif.style.transform = 'translateY(20px)';
-                setTimeout(() => notif.remove(), 300);
-            }, 4000);
+            try {
+                const container = document.getElementById('notification');
+                if (!container) return;
+                const notif = document.createElement('div');
+                notif.className = `notification`;
+                notif.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    ${message}
+                `;
+                container.appendChild(notif);
+                setTimeout(() => {
+                    notif.style.opacity = '0';
+                    notif.style.transform = 'translateY(20px)';
+                    setTimeout(() => notif.remove(), 300);
+                }, 4000);
+            } catch (error) {
+                showGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
+            }
         }
 
         function updateTabs() {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.tab === state.currentTab) {
-                    btn.classList.add('active');
-                }
-            });
+            try {
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.tab === state.currentTab) {
+                        btn.classList.add('active');
+                    }
+                });
+            } catch (error) {
+                showNotification("Ein Fehler ist beim Aktualisieren der Tabs aufgetreten."); console.error("Fehler beim Aktualisieren der Tabs:", error);
+            }
         }
 
         // Globale Fehlerbehandlung für unvorhergesehene Abstürze
@@ -1908,6 +1857,14 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             try {
+                // Parse localStorage with individual try-catch to avoid one bad value killing all settings
+                try {
+                    const saved = localStorage.getItem('premiumWatchlist');
+                    state.watchlist = saved ? JSON.parse(saved) : [];
+                } catch (e) {
+                    console.warn('LocalStorage nicht verfügbar', e);
+                    showNotification('Fehler beim Laden der Watchlist');
+                    state.watchlist = [];
                 const saved = localStorage.getItem('premiumWatchlist');
                 try {
                     state.watchlist = saved ? JSON.parse(saved) : [];
@@ -1916,34 +1873,82 @@
                     showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
                     state.watchlist = [];
                 }
+                state.watchlist = saved ? JSON.parse(saved) : [];
+            } catch (e) {
+                console.warn('LocalStorage Watchlist Fehler', e);
+                showNotification('Fehler beim Laden der Watchlist');
+                state.watchlist = [];
+            }
 
+            try {
                 const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
                 if (savedSearchTerm !== null) {
                     const searchInput = document.getElementById('searchInput');
                     if (searchInput) searchInput.value = savedSearchTerm;
                 }
+            } catch (e) {
+                console.warn('LocalStorage Suchbegriff Fehler', e);
+            }
 
+                try {
+                    const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
+                    if (savedSearchTerm !== null) {
+                        const searchInput = document.getElementById('searchInput');
+                        if (searchInput) searchInput.value = savedSearchTerm;
+                    }
+                } catch (e) { console.warn('LocalStorage error', e); }
+
+                try {
+                    const savedSortVal = localStorage.getItem('premiumSortVal');
+                    if (savedSortVal !== null) {
+                        const sortSelect = document.getElementById('sortSelect');
+                        if (sortSelect) sortSelect.value = savedSortVal;
+                    }
+                } catch (e) { console.warn('LocalStorage error', e); }
+
+                try {
+                    const savedTab = localStorage.getItem('premiumTab');
+                    if (savedTab !== null) {
+                        state.currentTab = savedTab;
+                        updateTabs();
+                    }
+                } catch (e) { console.warn('LocalStorage error', e); }
+
+                try {
+                    const savedPageSize = localStorage.getItem('premiumPageSize');
+                    if (savedPageSize !== null) {
+                        const pageSizeSelect = document.getElementById('pageSizeSelect');
+                        if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
+                    }
+                } catch (e) { console.warn('LocalStorage error', e); }
+            try {
                 const savedSortVal = localStorage.getItem('premiumSortVal');
                 if (savedSortVal !== null) {
                     const sortSelect = document.getElementById('sortSelect');
                     if (sortSelect) sortSelect.value = savedSortVal;
                 }
+            } catch (e) {
+                console.warn('LocalStorage Sortierung Fehler', e);
+            }
 
+            try {
                 const savedTab = localStorage.getItem('premiumTab');
                 if (savedTab !== null) {
                     state.currentTab = savedTab;
                     updateTabs();
                 }
+            } catch (e) {
+                console.warn('LocalStorage Tab Fehler', e);
+            }
 
+            try {
                 const savedPageSize = localStorage.getItem('premiumPageSize');
                 if (savedPageSize !== null) {
                     const pageSizeSelect = document.getElementById('pageSizeSelect');
                     if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
                 }
             } catch (e) {
-                console.warn('LocalStorage nicht verfügbar', e);
-                showNotification('Fehler beim Laden der Einstellungen');
-                state.watchlist = [];
+                console.warn('LocalStorage Seitengröße Fehler', e);
             }
 
             // Keyboard Shortcuts
@@ -2057,6 +2062,10 @@
 
             initializeAnimes();
             setTimeout(() => { showNotification('Datenbank geladen & bereit 🚀'); }, 800);
+            } catch (err) {
+                console.error("Unerwarteter Fehler bei der Initialisierung:", err);
+                showGlobalError(err.message || 'Fehler beim Laden der Seite.');
+            }
         });
     </script>
 
