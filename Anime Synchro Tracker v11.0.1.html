@@ -1401,20 +1401,24 @@
         }
 
         async function manualRefresh() {
-            addLog('🔄 Manueller Refresh...');
-            // Trigger Server-Scrape falls vorhanden
             try {
-                const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
-                if (!response.ok) {
-                    throw new Error(`HTTP Error: ${response.status}`);
+                addLog('🔄 Manueller Refresh...');
+                // Trigger Server-Scrape falls vorhanden
+                try {
+                    const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                    addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
+                    document.getElementById('scrapingIndicator')?.classList.add('visible');
+                } catch(e) {
+                    /* kein Server */
+                    showNotification('Fehler beim manuellen Refresh');
                 }
-                addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
-                document.getElementById('scrapingIndicator')?.classList.add('visible');
-            } catch(e) {
-                /* kein Server */
-                showNotification('Fehler beim manuellen Refresh');
+                await initializeAnimes();
+            } catch (error) {
+                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
             }
-            await initializeAnimes();
         }
 
         function updateStats() {
