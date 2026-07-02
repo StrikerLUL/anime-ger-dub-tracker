@@ -1398,8 +1398,6 @@
             } catch (err) {
                 console.error("Fehler beim manuellen Refresh", err);
                 showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
-            } catch (error) {
-                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
             }
         }
 
@@ -1447,11 +1445,13 @@
                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
 
-                try { localStorage.setItem('premiumSearchTerm', searchInput?.value || ''); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumSortVal', sortVal); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumYear', selectedYear); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumFormat', selectedFormat); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumTab', state.currentTab); } catch (e) {
+                try {
+                    localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
+                    localStorage.setItem('premiumSortVal', sortVal);
+                    localStorage.setItem('premiumYear', selectedYear);
+                    localStorage.setItem('premiumFormat', selectedFormat);
+                    localStorage.setItem('premiumTab', state.currentTab);
+                } catch (e) {
                     console.warn('LocalStorage nicht verfügbar', e);
                     showNotification('Fehler beim Speichern der Filter');
                 }
@@ -1860,38 +1860,22 @@
                 // Parse localStorage with individual try-catch to avoid one bad value killing all settings
                 try {
                     const saved = localStorage.getItem('premiumWatchlist');
-                    state.watchlist = saved ? JSON.parse(saved) : [];
+                    if (saved) {
+                        try {
+                            state.watchlist = JSON.parse(saved);
+                        } catch (parseError) {
+                            console.error('Fehler beim Parsen der Watchlist:', parseError);
+                            state.watchlist = [];
+                            showNotification('Fehler beim Laden der Watchlist');
+                        }
+                    } else {
+                        state.watchlist = [];
+                    }
                 } catch (e) {
-                    console.warn('LocalStorage nicht verfügbar', e);
+                    console.warn('LocalStorage Watchlist Fehler', e);
                     showNotification('Fehler beim Laden der Watchlist');
                     state.watchlist = [];
-                const saved = localStorage.getItem('premiumWatchlist');
-                try {
-                    state.watchlist = saved ? JSON.parse(saved) : [];
-                } catch (parseError) {
-                    console.error('Fehler beim Parsen der Watchlist:', parseError);
-                    state.watchlist = [];
-                    showNotification('Fehler beim Laden der Watchlist');
                 }
-                    showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
-                    state.watchlist = [];
-                }
-                state.watchlist = saved ? JSON.parse(saved) : [];
-            } catch (e) {
-                console.warn('LocalStorage Watchlist Fehler', e);
-                showNotification('Fehler beim Laden der Watchlist');
-                state.watchlist = [];
-            }
-
-            try {
-                const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
-                if (savedSearchTerm !== null) {
-                    const searchInput = document.getElementById('searchInput');
-                    if (searchInput) searchInput.value = savedSearchTerm;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Suchbegriff Fehler', e);
-            }
 
                 try {
                     const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
@@ -1899,7 +1883,9 @@
                         const searchInput = document.getElementById('searchInput');
                         if (searchInput) searchInput.value = savedSearchTerm;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Suchbegriff Fehler', e);
+                }
 
                 try {
                     const savedSortVal = localStorage.getItem('premiumSortVal');
@@ -1907,7 +1893,9 @@
                         const sortSelect = document.getElementById('sortSelect');
                         if (sortSelect) sortSelect.value = savedSortVal;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Sortierung Fehler', e);
+                }
 
                 try {
                     const savedTab = localStorage.getItem('premiumTab');
@@ -1915,7 +1903,9 @@
                         state.currentTab = savedTab;
                         updateTabs();
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Tab Fehler', e);
+                }
 
                 try {
                     const savedPageSize = localStorage.getItem('premiumPageSize');
@@ -1923,36 +1913,9 @@
                         const pageSizeSelect = document.getElementById('pageSizeSelect');
                         if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
-            try {
-                const savedSortVal = localStorage.getItem('premiumSortVal');
-                if (savedSortVal !== null) {
-                    const sortSelect = document.getElementById('sortSelect');
-                    if (sortSelect) sortSelect.value = savedSortVal;
+                } catch (e) {
+                    console.warn('LocalStorage Seitengröße Fehler', e);
                 }
-            } catch (e) {
-                console.warn('LocalStorage Sortierung Fehler', e);
-            }
-
-            try {
-                const savedTab = localStorage.getItem('premiumTab');
-                if (savedTab !== null) {
-                    state.currentTab = savedTab;
-                    updateTabs();
-                }
-            } catch (e) {
-                console.warn('LocalStorage Tab Fehler', e);
-            }
-
-            try {
-                const savedPageSize = localStorage.getItem('premiumPageSize');
-                if (savedPageSize !== null) {
-                    const pageSizeSelect = document.getElementById('pageSizeSelect');
-                    if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Seitengröße Fehler', e);
-            }
 
             // Keyboard Shortcuts
             document.addEventListener('keydown', (e) => {
