@@ -1,6 +1,15 @@
 {
   "kommende": [
     {
+      "id": 289,
+      "title": "Devil Lady",
+      "url": "https://www.anisearch.de/anime/289,devil-lady",
+      "image": "https://cdn.anisearch.de/images/anime/cover/0/289_400.webp",
+      "info": "TV-Serie, 26 (1998)",
+      "year": 1998,
+      "type": "TV-Serie"
+    },
+    {
       "id": 5278,
       "title": "Strike Witches 2",
       "url": "https://www.anisearch.de/anime/5278,strike-witches-2",
@@ -1049,7 +1058,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-02T08:44:57.848548Z",
+  "timestamp": "2026-07-03T08:53:06.488889Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
