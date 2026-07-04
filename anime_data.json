@@ -1,6 +1,42 @@
 {
   "kommende": [
     {
+      "id": 3255,
+      "title": "Violence Jack: Slumking",
+      "url": "https://www.anisearch.de/anime/3255,violence-jack-slumking",
+      "image": "https://cdn.anisearch.de/images/anime/cover/3/3255_400.webp",
+      "info": "OVA, 1 (1986)",
+      "year": 1986,
+      "type": "OVA"
+    },
+    {
+      "id": 1379,
+      "title": "Violence Jack: Evil Town",
+      "url": "https://www.anisearch.de/anime/1379,violence-jack-evil-town",
+      "image": "https://cdn.anisearch.de/images/anime/cover/1/1379_400.webp",
+      "info": "OVA, 1 (1988)",
+      "year": 1988,
+      "type": "OVA"
+    },
+    {
+      "id": 1208,
+      "title": "Violence Jack: Hell’s Wind",
+      "url": "https://www.anisearch.de/anime/1208,violence-jack-hells-wind",
+      "image": "https://cdn.anisearch.de/images/anime/cover/1/1208_400.webp",
+      "info": "OVA, 1 (1990)",
+      "year": 1990,
+      "type": "OVA"
+    },
+    {
+      "id": 2266,
+      "title": "Urotsukidoji IV",
+      "url": "https://www.anisearch.de/anime/2266,urotsukidoji-iv",
+      "image": "https://cdn.anisearch.de/images/anime/cover/hentai.v1_400.webp",
+      "info": "OVA, 3 (1993)",
+      "year": 1993,
+      "type": "OVA"
+    },
+    {
       "id": 289,
       "title": "Devil Lady",
       "url": "https://www.anisearch.de/anime/289,devil-lady",
@@ -127,6 +163,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 18327,
+      "title": "The Quintessential Quintuplets: Absehbare Sommerferien",
+      "url": "https://www.anisearch.de/anime/18327,the-quintessential-quintuplets-absehbare-sommerferien",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18327_400.webp",
+      "info": "Film, 1 (2023)",
+      "year": 2023,
+      "type": "Film"
+    },
+    {
       "id": 18360,
       "title": "Girls Band Cry",
       "url": "https://www.anisearch.de/anime/18360,girls-band-cry",
@@ -134,6 +179,15 @@
       "info": "TV-Serie, 13 (2024)",
       "year": 2024,
       "type": "TV-Serie"
+    },
+    {
+      "id": 19242,
+      "title": "The Quintessential Quintuplets Special 2",
+      "url": "https://www.anisearch.de/anime/19242,the-quintessential-quintuplets-special-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19242_400.webp",
+      "info": "Film, 1 (2024)",
+      "year": 2024,
+      "type": "Film"
     },
     {
       "id": 19490,
@@ -262,6 +316,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20994,
+      "title": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You (Staffel 3)",
+      "url": "https://www.anisearch.de/anime/20994,the-100-girlfriends-who-really-really-really-really-really-love-you-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20994_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 21357,
       "title": "You and I Are Polar Opposites: Staffel 2",
       "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
@@ -293,42 +356,6 @@
       "title": "Saga of Tanya the Evil: Staffel 2",
       "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 17984,
-      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
-      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20658,
-      "title": "Vom Landei zum Schwertheiligen II",
-      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 21171,
-      "title": "Tomb Raider King",
-      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20297,
-      "title": "Though I Am an Inept Villainess",
-      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -1058,7 +1085,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-03T08:53:06.488889Z",
+  "timestamp": "2026-07-04T08:28:24.840217Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
