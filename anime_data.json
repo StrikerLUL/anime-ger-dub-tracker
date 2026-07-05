@@ -289,29 +289,11 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20259,
-      "title": "Black Torch",
-      "url": "https://www.anisearch.de/anime/20259,black-torch",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20259_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19443,
       "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
       "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19951,
-      "title": "Skeleton Knight in Another World Staffel 2",
-      "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -359,6 +341,24 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
+    },
+    {
+      "id": 17984,
+      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20658,
+      "title": "Vom Landei zum Schwertheiligen II",
+      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -372,10 +372,37 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19962,
+      "title": "Magilumiere Inc. Staffel 2",
+      "url": "https://www.anisearch.de/anime/19962,magilumiere-inc-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19962_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 13774,
       "title": "Sparks of Tomorrow",
       "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
       "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20259,
+      "title": "Black Torch",
+      "url": "https://www.anisearch.de/anime/20259,black-torch",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20259_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19951,
+      "title": "Skeleton Knight in Another World Staffel 2",
+      "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -694,33 +721,6 @@
       "info": "Web, 20 (2026)",
       "year": 2026,
       "type": "Web"
-    },
-    {
-      "id": 19667,
-      "title": "Oshi no Ko: Mein Star - Season 3",
-      "url": "https://www.anisearch.de/anime/19667,oshi-no-ko-mein-star-season-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19667_400.webp",
-      "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18505,
-      "title": "Hell’s Paradise: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18505,hells-paradise-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18505_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19963,
-      "title": "You and I Are Polar Opposites",
-      "url": "https://www.anisearch.de/anime/19963,you-and-i-are-polar-opposites",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19963_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
@@ -734,10 +734,37 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19962,
+      "title": "Magilumiere Inc. Staffel 2",
+      "url": "https://www.anisearch.de/anime/19962,magilumiere-inc-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19962_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 13774,
       "title": "Sparks of Tomorrow",
       "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
       "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20259,
+      "title": "Black Torch",
+      "url": "https://www.anisearch.de/anime/20259,black-torch",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20259_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19951,
+      "title": "Skeleton Knight in Another World Staffel 2",
+      "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -1056,36 +1083,9 @@
       "info": "Web, 20 (2026)",
       "year": 2026,
       "type": "Web"
-    },
-    {
-      "id": 19667,
-      "title": "Oshi no Ko: Mein Star - Season 3",
-      "url": "https://www.anisearch.de/anime/19667,oshi-no-ko-mein-star-season-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19667_400.webp",
-      "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18505,
-      "title": "Hell’s Paradise: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18505,hells-paradise-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18505_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19963,
-      "title": "You and I Are Polar Opposites",
-      "url": "https://www.anisearch.de/anime/19963,you-and-i-are-polar-opposites",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19963_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-04T08:28:24.840217Z",
+  "timestamp": "2026-07-05T08:44:37.117282Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
