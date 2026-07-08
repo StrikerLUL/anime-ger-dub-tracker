@@ -316,15 +316,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 19292,
-      "title": "The Ghost in the Shell",
-      "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19292_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20894,
       "title": "Clevatess: Staffel 2",
       "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
@@ -359,6 +350,15 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
+    },
+    {
+      "id": 21171,
+      "title": "Tomb Raider King",
+      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -372,6 +372,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19292,
+      "title": "The Ghost in the Shell",
+      "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19292_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19962,
       "title": "Magilumiere Inc. Staffel 2",
       "url": "https://www.anisearch.de/anime/19962,magilumiere-inc-staffel-2",
@@ -712,15 +721,6 @@
       "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 21031,
-      "title": "Love Through a Prism",
-      "url": "https://www.anisearch.de/anime/21031,love-through-a-prism",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21031_400.webp",
-      "info": "Web, 20 (2026)",
-      "year": 2026,
-      "type": "Web"
     }
   ],
   "abgeschlossen": [
@@ -734,6 +734,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 19292,
+      "title": "The Ghost in the Shell",
+      "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19292_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19962,
       "title": "Magilumiere Inc. Staffel 2",
       "url": "https://www.anisearch.de/anime/19962,magilumiere-inc-staffel-2",
@@ -1074,18 +1083,9 @@
       "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 21031,
-      "title": "Love Through a Prism",
-      "url": "https://www.anisearch.de/anime/21031,love-through-a-prism",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21031_400.webp",
-      "info": "Web, 20 (2026)",
-      "year": 2026,
-      "type": "Web"
     }
   ],
-  "timestamp": "2026-07-07T09:29:40.896241Z",
+  "timestamp": "2026-07-08T08:13:54.738762Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
