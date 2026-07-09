@@ -316,15 +316,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20894,
-      "title": "Clevatess: Staffel 2",
-      "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 16391,
       "title": "Saga of Tanya the Evil: Staffel 2",
       "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
@@ -343,19 +334,19 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20658,
-      "title": "Vom Landei zum Schwertheiligen II",
-      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
+      "id": 21171,
+      "title": "Tomb Raider King",
+      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
     {
-      "id": 21171,
-      "title": "Tomb Raider King",
-      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
+      "id": 20297,
+      "title": "Though I Am an Inept Villainess",
+      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -372,6 +363,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20894,
+      "title": "Clevatess: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20658,
+      "title": "Vom Landei zum Schwertheiligen II",
+      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19292,
       "title": "The Ghost in the Shell",
       "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
@@ -701,24 +710,6 @@
       "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20379_400.webp",
       "info": "TV-Serie, 9 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 21004,
-      "title": "Cosmic Princess Kaguya!",
-      "url": "https://www.anisearch.de/anime/21004,cosmic-princess-kaguya",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21004_400.webp",
-      "info": "Web, 1 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 19635,
-      "title": "Frieren: Nach dem Ende der Reise - Staffel 2",
-      "url": "https://www.anisearch.de/anime/19635,frieren-nach-dem-ende-der-reise-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19635_400.webp",
-      "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -734,6 +725,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20894,
+      "title": "Clevatess: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20658,
+      "title": "Vom Landei zum Schwertheiligen II",
+      "url": "https://www.anisearch.de/anime/20658,vom-landei-zum-schwertheiligen-ii",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20658_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19292,
       "title": "The Ghost in the Shell",
       "url": "https://www.anisearch.de/anime/19292,the-ghost-in-the-shell",
@@ -1065,27 +1074,9 @@
       "info": "TV-Serie, 9 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 21004,
-      "title": "Cosmic Princess Kaguya!",
-      "url": "https://www.anisearch.de/anime/21004,cosmic-princess-kaguya",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21004_400.webp",
-      "info": "Web, 1 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 19635,
-      "title": "Frieren: Nach dem Ende der Reise - Staffel 2",
-      "url": "https://www.anisearch.de/anime/19635,frieren-nach-dem-ende-der-reise-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19635_400.webp",
-      "info": "TV-Serie, 10 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-08T08:13:54.738762Z",
+  "timestamp": "2026-07-09T09:26:50.536187Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
