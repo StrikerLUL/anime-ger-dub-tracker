@@ -190,6 +190,15 @@
       "type": "Film"
     },
     {
+      "id": 19244,
+      "title": "Promise of Wizard",
+      "url": "https://www.anisearch.de/anime/19244,promise-of-wizard",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19244_400.webp",
+      "info": "TV-Serie, 12 (2024)",
+      "year": 2024,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19490,
       "title": "Bitte zieh dich an, Takamine!",
       "url": "https://www.anisearch.de/anime/19490,bitte-zieh-dich-an-takamine",
@@ -1076,7 +1085,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-10T09:23:10.414051Z",
+  "timestamp": "2026-07-11T07:44:46.101093Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
