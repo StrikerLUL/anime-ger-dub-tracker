@@ -363,6 +363,15 @@
   ],
   "aktuelle": [
     {
+      "id": 21489,
+      "title": "The Ribbon Hero",
+      "url": "https://www.anisearch.de/anime/21489,the-ribbon-hero",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21489_400.webp",
+      "info": "Web, 1 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 21226,
       "title": "Thunder 3",
       "url": "https://www.anisearch.de/anime/21226,thunder-3",
@@ -712,19 +721,19 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 20379,
-      "title": "Medalist: Staffel 2",
-      "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20379_400.webp",
-      "info": "TV-Serie, 9 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
   "abgeschlossen": [
     {
+      "id": 21489,
+      "title": "The Ribbon Hero",
+      "url": "https://www.anisearch.de/anime/21489,the-ribbon-hero",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21489_400.webp",
+      "info": "Web, 1 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
       "id": 21226,
       "title": "Thunder 3",
       "url": "https://www.anisearch.de/anime/21226,thunder-3",
@@ -1074,18 +1083,9 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 20379,
-      "title": "Medalist: Staffel 2",
-      "url": "https://www.anisearch.de/anime/20379,medalist-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20379_400.webp",
-      "info": "TV-Serie, 9 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-07-12T08:05:41.626639Z",
+  "timestamp": "2026-07-13T08:55:35.926862Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
