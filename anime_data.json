@@ -145,6 +145,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 17380,
+      "title": "Kubo Won’t Let Me Be Invisible",
+      "url": "https://www.anisearch.de/anime/17380,kubo-wont-let-me-be-invisible",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17380_400.webp",
+      "info": "TV-Serie, 12 (2023)",
+      "year": 2023,
+      "type": "TV-Serie"
+    },
+    {
       "id": 17739,
       "title": "My Love Story with Yamada-kun at Lv999",
       "url": "https://www.anisearch.de/anime/17739,my-love-story-with-yamada-kun-at-lv999",
@@ -203,15 +212,6 @@
       "title": "Bitte zieh dich an, Takamine!",
       "url": "https://www.anisearch.de/anime/19490,bitte-zieh-dich-an-takamine",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19490_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19716,
-      "title": "The Beginning After the End",
-      "url": "https://www.anisearch.de/anime/19716,the-beginning-after-the-end",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19716_400.webp",
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie"
@@ -372,6 +372,15 @@
       "type": "Web"
     },
     {
+      "id": 21573,
+      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes - 44: Cloudy Beach",
+      "url": "https://www.anisearch.de/anime/21573,shiboyugi-das-phantom-madchen-im-spiel-des-todes-44-cloudy-beach",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21573_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 21226,
       "title": "Thunder 3",
       "url": "https://www.anisearch.de/anime/21226,thunder-3",
@@ -439,6 +448,15 @@
       "title": "Skeleton Knight in Another World Staffel 2",
       "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21218,
+      "title": "Chainsmoker Cat",
+      "url": "https://www.anisearch.de/anime/21218,chainsmoker-cat",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21218_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -703,24 +721,6 @@
       "info": "Web, 13 (2026)",
       "year": 2026,
       "type": "Web"
-    },
-    {
-      "id": 19636,
-      "title": "The Dangers in My Heart: The Movie",
-      "url": "https://www.anisearch.de/anime/19636,the-dangers-in-my-heart-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19636_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
-      "id": 21094,
-      "title": "Milky Subway: The Galactic Express - The Movie",
-      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
     }
   ],
   "abgeschlossen": [
@@ -734,6 +734,15 @@
       "type": "Web"
     },
     {
+      "id": 21573,
+      "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes - 44: Cloudy Beach",
+      "url": "https://www.anisearch.de/anime/21573,shiboyugi-das-phantom-madchen-im-spiel-des-todes-44-cloudy-beach",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21573_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 21226,
       "title": "Thunder 3",
       "url": "https://www.anisearch.de/anime/21226,thunder-3",
@@ -801,6 +810,15 @@
       "title": "Skeleton Knight in Another World Staffel 2",
       "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21218,
+      "title": "Chainsmoker Cat",
+      "url": "https://www.anisearch.de/anime/21218,chainsmoker-cat",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21218_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -1065,27 +1083,9 @@
       "info": "Web, 13 (2026)",
       "year": 2026,
       "type": "Web"
-    },
-    {
-      "id": 19636,
-      "title": "The Dangers in My Heart: The Movie",
-      "url": "https://www.anisearch.de/anime/19636,the-dangers-in-my-heart-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19636_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
-      "id": 21094,
-      "title": "Milky Subway: The Galactic Express - The Movie",
-      "url": "https://www.anisearch.de/anime/21094,milky-subway-the-galactic-express-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21094_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
     }
   ],
-  "timestamp": "2026-07-16T08:00:35.383352Z",
+  "timestamp": "2026-07-17T07:57:48.338523Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
