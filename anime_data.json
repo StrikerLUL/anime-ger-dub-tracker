@@ -271,15 +271,6 @@
       "type": "Film"
     },
     {
-      "id": 21327,
-      "title": "Hana-Kimi Staffel 2",
-      "url": "https://www.anisearch.de/anime/21327,hana-kimi-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21327_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19443,
       "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
       "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
@@ -303,33 +294,6 @@
       "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
       "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 16391,
-      "title": "Saga of Tanya the Evil: Staffel 2",
-      "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 17984,
-      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
-      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 21171,
-      "title": "Tomb Raider King",
-      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
-      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -381,10 +345,37 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21171,
+      "title": "Tomb Raider King",
+      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20894,
       "title": "Clevatess: Staffel 2",
       "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 16391,
+      "title": "Saga of Tanya the Evil: Staffel 2",
+      "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 17984,
+      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -448,6 +439,15 @@
       "title": "Chainsmoker Cat",
       "url": "https://www.anisearch.de/anime/21218,chainsmoker-cat",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21218_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21327,
+      "title": "Hana-Kimi Staffel 2",
+      "url": "https://www.anisearch.de/anime/21327,hana-kimi-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21327_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -676,42 +676,6 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 20466,
-      "title": "Steel Ball Run: Jojo’s Bizarre Adventure",
-      "url": "https://www.anisearch.de/anime/20466,steel-ball-run-jojos-bizarre-adventure",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20466_400.webp",
-      "info": "Web, 12 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 20494,
-      "title": "Beastars Letzte Staffel (Teil 2)",
-      "url": "https://www.anisearch.de/anime/20494,beastars-letzte-staffel-teil-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20494_400.webp",
-      "info": "Web, 12 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 19634,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Der Film - Die Tränen des azurblauen Meeres",
-      "url": "https://www.anisearch.de/anime/19634,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-der-film-die-tranen-des-azurblauen-meeres",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19634_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
-      "id": 19175,
-      "title": "Baki-Dou: The Invincible Samurai",
-      "url": "https://www.anisearch.de/anime/19175,baki-dou-the-invincible-samurai",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19175_400.webp",
-      "info": "Web, 13 (2026)",
-      "year": 2026,
-      "type": "Web"
     }
   ],
   "abgeschlossen": [
@@ -743,10 +707,37 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21171,
+      "title": "Tomb Raider King",
+      "url": "https://www.anisearch.de/anime/21171,tomb-raider-king",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21171_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20894,
       "title": "Clevatess: Staffel 2",
       "url": "https://www.anisearch.de/anime/20894,clevatess-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20894_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 16391,
+      "title": "Saga of Tanya the Evil: Staffel 2",
+      "url": "https://www.anisearch.de/anime/16391,saga-of-tanya-the-evil-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/16/16391_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 17984,
+      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -810,6 +801,15 @@
       "title": "Chainsmoker Cat",
       "url": "https://www.anisearch.de/anime/21218,chainsmoker-cat",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21218_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 21327,
+      "title": "Hana-Kimi Staffel 2",
+      "url": "https://www.anisearch.de/anime/21327,hana-kimi-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21327_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -1038,45 +1038,9 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 20466,
-      "title": "Steel Ball Run: Jojo’s Bizarre Adventure",
-      "url": "https://www.anisearch.de/anime/20466,steel-ball-run-jojos-bizarre-adventure",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20466_400.webp",
-      "info": "Web, 12 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 20494,
-      "title": "Beastars Letzte Staffel (Teil 2)",
-      "url": "https://www.anisearch.de/anime/20494,beastars-letzte-staffel-teil-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20494_400.webp",
-      "info": "Web, 12 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 19634,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Der Film - Die Tränen des azurblauen Meeres",
-      "url": "https://www.anisearch.de/anime/19634,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-der-film-die-tranen-des-azurblauen-meeres",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19634_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
-      "id": 19175,
-      "title": "Baki-Dou: The Invincible Samurai",
-      "url": "https://www.anisearch.de/anime/19175,baki-dou-the-invincible-samurai",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19175_400.webp",
-      "info": "Web, 13 (2026)",
-      "year": 2026,
-      "type": "Web"
     }
   ],
-  "timestamp": "2026-07-29T08:27:36.700861Z",
+  "timestamp": "2026-07-30T08:12:19.357824Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
