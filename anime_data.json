@@ -91,15 +91,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 10076,
-      "title": "Sound! Euphonium",
-      "url": "https://www.anisearch.de/anime/10076,sound-euphonium",
-      "image": "https://cdn.anisearch.de/images/anime/cover/10/10076_400.webp",
-      "info": "TV-Serie, 13 (2015)",
-      "year": 2015,
-      "type": "TV-Serie"
-    },
-    {
       "id": 13018,
       "title": "Servamp: Alice in the Garden",
       "url": "https://www.anisearch.de/anime/13018,servamp-alice-in-the-garden",
@@ -235,15 +226,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20255,
-      "title": "Hände weg, Kotesashi-kun",
-      "url": "https://www.anisearch.de/anime/20255,hande-weg-kotesashi-kun",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20255_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20694,
       "title": "Labyrinth",
       "url": "https://www.anisearch.de/anime/20694,labyrinth",
@@ -251,6 +233,15 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
+    },
+    {
+      "id": 20293,
+      "title": "Reincarnated as a Dragon Hatchling",
+      "url": "https://www.anisearch.de/anime/20293,reincarnated-as-a-dragon-hatchling",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20293_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 19245,
@@ -276,15 +267,6 @@
       "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
       "info": "TV-Serie, 14 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20994,
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You (Staffel 3)",
-      "url": "https://www.anisearch.de/anime/20994,the-100-girlfriends-who-really-really-really-really-really-love-you-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20994_400.webp",
-      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -373,7 +355,7 @@
     },
     {
       "id": 17984,
-      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "title": "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs Staffel 2",
       "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
       "info": "TV-Serie, 12 (2026)",
@@ -413,6 +395,15 @@
       "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
       "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
       "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20994,
+      "title": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You (Staffel 3)",
+      "url": "https://www.anisearch.de/anime/20994,the-100-girlfriends-who-really-really-really-really-really-love-you-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20994_400.webp",
+      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -667,15 +658,6 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20872,
-      "title": "Assassination Classroom: Our Time - The Movie",
-      "url": "https://www.anisearch.de/anime/20872,assassination-classroom-our-time-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20872_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
     }
   ],
   "abgeschlossen": [
@@ -735,7 +717,7 @@
     },
     {
       "id": 17984,
-      "title": "Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs Staffel 2",
+      "title": "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs Staffel 2",
       "url": "https://www.anisearch.de/anime/17984,trapped-in-a-dating-sim-the-world-of-otome-games-is-tough-for-mobs-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/17/17984_400.webp",
       "info": "TV-Serie, 12 (2026)",
@@ -775,6 +757,15 @@
       "url": "https://www.anisearch.de/anime/13774,sparks-of-tomorrow",
       "image": "https://cdn.anisearch.de/images/anime/cover/13/13774_400.webp",
       "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20994,
+      "title": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You (Staffel 3)",
+      "url": "https://www.anisearch.de/anime/20994,the-100-girlfriends-who-really-really-really-really-really-love-you-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20994_400.webp",
+      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -1029,18 +1020,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20872,
-      "title": "Assassination Classroom: Our Time - The Movie",
-      "url": "https://www.anisearch.de/anime/20872,assassination-classroom-our-time-the-movie",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20872_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
     }
   ],
-  "timestamp": "2026-08-01T08:08:50.944563Z",
+  "timestamp": "2026-08-02T08:10:34.136050Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
