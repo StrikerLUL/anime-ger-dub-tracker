@@ -280,15 +280,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20297,
-      "title": "Though I Am an Inept Villainess",
-      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
-      "info": "TV-Serie, 11 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20029,
       "title": "Bleach: Thousand-Year Blood War - The Calamity",
       "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
@@ -309,6 +300,24 @@
       "type": "Web"
     },
     {
+      "id": 21544,
+      "title": "My Hero Academia: I Am a Hero Too",
+      "url": "https://www.anisearch.de/anime/21544,my-hero-academia-i-am-a-hero-too",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21544_400.webp",
+      "info": "Web, 1 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
+      "id": 20297,
+      "title": "Though I Am an Inept Villainess",
+      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
+      "info": "TV-Serie, 11 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 21573,
       "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes - 44: Cloudy Beach",
       "url": "https://www.anisearch.de/anime/21573,shiboyugi-das-phantom-madchen-im-spiel-des-todes-44-cloudy-beach",
@@ -638,24 +647,6 @@
       "url": "https://www.anisearch.de/anime/19569,classroom-of-the-elite-4th-season-second-year-first-semester",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19569_400.webp",
       "info": "TV-Serie, 16 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18998,
-      "title": "Dorohedoro: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18998,dorohedoro-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18998_400.webp",
-      "info": "Web, 11 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 20893,
-      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
-      "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
-      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -671,6 +662,24 @@
       "type": "Web"
     },
     {
+      "id": 21544,
+      "title": "My Hero Academia: I Am a Hero Too",
+      "url": "https://www.anisearch.de/anime/21544,my-hero-academia-i-am-a-hero-too",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21544_400.webp",
+      "info": "Web, 1 (2026)",
+      "year": 2026,
+      "type": "Web"
+    },
+    {
+      "id": 20297,
+      "title": "Though I Am an Inept Villainess",
+      "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20297_400.webp",
+      "info": "TV-Serie, 11 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 21573,
       "title": "Shiboyugi: Das Phantom-Mädchen im Spiel des Todes - 44: Cloudy Beach",
       "url": "https://www.anisearch.de/anime/21573,shiboyugi-das-phantom-madchen-im-spiel-des-todes-44-cloudy-beach",
@@ -1002,27 +1011,9 @@
       "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 18998,
-      "title": "Dorohedoro: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18998,dorohedoro-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18998_400.webp",
-      "info": "Web, 11 (2026)",
-      "year": 2026,
-      "type": "Web"
-    },
-    {
-      "id": 20893,
-      "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
-      "url": "https://www.anisearch.de/anime/20893,reborn-as-a-vending-machine-i-now-wander-the-dungeon-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-04T08:26:18.307147Z",
+  "timestamp": "2026-08-05T08:24:46.252158Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
