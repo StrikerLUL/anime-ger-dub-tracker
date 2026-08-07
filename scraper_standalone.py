@@ -91,6 +91,21 @@ def parse_anime_list(page) -> list:
     return results
 
 
+def goto_with_retry(page, url: str, max_attempts: int = 3) -> bool:
+    for attempt in range(1, max_attempts + 1):
+        timeout_ms = 30000 + ((attempt - 1) * 15000)
+        try:
+            page.goto(url, wait_until='domcontentloaded', timeout=timeout_ms)
+            return True
+        except Exception as e:
+            print(f"   ⚠️  Laden fehlgeschlagen ({attempt}/{max_attempts}): {e}")
+            if attempt < max_attempts:
+                wait_s = attempt * 2
+                print(f"   ⏳ Neuer Versuch in {wait_s}s...")
+                page.wait_for_timeout(wait_s * 1000)
+    return False
+
+
 def scrape_category(pw, url_params: str, label: str, max_pages: int = MAX_PAGES) -> list:
     all_results: list = []
     print(f"\n{'='*55}")
@@ -107,7 +122,9 @@ def scrape_category(pw, url_params: str, label: str, max_pages: int = MAX_PAGES)
     try:
         url = f"{BASE_URL}/anime/index/page-1?{url_params}"
         print(f"📄 Lade Seite 1: {url}")
-        page.goto(url, wait_until='domcontentloaded', timeout=30000)
+        if not goto_with_retry(page, url):
+            print("   ❌ Seite 1 konnte nicht geladen werden")
+            return []
         page.wait_for_timeout(DELAY_MS)
         accept_cookies(page)
         page.wait_for_timeout(DELAY_MS)
@@ -130,15 +147,13 @@ def scrape_category(pw, url_params: str, label: str, max_pages: int = MAX_PAGES)
         for p_num in range(2, total_pages + 1):
             url = f"{BASE_URL}/anime/index/page-{p_num}?{url_params}"
             print(f"📄 Lade Seite {p_num}...")
-            try:
-                page.goto(url, wait_until='domcontentloaded', timeout=30000)
-                page.wait_for_timeout(DELAY_MS)
-                results = parse_anime_list(page)
-                all_results.extend(results)
-                print(f"   ✅ Seite {p_num}: {len(results)} Anime")
-            except Exception as e:
-                print(f"   ⚠️  Fehler auf Seite {p_num}: {e}")
+            if not goto_with_retry(page, url):
+                print(f"   ⚠️  Überspringe Seite {p_num} nach mehreren Fehlversuchen")
                 break
+            page.wait_for_timeout(DELAY_MS)
+            results = parse_anime_list(page)
+            all_results.extend(results)
+            print(f"   ✅ Seite {p_num}: {len(results)} Anime")
 
     finally:
         browser.close()
