@@ -76,6 +76,7 @@ jobs:
             echo "Keine Änderungen – nichts zu committen"
           else
             git commit -m "🤖 Auto-Update: Anime Dub Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
             git push
             echo "✅ anime_data.json erfolgreich gepusht!"
           fi
