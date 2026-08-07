@@ -7,6 +7,10 @@ on:
   # Manueller Start über GitHub Actions Tab
   workflow_dispatch:
 
+concurrency:
+  group: anime-dub-scraper-main
+  cancel-in-progress: false
+
 jobs:
   scrape:
     name: Scrape anisearch.de & Deploy
@@ -25,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       # 2. Python einrichten
       - name: 🐍 Set up Python 3.11
@@ -76,6 +81,7 @@ jobs:
             echo "Keine Änderungen – nichts zu committen"
           else
             git commit -m "🤖 Auto-Update: Anime Dub Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
             git push
             echo "✅ anime_data.json erfolgreich gepusht!"
           fi
