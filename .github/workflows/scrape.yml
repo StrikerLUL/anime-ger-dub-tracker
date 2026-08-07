@@ -7,6 +7,10 @@ on:
   # Manueller Start über GitHub Actions Tab
   workflow_dispatch:
 
+concurrency:
+  group: anime-dub-scraper-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   scrape:
     name: Scrape anisearch.de & Deploy
@@ -76,8 +80,20 @@ jobs:
             echo "Keine Änderungen – nichts zu committen"
           else
             git commit -m "🤖 Auto-Update: Anime Dub Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
-            echo "✅ anime_data.json erfolgreich gepusht!"
+            for attempt in 1 2 3; do
+              if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+                echo "✅ anime_data.json erfolgreich gepusht!"
+                break
+              fi
+
+              if [ "$attempt" -eq 3 ]; then
+                echo "❌ Push nach 3 Versuchen fehlgeschlagen"
+                exit 1
+              fi
+
+              echo "⚠️ Push-Konflikt erkannt, neuer Versuch in $((attempt * 5))s..."
+              sleep $((attempt * 5))
+            done
           fi
 
       # 7. (Optional) FTP-Upload zu InfinityFree
