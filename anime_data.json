@@ -226,6 +226,24 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20681,
+      "title": "Dusk Beyond the End of the World",
+      "url": "https://www.anisearch.de/anime/20681,dusk-beyond-the-end-of-the-world",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20681_400.webp",
+      "info": "TV-Serie, 12 (2025)",
+      "year": 2025,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19297,
+      "title": "Die letzte Blüte",
+      "url": "https://www.anisearch.de/anime/19297,die-letzte-bluete",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19297_400.webp",
+      "info": "Film, 1 (2025)",
+      "year": 2025,
+      "type": "Film"
+    },
+    {
       "id": 20694,
       "title": "Labyrinth",
       "url": "https://www.anisearch.de/anime/20694,labyrinth",
@@ -1013,7 +1031,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-06T08:22:08.186040Z",
+  "timestamp": "2026-08-07T10:17:52.357494Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
