@@ -262,6 +262,15 @@
       "type": "Film"
     },
     {
+      "id": 20280,
+      "title": "All You Need Is Kill",
+      "url": "https://www.anisearch.de/anime/20280,all-you-need-is-kill",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20280_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 19877,
       "title": "Hell Mode: The Hardcore Gamer Dominates in Another World with Garbage Balancing",
       "url": "https://www.anisearch.de/anime/19877,hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing",
@@ -348,15 +357,6 @@
       "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
       "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20029,
-      "title": "Bleach: Thousand-Year Blood War - The Calamity",
-      "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20029_400.webp",
-      "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -1085,7 +1085,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-12T07:14:13.923193Z",
+  "timestamp": "2026-08-13T07:16:15.887450Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
