@@ -100,15 +100,6 @@
       "type": "Film"
     },
     {
-      "id": 12939,
-      "title": "Banana Fish",
-      "url": "https://www.anisearch.de/anime/12939,banana-fish",
-      "image": "https://cdn.anisearch.de/images/anime/cover/12/12939_400.webp",
-      "info": "TV-Serie, 24 (2018)",
-      "year": 2018,
-      "type": "TV-Serie"
-    },
-    {
       "id": 14238,
       "title": "Tsugumomo 2",
       "url": "https://www.anisearch.de/anime/14238,tsugumomo-2",
@@ -357,6 +348,15 @@
       "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
       "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20029,
+      "title": "Bleach: Thousand-Year Blood War - The Calamity",
+      "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20029_400.webp",
+      "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -1085,7 +1085,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-14T07:14:33.437231Z",
+  "timestamp": "2026-08-15T06:25:09.350390Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
