@@ -507,6 +507,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21044,
+      "title": "Jaadugar: A Witch in Mongolia",
+      "url": "https://www.anisearch.de/anime/21044,jaadugar-a-witch-in-mongolia",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21044_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19951,
       "title": "Skeleton Knight in Another World Staffel 2",
       "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
@@ -710,15 +719,6 @@
       "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20917_400.webp",
       "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20149,
-      "title": "The Ramparts of Ice",
-      "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
-      "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -869,6 +869,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21044,
+      "title": "Jaadugar: A Witch in Mongolia",
+      "url": "https://www.anisearch.de/anime/21044,jaadugar-a-witch-in-mongolia",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21044_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 19951,
       "title": "Skeleton Knight in Another World Staffel 2",
       "url": "https://www.anisearch.de/anime/19951,skeleton-knight-in-another-world-staffel-2",
@@ -1074,18 +1083,9 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20149,
-      "title": "The Ramparts of Ice",
-      "url": "https://www.anisearch.de/anime/20149,the-ramparts-of-ice",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20149_400.webp",
-      "info": "TV-Serie, 14 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-15T06:25:09.350390Z",
+  "timestamp": "2026-08-16T06:27:31.710892Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
