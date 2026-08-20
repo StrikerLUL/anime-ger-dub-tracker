@@ -316,15 +316,6 @@
       "type": "Film"
     },
     {
-      "id": 20865,
-      "title": "Kill Blue",
-      "url": "https://www.anisearch.de/anime/20865,kill-blue",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20865_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
       "id": 19429,
       "title": "The Irregular at Magic High School: The Movie - Yotsuba Succession Arc",
       "url": "https://www.anisearch.de/anime/19429,the-irregular-at-magic-high-school-the-movie-yotsuba-succession-arc",
@@ -332,24 +323,6 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 19443,
-      "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
-      "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
-      "info": "TV-Serie, 14 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 21357,
-      "title": "You and I Are Polar Opposites: Staffel 2",
-      "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     },
     {
       "id": 20029,
@@ -498,6 +471,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21357,
+      "title": "You and I Are Polar Opposites: Staffel 2",
+      "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20259,
       "title": "Black Torch",
       "url": "https://www.anisearch.de/anime/20259,black-torch",
@@ -512,6 +494,15 @@
       "url": "https://www.anisearch.de/anime/21044,jaadugar-a-witch-in-mongolia",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21044_400.webp",
       "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19443,
+      "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
+      "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
+      "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -593,6 +584,15 @@
       "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18686_400.webp",
       "info": "TV-Serie, 14 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20865,
+      "title": "Kill Blue",
+      "url": "https://www.anisearch.de/anime/20865,kill-blue",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20865_400.webp",
+      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -692,33 +692,6 @@
       "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
       "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19776,
-      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19633,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20917,
-      "title": "Dr. Stone: Science Future - Cour 3",
-      "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20917_400.webp",
-      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -860,6 +833,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 21357,
+      "title": "You and I Are Polar Opposites: Staffel 2",
+      "url": "https://www.anisearch.de/anime/21357,you-and-i-are-polar-opposites-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21357_400.webp",
+      "info": "TV-Serie, 13 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20259,
       "title": "Black Torch",
       "url": "https://www.anisearch.de/anime/20259,black-torch",
@@ -874,6 +856,15 @@
       "url": "https://www.anisearch.de/anime/21044,jaadugar-a-witch-in-mongolia",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21044_400.webp",
       "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 19443,
+      "title": "Mushoku Tensei: Jobless Reincarnation - Staffel 3",
+      "url": "https://www.anisearch.de/anime/19443,mushoku-tensei-jobless-reincarnation-staffel-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19443_400.webp",
+      "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -955,6 +946,15 @@
       "url": "https://www.anisearch.de/anime/18686,fist-of-the-north-star-hokuto-no-ken",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18686_400.webp",
       "info": "TV-Serie, 14 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
+      "id": 20865,
+      "title": "Kill Blue",
+      "url": "https://www.anisearch.de/anime/20865,kill-blue",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20865_400.webp",
+      "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     },
@@ -1056,36 +1056,9 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 19776,
-      "title": "Welcome to Demon School! Iruma-kun: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19776,welcome-to-demon-school-iruma-kun-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19776_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 19633,
-      "title": "Meine Wiedergeburt als Schleim in einer anderen Welt: Staffel 4",
-      "url": "https://www.anisearch.de/anime/19633,meine-wiedergeburt-als-schleim-in-einer-anderen-welt-staffel-4",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19633_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20917,
-      "title": "Dr. Stone: Science Future - Cour 3",
-      "url": "https://www.anisearch.de/anime/20917,dr-stone-science-future-cour-3",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20917_400.webp",
-      "info": "TV-Serie, 13 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-19T06:34:02.636429Z",
+  "timestamp": "2026-08-20T06:33:22.178444Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
