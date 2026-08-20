@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
             /* Premium Color Palette */
@@ -20,20 +20,20 @@
             --primary-light: #d880ff;
             --secondary: #00d2ff;
             --secondary-glow: rgba(0, 210, 255, 0.4);
-            
+
             /* Glassmorphism Variables */
             --glass-bg: rgba(255, 255, 255, 0.03);
             --glass-bg-hover: rgba(255, 255, 255, 0.08);
             --glass-border: rgba(255, 255, 255, 0.05);
             --glass-border-highlight: rgba(255, 255, 255, 0.15);
             --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            
+
             /* Typography */
             --text-main: #ffffff;
             --text-muted: #a1a1aa;
             --font-display: 'Outfit', sans-serif;
             --font-body: 'Inter', sans-serif;
-            
+
             /* Status Colors */
             --success: #10b981;
             --warning: #f59e0b;
@@ -50,7 +50,7 @@
         body {
             font-family: var(--font-body);
             background-color: var(--bg-base);
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(184, 41, 255, 0.08), transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(0, 210, 255, 0.08), transparent 25%);
             background-attachment: fixed;
@@ -290,7 +290,7 @@
             box-shadow: 0 0 0 3px var(--primary-glow);
             background: rgba(0, 0, 0, 0.5);
         }
-        
+
         select option {
             background: var(--bg-accent);
             color: white;
@@ -908,7 +908,7 @@
                 </h1>
                 <div class="header-right">
                     <button class="btn btn-glass" id="refreshBtn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"></path><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"></path><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
                         Sync
                     </button>
                     <button class="btn btn-primary" id="watchlistBtn">
@@ -1119,18 +1119,14 @@
         }
 
         function addLog(message) {
-            try {
-                const logEl = document.getElementById('updateLog');
-                if (!logEl) return;
-                const entry = document.createElement('div');
-                entry.className = 'log-entry';
-                entry.innerHTML = `<span class="log-time">[${formatTime()}]</span> ${message}`;
-                logEl.appendChild(entry);
-                logEl.scrollTop = logEl.scrollHeight;
-                if (logEl.children.length > 30) logEl.removeChild(logEl.firstChild);
-                    } catch (error) {
-                console.error("Error in addLog:", error);
-            }
+            const logEl = document.getElementById('updateLog');
+            if (!logEl) return;
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.innerHTML = `<span class="log-time">[${formatTime()}]</span> ${message}`;
+            logEl.appendChild(entry);
+            logEl.scrollTop = logEl.scrollHeight;
+            if (logEl.children.length > 30) logEl.removeChild(logEl.firstChild);
         }
 
         // ─── Datenquellen ─────────────────────────────────────────────
@@ -1410,6 +1406,8 @@
             } catch (err) {
                 console.error("Fehler beim manuellen Refresh", err);
                 showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
+            } catch (error) {
+                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
             }
         }
 
@@ -1504,7 +1502,7 @@
         function renderAnimes() {
             const contentArea = document.getElementById('contentArea');
             if (!contentArea) return;
-            
+
             try {
                 if (state.filteredAnimes.length === 0) {
                     contentArea.innerHTML = `
@@ -1646,11 +1644,11 @@
             try {
                 const anime = state.animes.find(a => a.id === id);
                 if (!anime) return;
-                
+
                 const isWatchlisted = state.watchlist.some(w => w.id === id);
                 const isCurrent = anime.type === 'aktuell';
                 const hlClass = isCurrent ? 'time-highlight recent' : 'time-highlight soon';
-                
+
                 const modalBody = document.getElementById('modalBody');
                 const coverImg = anime.image
                     ? `<img src="${anime.image}" alt="${anime.title}" style="width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-bottom:20px;" onerror="this.style.display='none'" />`
@@ -2037,7 +2035,7 @@
                 manualRefresh();
             });
             document.getElementById('closeModalBtn').addEventListener('click', closeModal);
-            
+
             document.getElementById('watchlistBtn').addEventListener('click', () => {
                 state.currentTab = 'watchlist';
                 updateTabs();
