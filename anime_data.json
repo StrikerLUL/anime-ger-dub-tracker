@@ -543,6 +543,15 @@
       "type": "Web"
     },
     {
+      "id": 21070,
+      "title": "Mononoke the Movie: Chapter III - The Curse of the Serpent",
+      "url": "https://www.anisearch.de/anime/21070,mononoke-the-movie-chapter-iii-the-curse-of-the-serpent",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21070_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 20916,
       "title": "Devil May Cry: Staffel 2",
       "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
@@ -682,15 +691,6 @@
       "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
       "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
       "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20717,
-      "title": "Das Band der Unterwelt",
-      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -905,6 +905,15 @@
       "type": "Web"
     },
     {
+      "id": 21070,
+      "title": "Mononoke the Movie: Chapter III - The Curse of the Serpent",
+      "url": "https://www.anisearch.de/anime/21070,mononoke-the-movie-chapter-iii-the-curse-of-the-serpent",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21070_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 20916,
       "title": "Devil May Cry: Staffel 2",
       "url": "https://www.anisearch.de/anime/20916,devil-may-cry-staffel-2",
@@ -1047,18 +1056,9 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20717,
-      "title": "Das Band der Unterwelt",
-      "url": "https://www.anisearch.de/anime/20717,das-band-der-unterwelt",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20717_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-20T06:33:22.178444Z",
+  "timestamp": "2026-08-21T06:33:49.192030Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
