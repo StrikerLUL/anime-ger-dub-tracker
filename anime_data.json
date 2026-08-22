@@ -217,15 +217,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 18748,
-      "title": "Der Held ohne Klasse: Der Aufstieg eines Talentlosen",
-      "url": "https://www.anisearch.de/anime/18748,der-held-ohne-klasse-der-aufstieg-eines-talentlosen",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18748_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie"
-    },
-    {
       "id": 20681,
       "title": "Dusk Beyond the End of the World",
       "url": "https://www.anisearch.de/anime/20681,dusk-beyond-the-end-of-the-world",
@@ -1058,7 +1049,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-21T06:33:49.192030Z",
+  "timestamp": "2026-08-22T06:27:26.454690Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
