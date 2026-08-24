@@ -1014,32 +1014,33 @@
 
     <script>
         // ─── Global Error Handling ─────────────────────────────────────────
-        function showGlobalError(errorMsg) {
-            console.error(errorMsg);
+        // Globale Fehlerbehandlung für unvorhergesehene Abstürze
+        function renderGlobalError(errorMsg) {
             const contentArea = document.getElementById('contentArea');
-            if (contentArea) {
-                contentArea.innerHTML = `
-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Ausführung der Anwendung.</p>
-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                            🔄 Seite neu laden
-                        </button>
-                    </div>`;
-            }
-            const pagination = document.getElementById('pagination');
-            if (pagination) pagination.innerHTML = '';
+            if (!contentArea) return;
+
+            contentArea.innerHTML = `
+                <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+                        <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein unerwarteter Fehler ist aufgetreten!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anwendung konnte leider nicht weiter ausgeführt werden. Bitte lade die Seite neu.</p>
+                    <p style="color: var(--text-muted); font-size: 12px; margin-bottom: 20px;">Details: ${errorMsg}</p>
+                    <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+                        🔄 Seite neu laden
+                    </button>
+                </div>`;
+            document.getElementById('pagination').innerHTML = '';
         }
 
+
         window.addEventListener('error', function(e) {
-            showGlobalError(e.error || e.message);
+            renderGlobalError(e.error || e.message);
         });
 
         window.addEventListener('unhandledrejection', function(e) {
-            showGlobalError(e.reason);
+            renderGlobalError(e.reason);
         });
 
         // ─── Konfiguration ───────────────────────────────────────────────
@@ -1107,18 +1108,27 @@
         ];
 
         function formatTime() {
-            return new Date().toLocaleTimeString('de-DE', { hour: '2-digit', minute:'2-digit', second:'2-digit' });
+            try {
+                return new Date().toLocaleTimeString('de-DE', { hour: '2-digit', minute:'2-digit', second:'2-digit' });
+            } catch (e) {
+                console.error("Fehler beim Formatieren der Zeit", e);
+                return '00:00:00';
+            }
         }
 
         function addLog(message) {
-            const logEl = document.getElementById('updateLog');
-            if (!logEl) return;
-            const entry = document.createElement('div');
-            entry.className = 'log-entry';
-            entry.innerHTML = `<span class="log-time">[${formatTime()}]</span> ${message}`;
-            logEl.appendChild(entry);
-            logEl.scrollTop = logEl.scrollHeight;
-            if (logEl.children.length > 30) logEl.removeChild(logEl.firstChild);
+            try {
+                const logEl = document.getElementById('updateLog');
+                if (!logEl) return;
+                const entry = document.createElement('div');
+                entry.className = 'log-entry';
+                entry.innerHTML = `<span class="log-time">[${formatTime()}]</span> ${message}`;
+                logEl.appendChild(entry);
+                logEl.scrollTop = logEl.scrollHeight;
+                if (logEl.children.length > 30) logEl.removeChild(logEl.firstChild);
+            } catch (e) {
+                console.error("Fehler beim Hinzufügen des Logs", e);
+            }
         }
 
         // ─── Datenquellen ─────────────────────────────────────────────
@@ -1216,7 +1226,7 @@
                 };
             } catch (e) {
                 console.error("Fehler beim Normalisieren der Anime-Daten:", e);
-                showGlobalError("Ein unerwarteter Fehler ist beim Verarbeiten der Anime-Daten aufgetreten. Bitte lade die Seite neu.");
+                renderGlobalError("Ein unerwarteter Fehler ist beim Verarbeiten der Anime-Daten aufgetreten. Bitte lade die Seite neu.");
                 return {
                     id: `${type}_${index}`,
                     title: 'Fehlerhaftes Anime',
@@ -1311,7 +1321,7 @@
                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
                 }
             } catch (err) {
-                showGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
+                renderGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
             }
         }
 
@@ -1349,7 +1359,7 @@
                 }, 'demo');
                 startPolling();  // Auf Server warten
             } catch (err) {
-                showGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
+                renderGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
             }
         }
 
@@ -1397,9 +1407,7 @@
                 await initializeAnimes();
             } catch (err) {
                 console.error("Fehler beim manuellen Refresh", err);
-                showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
-            } catch (error) {
-                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
+                renderGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
             }
         }
 
@@ -1435,7 +1443,7 @@
                     </div>
                 `;
             } catch (error) {
-                showGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
+                renderGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
             }
         }
 
@@ -1447,11 +1455,13 @@
                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
 
-                try { localStorage.setItem('premiumSearchTerm', searchInput?.value || ''); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumSortVal', sortVal); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumYear', selectedYear); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumFormat', selectedFormat); } catch (e) { console.warn('LocalStorage error', e); }
-                try { localStorage.setItem('premiumTab', state.currentTab); } catch (e) {
+                try {
+                    localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
+                    localStorage.setItem('premiumSortVal', sortVal);
+                    localStorage.setItem('premiumYear', selectedYear);
+                    localStorage.setItem('premiumFormat', selectedFormat);
+                    localStorage.setItem('premiumTab', state.currentTab);
+                } catch (e) {
                     console.warn('LocalStorage nicht verfügbar', e);
                     showNotification('Fehler beim Speichern der Filter');
                 }
@@ -1487,7 +1497,7 @@
                 state.currentPage = 1;
                 renderAnimes();
             } catch (err) {
-                showGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
+                renderGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
             }
         }
 
@@ -1584,7 +1594,7 @@
 
                 document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
             } catch (error) {
-                showGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
+                renderGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
             }
         }
 
@@ -1624,7 +1634,7 @@
                     btn.innerHTML = '✓ In Watchlist';
                 }
             } catch (error) {
-                showGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
+                renderGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
             }
         }
 
@@ -1668,7 +1678,7 @@
                 `;
                 document.getElementById('detailsModal').classList.add('active');
             } catch (error) {
-                showGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
+                renderGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
             }
         }
 
@@ -1754,7 +1764,7 @@
                 window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
             } catch (error) {
                 console.error("Fehler bei der Pagination:", error);
-                showGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
+                renderGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
             }
         }
 
@@ -1808,7 +1818,7 @@
                     setTimeout(() => notif.remove(), 300);
                 }, 4000);
             } catch (error) {
-                showGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
+                renderGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
             }
         }
 
@@ -1825,25 +1835,7 @@
             }
         }
 
-        // Globale Fehlerbehandlung für unvorhergesehene Abstürze
-        function renderGlobalError(errorMsg) {
-            const contentArea = document.getElementById('contentArea');
-            if (!contentArea) return;
 
-            contentArea.innerHTML = `
-                <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
-                        <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
-                    <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein unerwarteter Fehler ist aufgetreten!</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">Die Anwendung konnte leider nicht weiter ausgeführt werden. Bitte lade die Seite neu.</p>
-                    <p style="color: var(--text-muted); font-size: 12px; margin-bottom: 20px;">Details: ${errorMsg}</p>
-                    <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
-                        🔄 Seite neu laden
-                    </button>
-                </div>`;
-            document.getElementById('pagination').innerHTML = '';
-        }
 
         window.addEventListener('error', (event) => {
             console.error('Ungefangener Fehler:', event.error || event.message);
@@ -1860,38 +1852,18 @@
                 // Parse localStorage with individual try-catch to avoid one bad value killing all settings
                 try {
                     const saved = localStorage.getItem('premiumWatchlist');
-                    state.watchlist = saved ? JSON.parse(saved) : [];
+                    try {
+                        state.watchlist = saved ? JSON.parse(saved) : [];
+                    } catch (parseError) {
+                        console.error('Fehler beim Parsen der Watchlist:', parseError);
+                        state.watchlist = [];
+                        showNotification('Fehler beim Laden der Watchlist');
+                    }
                 } catch (e) {
-                    console.warn('LocalStorage nicht verfügbar', e);
+                    console.warn('LocalStorage Watchlist Fehler', e);
                     showNotification('Fehler beim Laden der Watchlist');
                     state.watchlist = [];
-                const saved = localStorage.getItem('premiumWatchlist');
-                try {
-                    state.watchlist = saved ? JSON.parse(saved) : [];
-                } catch (parseError) {
-                    console.error('Fehler beim Parsen der Watchlist:', parseError);
-                    state.watchlist = [];
-                    showNotification('Fehler beim Laden der Watchlist');
                 }
-                    showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
-                    state.watchlist = [];
-                }
-                state.watchlist = saved ? JSON.parse(saved) : [];
-            } catch (e) {
-                console.warn('LocalStorage Watchlist Fehler', e);
-                showNotification('Fehler beim Laden der Watchlist');
-                state.watchlist = [];
-            }
-
-            try {
-                const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
-                if (savedSearchTerm !== null) {
-                    const searchInput = document.getElementById('searchInput');
-                    if (searchInput) searchInput.value = savedSearchTerm;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Suchbegriff Fehler', e);
-            }
 
                 try {
                     const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
@@ -1899,7 +1871,9 @@
                         const searchInput = document.getElementById('searchInput');
                         if (searchInput) searchInput.value = savedSearchTerm;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Suchbegriff Fehler', e);
+                }
 
                 try {
                     const savedSortVal = localStorage.getItem('premiumSortVal');
@@ -1907,7 +1881,9 @@
                         const sortSelect = document.getElementById('sortSelect');
                         if (sortSelect) sortSelect.value = savedSortVal;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Sortierung Fehler', e);
+                }
 
                 try {
                     const savedTab = localStorage.getItem('premiumTab');
@@ -1915,7 +1891,9 @@
                         state.currentTab = savedTab;
                         updateTabs();
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
+                } catch (e) {
+                    console.warn('LocalStorage Tab Fehler', e);
+                }
 
                 try {
                     const savedPageSize = localStorage.getItem('premiumPageSize');
@@ -1923,151 +1901,124 @@
                         const pageSizeSelect = document.getElementById('pageSizeSelect');
                         if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
                     }
-                } catch (e) { console.warn('LocalStorage error', e); }
-            try {
-                const savedSortVal = localStorage.getItem('premiumSortVal');
-                if (savedSortVal !== null) {
-                    const sortSelect = document.getElementById('sortSelect');
-                    if (sortSelect) sortSelect.value = savedSortVal;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Sortierung Fehler', e);
-            }
-
-            try {
-                const savedTab = localStorage.getItem('premiumTab');
-                if (savedTab !== null) {
-                    state.currentTab = savedTab;
-                    updateTabs();
-                }
-            } catch (e) {
-                console.warn('LocalStorage Tab Fehler', e);
-            }
-
-            try {
-                const savedPageSize = localStorage.getItem('premiumPageSize');
-                if (savedPageSize !== null) {
-                    const pageSizeSelect = document.getElementById('pageSizeSelect');
-                    if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Seitengröße Fehler', e);
-            }
-
-            // Keyboard Shortcuts
-            document.addEventListener('keydown', (e) => {
-                // Ignore if user is typing in an input or select
-                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
-                    if (e.key === 'Escape') {
-                        e.target.blur();
-                    }
-                    return;
+                } catch (e) {
+                    console.warn('LocalStorage Seitengröße Fehler', e);
                 }
 
-                if (e.key === '/') {
-                    e.preventDefault();
-                    const searchInput = document.getElementById('searchInput');
-                    if (searchInput) {
-                        searchInput.focus();
-                        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-                } else if (e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-
-            document.getElementById('searchInput').addEventListener('input', applyFilters);
-            document.getElementById('sortSelect').addEventListener('change', applyFilters);
-            document.getElementById('yearSelect').addEventListener('change', applyFilters);
-            document.getElementById('formatSelect').addEventListener('change', applyFilters);
-            document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
-                state.pageSize = parseInt(e.target.value) || 24;
-                try {
-                    localStorage.setItem('premiumPageSize', state.pageSize);
-                } catch (err) {
-                    console.warn('LocalStorage nicht verfügbar', err);
-                    showNotification('Fehler beim Speichern der Seitengröße');
-                }
-                applyFilters();
-            });
-
-            // Tooltip Logic
-            const tooltip = document.getElementById('animeTooltip');
-            let currentCard = null;
-
-            document.body.addEventListener('mouseover', (e) => {
-                const card = e.target.closest('.anime-card');
-                if (card && currentCard !== card) {
-                    currentCard = card;
-                    const title = card.dataset.title || 'Unbekannt';
-                    const format = card.dataset.format || '?';
-                    const episodes = card.dataset.episodes || '?';
-                    const status = card.dataset.status || '?';
-                    const year = card.dataset.year || '?';
-
-                    tooltip.innerHTML = `
-                        <h3>${title}</h3>
-                        <div class="tooltip-detail"><span>📺</span> Format: ${format}</div>
-                        <div class="tooltip-detail"><span>🎬</span> Episoden: ${episodes}</div>
-                        <div class="tooltip-detail"><span>📅</span> Jahr: ${year}</div>
-                        <div class="tooltip-detail"><span>ℹ️</span> Status: ${status}</div>
-                    `;
-                    tooltip.style.opacity = '1';
-                }
-            });
-
-            document.body.addEventListener('mousemove', (e) => {
-                if (currentCard && tooltip.style.opacity === '1') {
-                    const offset = 15;
-                    let left = e.clientX + offset;
-                    let top = e.clientY + offset;
-
-                    const rect = tooltip.getBoundingClientRect();
-                    if (left + rect.width > window.innerWidth) {
-                        left = e.clientX - rect.width - offset;
-                    }
-                    if (top + rect.height > window.innerHeight) {
-                        top = e.clientY - rect.height - offset;
+                // Keyboard Shortcuts
+                document.addEventListener('keydown', (e) => {
+                    // Ignore if user is typing in an input or select
+                    if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+                        if (e.key === 'Escape') {
+                            e.target.blur();
+                        }
+                        return;
                     }
 
-                    tooltip.style.left = `${left}px`;
-                    tooltip.style.top = `${top}px`;
-                }
-            });
+                    if (e.key === '/') {
+                        e.preventDefault();
+                        const searchInput = document.getElementById('searchInput');
+                        if (searchInput) {
+                            searchInput.focus();
+                            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    } else if (e.key === 'Escape') {
+                        closeModal();
+                    }
+                });
 
-            document.body.addEventListener('mouseout', (e) => {
-                const card = e.target.closest('.anime-card');
-                if (card && !card.contains(e.relatedTarget)) {
-                    currentCard = null;
-                    tooltip.style.opacity = '0';
-                }
-            });
+                document.getElementById('searchInput').addEventListener('input', applyFilters);
+                document.getElementById('sortSelect').addEventListener('change', applyFilters);
+                document.getElementById('yearSelect').addEventListener('change', applyFilters);
+                document.getElementById('formatSelect').addEventListener('change', applyFilters);
+                document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
+                    state.pageSize = parseInt(e.target.value) || 24;
+                    try {
+                        localStorage.setItem('premiumPageSize', state.pageSize);
+                    } catch (err) {
+                        console.warn('LocalStorage nicht verfügbar', err);
+                        showNotification('Fehler beim Speichern der Seitengröße');
+                    }
+                    applyFilters();
+                });
 
-            document.getElementById('refreshBtn').addEventListener('click', () => {
-                addLog('🔄 Manueller Resync...');
-                manualRefresh();
-            });
-            document.getElementById('closeModalBtn').addEventListener('click', closeModal);
-            
-            document.getElementById('watchlistBtn').addEventListener('click', () => {
-                state.currentTab = 'watchlist';
-                updateTabs();
-                applyFilters();
-            });
+                // Tooltip Logic
+                const tooltip = document.getElementById('animeTooltip');
+                let currentCard = null;
 
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    state.currentTab = btn.dataset.tab || 'alle';
+                document.body.addEventListener('mouseover', (e) => {
+                    const card = e.target.closest('.anime-card');
+                    if (card && currentCard !== card) {
+                        currentCard = card;
+                        const title = card.dataset.title || 'Unbekannt';
+                        const format = card.dataset.format || '?';
+                        const episodes = card.dataset.episodes || '?';
+                        const status = card.dataset.status || '?';
+                        const year = card.dataset.year || '?';
+
+                        tooltip.innerHTML = `
+                            <h3>${title}</h3>
+                            <div class="tooltip-detail"><span>📺</span> Format: ${format}</div>
+                            <div class="tooltip-detail"><span>🎬</span> Episoden: ${episodes}</div>
+                            <div class="tooltip-detail"><span>📅</span> Jahr: ${year}</div>
+                            <div class="tooltip-detail"><span>ℹ️</span> Status: ${status}</div>
+                        `;
+                        tooltip.style.opacity = '1';
+                    }
+                });
+
+                document.body.addEventListener('mousemove', (e) => {
+                    if (currentCard && tooltip.style.opacity === '1') {
+                        const offset = 15;
+                        let left = e.clientX + offset;
+                        let top = e.clientY + offset;
+
+                        const rect = tooltip.getBoundingClientRect();
+                        if (left + rect.width > window.innerWidth) {
+                            left = e.clientX - rect.width - offset;
+                        }
+                        if (top + rect.height > window.innerHeight) {
+                            top = e.clientY - rect.height - offset;
+                        }
+
+                        tooltip.style.left = `${left}px`;
+                        tooltip.style.top = `${top}px`;
+                    }
+                });
+
+                document.body.addEventListener('mouseout', (e) => {
+                    const card = e.target.closest('.anime-card');
+                    if (card && !card.contains(e.relatedTarget)) {
+                        currentCard = null;
+                        tooltip.style.opacity = '0';
+                    }
+                });
+
+                document.getElementById('refreshBtn').addEventListener('click', () => {
+                    addLog('🔄 Manueller Resync...');
+                    manualRefresh();
+                });
+                document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+                document.getElementById('watchlistBtn').addEventListener('click', () => {
+                    state.currentTab = 'watchlist';
                     updateTabs();
                     applyFilters();
                 });
-            });
 
-            initializeAnimes();
-            setTimeout(() => { showNotification('Datenbank geladen & bereit 🚀'); }, 800);
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        state.currentTab = btn.dataset.tab || 'alle';
+                        updateTabs();
+                        applyFilters();
+                    });
+                });
+
+                initializeAnimes();
+                setTimeout(() => { showNotification('Datenbank geladen & bereit 🚀'); }, 800);
             } catch (err) {
                 console.error("Unerwarteter Fehler bei der Initialisierung:", err);
-                showGlobalError(err.message || 'Fehler beim Laden der Seite.');
+                renderGlobalError(err.message || 'Fehler beim Laden der Seite.');
             }
         });
     </script>
