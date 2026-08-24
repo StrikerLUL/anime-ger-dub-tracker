@@ -244,6 +244,15 @@
       "type": "Film"
     },
     {
+      "id": 19132,
+      "title": "Demon Slave: Staffel 2",
+      "url": "https://www.anisearch.de/anime/19132,demon-slave-staffel-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19132_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20280,
       "title": "All You Need Is Kill",
       "url": "https://www.anisearch.de/anime/20280,all-you-need-is-kill",
@@ -1049,7 +1058,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-23T06:28:41.756216Z",
+  "timestamp": "2026-08-24T06:41:27.622487Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
