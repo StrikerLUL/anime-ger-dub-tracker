@@ -307,15 +307,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20864,
-      "title": "Detektiv Conan: Der gefallene Engel des Highways",
-      "url": "https://www.anisearch.de/anime/20864,detektiv-conan-der-gefallene-engel-des-highways",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20864_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
       "id": 19429,
       "title": "The Irregular at Magic High School: The Movie - Yotsuba Succession Arc",
       "url": "https://www.anisearch.de/anime/19429,the-irregular-at-magic-high-school-the-movie-yotsuba-succession-arc",
@@ -606,6 +597,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20864,
+      "title": "Detektiv Conan: Der gefallene Engel des Highways",
+      "url": "https://www.anisearch.de/anime/20864,detektiv-conan-der-gefallene-engel-des-highways",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20864_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 19669,
       "title": "The Warrior Princess and the Barbaric King",
       "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
@@ -683,15 +683,6 @@
       "url": "https://www.anisearch.de/anime/20808,akane-banashi",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
       "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 18911,
-      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
-      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
-      "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie"
     }
@@ -968,6 +959,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20864,
+      "title": "Detektiv Conan: Der gefallene Engel des Highways",
+      "url": "https://www.anisearch.de/anime/20864,detektiv-conan-der-gefallene-engel-des-highways",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20864_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 19669,
       "title": "The Warrior Princess and the Barbaric King",
       "url": "https://www.anisearch.de/anime/19669,the-warrior-princess-and-the-barbaric-king",
@@ -1047,18 +1047,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 18911,
-      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke",
-      "url": "https://www.anisearch.de/anime/18911,ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18911_400.webp",
-      "info": "TV-Serie, 24 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-26T06:36:02.871604Z",
+  "timestamp": "2026-08-27T17:12:20.799926Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
