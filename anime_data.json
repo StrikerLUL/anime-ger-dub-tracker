@@ -280,6 +280,15 @@
       "type": "TV-Serie"
     },
     {
+      "id": 20836,
+      "title": "Gintama the Movie 2026: Yoshiwara in Flames",
+      "url": "https://www.anisearch.de/anime/20836,gintama-the-movie-2026-yoshiwara-in-flames",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20836_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film"
+    },
+    {
       "id": 19245,
       "title": "A New Dawn",
       "url": "https://www.anisearch.de/anime/19245,a-new-dawn",
@@ -1049,7 +1058,7 @@
       "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-27T17:12:20.799926Z",
+  "timestamp": "2026-08-28T17:59:01.020126Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
