@@ -1,0 +1,265 @@
+--- "Anime Synchro Tracker v11.0.1.html"
++++ "Anime Synchro Tracker v11.0.1.html"
+@@ -1014,34 +1014,6 @@
+
+     <script>
+         // ─── Global Error Handling ─────────────────────────────────────────
+-        function showGlobalError(errorMsg) {
+-            console.error(errorMsg);
+-            const contentArea = document.getElementById('contentArea');
+-            if (contentArea) {
+-                contentArea.innerHTML = `
+-                    <div style="text-align: center; padding: 60px 20px; opacity: 0.9;">
+-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" style="margin-bottom: 20px;">
+-                            <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+-                        </svg>
+-                        <h2 style="font-family: var(--font-display); color: #ef4444; margin-bottom: 12px;">Hoppla, ein Fehler ist aufgetreten!</h2>
+-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Es gab ein Problem bei der Ausführung der Anwendung.</p>
+-                        <button class="btn btn-primary" style="margin: 0 auto; display: inline-flex;" onclick="location.reload()">
+-                            🔄 Seite neu laden
+-                        </button>
+-                    </div>\`;
+-            }
+-            const pagination = document.getElementById('pagination');
+-            if (pagination) pagination.innerHTML = '';
+-        }
+-
+-        window.addEventListener('error', function(e) {
+-            showGlobalError(e.error || e.message);
+-        });
+-
+-        window.addEventListener('unhandledrejection', function(e) {
+-            showGlobalError(e.reason);
+-        });
+-
+         // ─── Konfiguration ───────────────────────────────────────────────
+         const CONFIG = {
+             SERVER_URL:       'http://localhost:5000',
+@@ -1186,7 +1158,7 @@
+                 };
+             } catch (e) {
+                 console.error("Fehler beim Normalisieren der Anime-Daten:", e);
+-                showGlobalError("Ein unerwarteter Fehler ist beim Verarbeiten der Anime-Daten aufgetreten. Bitte lade die Seite neu.");
++                renderGlobalError("Ein unerwarteter Fehler ist beim Verarbeiten der Anime-Daten aufgetreten. Bitte lade die Seite neu.");
+                 return {
+                     id: \`\${type}_\${index}\`,
+                     title: 'Fehlerhaftes Anime',
+@@ -1266,7 +1238,7 @@
+                     document.getElementById('scrapingIndicator')?.classList.remove('visible');
+                 }
+             } catch (err) {
+-                showGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
++                renderGlobalError(err.message || 'Ein Fehler ist bei applyDataToState aufgetreten.');
+             }
+         }
+
+@@ -1295,7 +1267,7 @@
+                 }, 'demo');
+                 startPolling();  // Auf Server warten
+             } catch (err) {
+-                showGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
++                renderGlobalError(err.message || 'Kritischer Fehler bei der Initialisierung.');
+             }
+         }
+
+@@ -1333,9 +1305,8 @@
+                 }
+                 await initializeAnimes();
+-            } catch (err) {
+-                console.error("Fehler beim manuellen Refresh", err);
+-                showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
+             } catch (error) {
+-                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
++                console.error("Fehler beim manuellen Refresh", error);
++                renderGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + (error.message || 'Unbekannt'));
+             }
+         }
+
+@@ -1367,7 +1338,7 @@
+                     </div>
+                 \`;
+             } catch (error) {
+-                showGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
++                renderGlobalError(error.message || 'Fehler beim Aktualisieren der Statistiken.');
+             }
+         }
+
+@@ -1379,11 +1350,13 @@
+                 const selectedYear = document.getElementById('yearSelect')?.value || 'all';
+                 const selectedFormat = document.getElementById('formatSelect')?.value || 'all';
+
+-                try { localStorage.setItem('premiumSearchTerm', searchInput?.value || ''); } catch (e) { console.warn('LocalStorage error', e); }
+-                try { localStorage.setItem('premiumSortVal', sortVal); } catch (e) { console.warn('LocalStorage error', e); }
+-                try { localStorage.setItem('premiumYear', selectedYear); } catch (e) { console.warn('LocalStorage error', e); }
+-                try { localStorage.setItem('premiumFormat', selectedFormat); } catch (e) { console.warn('LocalStorage error', e); }
+-                try { localStorage.setItem('premiumTab', state.currentTab); } catch (e) {
++                try {
++                    localStorage.setItem('premiumSearchTerm', searchInput?.value || '');
++                    localStorage.setItem('premiumSortVal', sortVal);
++                    localStorage.setItem('premiumYear', selectedYear);
++                    localStorage.setItem('premiumFormat', selectedFormat);
++                    localStorage.setItem('premiumTab', state.currentTab);
++                } catch (e) {
+                     console.warn('LocalStorage nicht verfügbar', e);
+                     showNotification('Fehler beim Speichern der Filter');
+                 }
+@@ -1413,7 +1386,7 @@
+                 state.currentPage = 1;
+                 renderAnimes();
+             } catch (err) {
+-                showGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
++                renderGlobalError(err.message || 'Ein Fehler ist beim Anwenden der Filter aufgetreten.');
+             }
+         }
+
+@@ -1498,7 +1471,7 @@
+
+                 document.getElementById('pagination').innerHTML = totalPages > 1 ? paginationHtml : '';
+             } catch (error) {
+-                showGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
++                renderGlobalError(error.message || 'Beim Laden der Anime-Liste ist leider ein Fehler aufgetreten.');
+             }
+         }
+
+@@ -1533,7 +1506,7 @@
+                     btn.innerHTML = '✓ In Watchlist';
+                 }
+             } catch (error) {
+-                showGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
++                renderGlobalError(error.message || 'Fehler beim Aktualisieren der Watchlist.');
+             }
+         }
+
+@@ -1569,7 +1542,7 @@
+                 \`;
+                 document.getElementById('detailsModal').classList.add('active');
+             } catch (error) {
+-                showGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
++                renderGlobalError(error.message || 'Es gab ein Problem beim Öffnen der Anime-Details.');
+             }
+         }
+
+@@ -1652,7 +1625,7 @@
+                 window.scrollTo({ top: document.querySelector('.dashboard-panel').offsetTop - 100, behavior: 'smooth' });
+             } catch (error) {
+                 console.error("Fehler bei der Pagination:", error);
+-                showGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
++                renderGlobalError("Ein Fehler ist beim Seitenwechsel aufgetreten.");
+             }
+         }
+
+@@ -1700,7 +1673,7 @@
+                     setTimeout(() => notif.remove(), 300);
+                 }, 4000);
+             } catch (error) {
+-                showGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
++                renderGlobalError("Ein kritischer Fehler ist bei der Benachrichtigung aufgetreten."); console.error("Fehler bei der Anzeige der Benachrichtigung:", error);
+             }
+         }
+
+@@ -1742,39 +1715,14 @@
+
+         document.addEventListener('DOMContentLoaded', () => {
+             try {
+-                // Parse localStorage with individual try-catch to avoid one bad value killing all settings
+                 try {
+                     const saved = localStorage.getItem('premiumWatchlist');
+-                    state.watchlist = saved ? JSON.parse(saved) : [];
+-                } catch (e) {
+-                    console.warn('LocalStorage nicht verfügbar', e);
+-                    showNotification('Fehler beim Laden der Watchlist');
+-                    state.watchlist = [];
+-                const saved = localStorage.getItem('premiumWatchlist');
+-                try {
+-                    state.watchlist = saved ? JSON.parse(saved) : [];
+-                } catch (parseError) {
+-                    console.error('Fehler beim Parsen der Watchlist:', parseError);
+-                    state.watchlist = [];
+-                    showNotification('Fehler beim Laden der Watchlist');
+-                }
+-                    showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
+-                    state.watchlist = [];
+-                }
+-                state.watchlist = saved ? JSON.parse(saved) : [];
+-            } catch (e) {
+-                console.warn('LocalStorage Watchlist Fehler', e);
+-                showNotification('Fehler beim Laden der Watchlist');
+-                state.watchlist = [];
+-            }
+-
+-            try {
+-                const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
+-                if (savedSearchTerm !== null) {
+-                    const searchInput = document.getElementById('searchInput');
+-                    if (searchInput) searchInput.value = savedSearchTerm;
+-                }
+-            } catch (e) {
+-                console.warn('LocalStorage Suchbegriff Fehler', e);
+-            }
+-
+-                try {
+-                    const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
+-                    if (savedSearchTerm !== null) {
+-                        const searchInput = document.getElementById('searchInput');
+-                        if (searchInput) searchInput.value = savedSearchTerm;
+-                    }
+-                } catch (e) { console.warn('LocalStorage error', e); }
+-
+-                try {
+-                    const savedSortVal = localStorage.getItem('premiumSortVal');
+-                    if (savedSortVal !== null) {
+-                        const sortSelect = document.getElementById('sortSelect');
+-                        if (sortSelect) sortSelect.value = savedSortVal;
+-                    }
+-                } catch (e) { console.warn('LocalStorage error', e); }
+-
+-                try {
+-                    const savedTab = localStorage.getItem('premiumTab');
+-                    if (savedTab !== null) {
+-                        state.currentTab = savedTab;
+-                        updateTabs();
+-                    }
+-                } catch (e) { console.warn('LocalStorage error', e); }
+-
+-                try {
+-                    const savedPageSize = localStorage.getItem('premiumPageSize');
+-                    if (savedPageSize !== null) {
+-                        const pageSizeSelect = document.getElementById('pageSizeSelect');
+-                        if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
+-                    }
+-                } catch (e) { console.warn('LocalStorage error', e); }
++                    try {
++                        state.watchlist = saved ? JSON.parse(saved) : [];
++                    } catch (parseError) {
++                        console.error('Fehler beim Parsen der Watchlist:', parseError);
++                        state.watchlist = [];
++                        renderGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
++                    }
++                } catch (e) {
++                    console.warn('LocalStorage Watchlist Fehler', e);
++                    showNotification('Fehler beim Laden der Watchlist');
++                    state.watchlist = [];
++                }
++
++                try {
++                    const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
++                    if (savedSearchTerm !== null) {
++                        const searchInput = document.getElementById('searchInput');
++                        if (searchInput) searchInput.value = savedSearchTerm;
++                    }
++                } catch (e) {
++                    console.warn('LocalStorage Suchbegriff Fehler', e);
++                }
++
+             try {
+                 const savedSortVal = localStorage.getItem('premiumSortVal');
+                 if (savedSortVal !== null) {
+@@ -1949,7 +1897,7 @@
+             setTimeout(() => { showNotification('Datenbank geladen & bereit 🚀'); }, 800);
+             } catch (err) {
+                 console.error("Unerwarteter Fehler bei der Initialisierung:", err);
+-                showGlobalError(err.message || 'Fehler beim Laden der Seite.');
++                renderGlobalError(err.message || 'Fehler beim Laden der Seite.');
+             }
+         });
+     </script>
