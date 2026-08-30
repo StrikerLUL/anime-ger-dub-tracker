@@ -280,15 +280,6 @@
       "type": "TV-Serie"
     },
     {
-      "id": 20836,
-      "title": "Gintama the Movie 2026: Yoshiwara in Flames",
-      "url": "https://www.anisearch.de/anime/20836,gintama-the-movie-2026-yoshiwara-in-flames",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20836_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film"
-    },
-    {
       "id": 19245,
       "title": "A New Dawn",
       "url": "https://www.anisearch.de/anime/19245,a-new-dawn",
@@ -323,15 +314,6 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film"
-    },
-    {
-      "id": 20029,
-      "title": "Bleach: Thousand-Year Blood War - The Calamity",
-      "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20029_400.webp",
-      "info": "TV-Serie, 10 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
   "aktuelle": [
@@ -361,6 +343,15 @@
       "info": "Web, 1 (2026)",
       "year": 2026,
       "type": "Web"
+    },
+    {
+      "id": 20029,
+      "title": "Bleach: Thousand-Year Blood War - The Calamity",
+      "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20029_400.webp",
+      "info": "TV-Serie, 10 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
     },
     {
       "id": 20297,
@@ -682,15 +673,6 @@
       "title": "Nippon Sangoku: Die drei Nationen der roten Sonne",
       "url": "https://www.anisearch.de/anime/21198,nippon-sangoku-die-drei-nationen-der-roten-sonne",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21198_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
-    },
-    {
-      "id": 20808,
-      "title": "Akane-banashi",
-      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
@@ -725,6 +707,15 @@
       "type": "Web"
     },
     {
+      "id": 20029,
+      "title": "Bleach: Thousand-Year Blood War - The Calamity",
+      "url": "https://www.anisearch.de/anime/20029,bleach-thousand-year-blood-war-the-calamity",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20029_400.webp",
+      "info": "TV-Serie, 10 (2026)",
+      "year": 2026,
+      "type": "TV-Serie"
+    },
+    {
       "id": 20297,
       "title": "Though I Am an Inept Villainess",
       "url": "https://www.anisearch.de/anime/20297,though-i-am-an-inept-villainess",
@@ -1047,18 +1038,9 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie"
-    },
-    {
-      "id": 20808,
-      "title": "Akane-banashi",
-      "url": "https://www.anisearch.de/anime/20808,akane-banashi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20808_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie"
     }
   ],
-  "timestamp": "2026-08-29T12:04:59.032020Z",
+  "timestamp": "2026-08-30T11:00:46.291739Z",
   "source": "anisearch.de",
   "version": "4.0",
   "scraping": false
