@@ -1,1 +1,5 @@
+# Abhängigkeiten für den GitHub-Actions-Scraper
 playwright>=1.48.0
+# Für die Datenlogik-Tests, die vor jedem Scraping-Lauf laufen
+pytest>=8.0.0
+pytest-asyncio>=0.24.0

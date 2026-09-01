@@ -1,458 +1,230 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
-anisearch.de Scraper für Deutsche Anime Synchronisationen
-Version 4.0 - Playwright-basiert (headless Browser)
+Lokaler Server für den Anime-Synchro-Tracker.
 
-Benötigt: pip install playwright flask
-          python -m playwright install chromium
+Startet einen kleinen Flask-Server, liefert das HTML-Frontend aus und hält die
+Anime-Daten im Speicher. Die Scraping- und Datenlogik kommt aus
+anisearch_scraper.py – dieselbe, die auch GitHub Actions verwendet, damit es
+nur eine Wahrheit über die Daten gibt.
 
-Starte einfach mit: python scrape_anisearch_fixed.py
-Oder per Doppelklick auf: SERVER STARTEN.bat
+Starten:  python scrape_anisearch_fixed.py
+Windows:  Doppelklick auf "SERVER STARTEN.bat"
 """
 
-import json
-import sys
 import os
+import sys
 import threading
 import time
-from datetime import datetime
-from flask import Flask, jsonify, send_from_directory, request
 
-# ─── Flask-App Setup ──────────────────────────────────────────────────────────
+from flask import Flask, jsonify, send_from_directory
+
+from anisearch_scraper import (
+    BASE_DIR,
+    CATEGORY_ORDER,
+    DATA_FILE,
+    HTML_FILE,
+    dedupe_categories,
+    load_existing,
+    print_summary,
+    scrape_all,
+    write_if_changed,
+)
+
 app = Flask(__name__)
 
-# Globaler Cache
-CACHED_DATA: dict = {
-    'kommende':      [],
-    'aktuelle':      [],
-    'abgeschlossen': [],
-    'timestamp':     None,
+AUTO_REFRESH_HOURS = 6
+
+# Aktueller Datenstand im Speicher. Immer ein vollständiges Payload-Dict im
+# selben Format wie anime_data.json – so liefern API und Datei exakt dasselbe.
+STATE = {
+    "payload": None,
+    "scraping": False,
 }
-SCRAPING_FLAG = {'active': False}  # Getrennt, damit Typen klar bleiben
-DATA_LOCK = threading.Lock()
-
-# ─── Scraper-Konstanten ───────────────────────────────────────────────────────
-BASE_URL  = "https://www.anisearch.de"
-HEADERS   = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-MAX_PAGES = 5      # Max Seiten pro Kategorie
-DELAY_MS  = 1500   # Wartezeit zwischen Seitenladevorgängen (ms)
+STATE_LOCK = threading.Lock()
 
 
-def ensure_dependencies():
-    """Installiere fehlende Pakete automatisch."""
+def ensure_dependencies() -> None:
+    """Fehlende Pakete nachinstallieren (Komfort für den Doppelklick-Start)."""
     missing = []
-    try:
-        import flask
-    except ImportError:
-        missing.append('flask')
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        missing.append('playwright')
+    for module, package in (("flask", "flask"), ("playwright", "playwright")):
+        try:
+            __import__(module)
+        except ImportError:
+            missing.append(package)
 
     if missing:
         print(f"📦 Installiere fehlende Pakete: {', '.join(missing)}")
         os.system(f'"{sys.executable}" -m pip install {" ".join(missing)} -q')
 
-    # Playwright Chromium
     try:
         from playwright.sync_api import sync_playwright
         with sync_playwright() as pw:
             pw.chromium.launch(headless=True).close()
     except Exception:
-        print("📦 Installiere Playwright Chromium...")
+        print("📦 Installiere Playwright-Chromium...")
         os.system(f'"{sys.executable}" -m playwright install chromium')
 
 
-def accept_cookies(page):
-    """Akzeptiere den Cookie-Banner falls er erscheint."""
-    try:
-        consent = page.locator('text=ALLES AKZEPTIEREN')
-        if consent.count() > 0:
-            consent.first.click()
-            page.wait_for_timeout(1500)
-            print("✅ Cookie-Banner akzeptiert")
-    except Exception:
-        pass
+def load_cache_into_state() -> bool:
+    """Gespeicherte Daten in den Speicher laden, damit der Server sofort liefert."""
+    data = load_existing(DATA_FILE)
+    if not any(data.get(name) for name in CATEGORY_ORDER):
+        return False
+    with STATE_LOCK:
+        STATE["payload"] = data
+    total = sum(len(data.get(name, [])) for name in CATEGORY_ORDER)
+    print(f"💾 {total} Anime aus {os.path.basename(DATA_FILE)} geladen (Stand: {data.get('timestamp')})")
+    return True
 
 
-def parse_anime_list(page):
-    """Extrahiere Anime-Daten von der aktuell geladenen Seite."""
-    results = []
-    try:
-        page.wait_for_selector('.covers', timeout=8000)
-    except Exception:
-        return results
-
-    items = page.locator('ul.covers li a.anime-item').all()
-    for item in items:
-        try:
-            href     = item.get_attribute('href') or ''
-            title_el = item.locator('span.title')
-            title    = title_el.inner_text().strip() if title_el.count() > 0 else ''
-            date_el  = item.locator('span.date')
-            date_str = date_el.inner_text().strip() if date_el.count() > 0 else ''
-            img_el   = item.locator('img')
-            img      = img_el.get_attribute('src') or '' if img_el.count() > 0 else ''
-
-            # ID aus href extrahieren
-            anime_id = 0
-            if '/' in href:
-                part = href.split('/')[-1]
-                if ',' in part:
-                    try:
-                        anime_id = int(part.split(',')[0])
-                    except Exception:
-                        pass
-
-            if title:
-                results.append({
-                    'id':    anime_id,
-                    'title': title,
-                    'url':   f"{BASE_URL}/{href}",
-                    'image': img,
-                    'info':  date_str,
-                    'year':  extract_year(date_str),
-                    'type':  extract_type(date_str),
-                })
-        except Exception:
-            continue
-    return results
-
-
-def extract_year(date_str: str) -> int:
-    """Extrahiere das Jahr aus dem Datum-String."""
-    import re
-    m = re.search(r'\((\d{4})\)', date_str)
-    if m:
-        return int(m.group(1))
-    m = re.search(r'\b(20\d{2})\b', date_str)
-    if m:
-        return int(m.group(1))
-    return 0
-
-
-def extract_type(date_str: str) -> str:
-    """Extrahiere den Anime-Typ."""
-    types = ['TV-Serie', 'Film', 'OVA', 'Web', 'TV-Spezial', 'Bonus', 'Musikvideo']
-    for t in types:
-        if t in date_str:
-            return t
-    return 'Anime'
-
-
-def scrape_category(url_params: str, label: str, max_pages: int = MAX_PAGES, max_retries: int = 2) -> list:
-    """Scrape alle Seiten einer Kategorie mit Playwright. Mit Retry-Logik."""
+def run_scraper() -> None:
+    """Einmal komplett scrapen, entdoppeln und – nur bei Änderung – speichern."""
     from playwright.sync_api import sync_playwright
 
-    for attempt_idx in range(max_retries):
-        attempt = attempt_idx + 1
-        try:
-            all_results: list = []
-            print(f"\n{'='*60}")
-            print(f"🔍 Scrape: {label} (Versuch {attempt}/{max_retries})")
-            print(f"{'='*60}")
-
-            with sync_playwright() as pw:
-                browser = pw.chromium.launch(headless=True)
-                context = browser.new_context(
-                    user_agent=HEADERS['User-Agent'],
-                    locale='de-DE'
-                )
-                page = context.new_page()
-
-                # Erste Seite laden
-                url = f"{BASE_URL}/anime/index/page-1?{url_params}"
-                print(f"📄 Lade Seite 1: {url}")
-                page.goto(url, wait_until='domcontentloaded', timeout=30000)
-                page.wait_for_timeout(DELAY_MS)
-                accept_cookies(page)
-                page.wait_for_timeout(DELAY_MS)
-
-                # Gesamt-Seitenanzahl ermitteln
-                total_pages = 1
-                try:
-                    import re
-                    nav_info = page.locator('.pagenav-info').inner_text(timeout=3000)
-                    m = re.search(r'von (\d+)', nav_info)
-                    if m:
-                        total_pages = min(int(m.group(1)), max_pages)
-                except Exception:
-                    pass
-                print(f"   → {total_pages} Seite(n) gefunden")
-
-                # Seite 1 parsen
-                page1_results = parse_anime_list(page)
-                all_results.extend(page1_results)
-                print(f"   ✅ Seite 1: {len(page1_results)} Anime")
-
-                # Restliche Seiten
-                for p_num in range(2, total_pages + 1):
-                    url = f"{BASE_URL}/anime/index/page-{p_num}?{url_params}"
-                    print(f"📄 Lade Seite {p_num}: {url}")
-                    try:
-                        page.goto(url, wait_until='domcontentloaded', timeout=30000)
-                        page.wait_for_timeout(DELAY_MS)
-                        results = parse_anime_list(page)
-                        all_results.extend(results)
-                        print(f"   ✅ Seite {p_num}: {len(results)} Anime")
-                    except Exception as e:
-                        print(f"   ⚠️  Fehler auf Seite {p_num}: {e}")
-                        break
-
-                browser.close()
-
-            # Duplikate entfernen (anhand ID)
-            seen = set()
-            unique = []
-            for a in all_results:
-                if a['id'] not in seen:
-                    seen.add(a['id'])
-                    unique.append(a)
-
-            print(f"\n✅ {label}: {len(unique)} Anime gesamt\n")
-            return unique
-
-        except Exception as e:
-            print(f"⚠️  Versuch {attempt} fehlgeschlagen: {e}")
-            if attempt_idx < max_retries - 1:
-                print(f"⏳ Warte 5 Sekunden vor erneutem Versuch...")
-                time.sleep(5)
-
-    print(f"❌ {label}: Alle Versuche fehlgeschlagen")
-    return []
-
-
-def run_scraper():
-    """Haupt-Scraper: Lädt kommende, aktuelle und abgeschlossene Dubs."""
-    with DATA_LOCK:
-        if SCRAPING_FLAG['active']:
-            print("⚠️  Scraper läuft bereits, überspring...")
+    with STATE_LOCK:
+        if STATE["scraping"]:
+            print("⚠️  Scraper läuft bereits – übersprungen")
             return
-        SCRAPING_FLAG['active'] = True
+        STATE["scraping"] = True
 
     try:
-        print("\n" + "="*60)
-        print("🎬 ANISEARCH SCRAPER v4.0 - Deutsche Synchronisationen")
-        print("="*60)
+        print("\n" + "=" * 60)
+        print("🎬 ANISEARCH SCRAPER – Deutsche Synchronisationen")
+        print("=" * 60)
 
-        # dubbed_status=3 → Geplant / Bald verfügbar
-        kommende = scrape_category(
-            url_params='char=all&dubbed=de&dubbed_status=3&sort=date&order=asc',
-            label='Bald verfügbar (Geplante Deutsche Synchronisationen)'
-        )
+        with sync_playwright() as pw:
+            raw = scrape_all(pw)
 
-        # dubbed_status=2 → Laufend / Kürzlich erschienen
-        aktuelle = scrape_category(
-            url_params='char=all&dubbed=de&dubbed_status=2&sort=date&order=desc',
-            label='Kürzlich erschienen (Laufende Deutsche Synchronisationen)'
-        )
+        categories, warnings = dedupe_categories(raw)
+        written, payload = write_if_changed(categories, warnings=warnings, path=DATA_FILE)
 
-        # dubbed_status=1 → Abgeschlossen
-        abgeschlossen = scrape_category(
-            url_params='char=all&dubbed=de&dubbed_status=1&sort=date&order=desc',
-            label='Abgeschlossene Deutsche Synchronisationen',
-            max_pages=3  # Weniger Seiten, da sehr viele
-        )
+        with STATE_LOCK:
+            STATE["payload"] = payload
 
-        # Daten cachen
-        with DATA_LOCK:
-            CACHED_DATA['kommende']      = kommende
-            CACHED_DATA['aktuelle']      = aktuelle
-            CACHED_DATA['abgeschlossen'] = abgeschlossen
-            CACHED_DATA['timestamp']     = datetime.now().isoformat()
-            SCRAPING_FLAG['active']      = False
-
-        # JSON speichern für Offline-Nutzung
-        save_json(kommende, aktuelle, abgeschlossen)
-
-        total = len(kommende) + len(aktuelle) + len(abgeschlossen)
-        print(f"\n🚀 Fertig! {len(kommende)} kommende + {len(aktuelle)} aktuelle + {len(abgeschlossen)} abgeschlossene Dubs.")
-        print(f"📊 Gesamt: {total} deutsche Synchronisationen")
-        return kommende, aktuelle, abgeschlossen
-
+        print_summary(payload, written, DATA_FILE)
     except Exception as e:
         print(f"❌ Scraper-Fehler: {e}")
-        SCRAPING_FLAG['active'] = False
-        return [], [], []
+    finally:
+        with STATE_LOCK:
+            STATE["scraping"] = False
 
 
-def save_json(kommende, aktuelle, abgeschlossen, path='anime_data.json'):
-    """Speichere als JSON-Datei für Offline-Nutzung."""
-    data = {
-        'kommende':      kommende,
-        'aktuelle':      aktuelle,
-        'abgeschlossen': abgeschlossen,
-        'timestamp':     datetime.now().isoformat(),
-        'source':        'anisearch.de',
-        'version':       '4.0'
-    }
-    with open(path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    total = len(kommende) + len(aktuelle) + len(abgeschlossen)
-    print(f"💾 JSON gespeichert: {path} ({total} Animes)")
-
-
-def auto_refresh_loop(interval_hours=6):
-    """Automatisch alle N Stunden neu scrapen."""
+def auto_refresh_loop(interval_hours: int = AUTO_REFRESH_HOURS) -> None:
     while True:
         time.sleep(interval_hours * 3600)
-        print(f"\n🔄 Auto-Refresh gestartet (alle {interval_hours}h)...")
-        try:
-            run_scraper()
-        except Exception as e:
-            print(f"⚠️  Auto-Refresh Fehler: {e}")
+        print(f"\n🔄 Auto-Refresh (alle {interval_hours}h)...")
+        run_scraper()
 
 
 # ─── Flask-Endpunkte ──────────────────────────────────────────────────────────
 
-HTML_FILE = "Anime Synchro Tracker v11.0.1.html"
-
-
-@app.route('/')
+@app.route("/")
 def serve_index():
-    """Serviere den HTML-Tracker."""
     if os.path.exists(HTML_FILE):
-        with open(HTML_FILE, 'r', encoding='utf-8') as f:
+        with open(HTML_FILE, "r", encoding="utf-8") as f:
             return f.read()
     return "HTML-Datei nicht gefunden!", 404
 
 
-@app.route('/api/anime-data')
+@app.route("/api/anime-data")
 def api_anime_data():
-    """Haupt-API: liefert die gecachten Daten."""
-    with DATA_LOCK:
-        if CACHED_DATA['timestamp']:
-            return jsonify({
-                'kommende':      CACHED_DATA['kommende'],
-                'aktuelle':      CACHED_DATA['aktuelle'],
-                'abgeschlossen': CACHED_DATA['abgeschlossen'],
-                'timestamp':     CACHED_DATA['timestamp'],
-                'scraping':      SCRAPING_FLAG['active'],
-                'total':         len(CACHED_DATA['kommende']) + len(CACHED_DATA['aktuelle']) + len(CACHED_DATA['abgeschlossen']),
-                'source':        'live'
-            })
+    """Liefert den aktuellen Datenstand – identisches Format wie anime_data.json."""
+    with STATE_LOCK:
+        payload = STATE["payload"]
+        scraping = STATE["scraping"]
 
-    # Fallback: Lade JSON-Datei falls vorhanden
-    if os.path.exists('anime_data.json'):
-        with open('anime_data.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            data['source'] = 'cache'
-            return jsonify(data)
+    if payload:
+        response = dict(payload)
+        response["scraping"] = scraping
+        response["source"] = "live"
+        return jsonify(response)
 
     return jsonify({
-        'error':    'Noch keine Daten – Scraping läuft...',
-        'scraping': SCRAPING_FLAG['active']
+        "error": "Noch keine Daten – Scraping läuft...",
+        "scraping": scraping,
     }), 503
 
 
-@app.route('/api/refresh')
+@app.route("/api/refresh")
 def api_refresh():
-    """Manueller Scraper-Start via API."""
-    if SCRAPING_FLAG['active']:
-        return jsonify({'status': 'Scraping läuft bereits...', 'scraping': True})
-    t = threading.Thread(target=run_scraper, daemon=True)
-    t.start()
-    return jsonify({'status': 'Scraping gestartet...', 'scraping': True})
+    with STATE_LOCK:
+        if STATE["scraping"]:
+            return jsonify({"status": "Scraping läuft bereits...", "scraping": True})
+    threading.Thread(target=run_scraper, daemon=True).start()
+    return jsonify({"status": "Scraping gestartet...", "scraping": True})
 
 
-@app.route('/api/status')
+@app.route("/api/status")
 def api_status():
-    """Server-Status."""
-    with DATA_LOCK:
-        kom = len(CACHED_DATA['kommende'])
-        akt = len(CACHED_DATA['aktuelle'])
-        abg = len(CACHED_DATA['abgeschlossen'])
+    with STATE_LOCK:
+        payload = STATE["payload"] or {}
+        scraping = STATE["scraping"]
     return jsonify({
-        'status':        'online',
-        'kommende':      kom,
-        'aktuelle':      akt,
-        'abgeschlossen': abg,
-        'timestamp':     CACHED_DATA['timestamp'],
-        'scraping':      SCRAPING_FLAG['active'],
-        'version':       '4.0'
+        "status": "online",
+        "counts": payload.get("counts", {name: 0 for name in CATEGORY_ORDER}),
+        "total": payload.get("total", 0),
+        "timestamp": payload.get("timestamp"),
+        "warnings": payload.get("warnings", []),
+        "scraping": scraping,
+        "version": payload.get("version"),
     })
 
 
-@app.route('/anime_data.json')
+@app.route("/anime_data.json")
 def serve_json():
-    if os.path.exists('anime_data.json'):
-        return send_from_directory('.', 'anime_data.json')
-    return jsonify({'error': 'Keine Datei'}), 404
+    if os.path.exists(DATA_FILE):
+        return send_from_directory(BASE_DIR, os.path.basename(DATA_FILE))
+    return jsonify({"error": "Keine Datei"}), 404
 
 
-# CORS für direkten HTML-Datei-Aufruf und alle Quellen
 @app.after_request
 def add_cors(response):
-    response.headers['Access-Control-Allow-Origin']  = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
     return response
 
 
-# ─── Hauptprogramm ───────────────────────────────────────────────────────────
+# ─── Hauptprogramm ────────────────────────────────────────────────────────────
 
-def main():
-    print("="*60)
-    print("🎬 ANIME SYNCHRO TRACKER - SERVER v4.0")
-    print("="*60)
-    print()
-    print("abhängigkeiten werden geprüft...")
+def main() -> None:
+    print("=" * 60)
+    print("🎬 ANIME SYNCHRO TRACKER – SERVER")
+    print("=" * 60)
+    print("\nAbhängigkeiten werden geprüft...")
     ensure_dependencies()
-    print()
-    print("1. [Scraper + Server] Scrapt Anisearch & startet Server")
-    print("2. [Nur Server]       Startet Server mit gecachten Daten")
-    print("3. [Nur Scraper]      Scrapt Anisearch, kein Server")
-    print()
 
-    choice = input("Auswahl (1/2/3) [Standard: 1]: ").strip() or '1'
+    print("\n1. [Scraper + Server] Scrapt anisearch.de & startet den Server")
+    print("2. [Nur Server]       Startet den Server mit gespeicherten Daten")
+    print("3. [Nur Scraper]      Scrapt anisearch.de, kein Server\n")
 
-    if choice == '3':
+    choice = (input("Auswahl (1/2/3) [Standard: 1]: ").strip() or "1")
+
+    if choice == "3":
         run_scraper()
         return
 
-    if choice in ('1', ''):
-        print("\n📥 Starte ersten Scraping-Vorgang im Hintergrund...")
+    load_cache_into_state()
 
-        # Optional: gecachte Daten sofort laden damit Server sofort Daten hat
-        if os.path.exists('anime_data.json'):
-            print("💾 Lade gecachte Daten aus anime_data.json...")
-            try:
-                with open('anime_data.json', 'r', encoding='utf-8') as f:
-                    saved = json.load(f)
-                with DATA_LOCK:
-                    CACHED_DATA['kommende']      = saved.get('kommende', [])
-                    CACHED_DATA['aktuelle']      = saved.get('aktuelle', [])
-                    CACHED_DATA['abgeschlossen'] = saved.get('abgeschlossen', [])
-                    CACHED_DATA['timestamp']     = saved.get('timestamp', None)
-                total = len(CACHED_DATA['kommende']) + len(CACHED_DATA['aktuelle']) + len(CACHED_DATA['abgeschlossen'])
-                print(f"   → {total} Animes aus Cache geladen (werden im Hintergrund aktualisiert)")
-            except Exception as e:
-                print(f"   ⚠️  Cache-Fehler: {e}")
+    if choice != "2":
+        print("\n📥 Starte Scraping im Hintergrund...")
+        threading.Thread(target=run_scraper, daemon=True).start()
+        threading.Thread(target=auto_refresh_loop, args=(AUTO_REFRESH_HOURS,), daemon=True).start()
 
-        # Scraper im Hintergrund starten
-        t = threading.Thread(target=run_scraper, daemon=True)
-        t.start()
-
-        # Auto-Refresh alle 6 Stunden
-        t2 = threading.Thread(target=auto_refresh_loop, args=(6,), daemon=True)
-        t2.start()
-
-    print("\n" + "="*60)
-    print("🚀 Server läuft auf http://localhost:5000")
-    print("📡 API:           http://localhost:5000/api/anime-data")
-    print("🔄 Refresh:       http://localhost:5000/api/refresh")
-    print("📊 Status:        http://localhost:5000/api/status")
-    print("🛑 Beenden: CTRL+C drücken")
-    print("="*60 + "\n")
+    print("\n" + "=" * 60)
+    print("🚀 Server:  http://localhost:5000")
+    print("📡 API:     http://localhost:5000/api/anime-data")
+    print("🔄 Refresh: http://localhost:5000/api/refresh")
+    print("📊 Status:  http://localhost:5000/api/status")
+    print("🛑 Beenden: CTRL+C")
+    print("=" * 60 + "\n")
 
     try:
-        app.run(debug=False, host='localhost', port=5000, use_reloader=False)
+        app.run(debug=False, host="localhost", port=5000, use_reloader=False)
     except KeyboardInterrupt:
         print("\n✅ Server beendet.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

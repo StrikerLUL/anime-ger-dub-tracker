@@ -4,8 +4,13 @@ on:
   # Täglich um 06:00 UTC (= 07:00 Uhr Europa/Berlin Winterzeit, 08:00 Sommerzeit)
   schedule:
     - cron: '0 6 * * *'
-  # Manueller Start über GitHub Actions Tab
+  # Manueller Start über den GitHub-Actions-Tab
   workflow_dispatch:
+
+# Parallel laufende Scraper würden sich beim Push gegenseitig überholen.
+concurrency:
+  group: anime-scraper
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -20,13 +25,11 @@ jobs:
       contents: write   # Für git commit + push
 
     steps:
-      # 1. Repository auschecken
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 2. Python einrichten
       - name: 🐍 Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -34,54 +37,45 @@ jobs:
           cache: 'pip'
           cache-dependency-path: 'requirements_actions.txt'
 
-      # 3. Abhängigkeiten installieren
       - name: 📦 Install Dependencies
         run: |
           pip install -r requirements_actions.txt
           python -m playwright install --with-deps chromium
 
-      # 4. Scraper ausführen → erzeugt anime_data.json
+      # Prüft die Datenlogik (Deduplizierung, Hashing) ohne Netzwerkzugriff.
+      # Läuft vor dem Scraping, damit ein Logikfehler nicht erst nach 20 Minuten auffällt.
+      - name: 🧪 Datenlogik testen
+        run: python -m pytest test_data_pipeline.py -q
+
       - name: 🔍 Run Anisearch Scraper
         run: python scraper_standalone.py
         env:
           PYTHONIOENCODING: utf-8
 
-      # 5. Prüfen ob anime_data.json erstellt wurde
-      - name: ✅ Verify Output
-        run: |
-          if [ -f anime_data.json ]; then
-            echo "✅ anime_data.json erstellt!"
-            python -c "
-          import json
-          with open('anime_data.json') as f:
-              d = json.load(f)
-          k = len(d.get('kommende', []))
-          a = len(d.get('aktuelle', []))
-          ab = len(d.get('abgeschlossen', []))
-          print(f'📊 {k} kommende + {a} aktuelle + {ab} abgeschlossene Dubs')
-          "
-          else
-            echo "❌ anime_data.json fehlt – Scraper hat nicht funktioniert"
-            exit 1
-          fi
+      # Fachliche Prüfung: Datei vorhanden, Daten da – und vor allem:
+      # kein Anime steht in mehr als einer Kategorie.
+      - name: ✅ Daten prüfen (inkl. Duplikat-Check)
+        run: python check_data.py
 
-      # 6. Automatisch committen und pushen falls Daten geändert haben
       - name: 💾 Commit & Push anime_data.json
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions Bot"
           git add anime_data.json
-          # Nur committen wenn Änderungen vorhanden
+          # Der Scraper schreibt die Datei nur bei echten Datenänderungen neu.
+          # Gleiche Daten → kein Diff → kein Commit → keine endlos wachsende Historie.
           if git diff --staged --quiet; then
-            echo "Keine Änderungen – nichts zu committen"
+            echo "ℹ️  Keine Datenänderung – nichts zu committen"
           else
             git commit -m "🤖 Auto-Update: Anime Dub Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
             echo "✅ anime_data.json erfolgreich gepusht!"
           fi
 
-      # 7. (Optional) FTP-Upload zu InfinityFree
-      # Falls du FTP-Credentials als Secrets hinterlegst, wird die JSON auch direkt hochgeladen
+      # Optional: FTP-Upload zu InfinityFree (meine-anime-welt.de).
+      # Läuft auch dann, wenn es keinen neuen Commit gab – so liegt auf dem
+      # Webspace garantiert immer die aktuelle Datei.
       - name: 🌐 FTP Upload to InfinityFree (optional)
         if: env.FTP_HOST != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
