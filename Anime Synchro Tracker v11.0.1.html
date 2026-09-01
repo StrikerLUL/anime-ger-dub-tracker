@@ -1043,19 +1043,29 @@
         });
 
         // ─── Konfiguration ───────────────────────────────────────────────
+
+        // Läuft die Seite lokal (Flask-Server oder direkt geöffnete Datei)?
+        // Auf einem echten Webspace wie meine-anime-welt.de darf die Seite
+        // localhost weder abfragen noch dauerhaft anpingen: der Aufruf kann
+        // gar nicht klappen, wird von HTTPS-Seiten blockiert (Mixed Content)
+        // und erzeugte früher alle 30 Sekunden eine Fehlermeldung.
+        const IS_LOCAL = ['localhost', '127.0.0.1', ''].includes(location.hostname);
+
         const CONFIG = {
             SERVER_URL:       'http://localhost:5000',
             API_ENDPOINT:     'http://localhost:5000/api/anime-data',
             REFRESH_ENDPOINT: 'http://localhost:5000/api/refresh',
             JSON_CACHE:       'anime_data.json',
-            POLL_INTERVAL_MS: 30000,  // 30 Sekunden Auto-Poll
+            // Lokal darf häufig gepollt werden, gehostet reicht alle 15 Minuten –
+            // die Daten werden ohnehin nur einmal täglich aktualisiert.
+            POLL_INTERVAL_MS: IS_LOCAL ? 30000 : 900000,
             FETCH_TIMEOUT_MS: 5000,
 
-            // ► GitHub Raw URL für InfinityFree-Hosting
+            // ► GitHub Raw URL als Rückfallebene fürs Hosting.
             // Wird täglich von GitHub Actions aktualisiert.
             // Format: https://raw.githubusercontent.com/USERNAME/REPO/main/anime_data.json
             // Setze auf '' um diese Quelle zu deaktivieren.
-            GITHUB_RAW_URL: 'https://raw.githubusercontent.com/StrikerLUL/anime-ger-dub-tracker-WORK-IN-PROGRESS/main/anime_data.json',
+            GITHUB_RAW_URL: 'https://raw.githubusercontent.com/StrikerLUL/anime-ger-dub-tracker/main/anime_data.json',
         };
 
         // ─── Globaler State ──────────────────────────────────────────────
@@ -1077,7 +1087,8 @@
             currentPage: 1,
             pageSize: getSafePageSize(),
             currentTab: 'alle',
-            dataSource: 'none',  // 'live' | 'cache' | 'demo'
+            dataSource: 'none',  // 'live' | 'cache' | 'github' | 'demo'
+            dataHash: null,      // Content-Hash der geladenen Daten
             lastUpdate: null,
             pollTimer: null,
             hasAbgeschlossen: false,
@@ -1136,60 +1147,75 @@
             }
         }
 
+        function hasAnimeData(data) {
+            return !!data && (
+                (data.kommende      && data.kommende.length) ||
+                (data.aktuelle      && data.aktuelle.length) ||
+                (data.abgeschlossen && data.abgeschlossen.length)
+            );
+        }
+
+        async function fetchJson(url, timeout) {
+            const response = await fetchWithTimeout(url, timeout);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        }
+
+        // Quelle 1: lokaler Flask-Server – nur sinnvoll, wenn die Seite selbst lokal läuft.
         async function loadFromServer() {
+            if (!IS_LOCAL) return null;
             try {
-                const response = await fetchWithTimeout(CONFIG.API_ENDPOINT, CONFIG.FETCH_TIMEOUT_MS);
-                if (!response.ok) {
-                    throw new Error(`HTTP Error: ${response.status}`);
-                }
-                const data = await response.json();
+                const data = await fetchJson(CONFIG.API_ENDPOINT, CONFIG.FETCH_TIMEOUT_MS);
                 if (data.error) return null;  // Server da, aber Daten noch nicht bereit
                 return data;
             } catch (e) {
-                /* Server offline */
-                showNotification('Fehler beim Verbinden mit dem Server');
+                console.debug('Lokaler Server nicht erreichbar:', e.message);
+                return null;
             }
-            return null;
         }
 
+        // Quelle 2: gespeicherte anime_data.json.
+        // Erst von der eigenen Domain (schnell, keine Fremdabhängigkeit, wird
+        // per FTP von GitHub Actions aktualisiert), dann als Rückfallebene
+        // direkt von GitHub.
         async function loadFromCachedJson() {
-            // Quelle A: GitHub Raw URL (für InfinityFree-Hosting, immer erreichbar wenn Repo public ist)
-            if (CONFIG.GITHUB_RAW_URL) {
+            const sources = [
+                // Gleiche Herkunft: auf meine-anime-welt.de die per FTP
+                // hochgeladene Datei, lokal die Datei neben dem HTML.
+                { url: CONFIG.JSON_CACHE,                                name: 'cache',  timeout: 5000 },
+                // Flask-Server, falls das HTML direkt als Datei geöffnet wurde.
+                { url: IS_LOCAL ? CONFIG.SERVER_URL + '/' + CONFIG.JSON_CACHE : '', name: 'cache', timeout: 3000 },
+                // Rückfallebene: direkt von GitHub.
+                { url: CONFIG.GITHUB_RAW_URL,                            name: 'github', timeout: 8000 },
+            ];
+
+            for (const source of sources) {
+                if (!source.url) continue;
                 try {
-                    const response = await fetchWithTimeout(CONFIG.GITHUB_RAW_URL, 8000);
-                    if (!response.ok) {
-                        throw new Error(`HTTP Error: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    if (data.kommende || data.aktuelle) {
-                        data.source = 'github';
+                    const data = await fetchJson(source.url, source.timeout);
+                    if (hasAnimeData(data)) {
+                        data.source = source.name;
                         return data;
                     }
                 } catch (e) {
-                    /* GitHub nicht erreichbar */
-                    showNotification('Fehler beim Laden der gecachten Daten');
+                    console.debug(`Datenquelle ${source.name} nicht erreichbar:`, e.message);
                 }
-            }
-
-            // Quelle B: Lokale anime_data.json (via Flask-Server oder selber Domain)
-            try {
-                const response = await fetchWithTimeout(CONFIG.SERVER_URL + '/' + CONFIG.JSON_CACHE, 3000);
-                if (!response.ok) {
-                    throw new Error(`HTTP Error: ${response.status}`);
-                }
-                const data = await response.json();
-                if (data.kommende || data.aktuelle) {
-                    data.source = 'cache';
-                    return data;
-                }
-            } catch (e) {
-                /* kein Server */
-                showNotification('Fehler beim Laden der gecachten Daten');
             }
             return null;
         }
 
         // ─── Normalisierung ───────────────────────────────────────────
+
+        // Stabile ID: hängt nur am Anime, nicht an seiner Kategorie. Dadurch
+        // bleibt ein Anime derselbe Eintrag, wenn er von "Bald verfügbar" nach
+        // "Kürzlich erschienen" wandert – und er lässt sich kategorieübergreifend
+        // entdoppeln.
+        function animeIdOf(raw, index, type) {
+            if (raw.id) return `as_${raw.id}`;
+            if (raw.url) return `url_${raw.url}`;
+            if (raw.title) return `title_${String(raw.title).toLowerCase()}`;
+            return `${type}_${index}`;
+        }
 
         function normalizeAnime(raw, index, type) {
             try {
@@ -1197,7 +1223,7 @@
                 return {
                     ...raw,
                     format: raw.type || raw.format || 'Unbekannt',
-                    id: raw.id ? `${type}_${raw.id}` : `${type}_${index}`,
+                    id: animeIdOf(raw, index, type),
                     type: type,
                     episodes: raw.episodes || (isScraperFormat
                         ? (raw.info?.match(/(\d+)\s*Episode/)?.[1] || '?')
@@ -1240,17 +1266,40 @@
                 const aktuelleData      = data.aktuelle      || [];
                 const abgeschlossenData = data.abgeschlossen || [];
 
-                const allAnimes = [
-                    ...kommendeData.map((a, i)      => normalizeAnime(a, i, 'kommend')),
-                    ...aktuelleData.map((a, i)      => normalizeAnime(a, i, 'aktuell')),
-                    ...abgeschlossenData.map((a, i) => normalizeAnime(a, i, 'abgeschlossen')),
-                ];
+                // Kategorien zusammenführen und dabei entdoppeln. Der Scraper
+                // liefert bereits überschneidungsfreie Daten – diese Prüfung ist
+                // die zweite Sicherung, damit ein Anime auch bei einer alten oder
+                // fehlerhaften JSON nie doppelt in der Liste landet.
+                const seenIds = new Set();
+                const allAnimes = [];
+                let duplicates = 0;
+
+                const addAll = (entries, type) => {
+                    entries.forEach((entry, index) => {
+                        const anime = normalizeAnime(entry, index, type);
+                        if (seenIds.has(anime.id)) {
+                            duplicates++;
+                            return;
+                        }
+                        seenIds.add(anime.id);
+                        allAnimes.push(anime);
+                    });
+                };
+
+                addAll(kommendeData,      'kommend');
+                addAll(aktuelleData,      'aktuell');
+                addAll(abgeschlossenData, 'abgeschlossen');
+
+                if (duplicates > 0) {
+                    addLog(`🧹 ${duplicates} doppelte Einträge aus den Daten entfernt`);
+                }
 
                 const prevSource = state.dataSource;
                 state.animes     = allAnimes;
                 state.dataSource = source;
+                state.dataHash   = data.data_hash || null;
                 state.lastUpdate = new Date().toLocaleString('de-DE');
-                state.hasAbgeschlossen = abgeschlossenData.length > 0;
+                state.hasAbgeschlossen = allAnimes.some(a => a.type === 'abgeschlossen');
 
                 // Dynamisch Jahr und Format Dropdowns befüllen
                 const yearSelect = document.getElementById('yearSelect');
@@ -1317,20 +1366,20 @@
 
         async function initializeAnimes() {
             try {
-                addLog('📡 Verbinde mit Server...');
+                addLog(IS_LOCAL ? '📡 Verbinde mit lokalem Server...' : '📡 Lade Anime-Daten...');
 
-                // Quelle 1: Live-Server
+                // Quelle 1: Live-Server (nur lokal)
                 const serverData = await loadFromServer();
-                if (serverData && (serverData.kommende || serverData.aktuelle)) {
+                if (hasAnimeData(serverData)) {
                     applyDataToState(serverData, 'live');
                     startPolling();
                     return;
                 }
 
-                // Quelle 2: Gecachte JSON-Datei
-                addLog('⚠️ Server nicht verfügbar – versuche gecachte Daten...');
+                // Quelle 2: Gespeicherte JSON-Datei
+                if (IS_LOCAL) addLog('⚠️ Server nicht verfügbar – versuche gespeicherte Daten...');
                 const cachedData = await loadFromCachedJson();
-                if (cachedData && (cachedData.kommende || cachedData.aktuelle)) {
+                if (hasAnimeData(cachedData)) {
                     const age = cachedData.timestamp
                         ? new Date(cachedData.timestamp).toLocaleString('de-DE')
                         : 'unbekannt';
@@ -1360,21 +1409,31 @@
             state.pollTimer = setInterval(async () => {
                 try {
                     const prev = state.dataSource;
+
+                    // Gehostet gibt es keinen lokalen Server: dort wird einfach
+                    // in Ruhe die gespeicherte JSON neu geladen.
+                    if (!IS_LOCAL) {
+                        const fresh = await loadFromCachedJson();
+                        if (hasAnimeData(fresh) && fresh.data_hash !== state.dataHash) {
+                            applyDataToState(fresh, 'cache');
+                        }
+                        return;
+                    }
+
                     const serverData = await loadFromServer();
-                    if (serverData && (serverData.kommende || serverData.aktuelle)) {
+                    if (hasAnimeData(serverData)) {
                         if (prev !== 'live' || serverData.scraping !== undefined) {
                             applyDataToState(serverData, 'live');
                         }
                     } else if (prev === 'live') {
-                        // Server weg – zurück auf Cache oder Demo
+                        // Server weg – zurück auf gespeicherte Daten oder Demo
                         addLog('⚠️ Server-Verbindung verloren – Auto-Reconnect aktiv...');
                         const cached = await loadFromCachedJson();
-                        if (cached) applyDataToState(cached, 'cache');
+                        if (hasAnimeData(cached)) applyDataToState(cached, 'cache');
                         else applyDataToState({ kommende: KOMMENDE_DUBS, aktuelle: AKTUELLE_DUBS, abgeschlossen: [] }, 'demo');
                     }
                 } catch (error) {
                     console.error('Fehler beim Auto-Polling:', error);
-                    addLog('❌ Fehler beim Aktualisieren der Daten im Hintergrund.');
                 }
             }, CONFIG.POLL_INTERVAL_MS);
         }
@@ -1382,24 +1441,21 @@
         async function manualRefresh() {
             try {
                 addLog('🔄 Manueller Refresh...');
-                // Trigger Server-Scrape falls vorhanden
-                try {
-                    const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
-                    if (!response.ok) {
-                        throw new Error(`HTTP Error: ${response.status}`);
+                // Scrape nur anstoßen, wenn ein lokaler Server läuft.
+                if (IS_LOCAL) {
+                    try {
+                        const response = await fetchWithTimeout(CONFIG.REFRESH_ENDPOINT, 3000);
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
+                        document.getElementById('scrapingIndicator')?.classList.add('visible');
+                    } catch (e) {
+                        console.debug('Kein lokaler Server für Refresh:', e.message);
                     }
-                    addLog('⚙️ Scraper gestartet – Daten kommen in Kürze...');
-                    document.getElementById('scrapingIndicator')?.classList.add('visible');
-                } catch(e) {
-                    /* kein Server */
-                    showNotification('Fehler beim manuellen Refresh');
                 }
                 await initializeAnimes();
             } catch (err) {
                 console.error("Fehler beim manuellen Refresh", err);
                 showGlobalError("Ein unerwarteter Fehler ist beim Aktualisieren aufgetreten: " + (err.message || 'Unbekannt'));
-            } catch (error) {
-                showGlobalError("Ein unerwarteter Fehler ist beim manuellen Refresh aufgetreten: " + error.message);
             }
         }
 
@@ -1855,104 +1911,72 @@
             renderGlobalError(event.reason?.message || 'Unbekannter Fehler bei Netzwerk/API');
         });
 
+        // ─── Gespeicherte Einstellungen (localStorage) ────────────────
+
+        function safeGetItem(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch (e) {
+                console.warn('LocalStorage nicht lesbar:', key, e);
+                return null;
+            }
+        }
+
+        // Watchlist-Einträge wurden früher pro Kategorie gespeichert
+        // (z. B. "kommend_3255"). Wechselte ein Anime die Kategorie, war der
+        // gemerkte Eintrag weg. Jetzt zählt nur noch die anisearch-ID.
+        function migrateWatchlistId(id) {
+            const match = /^(?:kommend|aktuell|abgeschlossen)_(\d+)$/.exec(String(id || ''));
+            return match ? `as_${match[1]}` : id;
+        }
+
+        function loadWatchlist() {
+            const raw = safeGetItem('premiumWatchlist');
+            if (!raw) return [];
+            try {
+                const parsed = JSON.parse(raw);
+                if (!Array.isArray(parsed)) return [];
+
+                const seen = new Set();
+                const result = [];
+                for (const entry of parsed) {
+                    if (!entry || !entry.id) continue;
+                    const id = migrateWatchlistId(entry.id);
+                    if (seen.has(id)) continue;   // doppelte Merkungen verwerfen
+                    seen.add(id);
+                    result.push({ ...entry, id });
+                }
+                return result;
+            } catch (e) {
+                console.error('Watchlist beschädigt – wird zurückgesetzt:', e);
+                showNotification('Watchlist konnte nicht gelesen werden');
+                return [];
+            }
+        }
+
+        function restoreInputValue(key, elementId) {
+            const value = safeGetItem(key);
+            if (value === null) return;
+            const el = document.getElementById(elementId);
+            if (el) el.value = value;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             try {
-                // Parse localStorage with individual try-catch to avoid one bad value killing all settings
-                try {
-                    const saved = localStorage.getItem('premiumWatchlist');
-                    state.watchlist = saved ? JSON.parse(saved) : [];
-                } catch (e) {
-                    console.warn('LocalStorage nicht verfügbar', e);
-                    showNotification('Fehler beim Laden der Watchlist');
-                    state.watchlist = [];
-                const saved = localStorage.getItem('premiumWatchlist');
-                try {
-                    state.watchlist = saved ? JSON.parse(saved) : [];
-                } catch (parseError) {
-                    console.error('Fehler beim Parsen der Watchlist:', parseError);
-                    state.watchlist = [];
-                    showNotification('Fehler beim Laden der Watchlist');
-                }
-                    showGlobalError('Fehler beim Laden der Watchlist (Daten beschädigt)');
-                    state.watchlist = [];
-                }
-                state.watchlist = saved ? JSON.parse(saved) : [];
-            } catch (e) {
-                console.warn('LocalStorage Watchlist Fehler', e);
-                showNotification('Fehler beim Laden der Watchlist');
-                state.watchlist = [];
-            }
+                // Gespeicherte Einstellungen wiederherstellen. Jeder Wert wird
+                // einzeln abgesichert, damit ein beschädigter Eintrag nicht
+                // alle übrigen mitreißt.
+                state.watchlist = loadWatchlist();
 
-            try {
-                const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
-                if (savedSearchTerm !== null) {
-                    const searchInput = document.getElementById('searchInput');
-                    if (searchInput) searchInput.value = savedSearchTerm;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Suchbegriff Fehler', e);
-            }
+                restoreInputValue('premiumSearchTerm', 'searchInput');
+                restoreInputValue('premiumSortVal',    'sortSelect');
+                restoreInputValue('premiumPageSize',   'pageSizeSelect');
 
-                try {
-                    const savedSearchTerm = localStorage.getItem('premiumSearchTerm');
-                    if (savedSearchTerm !== null) {
-                        const searchInput = document.getElementById('searchInput');
-                        if (searchInput) searchInput.value = savedSearchTerm;
-                    }
-                } catch (e) { console.warn('LocalStorage error', e); }
-
-                try {
-                    const savedSortVal = localStorage.getItem('premiumSortVal');
-                    if (savedSortVal !== null) {
-                        const sortSelect = document.getElementById('sortSelect');
-                        if (sortSelect) sortSelect.value = savedSortVal;
-                    }
-                } catch (e) { console.warn('LocalStorage error', e); }
-
-                try {
-                    const savedTab = localStorage.getItem('premiumTab');
-                    if (savedTab !== null) {
-                        state.currentTab = savedTab;
-                        updateTabs();
-                    }
-                } catch (e) { console.warn('LocalStorage error', e); }
-
-                try {
-                    const savedPageSize = localStorage.getItem('premiumPageSize');
-                    if (savedPageSize !== null) {
-                        const pageSizeSelect = document.getElementById('pageSizeSelect');
-                        if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
-                    }
-                } catch (e) { console.warn('LocalStorage error', e); }
-            try {
-                const savedSortVal = localStorage.getItem('premiumSortVal');
-                if (savedSortVal !== null) {
-                    const sortSelect = document.getElementById('sortSelect');
-                    if (sortSelect) sortSelect.value = savedSortVal;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Sortierung Fehler', e);
-            }
-
-            try {
-                const savedTab = localStorage.getItem('premiumTab');
+                const savedTab = safeGetItem('premiumTab');
                 if (savedTab !== null) {
                     state.currentTab = savedTab;
                     updateTabs();
                 }
-            } catch (e) {
-                console.warn('LocalStorage Tab Fehler', e);
-            }
-
-            try {
-                const savedPageSize = localStorage.getItem('premiumPageSize');
-                if (savedPageSize !== null) {
-                    const pageSizeSelect = document.getElementById('pageSizeSelect');
-                    if (pageSizeSelect) pageSizeSelect.value = savedPageSize;
-                }
-            } catch (e) {
-                console.warn('LocalStorage Seitengröße Fehler', e);
-            }
 
             // Keyboard Shortcuts
             document.addEventListener('keydown', (e) => {
