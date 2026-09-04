@@ -211,16 +211,6 @@
       "status": "kommende"
     },
     {
-      "id": 17799,
-      "title": "The Most Heretical Last Boss Queen: From Villainess to Savior",
-      "url": "https://www.anisearch.de/anime/17799,higeki-no-genkyou-to-naru-saikyou-gedou-last-boss-joou-wa-tami-no-tame-ni-tsukushimasu",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17799_400.webp",
-      "info": "TV-Serie, 12 (2023)",
-      "year": 2023,
-      "type": "TV-Serie",
-      "status": "kommende"
-    },
-    {
       "id": 15989,
       "title": "Bocchi the Rock!",
       "url": "https://www.anisearch.de/anime/15989,bocchi-the-rock",
@@ -2354,15 +2344,15 @@
     }
   ],
   "abgeschlossen": [],
-  "timestamp": "2026-09-02T10:21:05Z",
-  "data_changed_at": "2026-09-02T10:21:05Z",
-  "data_hash": "11914e36c8616bd54338bd96952067e35a6863b5fa934aefb30d2dee7bd649bd",
+  "timestamp": "2026-09-04T10:19:21Z",
+  "data_changed_at": "2026-09-04T10:19:21Z",
+  "data_hash": "2b44c060f06985f734755002fb91c082e07f09f624278ca95bd1c6e63c9e8ec0",
   "counts": {
-    "kommende": 35,
+    "kommende": 34,
     "aktuelle": 200,
     "abgeschlossen": 0
   },
-  "total": 235,
+  "total": 234,
   "source": "anisearch.de",
   "version": "5.0",
   "scraping": false,
