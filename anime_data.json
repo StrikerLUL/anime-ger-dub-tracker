@@ -653,6 +653,16 @@
       "status": "aktuelle"
     },
     {
+      "id": 21925,
+      "title": "Kaiju No. 8: Narumi’s Week at Work",
+      "url": "https://www.anisearch.de/anime/21925,kaijuu-8-gou-narumi-no-heijitsu",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21925_400.webp",
+      "info": "Web, 4 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "status": "aktuelle"
+    },
+    {
       "id": 20865,
       "title": "Kill Blue",
       "url": "https://www.anisearch.de/anime/20865,kill-ao",
@@ -2313,16 +2323,6 @@
       "status": "aktuelle"
     },
     {
-      "id": 19161,
-      "title": "Shangri-La Frontier: Staffel 2",
-      "url": "https://www.anisearch.de/anime/19161,shangri-la-frontier-kusogee-hunter-kamigee-ni-idoman-to-su-2024",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19161_400.webp",
-      "info": "TV-Serie, 25 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "status": "aktuelle"
-    },
-    {
       "id": 19343,
       "title": "Tokyo Override",
       "url": "https://www.anisearch.de/anime/19343,tokyo-override",
@@ -2344,9 +2344,9 @@
     }
   ],
   "abgeschlossen": [],
-  "timestamp": "2026-09-04T10:19:21Z",
-  "data_changed_at": "2026-09-04T10:19:21Z",
-  "data_hash": "2b44c060f06985f734755002fb91c082e07f09f624278ca95bd1c6e63c9e8ec0",
+  "timestamp": "2026-09-06T10:03:13Z",
+  "data_changed_at": "2026-09-06T10:03:13Z",
+  "data_hash": "9a6baa3ef4dac97b43537e452c80a3b9a93e706443ae34bac0342086a0e8432f",
   "counts": {
     "kommende": 34,
     "aktuelle": 200,
