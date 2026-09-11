@@ -101,6 +101,16 @@
       "status": "kommende"
     },
     {
+      "id": 16972,
+      "title": "Witch on the Holy Night",
+      "url": "https://www.anisearch.de/anime/16972,mahou-tsukai-no-yoru",
+      "image": "https://cdn.anisearch.de/images/anime/cover/16/16972_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film",
+      "status": "kommende"
+    },
+    {
       "id": 19490,
       "title": "Bitte zieh dich an, Takamine!",
       "url": "https://www.anisearch.de/anime/19490,haite-kudasai-takamine-san",
@@ -670,6 +680,16 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "status": "aktuelle"
+    },
+    {
+      "id": 21592,
+      "title": "Lord of Mysteries Specials",
+      "url": "https://www.anisearch.de/anime/21592,guimi-zhi-zhu-tebie-pian",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21592_400.webp",
+      "info": "Web, 3 (2026)",
+      "year": 2026,
+      "type": "Web",
       "status": "aktuelle"
     },
     {
@@ -2283,16 +2303,6 @@
       "status": "aktuelle"
     },
     {
-      "id": 19696,
-      "title": "One Piece Fan Letter",
-      "url": "https://www.anisearch.de/anime/19696,one-piece-fan-letter",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19696_400.webp",
-      "info": "TV-Spezial, 1 (2024)",
-      "year": 2024,
-      "type": "TV-Spezial",
-      "status": "aktuelle"
-    },
-    {
       "id": 19699,
       "title": "One Piece Log: Fish-Man Island Saga",
       "url": "https://www.anisearch.de/anime/19699,special-edited-version-one-piece-gyojintou-hen",
@@ -2334,15 +2344,15 @@
     }
   ],
   "abgeschlossen": [],
-  "timestamp": "2026-09-10T10:22:34Z",
-  "data_changed_at": "2026-09-10T10:22:34Z",
-  "data_hash": "cc69536caf1aaaecef2b90576d94d27b43c89d25b08c795af61d2f34f4ae100d",
+  "timestamp": "2026-09-11T10:23:10Z",
+  "data_changed_at": "2026-09-11T10:23:10Z",
+  "data_hash": "b174400fd8749a6eede09087af242433e832ff61c5607f15c6f2d3fb79efd221",
   "counts": {
-    "kommende": 33,
+    "kommende": 34,
     "aktuelle": 200,
     "abgeschlossen": 0
   },
-  "total": 233,
+  "total": 234,
   "source": "anisearch.de",
   "version": "5.0",
   "scraping": false,
