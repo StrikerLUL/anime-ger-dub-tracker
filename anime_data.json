@@ -8,6 +8,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -20,6 +21,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -32,6 +34,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -44,6 +47,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -56,6 +60,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -68,6 +73,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -80,6 +86,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -92,6 +99,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -104,6 +112,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -116,6 +125,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -128,6 +138,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -140,6 +151,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -152,6 +164,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -164,6 +177,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -176,6 +190,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -188,6 +203,7 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -200,6 +216,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -212,6 +229,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -224,6 +242,7 @@
       "info": "TV-Serie, 12 (2024)",
       "year": 2024,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -236,6 +255,7 @@
       "info": "TV-Serie, 12 (2023)",
       "year": 2023,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -248,6 +268,7 @@
       "info": "TV-Serie, 13 (2023)",
       "year": 2023,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -260,6 +281,7 @@
       "info": "TV-Serie, 12 (2022)",
       "year": 2022,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -272,6 +294,7 @@
       "info": "TV-Serie, 12 (2020)",
       "year": 2020,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -284,6 +307,7 @@
       "info": "Film, 1 (2018)",
       "year": 2018,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -296,6 +320,7 @@
       "info": "TV-Serie, 12 (2015)",
       "year": 2015,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -308,6 +333,7 @@
       "info": "OVA, 3 (2014)",
       "year": 2014,
       "type": "OVA",
+      "episodes": 3,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -320,6 +346,7 @@
       "info": "TV-Serie, 13 (2012)",
       "year": 2012,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -332,6 +359,7 @@
       "info": "Film, 1 (2010)",
       "year": 2010,
       "type": "Film",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -344,6 +372,7 @@
       "info": "TV-Serie, 12 (2010)",
       "year": 2010,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -356,6 +385,7 @@
       "info": "TV-Serie, 26 (1998)",
       "year": 1998,
       "type": "TV-Serie",
+      "episodes": 26,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -368,6 +398,7 @@
       "info": "OVA, 3 (1993)",
       "year": 1993,
       "type": "OVA",
+      "episodes": 3,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -380,6 +411,7 @@
       "info": "OVA, 1 (1990)",
       "year": 1990,
       "type": "OVA",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -392,6 +424,7 @@
       "info": "OVA, 1 (1988)",
       "year": 1988,
       "type": "OVA",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -404,6 +437,7 @@
       "info": "OVA, 1 (1986)",
       "year": 1986,
       "type": "OVA",
+      "episodes": 1,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -418,6 +452,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -430,6 +465,7 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -442,6 +478,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -454,6 +491,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -466,6 +504,7 @@
       "info": "Web, 13 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -478,6 +517,7 @@
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -490,6 +530,7 @@
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -502,6 +543,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -514,6 +556,7 @@
       "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 10,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -526,6 +569,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -538,6 +582,7 @@
       "info": "TV-Serie, 16 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 16,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -550,6 +595,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -562,6 +608,7 @@
       "info": "Web, 1 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -574,6 +621,7 @@
       "info": "Web, 7 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 7,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -586,6 +634,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -598,6 +647,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -610,6 +660,7 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -622,6 +673,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -634,6 +686,7 @@
       "info": "Web, 8 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -646,6 +699,7 @@
       "info": "TV-Serie, 20 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 20,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -658,6 +712,7 @@
       "info": "Web, 11 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -670,6 +725,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -682,6 +738,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -694,6 +751,7 @@
       "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 14,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -706,6 +764,7 @@
       "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 10,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -718,6 +777,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -730,6 +790,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -742,6 +803,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -754,6 +816,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -766,6 +829,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -778,6 +842,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -790,6 +855,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -802,6 +868,7 @@
       "info": "Web, 4 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 4,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -814,6 +881,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -826,6 +894,7 @@
       "info": "Web, 3 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 3,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -838,6 +907,7 @@
       "info": "Web, 20 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 20,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -850,6 +920,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -862,6 +933,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -874,6 +946,7 @@
       "info": "TV-Serie, 9 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 9,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -886,6 +959,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -898,6 +972,7 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -910,6 +985,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -922,6 +998,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -934,6 +1011,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -946,6 +1024,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -958,6 +1037,7 @@
       "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 14,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -970,6 +1050,7 @@
       "info": "Web, 1 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -982,6 +1063,7 @@
       "info": "TV-Spezial, 1 (2026)",
       "year": 2026,
       "type": "TV-Spezial",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -994,6 +1076,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1006,6 +1089,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1018,6 +1102,7 @@
       "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1030,6 +1115,7 @@
       "info": "TV-Serie, 19 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 19,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1042,6 +1128,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1054,6 +1141,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1066,6 +1154,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1078,6 +1167,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1090,6 +1180,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1102,6 +1193,7 @@
       "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1114,6 +1206,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1126,6 +1219,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1138,6 +1232,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1150,6 +1245,7 @@
       "info": "Web, 8 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1162,6 +1258,7 @@
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1174,6 +1271,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1186,6 +1284,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1198,6 +1297,7 @@
       "info": "Film, 1 (2026)",
       "year": 2026,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1210,6 +1310,7 @@
       "info": "TV-Serie, 10 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 10,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1222,6 +1323,7 @@
       "info": "TV-Serie, 14 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 14,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1234,6 +1336,7 @@
       "info": "Web, 1 (2026)",
       "year": 2026,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1246,6 +1349,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1258,6 +1362,7 @@
       "info": "TV-Serie, 11 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1270,6 +1375,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1282,6 +1388,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1294,6 +1401,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1306,6 +1414,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1318,6 +1427,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1330,6 +1440,7 @@
       "info": "TV-Serie, 24 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1342,6 +1453,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1354,6 +1466,7 @@
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1366,6 +1479,7 @@
       "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1378,6 +1492,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1390,6 +1505,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1402,6 +1518,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1414,6 +1531,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1426,6 +1544,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1438,6 +1557,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1450,6 +1570,7 @@
       "info": "Web, 12 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1462,6 +1583,7 @@
       "info": "TV-Serie, 10 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 10,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1474,6 +1596,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1486,6 +1609,7 @@
       "info": "Web, 12 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1498,6 +1622,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1510,6 +1635,7 @@
       "info": "Web, 8 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1522,6 +1648,7 @@
       "info": "Web, 1 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1534,6 +1661,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1546,6 +1674,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1558,6 +1687,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1570,6 +1700,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1582,6 +1713,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1594,6 +1726,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1606,6 +1739,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1618,6 +1752,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1630,6 +1765,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1642,6 +1778,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1654,6 +1791,7 @@
       "info": "Web, 8 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1666,6 +1804,7 @@
       "info": "Web, 4 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 4,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1678,6 +1817,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1690,6 +1830,7 @@
       "info": "Web, 8 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1702,6 +1843,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1714,6 +1856,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1726,6 +1869,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1738,6 +1882,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1750,6 +1895,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1762,6 +1908,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1774,6 +1921,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1786,6 +1934,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1798,6 +1947,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1810,6 +1960,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1822,6 +1973,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1834,6 +1986,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1846,6 +1999,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1858,6 +2012,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1870,6 +2025,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1882,6 +2038,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1894,6 +2051,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1906,6 +2064,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1918,6 +2077,7 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1930,6 +2090,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1942,6 +2103,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1954,6 +2116,7 @@
       "info": "Film, 2 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 2,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1966,6 +2129,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1978,6 +2142,7 @@
       "info": "Web, 12 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -1990,6 +2155,7 @@
       "info": "Web, 13 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2002,6 +2168,7 @@
       "info": "Web, 1 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2014,6 +2181,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2026,6 +2194,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2038,6 +2207,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2050,6 +2220,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2062,6 +2233,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2074,6 +2246,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2086,6 +2259,7 @@
       "info": "Web, 18 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 18,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2098,6 +2272,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2110,6 +2285,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2122,6 +2298,7 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2134,6 +2311,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2146,6 +2324,7 @@
       "info": "Web, 12 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2158,6 +2337,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2170,6 +2350,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2182,6 +2363,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2194,6 +2376,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2206,6 +2389,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2218,6 +2402,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2230,6 +2415,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2242,6 +2428,7 @@
       "info": "Web, 1 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2254,6 +2441,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2266,6 +2454,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2278,6 +2467,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2290,6 +2480,7 @@
       "info": "Web, 15 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 15,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2302,6 +2493,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2314,6 +2506,7 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2326,6 +2519,7 @@
       "info": "TV-Serie, 11 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2338,6 +2532,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2350,6 +2545,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2362,6 +2558,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2374,6 +2571,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2386,6 +2584,7 @@
       "info": "Web, 9 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 9,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2398,6 +2597,7 @@
       "info": "Web, 12 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2410,6 +2610,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2422,6 +2623,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2434,6 +2636,7 @@
       "info": "Film, 8 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 8,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2446,6 +2649,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2458,6 +2662,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2470,6 +2675,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2482,6 +2688,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2494,6 +2701,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2506,6 +2714,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2518,6 +2727,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2530,6 +2740,7 @@
       "info": "Web, 1 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2542,6 +2753,7 @@
       "info": "Web, 24 (2025)",
       "year": 2025,
       "type": "Web",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2554,6 +2766,7 @@
       "info": "TV-Serie, 22 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 22,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2566,6 +2779,7 @@
       "info": "Film, 1 (2025)",
       "year": 2025,
       "type": "Film",
+      "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2578,6 +2792,7 @@
       "info": "TV-Serie, 24 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2590,6 +2805,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2602,6 +2818,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2614,6 +2831,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2626,6 +2844,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2638,6 +2857,7 @@
       "info": "TV-Serie, 25 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 25,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2650,6 +2870,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2662,6 +2883,7 @@
       "info": "TV-Serie, 13 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2674,6 +2896,7 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
@@ -2686,10 +2909,13 @@
       "info": "TV-Serie, 12 (2025)",
       "year": 2025,
       "type": "TV-Serie",
+      "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
+    }
+  ],
+  "abgeschlossen": [
     {
       "id": 19527,
       "title": "Attack on Titan: The Last Attack",
@@ -2698,7 +2924,9 @@
       "info": "Film, 1 (2024)",
       "year": 2024,
       "type": "Film",
-      "status": "aktuelle",
+      "episodes": 1,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2710,7 +2938,9 @@
       "info": "Web, 12 (2024)",
       "year": 2024,
       "type": "Web",
-      "status": "aktuelle",
+      "episodes": 12,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2722,7 +2952,9 @@
       "info": "TV-Serie, 12 (2024)",
       "year": 2024,
       "type": "TV-Serie",
-      "status": "aktuelle",
+      "episodes": 12,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2734,7 +2966,9 @@
       "info": "Film, 1 (2024)",
       "year": 2024,
       "type": "Film",
-      "status": "aktuelle",
+      "episodes": 1,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2746,7 +2980,9 @@
       "info": "Film, 1 (2024)",
       "year": 2024,
       "type": "Film",
-      "status": "aktuelle",
+      "episodes": 1,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2758,7 +2994,9 @@
       "info": "TV-Serie, 13 (2024)",
       "year": 2024,
       "type": "TV-Serie",
-      "status": "aktuelle",
+      "episodes": 13,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2770,7 +3008,9 @@
       "info": "TV-Serie, 21 (2024)",
       "year": 2024,
       "type": "TV-Serie",
-      "status": "aktuelle",
+      "episodes": 21,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2782,7 +3022,9 @@
       "info": "TV-Serie, 10 (2024)",
       "year": 2024,
       "type": "TV-Serie",
-      "status": "aktuelle",
+      "episodes": 10,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2794,7 +3036,9 @@
       "info": "Web, 6 (2024)",
       "year": 2024,
       "type": "Web",
-      "status": "aktuelle",
+      "episodes": 6,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     },
@@ -2806,26 +3050,52 @@
       "info": "TV-Serie, 4 (2024)",
       "year": 2024,
       "type": "TV-Serie",
-      "status": "aktuelle",
+      "episodes": 4,
+      "status": "abgeschlossen",
+      "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
     }
   ],
-  "abgeschlossen": [],
-  "news": [],
-  "timestamp": "2026-09-11T10:23:10Z",
-  "data_changed_at": "2026-09-11T10:23:10Z",
-  "data_hash": "b174400fd8749a6eede09087af242433e832ff61c5607f15c6f2d3fb79efd221",
+  "news": [
+    {
+      "title": "Crunchyroll zeigt 13 Anime-Neustarts im Herbst 2026 auf Deutsch",
+      "url": "https://www.anime2you.de/news/1050694/crunchyroll-herbst-2026-synchros/",
+      "source": "anime2you.de",
+      "published": "2026-09-15T17:10:22Z",
+      "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man 13 Anime-Neustarts aus der Herbst-Season 2026 eine deutsche Synchronfassung spendieren wird. Um welche Serien es sich d…"
+    },
+    {
+      "title": "Sieben neue Plüschanhänger zu »Spy x Family« vorgestellt",
+      "url": "https://www.anime2you.de/news/1047443/sieben-spy-x-family-plueschanhaenger/",
+      "source": "anime2you.de",
+      "published": "2026-09-14T14:03:30Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich neue Plüschanhänger zu »Spy x Family« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilder…"
+    },
+    {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 38/2026",
+      "url": "https://www.anime2you.de/news/1049852/anime-tv-programm-38-2026/",
+      "source": "anime2you.de",
+      "published": "2026-09-13T18:00:26Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    }
+  ],
+  "timestamp": "2026-09-16T12:55:47Z",
+  "data_changed_at": "2026-09-16T12:55:47Z",
+  "data_hash": "ee33d97e5625ef338a17108bf992ed9c57a21dd0dd7df38b1fdc1db6c5d51906",
   "counts": {
     "kommende": 34,
-    "aktuelle": 200,
-    "abgeschlossen": 0,
-    "news": 0
+    "aktuelle": 190,
+    "abgeschlossen": 10,
+    "news": 3
   },
   "total": 234,
   "source": "anisearch.de",
   "sources": [
-    "anisearch"
+    "anilist",
+    "anisearch",
+    "jikan",
+    "news"
   ],
   "version": "6.0",
   "retention": {
@@ -2836,8 +3106,9 @@
   },
   "scraping": false,
   "warnings": [
-    "abgeschlossen: 120 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
-    "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in anisearch_scraper.py gegen anisearch.de prüfen"
+    "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
+    "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
+    "10 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-16T12:29:01Z"
+  "updated_at": "2026-09-16T12:55:47Z"
 }
