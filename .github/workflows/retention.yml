@@ -1,0 +1,54 @@
+name: 🧹 Aufräumen
+
+# Sicherheitsnetz für die Aufbewahrung: löscht abgelaufene und verschwundene
+# Einträge auch dann, wenn der Scraper länger klemmt (anisearch.de umgebaut,
+# Playwright kaputt, …). Ohne diesen Lauf lägen alte Daten genau dann ewig
+# herum, wenn ohnehin schon etwas nicht stimmt.
+
+on:
+  schedule:
+    - cron: '30 4 * * 1'     # montags 04:30 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: anime-scraper       # nie gleichzeitig mit dem Scraper
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  prune:
+    name: Alte Einträge entfernen
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONIOENCODING: utf-8
+      # Ohne Scraping braucht es keinen Browser – nur News werden geholt.
+      TRACKER_SOURCES: news
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🧹 Aufräumen
+        run: python -m tracker prune
+
+      - name: ✅ Daten prüfen
+        run: python -m tracker check
+
+      - name: 💾 Änderungen committen
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add anime_data.json
+          if git diff --staged --quiet; then
+            echo "ℹ️  Nichts aufzuräumen"
+          else
+            git commit -m "🧹 Aufbewahrung: alte Einträge entfernt $(date -u '+%Y-%m-%d')"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

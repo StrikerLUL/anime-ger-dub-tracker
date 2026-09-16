@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 venv/
 *.egg-info/
+.pytest_cache/
 
 # Node
 node_modules/
@@ -12,13 +13,11 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+.DS_Store
 
-# Local test files
-pw_test.png
-final_test.html
-test_a2y.html
-test_anisearch.html
-test_pw.py
-inspect_html.py
-verify_scraper.py
-machen
+# Zwischenstände des Scrapers (atomar geschrieben, sollten nie liegen bleiben)
+anime_data.json.tmp
+
+# Lokale Versuche
+*.local.html
+screenshots/

@@ -1,0 +1,61 @@
+name: 🧪 Tests
+
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['anime_data.json', '**.md']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  daten:
+    name: Datenlogik (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.9', '3.11', '3.13']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: 'pip'
+          cache-dependency-path: 'requirements_actions.txt'
+
+      - run: pip install pytest
+
+      - name: 🧪 Tests ohne Browser
+        run: python -m pytest -m "not ui"
+
+      # Nur ein Hinweis: eine in die Jahre gekommene Datendatei soll nicht
+      # jeden unbeteiligten Pull Request blockieren.
+      - name: ✅ Ausgelieferte anime_data.json prüfen
+        if: matrix.python == '3.11'
+        continue-on-error: true
+        run: python -m tracker check
+
+  frontend:
+    name: Frontend im Browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: |
+          pip install pytest playwright
+          python -m playwright install --with-deps chromium
+
+      - name: 🖥️ Frontend-Tests
+        run: python -m pytest tests/test_frontend.py -m ui

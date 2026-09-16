@@ -1,25 +1,26 @@
 @echo off
 chcp 65001 > nul
-title Anime Synchro Tracker - Server
+title Anime Ger Dub Tracker - Server
 echo ============================================================
-echo   ANIME SYNCHRO TRACKER - Automatischer Datenserver
+echo   ANIME GER DUB TRACKER - lokaler Server
 echo ============================================================
 echo.
-echo  Was passiert jetzt:
+echo  Was jetzt passiert:
 echo  1. Python-Pakete werden geprueft (flask, playwright)
-echo  2. Chromium-Browser wird im Hintergrund gestartet
-echo  3. anisearch.de wird nach deutschen Syncros durchsucht
+echo  2. Chromium wird im Hintergrund gestartet
+echo  3. anisearch.de, AniList und die News-Feeds werden abgefragt
 echo  4. Dein Browser oeffnet sich automatisch auf dem Tracker
 echo.
-echo  Server laeuft auf: http://localhost:5000
-echo  Daten-API:         http://localhost:5000/api/anime-data
-echo  Manuell refreshen: http://localhost:5000/api/refresh
+echo  Server:      http://localhost:5000
+echo  Daten-API:   http://localhost:5000/api/anime-data
+echo  Aktualisieren: http://localhost:5000/api/refresh
+echo  Status:      http://localhost:5000/api/status
 echo.
 echo  Zum Beenden: CTRL+C druecken
 echo ============================================================
 echo.
 
-REM Kurz warten, dann Browser öffnen (Server braucht ~2 Sekunden zum Starten)
+REM Kurz warten, dann Browser oeffnen (der Server braucht ein paar Sekunden)
 start "" /B cmd /C "timeout /t 4 /nobreak > nul && start http://localhost:5000"
 
 python scrape_anisearch_fixed.py

@@ -1,5 +1,6 @@
-# Abhängigkeiten für den GitHub-Actions-Scraper
-playwright>=1.48.0
-# Für die Datenlogik-Tests, die vor jedem Scraping-Lauf laufen
-pytest>=8.0.0
-pytest-asyncio>=0.24.0
+# Abhängigkeiten für den GitHub-Actions-Workflow.
+# Die Zusatzquellen (AniList, MyAnimeList, News-Feeds) laufen bewusst mit der
+# Standardbibliothek – hier steht deshalb nur, was wirklich nötig ist.
+
+playwright>=1.48.0      # anisearch.de rendert die Listen per JavaScript
+pytest>=8.0.0           # Datenlogik-Tests vor jedem Lauf

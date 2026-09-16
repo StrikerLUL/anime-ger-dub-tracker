@@ -1,89 +1,103 @@
-name: 🎬 Anime Dub Scraper
+name: 🎬 Daten aktualisieren
 
 on:
-  # Täglich um 06:00 UTC (= 07:00 Uhr Europa/Berlin Winterzeit, 08:00 Sommerzeit)
+  # Täglich um 06:00 UTC (07:00 Berlin im Winter, 08:00 im Sommer)
   schedule:
     - cron: '0 6 * * *'
-  # Manueller Start über den GitHub-Actions-Tab
   workflow_dispatch:
+    inputs:
+      quellen:
+        description: 'Welche Quellen? (Komma-getrennt, z. B. anisearch,anilist)'
+        required: false
+        default: 'anisearch,anilist,jikan,news'
 
-# Parallel laufende Scraper würden sich beim Push gegenseitig überholen.
+# Zwei gleichzeitig laufende Läufe würden sich beim Push gegenseitig überholen.
 concurrency:
   group: anime-scraper
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
-  scrape:
-    name: Scrape anisearch.de & Deploy
-    runs-on: ubuntu-22.04
-    timeout-minutes: 30
+  update:
+    name: Quellen abfragen & veröffentlichen
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
     env:
       FTP_HOST: ${{ secrets.FTP_HOST }}
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-    permissions:
-      contents: write   # Für git commit + push
+      PYTHONIOENCODING: utf-8
+      TRACKER_SOURCES: ${{ inputs.quellen || 'anisearch,anilist,jikan,news' }}
+      # Aufbewahrung – hier zentral einstellbar, ohne Code anzufassen.
+      TRACKER_MAX_AGE_DAYS: '365'
+      TRACKER_STALE_GRACE_DAYS: '14'
+      TRACKER_MAX_ENTRIES: '400'
 
     steps:
-      - name: 📥 Checkout Repository
+      - name: 📥 Repository holen
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🐍 Set up Python 3.11
+      - name: 🐍 Python 3.11 einrichten
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
           cache-dependency-path: 'requirements_actions.txt'
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Abhängigkeiten installieren
         run: |
           pip install -r requirements_actions.txt
           python -m playwright install --with-deps chromium
 
-      # Prüft die Datenlogik (Deduplizierung, Hashing) ohne Netzwerkzugriff.
-      # Läuft vor dem Scraping, damit ein Logikfehler nicht erst nach 20 Minuten auffällt.
+      # Die Datenlogik (Entdoppeln, Aufbewahrung, Hashing) läuft ohne Netzwerk
+      # und dauert Sekunden – deshalb vor dem Scraping, damit ein Logikfehler
+      # nicht erst nach 20 Minuten auffällt.
       - name: 🧪 Datenlogik testen
-        run: python -m pytest test_data_pipeline.py -q
+        run: python -m pytest -m "not ui"
 
-      - name: 🔍 Run Anisearch Scraper
-        run: python scraper_standalone.py
-        env:
-          PYTHONIOENCODING: utf-8
+      - name: 🔍 Quellen abfragen
+        run: python -m tracker scrape
 
-      # Fachliche Prüfung: Datei vorhanden, Daten da – und vor allem:
-      # kein Anime steht in mehr als einer Kategorie.
-      - name: ✅ Daten prüfen (inkl. Duplikat-Check)
-        run: python check_data.py
+      # Letzte Station vor der Veröffentlichung: Duplikate, Pflichtfelder,
+      # Aufbewahrungsregeln, Hash und Zählerstände.
+      - name: ✅ Daten prüfen
+        run: python -m tracker check
 
-      - name: 💾 Commit & Push anime_data.json
+      - name: 📋 Zusammenfassung
+        if: always()
+        run: |
+          {
+            echo '## 🎬 Anime Ger Dub Tracker'
+            echo '```'
+            python -m tracker info || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 💾 anime_data.json committen
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions Bot"
           git add anime_data.json
-          # Der Scraper schreibt die Datei nur bei echten Datenänderungen neu.
-          # Gleiche Daten → kein Diff → kein Commit → keine endlos wachsende Historie.
+          # Die Pipeline schreibt die Datei nur bei echten Änderungen neu:
+          # gleiche Daten → kein Diff → kein Commit → keine wachsende Historie.
           if git diff --staged --quiet; then
             echo "ℹ️  Keine Datenänderung – nichts zu committen"
           else
-            git commit -m "🤖 Auto-Update: Anime Dub Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "🤖 Auto-Update: Anime-Dub-Daten $(date -u '+%Y-%m-%d %H:%M UTC')"
             git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
-            echo "✅ anime_data.json erfolgreich gepusht!"
+            echo "✅ anime_data.json gepusht"
           fi
 
-      # Optional: FTP-Upload zu InfinityFree (meine-anime-welt.de).
-      # Läuft auch dann, wenn es keinen neuen Commit gab – so liegt auf dem
-      # Webspace garantiert immer die aktuelle Datei.
-      - name: 🌐 FTP Upload to InfinityFree (optional)
+      # Optional: Upload auf den Webspace (meine-anime-welt.de).
+      # Läuft auch ohne neuen Commit – so liegt dort immer die aktuelle Datei.
+      - name: 🌐 FTP-Upload (optional)
         if: env.FTP_HOST != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          # Nur anime_data.json hochladen (nicht den ganzen Repo-Inhalt)
           local-dir: ./
           server-dir: ${{ secrets.FTP_PATH || '/htdocs/' }}
           include: |
