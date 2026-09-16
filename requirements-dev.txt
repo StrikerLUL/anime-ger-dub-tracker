@@ -1,0 +1,7 @@
+# Alles, was für die lokale Entwicklung gebraucht wird.
+#   pip install -r requirements-dev.txt
+#   python -m playwright install chromium
+
+-r requirements_actions.txt
+
+flask>=3.0.0            # lokaler Server (python -m tracker serve)
