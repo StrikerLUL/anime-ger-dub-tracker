@@ -3229,6 +3229,20 @@
   ],
   "news": [
     {
+      "title": "Disney+ entfernt weitere Streaming-Funktion in Deutschland",
+      "url": "https://www.anime2you.de/news/1052501/disney-entfernt-airplay-in-deutschland/",
+      "source": "anime2you.de",
+      "published": "2026-09-21T14:42:02Z",
+      "summary": "Disney+ hat in Deutschland eine weitere Funktion eingebüßt. Nachdem zuletzt bereits Google Cast entfernt wurde, steht mittlerweile auch AirPlay nicht mehr zur Verfügung. Wir fassen…"
+    },
+    {
+      "title": "Neue Acrylaufsteller und Badges zu »Witch Hat Atelier« vorgestellt",
+      "url": "https://www.anime2you.de/news/1047349/neue-witch-hat-atelier-acrylaufsteller-badges/",
+      "source": "anime2you.de",
+      "published": "2026-09-21T14:30:28Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zu »Witch Hat Atelier« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen…"
+    },
+    {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 39/2026",
       "url": "https://www.anime2you.de/news/1052381/anime-tv-programm-39-2026/",
       "source": "anime2you.de",
@@ -3299,7 +3313,7 @@
     "kommende": 46,
     "aktuelle": 191,
     "abgeschlossen": 10,
-    "news": 9
+    "news": 11
   },
   "total": 247,
   "source": "anisearch.de",
@@ -3322,5 +3336,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "9 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-21T11:39:15Z"
+  "updated_at": "2026-09-22T10:43:51Z"
 }
