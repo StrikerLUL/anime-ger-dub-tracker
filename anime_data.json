@@ -1369,7 +1369,7 @@
     },
     {
       "id": 19951,
-      "title": "Skeleton Knight in Another World Staffel 2",
+      "title": "Skeleton Knight in Another World: Staffel 2",
       "url": "https://www.anisearch.de/anime/19951,gaikotsu-kishi-sama-tadaima-isekai-e-odekake-chuu-ii",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19951_400.webp",
       "info": "TV-Serie, 12 (2026)",
@@ -3229,6 +3229,20 @@
   ],
   "news": [
     {
+      "title": "Deutscher Synchro-Trailer zu »YAIBA: Samurai Legend«",
+      "url": "https://www.anime2you.de/news/1052908/yaiba-samurai-legend-synchro-trailer/",
+      "source": "anime2you.de",
+      "published": "2026-09-22T13:52:36Z",
+      "summary": "Der Publisher peppermint anime hat heute einen deutschen Trailer zum Disc-Release von »YAIBA: Samurai Legend« veröffentlicht. Das Video findet ihr unten. Disc-Release ab Dezember 2…"
+    },
+    {
+      "title": "Offizieller Regenschirm zu »The Apothecary Diaries« angekündigt",
+      "url": "https://www.anime2you.de/news/1051393/the-apothecary-diaries-regenschirm/",
+      "source": "anime2you.de",
+      "published": "2026-09-22T11:40:12Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat einen neuen Regenschirm zum Mystery-Anime »The Apothecary Diaries« angekündigt, der ab sofort im AKIBA PASS SHOP vorbestellt werden…"
+    },
+    {
       "title": "Disney+ entfernt weitere Streaming-Funktion in Deutschland",
       "url": "https://www.anime2you.de/news/1052501/disney-entfernt-airplay-in-deutschland/",
       "source": "anime2you.de",
@@ -3306,14 +3320,14 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-09-20T10:23:42Z",
-  "data_changed_at": "2026-09-20T10:23:42Z",
-  "data_hash": "c84123b75f70a78614b6d3690d3e0ce933b142e89100fe41b1138ecfac909c15",
+  "timestamp": "2026-09-23T10:34:37Z",
+  "data_changed_at": "2026-09-23T10:34:37Z",
+  "data_hash": "0a2359f89857371347cd0320ad07760091f77cf17b9e2c51cbe86d41953853d6",
   "counts": {
     "kommende": 46,
     "aktuelle": 191,
     "abgeschlossen": 10,
-    "news": 11
+    "news": 13
   },
   "total": 247,
   "source": "anisearch.de",
@@ -3336,5 +3350,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "9 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-22T10:43:51Z"
+  "updated_at": "2026-09-23T10:34:37Z"
 }
