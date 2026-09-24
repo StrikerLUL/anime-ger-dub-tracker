@@ -157,6 +157,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 20815,
+      "title": "I Want You to Show Me Your Panties with a Disgusted Face Returns",
+      "url": "https://www.anisearch.de/anime/20815,iya-na-kao-sarenagara-opantsu-misete-moraitai-returns",
+      "image": "https://cdn.anisearch.de/images/anime/cover/ecchi.v1_400.webp",
+      "info": "Web, 6 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 6,
+      "status": "kommende",
+      "first_seen": "2026-09-24T10:53:39Z",
+      "expires_at": "2027-09-24T10:53:39Z"
+    },
+    {
       "id": 20694,
       "title": "Labyrinth",
       "url": "https://www.anisearch.de/anime/20694,meikyuu-no-shiori",
@@ -3320,16 +3333,16 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-09-23T10:34:37Z",
-  "data_changed_at": "2026-09-23T10:34:37Z",
-  "data_hash": "0a2359f89857371347cd0320ad07760091f77cf17b9e2c51cbe86d41953853d6",
+  "timestamp": "2026-09-24T10:53:39Z",
+  "data_changed_at": "2026-09-24T10:53:39Z",
+  "data_hash": "0d561bb9324bbc94ac6adb33f7ec297f97b08a695107bf03a25512922605856a",
   "counts": {
-    "kommende": 46,
+    "kommende": 47,
     "aktuelle": 191,
     "abgeschlossen": 10,
     "news": 13
   },
-  "total": 247,
+  "total": 248,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3350,5 +3363,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "9 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-23T10:34:37Z"
+  "updated_at": "2026-09-24T10:53:39Z"
 }
