@@ -3242,6 +3242,13 @@
   ],
   "news": [
     {
+      "title": "Deutscher Kinostart des neuen »Madoka Magica«-Films + Poster",
+      "url": "https://www.anime2you.de/news/1053546/madoka-magica-film-deutscher-kinostart/",
+      "source": "anime2you.de",
+      "published": "2026-09-24T14:55:00Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat heute neue Details zum deutschen Kinostart des vierten »Madoka Magica«-Films enthüllt. Wir fassen zusammen. Kinostart im November 2026 Der Sequ…"
+    },
+    {
       "title": "Deutscher Synchro-Trailer zu »YAIBA: Samurai Legend«",
       "url": "https://www.anime2you.de/news/1052908/yaiba-samurai-legend-synchro-trailer/",
       "source": "anime2you.de",
@@ -3340,7 +3347,7 @@
     "kommende": 47,
     "aktuelle": 191,
     "abgeschlossen": 10,
-    "news": 13
+    "news": 14
   },
   "total": 248,
   "source": "anisearch.de",
@@ -3363,5 +3370,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "9 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-24T10:53:39Z"
+  "updated_at": "2026-09-25T10:55:40Z"
 }
