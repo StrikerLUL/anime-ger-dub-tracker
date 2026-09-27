@@ -1160,6 +1160,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 19687,
+      "title": "Mission: Yozakura Family - Staffel 2",
+      "url": "https://www.anisearch.de/anime/19687,yozakura-san-chi-no-daisakusen-dai-2-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19687_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-27T11:09:22Z",
+      "expires_at": "2027-09-27T11:09:22Z"
+    },
+    {
       "id": 20461,
       "title": "Mistress Kanan Is Devilishly Easy",
       "url": "https://www.anisearch.de/anime/20461,kanan-sama-wa-akumade-choroi",
@@ -3195,7 +3208,8 @@
       "status": "abgeschlossen",
       "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-09-27T11:09:22Z"
     },
     {
       "id": 19445,
@@ -3241,6 +3255,13 @@
     }
   ],
   "news": [
+    {
+      "title": "Sieben neue Minifiguren zu »Jujutsu Kaisen« vorgestellt",
+      "url": "https://www.anime2you.de/news/1048803/sieben-neue-jujutsu-kaisen-minifiguren/",
+      "source": "anime2you.de",
+      "published": "2026-09-26T13:14:48Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich sieben Minifiguren zu »Jujutsu Kaisen« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilde…"
+    },
     {
       "title": "Deutscher Kinostart des neuen »Madoka Magica«-Films + Poster",
       "url": "https://www.anime2you.de/news/1053546/madoka-magica-film-deutscher-kinostart/",
@@ -3340,16 +3361,16 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-09-24T10:53:39Z",
-  "data_changed_at": "2026-09-24T10:53:39Z",
-  "data_hash": "0d561bb9324bbc94ac6adb33f7ec297f97b08a695107bf03a25512922605856a",
+  "timestamp": "2026-09-27T11:09:22Z",
+  "data_changed_at": "2026-09-27T11:09:22Z",
+  "data_hash": "22265ccdf99d3d0383daa454caecd184857e9992bf5de67da371e143c9f1b547",
   "counts": {
     "kommende": 47,
-    "aktuelle": 191,
+    "aktuelle": 192,
     "abgeschlossen": 10,
-    "news": 14
+    "news": 15
   },
-  "total": 248,
+  "total": 249,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3368,7 +3389,7 @@
   "warnings": [
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
-    "9 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
+    "8 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-25T10:55:40Z"
+  "updated_at": "2026-09-27T11:09:22Z"
 }
