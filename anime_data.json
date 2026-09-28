@@ -146,7 +146,7 @@
     {
       "id": 19877,
       "title": "Hell Mode: The Hardcore Gamer Dominates in Another World with Garbage Balancing",
-      "url": "https://www.anisearch.de/anime/19877,hell-mode-yarikomi-suki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru-hajimari-no-shoukan-samurai",
+      "url": "https://www.anisearch.de/anime/19877,hell-mode-yarikomi-suki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19877_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
@@ -181,19 +181,6 @@
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 21586,
-      "title": "Overgeared",
-      "url": "https://www.anisearch.de/anime/21586,tempal-item-no-chikara",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21586_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 19497,
@@ -285,6 +272,19 @@
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21791,
+      "title": "The Ramparts of Ice: Staffel 2",
+      "url": "https://www.anisearch.de/anime/21791,koori-no-jouheki-dai-2-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21791_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "kommende",
+      "first_seen": "2026-09-28T12:34:21Z",
+      "expires_at": "2027-09-28T12:34:21Z"
     },
     {
       "id": 21216,
@@ -1290,6 +1290,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 21586,
+      "title": "Overgeared",
+      "url": "https://www.anisearch.de/anime/21586,tempal-item-no-chikara",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21586_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
+    },
+    {
       "id": 20366,
       "title": "Re:Zero - Starting Life in Another World: Staffel 4",
       "url": "https://www.anisearch.de/anime/20366,re-zero-kara-hajimeru-isekai-seikatsu-4",
@@ -1447,16 +1460,29 @@
     },
     {
       "id": 20466,
-      "title": "Steel Ball Run: Jojo’s Bizarre Adventure",
-      "url": "https://www.anisearch.de/anime/20466,steel-ball-run-jojo-no-kimyou-na-bouken",
+      "title": "Steel Ball Run: Jojo’s Bizarre Adventure - Phase 1",
+      "url": "https://www.anisearch.de/anime/20466,steel-ball-run-jojo-no-kimyou-na-bouken-1st-stage",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20466_400.webp",
+      "info": "Web, 1 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 1,
+      "status": "aktuelle",
+      "first_seen": "2026-09-16T12:29:01Z",
+      "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21986,
+      "title": "Steel Ball Run: Jojo’s Bizarre Adventure - Phase 2-3",
+      "url": "https://www.anisearch.de/anime/21986,steel-ball-run-jojo-no-kimyou-na-bouken-2nd-3rd-stage",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21986_400.webp",
       "info": "Web, 12 (2026)",
       "year": 2026,
       "type": "Web",
       "episodes": 12,
       "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "first_seen": "2026-09-28T12:34:21Z",
+      "expires_at": "2027-09-28T12:34:21Z"
     },
     {
       "id": 19573,
@@ -3123,7 +3149,8 @@
       "status": "abgeschlossen",
       "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-09-28T12:34:21Z"
     },
     {
       "id": 16524,
@@ -3237,7 +3264,8 @@
       "status": "abgeschlossen",
       "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-09-28T12:34:21Z"
     },
     {
       "id": 14594,
@@ -3375,18 +3403,21 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-09-27T11:09:22Z",
-  "data_changed_at": "2026-09-27T11:09:22Z",
-  "data_hash": "22265ccdf99d3d0383daa454caecd184857e9992bf5de67da371e143c9f1b547",
+  "timestamp": "2026-09-28T12:34:21Z",
+  "data_changed_at": "2026-09-28T12:34:21Z",
+  "data_hash": "381782c3fd0501c62f53976c35b2383b74d0af72b90bbd17d0c81bb69fc64a71",
   "counts": {
     "kommende": 47,
-    "aktuelle": 192,
+    "aktuelle": 194,
     "abgeschlossen": 10,
     "news": 17
   },
-  "total": 249,
+  "total": 251,
   "source": "anisearch.de",
   "sources": [
+    "anilist",
+    "anisearch",
+    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3400,7 +3431,7 @@
   "warnings": [
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
-    "8 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
+    "6 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-09-28T11:05:16Z"
+  "updated_at": "2026-09-28T12:34:21Z"
 }
