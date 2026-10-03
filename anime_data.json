@@ -274,19 +274,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 21791,
-      "title": "The Ramparts of Ice: Staffel 2",
-      "url": "https://www.anisearch.de/anime/21791,koori-no-jouheki-dai-2-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21791_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-28T12:34:21Z",
-      "expires_at": "2027-09-28T12:34:21Z"
-    },
-    {
       "id": 21216,
       "title": "The Vermilion Mask",
       "url": "https://www.anisearch.de/anime/21216,shuiro-no-kamen",
@@ -1551,6 +1538,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 21791,
+      "title": "The Ramparts of Ice: Staffel 2",
+      "url": "https://www.anisearch.de/anime/21791,koori-no-jouheki-dai-2-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21791_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-28T12:34:21Z",
+      "expires_at": "2027-09-28T12:34:21Z"
+    },
+    {
       "id": 21489,
       "title": "The Ribbon Hero",
       "url": "https://www.anisearch.de/anime/21489,the-ribbon-hero",
@@ -1601,6 +1601,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 19353,
+      "title": "Tokyo Revengers: War of the Three Titans",
+      "url": "https://www.anisearch.de/anime/19353,tokyo-revengers-santen-sensou-hen",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19353_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-10-03T10:55:26Z",
+      "expires_at": "2027-10-03T10:55:26Z"
     },
     {
       "id": 21171,
@@ -3165,7 +3178,8 @@
       "status": "abgeschlossen",
       "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-03T10:55:26Z"
     },
     {
       "id": 19127,
@@ -3196,21 +3210,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19140,
-      "title": "Give It All",
-      "url": "https://www.anisearch.de/anime/19140,ganbatte-ikimasshoi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19140_400.webp",
-      "info": "Film, 1 (2024)",
-      "year": 2024,
-      "type": "Film",
-      "episodes": 1,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-09-19T10:05:09Z"
-    },
-    {
       "id": 18701,
       "title": "Meine ganz besondere Hochzeit: Staffel 2",
       "url": "https://www.anisearch.de/anime/18701,watashi-no-shiawase-na-kekkon-dai-ni-ki",
@@ -3222,7 +3221,8 @@
       "status": "abgeschlossen",
       "status_geschaetzt": true,
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-03T10:55:26Z"
     },
     {
       "id": 19699,
@@ -3411,13 +3411,13 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-09-28T12:34:21Z",
-  "data_changed_at": "2026-09-28T12:34:21Z",
-  "data_hash": "381782c3fd0501c62f53976c35b2383b74d0af72b90bbd17d0c81bb69fc64a71",
+  "timestamp": "2026-10-03T10:55:26Z",
+  "data_changed_at": "2026-10-03T10:55:26Z",
+  "data_hash": "d67b58e3b4e49aa862ca0ecb3a7375a84dd9fbc5ea261018fb427de36a16607e",
   "counts": {
-    "kommende": 47,
-    "aktuelle": 194,
-    "abgeschlossen": 10,
+    "kommende": 46,
+    "aktuelle": 196,
+    "abgeschlossen": 9,
     "news": 18
   },
   "total": 251,
@@ -3439,7 +3439,7 @@
   "warnings": [
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
-    "6 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
+    "4 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-10-01T12:12:04Z"
+  "updated_at": "2026-10-03T10:55:26Z"
 }
