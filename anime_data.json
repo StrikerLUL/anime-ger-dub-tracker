@@ -209,6 +209,19 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
+      "id": 21332,
+      "title": "Ranma 1/2: Staffel 3",
+      "url": "https://www.anisearch.de/anime/21332,ranma-1-2-dai-3-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21332_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "kommende",
+      "first_seen": "2026-10-04T11:37:24Z",
+      "expires_at": "2027-10-04T11:37:24Z"
+    },
+    {
       "id": 20172,
       "title": "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!",
       "url": "https://www.anisearch.de/anime/20172,mezametara-saikyou-soubi-to-uchuusen-mochi-datta-no-de-ikkodate-mezashite-youhei-toshite-jiyuu-ni-ikitai",
@@ -3285,6 +3298,27 @@
   ],
   "news": [
     {
+      "title": "Prime Video ergänzt zwei Anime-Neuzugänge auf Deutsch",
+      "url": "https://www.anime2you.de/news/1057464/prime-video-marronniers-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-04T11:15:50Z",
+      "summary": "Der Streaming-Dienst Prime Video hat sein Programm um zwei Anime-Titel erweitert. Wir fassen nachfolgend zusammen. Zwei Anime-Neuzugänge Bei den Neuzugängen handelt es sich um die…"
+    },
+    {
+      "title": "Filmkunstmesse: »Cocoon« gewinnt deutschen Jugendjury-Preis",
+      "url": "https://www.anime2you.de/news/1056252/cocoon-filmkunstmesse-jugendjury-preis/",
+      "source": "anime2you.de",
+      "published": "2026-10-04T11:00:33Z",
+      "summary": "Der Anime-Film »Cocoon – A Summer of Girlhood« wurde auf der Filmkunstmesse Leipzig 2026 von der Jugendjury ausgezeichnet. Wir fassen zusammen. Deutscher Kinostart für 2027 geplant…"
+    },
+    {
+      "title": "»Jujutsu Kaisen«-Star erzielt wichtiges Urteil gegen KI-Stimmen",
+      "url": "https://www.anime2you.de/news/1055960/jujutsu-kaisen-star-urteil-gegen-ki-stimmen/",
+      "source": "anime2you.de",
+      "published": "2026-10-03T19:15:59Z",
+      "summary": "Der japanische Synchronsprecher Kenjiro Tsuda, der insbesondere als Kento Nanami aus »Jujutsu Kaisen« bekannt ist, hat in einem Rechtsstreit über KI-generierte Stimmen eine wichtig…"
+    },
+    {
       "title": "Elf neue Plüschfiguren zu »One Piece« angekündigt",
       "url": "https://www.anime2you.de/news/1051229/elf-neue-one-piece-plueschfiguren/",
       "source": "anime2you.de",
@@ -3411,16 +3445,16 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-10-03T10:55:26Z",
-  "data_changed_at": "2026-10-03T10:55:26Z",
-  "data_hash": "d67b58e3b4e49aa862ca0ecb3a7375a84dd9fbc5ea261018fb427de36a16607e",
+  "timestamp": "2026-10-04T11:37:24Z",
+  "data_changed_at": "2026-10-04T11:37:24Z",
+  "data_hash": "fa09b88f9371d537fb04efbb2884cb1c4d9bfd6868a18261944dc8ef300dd92f",
   "counts": {
-    "kommende": 46,
+    "kommende": 47,
     "aktuelle": 196,
     "abgeschlossen": 9,
-    "news": 18
+    "news": 21
   },
-  "total": 251,
+  "total": 252,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3441,5 +3475,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "4 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-10-03T10:55:26Z"
+  "updated_at": "2026-10-04T11:37:24Z"
 }
