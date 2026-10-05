@@ -3298,11 +3298,32 @@
   ],
   "news": [
     {
-      "title": "Prime Video ergänzt zwei Anime-Neuzugänge auf Deutsch",
+      "title": "Crunchyroll erweitert Anime-Katalog um sechs Neuzugänge + Synchro",
+      "url": "https://www.anime2you.de/news/1057488/crunchyroll-reborn-as-a-space-mercenary-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-04T16:35:21Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm heute mit sechs weiteren Neuzugängen aufgestockt. Wir fassen nachfolgend zusammen. Sechs Anime-Neuzugänge Zu den heutigen Anime-N…"
+    },
+    {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 41/2026",
+      "url": "https://www.anime2you.de/news/1057497/anime-tv-programm-41-2026/",
+      "source": "anime2you.de",
+      "published": "2026-10-04T15:36:29Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
+      "title": "Maomao-Sprecherin spricht über unangenehme »Apothecary Diaries«-Aufnahme",
+      "url": "https://www.anime2you.de/news/1056195/maomao-sprecherin-unangenehme-apothecary-diaries-aufnahme/",
+      "source": "anime2you.de",
+      "published": "2026-10-04T15:30:14Z",
+      "summary": "Die Synchronsprecher von »The Apothecary Diaries« haben kurz vor dem Start der dritten Staffel über die Arbeit an den neuen Episoden gesprochen. Dabei verrieten Aoi Yuki und Tatsum…"
+    },
+    {
+      "title": "Prime Video ergänzt drei Anime-Neuzugänge auf Deutsch",
       "url": "https://www.anime2you.de/news/1057464/prime-video-marronniers-und-mehr/",
       "source": "anime2you.de",
       "published": "2026-10-04T11:15:50Z",
-      "summary": "Der Streaming-Dienst Prime Video hat sein Programm um zwei Anime-Titel erweitert. Wir fassen nachfolgend zusammen. Zwei Anime-Neuzugänge Bei den Neuzugängen handelt es sich um die…"
+      "summary": "Der Streaming-Dienst Prime Video hat sein Programm um drei Anime-Titel erweitert. Wir fassen nachfolgend zusammen. Drei Anime-Neuzugänge Bei den Neuzugängen handelt es sich um die…"
     },
     {
       "title": "Filmkunstmesse: »Cocoon« gewinnt deutschen Jugendjury-Preis",
@@ -3452,14 +3473,11 @@
     "kommende": 47,
     "aktuelle": 196,
     "abgeschlossen": 9,
-    "news": 21
+    "news": 24
   },
   "total": 252,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3475,5 +3493,5 @@
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen",
     "4 Anime bis Jahrgang 2024 wurden anhand des Erscheinungsjahres als 'abgeschlossen' eingeordnet (Schätzung, weil der anisearch-Filter nicht greift)"
   ],
-  "updated_at": "2026-10-04T11:37:24Z"
+  "updated_at": "2026-10-05T11:41:21Z"
 }
