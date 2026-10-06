@@ -196,19 +196,6 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
-      "id": 21332,
-      "title": "Ranma 1/2: Staffel 3",
-      "url": "https://www.anisearch.de/anime/21332,ranma-1-2-dai-3-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21332_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-10-04T11:37:24Z",
-      "expires_at": "2027-10-04T11:37:24Z"
-    },
-    {
       "id": 20293,
       "title": "Reincarnated as a Dragon Hatchling",
       "url": "https://www.anisearch.de/anime/20293,tensei-shitara-dragon-no-tamago-datta-saikyou-igai-mezasanee",
@@ -1302,6 +1289,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-20T10:23:42Z",
       "expires_at": "2027-09-20T10:23:42Z"
+    },
+    {
+      "id": 21332,
+      "title": "Ranma 1/2: Staffel 3",
+      "url": "https://www.anisearch.de/anime/21332,ranma-1-2-dai-3-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21332_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-10-04T11:37:24Z",
+      "expires_at": "2027-10-04T11:37:24Z"
     },
     {
       "id": 20366,
@@ -2718,7 +2718,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-06T12:33:26Z"
     },
     {
       "id": 19989,
@@ -3328,6 +3329,13 @@
   ],
   "news": [
     {
+      "title": "Netflix reicht deutsche Synchro der dritten »Ranma 1/2«-Staffel nach",
+      "url": "https://www.anime2you.de/news/1057709/netflix-ranma-12-staffel-3-deutsche-synchro/",
+      "source": "anime2you.de",
+      "published": "2026-10-05T16:28:15Z",
+      "summary": "Der Streaming-Dienst Netflix hat heute die deutsche Sprachfassung der dritten Staffel von »Ranma 1/2« nachgereicht. Wir fassen zusammen. Erste Episode auf Deutsch Die Auftaktepisod…"
+    },
+    {
       "title": "Crunchyroll erweitert Anime-Katalog um sechs Neuzugänge + Synchro",
       "url": "https://www.anime2you.de/news/1057488/crunchyroll-reborn-as-a-space-mercenary-und-mehr/",
       "source": "anime2you.de",
@@ -3496,14 +3504,14 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-10-05T13:14:52Z",
-  "data_changed_at": "2026-10-05T13:14:52Z",
-  "data_hash": "c7de13cdac3009b36199ee2b91c38d5b8ab8921718f6c77389666338150e54da",
+  "timestamp": "2026-10-06T12:33:26Z",
+  "data_changed_at": "2026-10-06T12:33:26Z",
+  "data_hash": "b97850b00f6c295ce7344881e8068114af45c71c8d6754c85ec406f7b56ed4e0",
   "counts": {
-    "kommende": 45,
-    "aktuelle": 200,
+    "kommende": 44,
+    "aktuelle": 201,
     "abgeschlossen": 9,
-    "news": 24
+    "news": 25
   },
   "total": 254,
   "source": "anisearch.de",
@@ -3525,5 +3533,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-05T13:14:52Z"
+  "updated_at": "2026-10-06T12:33:26Z"
 }
