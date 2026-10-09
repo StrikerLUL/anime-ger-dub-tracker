@@ -2905,7 +2905,7 @@
     },
     {
       "id": 20871,
-      "title": "Tatsuki Fujimoto 17–26",
+      "title": "Tatsuki Fujimoto 17-26",
       "url": "https://www.anisearch.de/anime/20871,fujimoto-tatsuki-17-26",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20871_400.webp",
       "info": "Film, 8 (2025)",
@@ -3329,6 +3329,13 @@
   ],
   "news": [
     {
+      "title": "Crunchyroll bringt »Apothecary Diaries«-Film in die deutschen Kinos",
+      "url": "https://www.anime2you.de/news/1058311/crunchyroll-apothecary-diaries-film-im-kino/",
+      "source": "anime2you.de",
+      "published": "2026-10-08T14:15:31Z",
+      "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man den Film zur Anime-Adaption von »The Apothecary Diaries« hierzulande im Rahmen einer Kooperation mit Sony Pictures Ente…"
+    },
+    {
       "title": "Netflix reicht deutsche Synchro der dritten »Ranma 1/2«-Staffel nach",
       "url": "https://www.anime2you.de/news/1057709/netflix-ranma-12-staffel-3-deutsche-synchro/",
       "source": "anime2you.de",
@@ -3504,14 +3511,14 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-10-06T12:33:26Z",
-  "data_changed_at": "2026-10-06T12:33:26Z",
-  "data_hash": "b97850b00f6c295ce7344881e8068114af45c71c8d6754c85ec406f7b56ed4e0",
+  "timestamp": "2026-10-09T12:23:21Z",
+  "data_changed_at": "2026-10-09T12:23:21Z",
+  "data_hash": "303d155f3d8db7d3f3fc4be2baa32ab193c50a4a3cd45b706bea3f04977ff4ea",
   "counts": {
     "kommende": 44,
     "aktuelle": 201,
     "abgeschlossen": 9,
-    "news": 25
+    "news": 26
   },
   "total": 254,
   "source": "anisearch.de",
@@ -3533,5 +3540,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-06T12:33:26Z"
+  "updated_at": "2026-10-09T12:23:21Z"
 }
