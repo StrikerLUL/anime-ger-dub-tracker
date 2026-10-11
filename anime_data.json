@@ -3267,21 +3267,6 @@
       "missing_since": "2026-10-03T10:55:26Z"
     },
     {
-      "id": 19699,
-      "title": "One Piece Log: Fish-Man Island Saga",
-      "url": "https://www.anisearch.de/anime/19699,special-edited-version-one-piece-gyojintou-hen",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19699_400.webp",
-      "info": "TV-Serie, 21 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 21,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-09-27T11:09:22Z"
-    },
-    {
       "id": 19445,
       "title": "Rick and Morty: The Anime",
       "url": "https://www.anisearch.de/anime/19445,rick-and-morty-the-anime",
@@ -3511,16 +3496,16 @@
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-10-09T12:23:21Z",
-  "data_changed_at": "2026-10-09T12:23:21Z",
-  "data_hash": "303d155f3d8db7d3f3fc4be2baa32ab193c50a4a3cd45b706bea3f04977ff4ea",
+  "timestamp": "2026-10-11T11:55:13Z",
+  "data_changed_at": "2026-10-11T11:55:13Z",
+  "data_hash": "e3d7d7724855b8249fd45cdae20a027523a466b1955fabf51a8c920e0c8bcc62",
   "counts": {
     "kommende": 44,
     "aktuelle": 201,
-    "abgeschlossen": 9,
+    "abgeschlossen": 8,
     "news": 26
   },
-  "total": 254,
+  "total": 253,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3540,5 +3525,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-09T12:23:21Z"
+  "updated_at": "2026-10-11T11:55:13Z"
 }
