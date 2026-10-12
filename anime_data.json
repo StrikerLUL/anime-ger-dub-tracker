@@ -3314,6 +3314,13 @@
   ],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 42/2026",
+      "url": "https://www.anime2you.de/news/1060030/anime-tv-programm-42-2026/",
+      "source": "anime2you.de",
+      "published": "2026-10-11T23:30:33Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
       "title": "Crunchyroll bringt »Apothecary Diaries«-Film in die deutschen Kinos",
       "url": "https://www.anime2you.de/news/1058311/crunchyroll-apothecary-diaries-film-im-kino/",
       "source": "anime2you.de",
@@ -3503,14 +3510,11 @@
     "kommende": 44,
     "aktuelle": 201,
     "abgeschlossen": 8,
-    "news": 26
+    "news": 27
   },
   "total": 253,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3525,5 +3529,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-11T11:55:13Z"
+  "updated_at": "2026-10-12T12:14:15Z"
 }
