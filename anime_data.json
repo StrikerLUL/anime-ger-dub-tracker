@@ -66,6 +66,19 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
+      "id": 20705,
+      "title": "Cyberpunk: Edgerunners 2",
+      "url": "https://www.anisearch.de/anime/20705,cyberpunk-edgerunners-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20705_400.webp",
+      "info": "Web, 10 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 10,
+      "status": "kommende",
+      "first_seen": "2026-10-15T10:39:37Z",
+      "expires_at": "2027-10-15T10:39:37Z"
+    },
+    {
       "id": 19132,
       "title": "Demon Slave: Staffel 2",
       "url": "https://www.anisearch.de/anime/19132,mato-seihei-no-slave-2",
@@ -3284,6 +3297,20 @@
   ],
   "news": [
     {
+      "title": "Studie: Anime und Manga sind in Deutschland ein Milliardenmarkt",
+      "url": "https://www.anime2you.de/news/1058631/anime-manga-milliardenmarkt-in-deutschland/",
+      "source": "anime2you.de",
+      "published": "2026-10-14T17:30:58Z",
+      "summary": "Wie verbreitet sind Anime und Manga in Deutschland – und wie viel Geld geben Fans dafür aus? Eine neue Studie untersucht die Nutzung und Konsumausgaben der 16- bis 45-Jährigen. Wir…"
+    },
+    {
+      "title": "Disney+ ergänzt einen neuen Simulcast und eine neue Synchro",
+      "url": "https://www.anime2you.de/news/1060828/disney-plus-dragon-ball-super-beerus-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-14T17:27:12Z",
+      "summary": "Der Streaming-Dienst Disney+ hat sein Anime-Programm mit zwei weiteren Neuheiten aufgestockt. Wir fassen zusammen. Zwei Anime-Neuzugänge Zu den aktuellen Anime-Neuzugängen gehört d…"
+    },
+    {
       "title": "Crunchyroll nimmt sechs Anime-Neuzugänge ins Programm + Synchro",
       "url": "https://www.anime2you.de/news/1060717/crunchyroll-full-clearing-another-world-und-mehr/",
       "source": "anime2you.de",
@@ -3464,25 +3491,18 @@
       "source": "anime2you.de",
       "published": "2026-09-15T17:10:22Z",
       "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man 13 Anime-Neustarts aus der Herbst-Season 2026 eine deutsche Synchronfassung spendieren wird. Um welche Serien es sich d…"
-    },
-    {
-      "title": "Sieben neue Plüschanhänger zu »Spy x Family« vorgestellt",
-      "url": "https://www.anime2you.de/news/1047443/sieben-spy-x-family-plueschanhaenger/",
-      "source": "anime2you.de",
-      "published": "2026-09-14T14:03:30Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich neue Plüschanhänger zu »Spy x Family« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilder…"
     }
   ],
-  "timestamp": "2026-10-12T14:05:18Z",
-  "data_changed_at": "2026-10-12T14:05:18Z",
-  "data_hash": "0a8c8b4e72e7f399f50440ba8ba94a6678ffb5b2eb6320362a8383cd2dc7538f",
+  "timestamp": "2026-10-15T10:39:37Z",
+  "data_changed_at": "2026-10-15T10:39:37Z",
+  "data_hash": "25c0538a97b44a49f7fb3881dff488d5c1717d58db6a0f9470084c2d4cc8fc21",
   "counts": {
-    "kommende": 44,
+    "kommende": 45,
     "aktuelle": 201,
     "abgeschlossen": 6,
-    "news": 27
+    "news": 28
   },
-  "total": 251,
+  "total": 252,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3502,5 +3522,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-14T10:58:15Z"
+  "updated_at": "2026-10-15T10:39:37Z"
 }
