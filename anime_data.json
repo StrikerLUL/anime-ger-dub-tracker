@@ -378,6 +378,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 18892,
+      "title": "Isekai Onsen Paradise",
+      "url": "https://www.anisearch.de/anime/18892,meitou-isekai-no-yu-kaitaku-ki-arafoo-onsen-mania-no-tensei-saki-wa-nonbiri-onsen-tengoku-deshita",
+      "image": "https://cdn.anisearch.de/images/anime/cover/18/18892_400.webp",
+      "info": "TV-Serie, 12 (2024)",
+      "year": 2024,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "kommende",
+      "first_seen": "2026-10-16T10:26:35Z",
+      "expires_at": "2027-10-16T10:26:35Z"
+    },
+    {
       "id": 19244,
       "title": "Promise of Wizard",
       "url": "https://www.anisearch.de/anime/19244,mahou-tsukai-no-yakusoku",
@@ -402,20 +415,6 @@
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 17739,
-      "title": "My Love Story with Yamada-kun at Lv999",
-      "url": "https://www.anisearch.de/anime/17739,yamada-kun-to-lv999-no-koi-o-suru",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17739_400.webp",
-      "info": "TV-Serie, 13 (2023)",
-      "year": 2023,
-      "type": "TV-Serie",
-      "episodes": 13,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-01T12:12:04Z"
     },
     {
       "id": 15989,
@@ -3297,6 +3296,13 @@
   ],
   "news": [
     {
+      "title": "Deutscher Synchro-Trailer zu »Cyberpunk: Edgerunners II« + Visual",
+      "url": "https://www.anime2you.de/news/1060922/cyberpunk-edgerunners-2-synchro-trailer/",
+      "source": "anime2you.de",
+      "published": "2026-10-15T16:12:45Z",
+      "summary": "Der Streaming-Dienst Netflix hat heute einen deutschen Synchro-Trailer zur zweiten »Cyberpunk: Edgerunners«-Serie veröffentlicht. Das Video findet ihr unten. Release im Oktober 202…"
+    },
+    {
       "title": "Studie: Anime und Manga sind in Deutschland ein Milliardenmarkt",
       "url": "https://www.anime2you.de/news/1058631/anime-manga-milliardenmarkt-in-deutschland/",
       "source": "anime2you.de",
@@ -3484,18 +3490,11 @@
       "source": "anime2you.de",
       "published": "2026-09-16T14:36:40Z",
       "summary": "Disney+ hat seinen Nutzungsvertrag in Deutschland überarbeitet und verschafft sich damit künftig mehr Spielraum, verschiedene Werbeformen auch in den Tarifen »Standard« und »Premiu…"
-    },
-    {
-      "title": "Crunchyroll zeigt 13 Anime-Neustarts im Herbst 2026 auf Deutsch",
-      "url": "https://www.anime2you.de/news/1050694/crunchyroll-herbst-2026-synchros/",
-      "source": "anime2you.de",
-      "published": "2026-09-15T17:10:22Z",
-      "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man 13 Anime-Neustarts aus der Herbst-Season 2026 eine deutsche Synchronfassung spendieren wird. Um welche Serien es sich d…"
     }
   ],
-  "timestamp": "2026-10-15T10:39:37Z",
-  "data_changed_at": "2026-10-15T10:39:37Z",
-  "data_hash": "25c0538a97b44a49f7fb3881dff488d5c1717d58db6a0f9470084c2d4cc8fc21",
+  "timestamp": "2026-10-16T10:26:35Z",
+  "data_changed_at": "2026-10-16T10:26:35Z",
+  "data_hash": "7ceab1f0285c73ff3312c32f07ccda59349b87f8c53e9d8ec38c31bbd2cffb72",
   "counts": {
     "kommende": 45,
     "aktuelle": 201,
@@ -3522,5 +3521,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-15T10:39:37Z"
+  "updated_at": "2026-10-16T10:26:35Z"
 }
