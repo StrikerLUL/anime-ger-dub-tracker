@@ -3296,6 +3296,20 @@
   ],
   "news": [
     {
+      "title": "»Fairy Tail« erhält neue Anhänger, Tragetasche und XXL-Mauspad",
+      "url": "https://www.anime2you.de/news/1061130/neues-fairy-tail-merchandise/",
+      "source": "anime2you.de",
+      "published": "2026-10-16T16:00:10Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zum Action-Anime »Fairy Tail« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir…"
+    },
+    {
+      "title": "Neue »Apothecary Diaries«-Plüschfigur von Jinshi vorgestellt",
+      "url": "https://www.anime2you.de/news/1056535/apothecary-diaries-plueschfigur-jinshi/",
+      "source": "anime2you.de",
+      "published": "2026-10-16T14:40:00Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat einen neuen Plüschanhänger zum Mystery-Anime »The Apothecary Diaries« angekündigt, der ab sofort im AKIBA PASS SHOP vorbestellt werd…"
+    },
+    {
       "title": "Deutscher Synchro-Trailer zu »Cyberpunk: Edgerunners II« + Visual",
       "url": "https://www.anime2you.de/news/1060922/cyberpunk-edgerunners-2-synchro-trailer/",
       "source": "anime2you.de",
@@ -3476,20 +3490,6 @@
       "source": "anime2you.de",
       "published": "2026-09-17T17:05:20Z",
       "summary": "Der Streaming-Dienst Disney+ hat sich heute zur aktuellen Berichterstattung über die Anpassung seines Nutzungsvertrags in Deutschland geäußert und klargestellt, was sich für Abonne…"
-    },
-    {
-      "title": "15 Anime-Filme ab sofort bei Sky und WOW verfügbar",
-      "url": "https://www.anime2you.de/news/1050993/15-anime-filme-bei-sky-und-wow/",
-      "source": "anime2you.de",
-      "published": "2026-09-16T15:46:49Z",
-      "summary": "Der Pay-TV-Anbieter Sky Deutschland hat sich 15 Anime-Filme gesichert und stellt diese ab sofort auf der eigenen Plattform sowie auf WOW zum Stremen bereit. Wir fassen die Details…"
-    },
-    {
-      "title": "Disney+ weitet Werbung auf Standard- und Premium-Abos aus",
-      "url": "https://www.anime2you.de/news/1051016/disney-plus-werbung-standard-premium-abo/",
-      "source": "anime2you.de",
-      "published": "2026-09-16T14:36:40Z",
-      "summary": "Disney+ hat seinen Nutzungsvertrag in Deutschland überarbeitet und verschafft sich damit künftig mehr Spielraum, verschiedene Werbeformen auch in den Tarifen »Standard« und »Premiu…"
     }
   ],
   "timestamp": "2026-10-16T10:26:35Z",
@@ -3521,5 +3521,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-16T10:26:35Z"
+  "updated_at": "2026-10-17T09:58:11Z"
 }
