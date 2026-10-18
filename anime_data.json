@@ -3204,21 +3204,6 @@
   ],
   "abgeschlossen": [
     {
-      "id": 16524,
-      "title": "Beastars Letzte Staffel",
-      "url": "https://www.anisearch.de/anime/16524,beastars-final-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/16/16524_400.webp",
-      "info": "Web, 12 (2024)",
-      "year": 2024,
-      "type": "Web",
-      "episodes": 12,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-03T10:55:26Z"
-    },
-    {
       "id": 19127,
       "title": "Beheneko: Ich bin ein mächtiger Behemoth und lebe als Kätzchen bei einer Elfe",
       "url": "https://www.anisearch.de/anime/19127,s-rank-monster-no-behemoth-da-kedo-neko-to-machigawarete-elf-musume-no-kishi-pet-toshite-kurashitemasu",
@@ -3247,21 +3232,6 @@
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z",
       "missing_since": "2026-10-05T13:14:52Z"
-    },
-    {
-      "id": 18701,
-      "title": "Meine ganz besondere Hochzeit: Staffel 2",
-      "url": "https://www.anisearch.de/anime/18701,watashi-no-shiawase-na-kekkon-dai-ni-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18701_400.webp",
-      "info": "TV-Serie, 13 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 13,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-03T10:55:26Z"
     },
     {
       "id": 19445,
@@ -3295,6 +3265,13 @@
     }
   ],
   "news": [
+    {
+      "title": "Zwei neue Acrylanhänger zu »Detektiv Conan« angekündigt",
+      "url": "https://www.anime2you.de/news/1061186/zwei-detektiv-conan-acrylanhaenger/",
+      "source": "anime2you.de",
+      "published": "2026-10-17T16:20:14Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Schlüsselanhänger zu »Detektiv Conan« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen alle…"
+    },
     {
       "title": "»Fairy Tail« erhält neue Anhänger, Tragetasche und XXL-Mauspad",
       "url": "https://www.anime2you.de/news/1061130/neues-fairy-tail-merchandise/",
@@ -3483,25 +3460,18 @@
       "source": "anime2you.de",
       "published": "2026-09-18T14:30:18Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich ein neues Mauspad zum Mystery-Anime »The Apothecary Diaries« angekündigt, das ab sofort im AKIBA PASS SHOP vorbestellt werd…"
-    },
-    {
-      "title": "Disney+ beruhigt Abonnenten nach Berichten über mehr Werbung",
-      "url": "https://www.anime2you.de/news/1051161/disney-beruhigt-abonnenten-statement/",
-      "source": "anime2you.de",
-      "published": "2026-09-17T17:05:20Z",
-      "summary": "Der Streaming-Dienst Disney+ hat sich heute zur aktuellen Berichterstattung über die Anpassung seines Nutzungsvertrags in Deutschland geäußert und klargestellt, was sich für Abonne…"
     }
   ],
-  "timestamp": "2026-10-16T10:26:35Z",
-  "data_changed_at": "2026-10-16T10:26:35Z",
-  "data_hash": "7ceab1f0285c73ff3312c32f07ccda59349b87f8c53e9d8ec38c31bbd2cffb72",
+  "timestamp": "2026-10-18T10:11:04Z",
+  "data_changed_at": "2026-10-18T10:11:04Z",
+  "data_hash": "cf24db83a30bd52492f3fd595c297c783f3e16f711c7934f5e97bebcfc832004",
   "counts": {
     "kommende": 45,
     "aktuelle": 201,
-    "abgeschlossen": 6,
+    "abgeschlossen": 4,
     "news": 28
   },
-  "total": 252,
+  "total": 250,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3521,5 +3491,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-17T09:58:11Z"
+  "updated_at": "2026-10-18T10:11:04Z"
 }
