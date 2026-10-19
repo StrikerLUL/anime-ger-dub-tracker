@@ -3266,6 +3266,34 @@
   ],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 43/2026",
+      "url": "https://www.anime2you.de/news/1062070/anime-tv-programm-43-2026/",
+      "source": "anime2you.de",
+      "published": "2026-10-18T21:35:56Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
+      "title": "ProSieben FUN wiederholt »Magical Girl Special Ops Asuka«",
+      "url": "https://www.anime2you.de/news/1062104/prosieben-fun-magical-girl-special-ops-asuka-wiederholung/",
+      "source": "anime2you.de",
+      "published": "2026-10-18T18:33:18Z",
+      "summary": "Durch Einträge im Programmplan von ProSieben FUN wurde bekannt, dass der Pay-TV-Sender die Fantasy-Serie »Magical Girl Special Ops Asuka« in wenigen Wochen erneut mit deutscher Ver…"
+    },
+    {
+      "title": "AniMoon kündigt neue XXL-Acrylfigur zu »Goblin Slayer« an",
+      "url": "https://www.anime2you.de/news/1061538/animoon-goblin-slayer-xxl-acrylfigur/",
+      "source": "anime2you.de",
+      "published": "2026-10-18T13:05:04Z",
+      "summary": "Das deutsche Unternehmen AniMoon Publishing hat vor Kurzem eine neue Acrylfigur zum Fantasy-Anime »Goblin Slayer« vorgestellt. Wir fassen zusammen. Ab sofort erhältlich Die neue XX…"
+    },
+    {
+      "title": "Neue Plüschfigur der »Frieren«-Protagonistin angekündigt",
+      "url": "https://www.anime2you.de/news/1061247/frieren-protagonistin-sakami-plueschfigur/",
+      "source": "anime2you.de",
+      "published": "2026-10-18T13:00:27Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich eine neue Plüschfigur der Protagonistin aus »Frieren: Beyond Journey’s End« angekündigt, die ab sofort im AKIBA PASS SHOP e…"
+    },
+    {
       "title": "Zwei neue Acrylanhänger zu »Detektiv Conan« angekündigt",
       "url": "https://www.anime2you.de/news/1061186/zwei-detektiv-conan-acrylanhaenger/",
       "source": "anime2you.de",
@@ -3453,13 +3481,6 @@
       "source": "anime2you.de",
       "published": "2026-09-20T17:33:34Z",
       "summary": "Der Verbraucherschutzverein VSV zieht in Deutschland gegen drei große Streaming-Dienste vor Gericht. Im Mittelpunkt stehen Netflix, Apple TV und WOW, denen der Verein unzulässige P…"
-    },
-    {
-      "title": "Neues Mauspad zu »The Apothecary Diaries« vorgestellt",
-      "url": "https://www.anime2you.de/news/1047416/neues-the-apothecary-diaries-mauspad/",
-      "source": "anime2you.de",
-      "published": "2026-09-18T14:30:18Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich ein neues Mauspad zum Mystery-Anime »The Apothecary Diaries« angekündigt, das ab sofort im AKIBA PASS SHOP vorbestellt werd…"
     }
   ],
   "timestamp": "2026-10-18T10:11:04Z",
@@ -3469,14 +3490,11 @@
     "kommende": 45,
     "aktuelle": 201,
     "abgeschlossen": 4,
-    "news": 28
+    "news": 31
   },
   "total": 250,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3491,5 +3509,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-18T10:11:04Z"
+  "updated_at": "2026-10-19T10:05:29Z"
 }
