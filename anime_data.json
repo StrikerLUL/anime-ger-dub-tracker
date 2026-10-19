@@ -40,19 +40,6 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
-      "id": 19993,
-      "title": "As a Reincarnated Aristocrat, I’ll Use My Appraisal Skill to Rise in the World: Staffel 3",
-      "url": "https://www.anisearch.de/anime/19993,tensei-kizoku-kantei-skill-de-nariagaru-dai-3-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19993_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 20716,
       "title": "Black Clover: Staffel 2",
       "url": "https://www.anisearch.de/anime/20716,black-clover-2nd-season",
@@ -612,6 +599,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 19993,
+      "title": "As a Reincarnated Aristocrat, I’ll Use My Appraisal Skill to Rise in the World: Staffel 3",
+      "url": "https://www.anisearch.de/anime/19993,tensei-kizoku-kantei-skill-de-nariagaru-dai-3-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19993_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 18911,
@@ -3186,7 +3186,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-19T11:45:36Z"
     },
     {
       "id": 19079,
@@ -3265,6 +3266,13 @@
     }
   ],
   "news": [
+    {
+      "title": "Zehn neue Minifiguren zu »Lord of Mysteries« vorgestellt",
+      "url": "https://www.anime2you.de/news/1058725/zehn-lord-of-mysteries-minifiguren/",
+      "source": "anime2you.de",
+      "published": "2026-10-19T10:20:54Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich zehn neue Minifiguren zu »Lord of Mysteries« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste…"
+    },
     {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 43/2026",
       "url": "https://www.anime2you.de/news/1062070/anime-tv-programm-43-2026/",
@@ -3483,18 +3491,21 @@
       "summary": "Der Verbraucherschutzverein VSV zieht in Deutschland gegen drei große Streaming-Dienste vor Gericht. Im Mittelpunkt stehen Netflix, Apple TV und WOW, denen der Verein unzulässige P…"
     }
   ],
-  "timestamp": "2026-10-18T10:11:04Z",
-  "data_changed_at": "2026-10-18T10:11:04Z",
-  "data_hash": "cf24db83a30bd52492f3fd595c297c783f3e16f711c7934f5e97bebcfc832004",
+  "timestamp": "2026-10-19T11:45:36Z",
+  "data_changed_at": "2026-10-19T11:45:36Z",
+  "data_hash": "681414c0d47fb5da8e0d0cc7234dd62d32967e1614a109066a8fd0399282b35d",
   "counts": {
-    "kommende": 45,
-    "aktuelle": 201,
+    "kommende": 44,
+    "aktuelle": 202,
     "abgeschlossen": 4,
-    "news": 31
+    "news": 32
   },
   "total": 250,
   "source": "anisearch.de",
   "sources": [
+    "anilist",
+    "anisearch",
+    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3509,5 +3520,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-19T10:05:29Z"
+  "updated_at": "2026-10-19T11:45:36Z"
 }
