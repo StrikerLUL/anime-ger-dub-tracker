@@ -1,19 +1,6 @@
 {
   "kommende": [
     {
-      "id": 19245,
-      "title": "A New Dawn",
-      "url": "https://www.anisearch.de/anime/19245,hana-rokushou-ga-akeru-hi-ni",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19245_400.webp",
-      "info": "Film, 1 (2026)",
-      "year": 2026,
-      "type": "Film",
-      "episodes": 1,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
       "id": 21117,
       "title": "A Wild Last Boss Appeared! Staffel 2",
       "url": "https://www.anisearch.de/anime/21117,yasei-no-last-boss-ga-arawareta-dai-2-ki",
@@ -51,19 +38,6 @@
       "status": "kommende",
       "first_seen": "2026-09-20T10:23:42Z",
       "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
-      "id": 20705,
-      "title": "Cyberpunk: Edgerunners 2",
-      "url": "https://www.anisearch.de/anime/20705,cyberpunk-edgerunners-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20705_400.webp",
-      "info": "Web, 10 (2026)",
-      "year": 2026,
-      "type": "Web",
-      "episodes": 10,
-      "status": "kommende",
-      "first_seen": "2026-10-15T10:39:37Z",
-      "expires_at": "2027-10-15T10:39:37Z"
     },
     {
       "id": 19132,
@@ -575,6 +549,19 @@
   ],
   "aktuelle": [
     {
+      "id": 19245,
+      "title": "A New Dawn",
+      "url": "https://www.anisearch.de/anime/19245,hana-rokushou-ga-akeru-hi-ni",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19245_400.webp",
+      "info": "Film, 1 (2026)",
+      "year": 2026,
+      "type": "Film",
+      "episodes": 1,
+      "status": "aktuelle",
+      "first_seen": "2026-09-16T12:29:01Z",
+      "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
       "id": 20808,
       "title": "Akane-banashi",
       "url": "https://www.anisearch.de/anime/20808,akane-banashi",
@@ -781,6 +768,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20705,
+      "title": "Cyberpunk: Edgerunners 2",
+      "url": "https://www.anisearch.de/anime/20705,cyberpunk-edgerunners-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20705_400.webp",
+      "info": "Web, 10 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 10,
+      "status": "aktuelle",
+      "first_seen": "2026-10-15T10:39:37Z",
+      "expires_at": "2027-10-15T10:39:37Z"
     },
     {
       "id": 21293,
@@ -1333,10 +1333,10 @@
       "title": "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!",
       "url": "https://www.anisearch.de/anime/20172,mezametara-saikyou-soubi-to-uchuusen-mochi-datta-no-de-ikkodate-mezashite-youhei-toshite-jiyuu-ni-ikitai",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20172_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
-      "episodes": 12,
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-20T10:23:42Z",
       "expires_at": "2027-09-20T10:23:42Z"
@@ -1502,10 +1502,10 @@
       "title": "Steel Ball Run: Jojo’s Bizarre Adventure - Phase 2-3",
       "url": "https://www.anisearch.de/anime/21986,steel-ball-run-jojo-no-kimyou-na-bouken-2nd-3rd-stage",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21986_400.webp",
-      "info": "Web, 12 (2026)",
+      "info": "Web, 11 (2026)",
       "year": 2026,
       "type": "Web",
-      "episodes": 12,
+      "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-28T12:34:21Z",
       "expires_at": "2027-09-28T12:34:21Z"
@@ -1846,7 +1846,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-20T10:45:59Z"
     },
     {
       "id": 17925,
@@ -2848,7 +2849,8 @@
       "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-20T10:45:59Z"
     },
     {
       "id": 19327,
@@ -3203,69 +3205,29 @@
       "expires_at": "2027-09-16T12:29:01Z"
     }
   ],
-  "abgeschlossen": [
-    {
-      "id": 19127,
-      "title": "Beheneko: Ich bin ein mächtiger Behemoth und lebe als Kätzchen bei einer Elfe",
-      "url": "https://www.anisearch.de/anime/19127,s-rank-monster-no-behemoth-da-kedo-neko-to-machigawarete-elf-musume-no-kishi-pet-toshite-kurashitemasu",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19127_400.webp",
-      "info": "TV-Serie, 12 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-05T13:14:52Z"
-    },
-    {
-      "id": 19566,
-      "title": "Der Herr der Ringe: Die Schlacht der Rohirrim",
-      "url": "https://www.anisearch.de/anime/19566,lord-of-the-rings-rohan-no-tatakai",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19566_400.webp",
-      "info": "Film, 1 (2024)",
-      "year": 2024,
-      "type": "Film",
-      "episodes": 1,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-05T13:14:52Z"
-    },
-    {
-      "id": 19445,
-      "title": "Rick and Morty: The Anime",
-      "url": "https://www.anisearch.de/anime/19445,rick-and-morty-the-anime",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19445_400.webp",
-      "info": "TV-Serie, 10 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 10,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-05T13:14:52Z"
-    },
-    {
-      "id": 14594,
-      "title": "Uzumaki",
-      "url": "https://www.anisearch.de/anime/14594,uzumaki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/14/14594_400.webp",
-      "info": "TV-Serie, 4 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 4,
-      "status": "abgeschlossen",
-      "status_geschaetzt": true,
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-05T13:14:52Z"
-    }
-  ],
+  "abgeschlossen": [],
   "news": [
+    {
+      "title": "Crunchyroll nimmt drei Anime-Neuzugänge ins Programm + Synchro",
+      "url": "https://www.anime2you.de/news/1062283/crunchyroll-your-letter-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-19T17:43:10Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit drei weiteren Anime-Titeln aufgestockt. Wir fassen die Details nachfolgend zusammen. Drei Anime-Neuzugänge Zu den Neuzugängen…"
+    },
+    {
+      "title": "Elf neue Merchandise-Produkte zu »Apothecary Diaries« angekündigt",
+      "url": "https://www.anime2you.de/news/1061032/apothecary-diaries-elf-merchandise-produkte/",
+      "source": "anime2you.de",
+      "published": "2026-10-19T16:50:52Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zum Mystery-Anime »The Apothecary Diaries« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden…"
+    },
+    {
+      "title": "»Dragon Ball«-Sprecherin wehrt sich gegen KI-Nachahmungen",
+      "url": "https://www.anime2you.de/news/1061995/dragon-ball-sprecherin-unerlaubte-ki-nachahmungen/",
+      "source": "anime2you.de",
+      "published": "2026-10-19T15:05:03Z",
+      "summary": "Die unerlaubte Nachahmung menschlicher Stimmen durch künstliche Intelligenz (KI) sorgt seit geraumer Zeit für Kritik. Nun hat sich eine der bekanntesten japanischen Anime-Synchrons…"
+    },
     {
       "title": "Zehn neue Minifiguren zu »Lord of Mysteries« vorgestellt",
       "url": "https://www.anime2you.de/news/1058725/zehn-lord-of-mysteries-minifiguren/",
@@ -3491,16 +3453,16 @@
       "summary": "Der Verbraucherschutzverein VSV zieht in Deutschland gegen drei große Streaming-Dienste vor Gericht. Im Mittelpunkt stehen Netflix, Apple TV und WOW, denen der Verein unzulässige P…"
     }
   ],
-  "timestamp": "2026-10-19T11:45:36Z",
-  "data_changed_at": "2026-10-19T11:45:36Z",
-  "data_hash": "681414c0d47fb5da8e0d0cc7234dd62d32967e1614a109066a8fd0399282b35d",
+  "timestamp": "2026-10-20T10:45:59Z",
+  "data_changed_at": "2026-10-20T10:45:59Z",
+  "data_hash": "edffec607e677b29dfb6e9c1c49b83c4645765fd1e57f7df455b916b721f0d94",
   "counts": {
-    "kommende": 44,
-    "aktuelle": 202,
-    "abgeschlossen": 4,
-    "news": 32
+    "kommende": 42,
+    "aktuelle": 204,
+    "abgeschlossen": 0,
+    "news": 35
   },
-  "total": 250,
+  "total": 246,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3520,5 +3482,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-19T11:45:36Z"
+  "updated_at": "2026-10-20T10:45:59Z"
 }
