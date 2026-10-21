@@ -2721,20 +2721,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19264,
-      "title": "Possibly the Greatest Alchemist of All Time",
-      "url": "https://www.anisearch.de/anime/19264,izure-saikyou-no-renkinjutsushi",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19264_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-06T12:33:26Z"
-    },
-    {
       "id": 19989,
       "title": "Ranma 1/2: Staffel 2",
       "url": "https://www.anisearch.de/anime/19989,ranma-1-2-dai-2-ki",
@@ -3437,32 +3423,18 @@
       "source": "anime2you.de",
       "published": "2026-09-21T14:30:28Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zu »Witch Hat Atelier« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 39/2026",
-      "url": "https://www.anime2you.de/news/1052381/anime-tv-programm-39-2026/",
-      "source": "anime2you.de",
-      "published": "2026-09-20T22:45:31Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
-    },
-    {
-      "title": "Verbraucherschützer verklagen Netflix und Co. wegen Preiserhöhungen",
-      "url": "https://www.anime2you.de/news/1051260/verbraucherschuetzer-verklagen-netflix-preiserhoehungen/",
-      "source": "anime2you.de",
-      "published": "2026-09-20T17:33:34Z",
-      "summary": "Der Verbraucherschutzverein VSV zieht in Deutschland gegen drei große Streaming-Dienste vor Gericht. Im Mittelpunkt stehen Netflix, Apple TV und WOW, denen der Verein unzulässige P…"
     }
   ],
-  "timestamp": "2026-10-20T10:45:59Z",
-  "data_changed_at": "2026-10-20T10:45:59Z",
-  "data_hash": "edffec607e677b29dfb6e9c1c49b83c4645765fd1e57f7df455b916b721f0d94",
+  "timestamp": "2026-10-21T10:58:05Z",
+  "data_changed_at": "2026-10-21T10:58:05Z",
+  "data_hash": "5029e22166fa3a5532abe1ee2caacae80f1c157338668773d2d63254cafd4d95",
   "counts": {
     "kommende": 42,
-    "aktuelle": 204,
+    "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 35
+    "news": 33
   },
-  "total": 246,
+  "total": 245,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3482,5 +3454,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-20T10:45:59Z"
+  "updated_at": "2026-10-21T10:58:05Z"
 }
