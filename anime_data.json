@@ -3409,20 +3409,6 @@
       "source": "anime2you.de",
       "published": "2026-09-22T11:40:12Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat einen neuen Regenschirm zum Mystery-Anime »The Apothecary Diaries« angekündigt, der ab sofort im AKIBA PASS SHOP vorbestellt werden…"
-    },
-    {
-      "title": "Disney+ entfernt weitere Streaming-Funktion in Deutschland",
-      "url": "https://www.anime2you.de/news/1052501/disney-entfernt-airplay-in-deutschland/",
-      "source": "anime2you.de",
-      "published": "2026-09-21T14:42:02Z",
-      "summary": "Disney+ hat in Deutschland eine weitere Funktion eingebüßt. Nachdem zuletzt bereits Google Cast entfernt wurde, steht mittlerweile auch AirPlay nicht mehr zur Verfügung. Wir fassen…"
-    },
-    {
-      "title": "Neue Acrylaufsteller und Badges zu »Witch Hat Atelier« vorgestellt",
-      "url": "https://www.anime2you.de/news/1047349/neue-witch-hat-atelier-acrylaufsteller-badges/",
-      "source": "anime2you.de",
-      "published": "2026-09-21T14:30:28Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zu »Witch Hat Atelier« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen…"
     }
   ],
   "timestamp": "2026-10-21T10:58:05Z",
@@ -3432,7 +3418,7 @@
     "kommende": 42,
     "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 33
+    "news": 31
   },
   "total": 245,
   "source": "anisearch.de",
@@ -3454,5 +3440,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-21T10:58:05Z"
+  "updated_at": "2026-10-22T10:56:53Z"
 }
