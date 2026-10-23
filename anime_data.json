@@ -170,19 +170,6 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
-      "id": 20293,
-      "title": "Reincarnated as a Dragon Hatchling",
-      "url": "https://www.anisearch.de/anime/20293,tensei-shitara-dragon-no-tamago-datta-saikyou-igai-mezasanee",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20293_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
       "id": 17546,
       "title": "The Detective Is Already Dead: Staffel 2",
       "url": "https://www.anisearch.de/anime/17546,tantei-wa-mou-shinde-iru-season-2",
@@ -1346,6 +1333,19 @@
       "title": "Reborn as a Vending Machine, I Now Wander the Dungeon: Staffel 3",
       "url": "https://www.anisearch.de/anime/20893,jidou-hanbaiki-ni-umarekawatta-ore-wa-meikyuu-o-samayou-3-ki",
       "image": "https://cdn.anisearch.de/images/anime/cover/20/20893_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-16T12:29:01Z",
+      "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20293,
+      "title": "Reincarnated as a Dragon Hatchling",
+      "url": "https://www.anisearch.de/anime/20293,tensei-shitara-dragon-no-tamago-datta-saikyou-igai-mezasanee",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20293_400.webp",
       "info": "TV-Serie, 12 (2026)",
       "year": 2026,
       "type": "TV-Serie",
@@ -3083,7 +3083,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-23T10:55:49Z"
     },
     {
       "id": 19507,
@@ -3395,30 +3396,16 @@
       "source": "anime2you.de",
       "published": "2026-09-24T14:55:00Z",
       "summary": "Der Streaming-Dienst Crunchyroll hat heute neue Details zum deutschen Kinostart des vierten »Madoka Magica«-Films enthüllt. Wir fassen zusammen. Kinostart im November 2026 Der Sequ…"
-    },
-    {
-      "title": "Deutscher Synchro-Trailer zu »YAIBA: Samurai Legend«",
-      "url": "https://www.anime2you.de/news/1052908/yaiba-samurai-legend-synchro-trailer/",
-      "source": "anime2you.de",
-      "published": "2026-09-22T13:52:36Z",
-      "summary": "Der Publisher peppermint anime hat heute einen deutschen Trailer zum Disc-Release von »YAIBA: Samurai Legend« veröffentlicht. Das Video findet ihr unten. Disc-Release ab Dezember 2…"
-    },
-    {
-      "title": "Offizieller Regenschirm zu »The Apothecary Diaries« angekündigt",
-      "url": "https://www.anime2you.de/news/1051393/the-apothecary-diaries-regenschirm/",
-      "source": "anime2you.de",
-      "published": "2026-09-22T11:40:12Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat einen neuen Regenschirm zum Mystery-Anime »The Apothecary Diaries« angekündigt, der ab sofort im AKIBA PASS SHOP vorbestellt werden…"
     }
   ],
-  "timestamp": "2026-10-21T10:58:05Z",
-  "data_changed_at": "2026-10-21T10:58:05Z",
-  "data_hash": "5029e22166fa3a5532abe1ee2caacae80f1c157338668773d2d63254cafd4d95",
+  "timestamp": "2026-10-23T10:55:49Z",
+  "data_changed_at": "2026-10-23T10:55:49Z",
+  "data_hash": "2ac4e5b15965b9a0dcb78dd89006e0dd850bdc6abc6f2bdae52cc23a799865d0",
   "counts": {
-    "kommende": 42,
-    "aktuelle": 203,
+    "kommende": 41,
+    "aktuelle": 204,
     "abgeschlossen": 0,
-    "news": 31
+    "news": 29
   },
   "total": 245,
   "source": "anisearch.de",
@@ -3440,5 +3427,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-22T10:56:53Z"
+  "updated_at": "2026-10-23T10:55:49Z"
 }
