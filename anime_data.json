@@ -53,19 +53,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 20704,
-      "title": "Die Tagebücher der Apothekerin: Staffel 3 - Cour 1",
-      "url": "https://www.anisearch.de/anime/20704,kusuriya-no-hitorigoto-2026",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20704_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 20857,
       "title": "Farming Life in Another World 2",
       "url": "https://www.anisearch.de/anime/20857,isekai-nonbiri-nouka-2",
@@ -859,6 +846,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20704,
+      "title": "Die Tagebücher der Apothekerin: Staffel 3 - Cour 1",
+      "url": "https://www.anisearch.de/anime/20704,kusuriya-no-hitorigoto-2026",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20704_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 18998,
@@ -2471,7 +2471,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-24T10:04:48Z"
     },
     {
       "id": 18808,
@@ -3195,6 +3196,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "ProSieben FUN zeigt »Akame ga KILL!« als Pay-TV-Premiere",
+      "url": "https://www.anime2you.de/news/1063292/prosieben-fun-zeigt-akame-ga-kill/",
+      "source": "anime2you.de",
+      "published": "2026-10-23T14:30:36Z",
+      "summary": "Der Pay-TV-Sender ProSieben FUN nimmt im nächsten Monat die Actionserie »Akame ga KILL!« mit deutscher Sprachfassung in sein Programm auf. Wir fassen zusammen. Ab November 2026 »Ak…"
+    },
+    {
+      "title": "ProSieben MAXX wiederholt sechste »My Hero Academia«-Staffel",
+      "url": "https://www.anime2you.de/news/1063329/my-hero-academia-staffel-6-prosieben-maxx-wiederholung/",
+      "source": "anime2you.de",
+      "published": "2026-10-23T14:00:54Z",
+      "summary": "Durch Einträge im Programmplan von ProSieben MAXX wurde bekannt, dass der Free-TV-Sender die sechste Staffel von »My Hero Academia« in wenigen Wochen erneut mit deutscher Sprachfas…"
+    },
+    {
       "title": "Crunchyroll nimmt drei Anime-Neuzugänge ins Programm + Synchro",
       "url": "https://www.anime2you.de/news/1062283/crunchyroll-your-letter-und-mehr/",
       "source": "anime2you.de",
@@ -3398,14 +3413,14 @@
       "summary": "Der Streaming-Dienst Crunchyroll hat heute neue Details zum deutschen Kinostart des vierten »Madoka Magica«-Films enthüllt. Wir fassen zusammen. Kinostart im November 2026 Der Sequ…"
     }
   ],
-  "timestamp": "2026-10-23T10:55:49Z",
-  "data_changed_at": "2026-10-23T10:55:49Z",
-  "data_hash": "2ac4e5b15965b9a0dcb78dd89006e0dd850bdc6abc6f2bdae52cc23a799865d0",
+  "timestamp": "2026-10-24T10:04:48Z",
+  "data_changed_at": "2026-10-24T10:04:48Z",
+  "data_hash": "83b3e2b7cc580ffb29bd259806772d44a6f1a10abf53db86aa15a739e8bac137",
   "counts": {
-    "kommende": 41,
-    "aktuelle": 204,
+    "kommende": 40,
+    "aktuelle": 205,
     "abgeschlossen": 0,
-    "news": 29
+    "news": 31
   },
   "total": 245,
   "source": "anisearch.de",
@@ -3427,5 +3442,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-23T10:55:49Z"
+  "updated_at": "2026-10-24T10:04:48Z"
 }
