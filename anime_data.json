@@ -1,19 +1,6 @@
 {
   "kommende": [
     {
-      "id": 21117,
-      "title": "A Wild Last Boss Appeared! Staffel 2",
-      "url": "https://www.anisearch.de/anime/21117,yasei-no-last-boss-ga-arawareta-dai-2-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21117_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 20477,
       "title": "Aoashi Staffel 2",
       "url": "https://www.anisearch.de/anime/20477,ao-ashi-dai-2-ki",
@@ -534,6 +521,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21117,
+      "title": "A Wild Last Boss Appeared! Staffel 2",
+      "url": "https://www.anisearch.de/anime/21117,yasei-no-last-boss-ga-arawareta-dai-2-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21117_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 20808,
@@ -2237,7 +2237,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-25T10:29:55Z"
     },
     {
       "id": 20255,
@@ -3196,6 +3197,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Zwei Synchro-Neuzugänge ab sofort auf Crunchyroll verfügbar",
+      "url": "https://www.anime2you.de/news/1063615/crunchyroll-apotheke-staffel-3-synchro-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-24T15:54:49Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm um zwei Anime-Neustarts auf Deutsch erweitert. Wir fassen zusammen. Zwei Neuzugänge auf Deutsch Ab sofort können die jeweils erst…"
+    },
+    {
       "title": "ProSieben FUN zeigt »Akame ga KILL!« als Pay-TV-Premiere",
       "url": "https://www.anime2you.de/news/1063292/prosieben-fun-zeigt-akame-ga-kill/",
       "source": "anime2you.de",
@@ -3404,21 +3412,14 @@
       "source": "anime2you.de",
       "published": "2026-09-26T13:14:48Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich sieben Minifiguren zu »Jujutsu Kaisen« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilde…"
-    },
-    {
-      "title": "Deutscher Kinostart des neuen »Madoka Magica«-Films + Poster",
-      "url": "https://www.anime2you.de/news/1053546/madoka-magica-film-deutscher-kinostart/",
-      "source": "anime2you.de",
-      "published": "2026-09-24T14:55:00Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat heute neue Details zum deutschen Kinostart des vierten »Madoka Magica«-Films enthüllt. Wir fassen zusammen. Kinostart im November 2026 Der Sequ…"
     }
   ],
-  "timestamp": "2026-10-24T10:04:48Z",
-  "data_changed_at": "2026-10-24T10:04:48Z",
-  "data_hash": "83b3e2b7cc580ffb29bd259806772d44a6f1a10abf53db86aa15a739e8bac137",
+  "timestamp": "2026-10-25T10:29:55Z",
+  "data_changed_at": "2026-10-25T10:29:55Z",
+  "data_hash": "9bac3d68deccd6f781854d85bbba42976162bea996ff1551adbd16406ab585eb",
   "counts": {
-    "kommende": 40,
-    "aktuelle": 205,
+    "kommende": 39,
+    "aktuelle": 206,
     "abgeschlossen": 0,
     "news": 31
   },
@@ -3442,5 +3443,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-24T10:04:48Z"
+  "updated_at": "2026-10-25T10:29:55Z"
 }
