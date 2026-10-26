@@ -1,19 +1,6 @@
 {
   "kommende": [
     {
-      "id": 20477,
-      "title": "Aoashi Staffel 2",
-      "url": "https://www.anisearch.de/anime/20477,ao-ashi-dai-2-ki",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20477_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 20716,
       "title": "Black Clover: Staffel 2",
       "url": "https://www.anisearch.de/anime/20716,black-clover-2nd-season",
@@ -562,6 +549,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 20477,
+      "title": "Aoashi Staffel 2",
+      "url": "https://www.anisearch.de/anime/20477,ao-ashi-dai-2-ki",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20477_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
+    },
+    {
       "id": 19993,
       "title": "As a Reincarnated Aristocrat, I’ll Use My Appraisal Skill to Rise in the World: Staffel 3",
       "url": "https://www.anisearch.de/anime/19993,tensei-kizoku-kantei-skill-de-nariagaru-dai-3-ki",
@@ -1106,6 +1106,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20463,
+      "title": "Meine ganz besondere Hochzeit: Special",
+      "url": "https://www.anisearch.de/anime/20463,watashi-no-shiawase-na-kekkon-2026",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20463_400.webp",
+      "info": "TV-Spezial, 3 (2026)",
+      "year": 2026,
+      "type": "TV-Spezial",
+      "episodes": 3,
+      "status": "aktuelle",
+      "first_seen": "2026-10-26T12:16:39Z",
+      "expires_at": "2027-10-26T12:16:39Z"
     },
     {
       "id": 19634,
@@ -2133,7 +2146,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-26T12:16:39Z"
     },
     {
       "id": 20372,
@@ -2198,7 +2212,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-26T12:16:39Z"
     },
     {
       "id": 19329,
@@ -3421,18 +3436,21 @@
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich sieben Minifiguren zu »Jujutsu Kaisen« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilde…"
     }
   ],
-  "timestamp": "2026-10-25T10:29:55Z",
-  "data_changed_at": "2026-10-25T10:29:55Z",
-  "data_hash": "9bac3d68deccd6f781854d85bbba42976162bea996ff1551adbd16406ab585eb",
+  "timestamp": "2026-10-26T12:16:39Z",
+  "data_changed_at": "2026-10-26T12:16:39Z",
+  "data_hash": "11c16126243360b65aaa35042737ce082fc623db8caaa060878e53248958bf01",
   "counts": {
-    "kommende": 39,
-    "aktuelle": 206,
+    "kommende": 38,
+    "aktuelle": 208,
     "abgeschlossen": 0,
     "news": 32
   },
-  "total": 245,
+  "total": 246,
   "source": "anisearch.de",
   "sources": [
+    "anilist",
+    "anisearch",
+    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3447,5 +3465,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-26T10:20:11Z"
+  "updated_at": "2026-10-26T12:16:39Z"
 }
