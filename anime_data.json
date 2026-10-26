@@ -3197,6 +3197,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 44/2026",
+      "url": "https://www.anime2you.de/news/1063795/anime-tv-programm-44-2026/",
+      "source": "anime2you.de",
+      "published": "2026-10-25T18:50:05Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
       "title": "Zwei Synchro-Neuzugänge ab sofort auf Crunchyroll verfügbar",
       "url": "https://www.anime2you.de/news/1063615/crunchyroll-apotheke-staffel-3-synchro-und-mehr/",
       "source": "anime2you.de",
@@ -3421,14 +3428,11 @@
     "kommende": 39,
     "aktuelle": 206,
     "abgeschlossen": 0,
-    "news": 31
+    "news": 32
   },
   "total": 245,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3443,5 +3447,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-25T10:29:55Z"
+  "updated_at": "2026-10-26T10:20:11Z"
 }
