@@ -118,19 +118,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 21084,
-      "title": "Psyren",
-      "url": "https://www.anisearch.de/anime/21084,psyren",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21084_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 17546,
       "title": "The Detective Is Already Dead: Staffel 2",
       "url": "https://www.anisearch.de/anime/17546,tantei-wa-mou-shinde-iru-season-2",
@@ -1303,6 +1290,19 @@
       "expires_at": "2027-09-20T10:23:42Z"
     },
     {
+      "id": 21084,
+      "title": "Psyren",
+      "url": "https://www.anisearch.de/anime/21084,psyren",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21084_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
+    },
+    {
       "id": 21332,
       "title": "Ranma 1/2: Staffel 3",
       "url": "https://www.anisearch.de/anime/21332,ranma-1-2-dai-3-ki",
@@ -2120,7 +2120,8 @@
       "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-27T11:22:04Z"
     },
     {
       "id": 16886,
@@ -3212,6 +3213,27 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "»Rascal Does Not Dream«-Finalfilm startet heute im Kino",
+      "url": "https://www.anime2you.de/news/1064211/rascal-does-not-dream-of-a-dear-friend-startet-heute/",
+      "source": "anime2you.de",
+      "published": "2026-10-27T08:30:47Z",
+      "summary": "Mit »Rascal Does Not Dream of a Dear Friend« startet heute das große Finale der »Rascal Does Not Dream«-Reihe (jap.: »Seishun Buta Yarou Series«) in den deutschen Kinos. Wir fassen…"
+    },
+    {
+      "title": "Crunchyroll ergänzt zwei weitere Anime-Neuzugänge auf Deutsch",
+      "url": "https://www.anime2you.de/news/1064193/crunchyroll-psyren-synchro-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-26T19:10:13Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm kürzlich erneut mit zwei Anime-Neustarts auf Deutsch erweitert. Wir fassen zusammen. Zwei Neuzugänge auf Deutsch Bei den aktuelle…"
+    },
+    {
+      "title": "Crunchyroll bringt besonderes »Black Clover«-Erlebnis nach Deutschland",
+      "url": "https://www.anime2you.de/news/1064175/crunchyroll-black-clover-erlebnis-in-berlin/",
+      "source": "anime2you.de",
+      "published": "2026-10-26T18:08:29Z",
+      "summary": "Crunchyroll veranstaltet bereits in wenigen Tagen ein besonderes »Fan-Erlebnis« zum Start der zweiten Staffel von »Black Clover«. Wir fassen zusammen. Kostenloser Eintritt Der soge…"
+    },
+    {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 44/2026",
       "url": "https://www.anime2you.de/news/1063795/anime-tv-programm-44-2026/",
       "source": "anime2you.de",
@@ -3427,23 +3449,16 @@
       "source": "anime2you.de",
       "published": "2026-09-27T19:22:16Z",
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
-    },
-    {
-      "title": "Sieben neue Minifiguren zu »Jujutsu Kaisen« vorgestellt",
-      "url": "https://www.anime2you.de/news/1048803/sieben-neue-jujutsu-kaisen-minifiguren/",
-      "source": "anime2you.de",
-      "published": "2026-09-26T13:14:48Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich sieben Minifiguren zu »Jujutsu Kaisen« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilde…"
     }
   ],
-  "timestamp": "2026-10-26T12:16:39Z",
-  "data_changed_at": "2026-10-26T12:16:39Z",
-  "data_hash": "11c16126243360b65aaa35042737ce082fc623db8caaa060878e53248958bf01",
+  "timestamp": "2026-10-27T11:22:04Z",
+  "data_changed_at": "2026-10-27T11:22:04Z",
+  "data_hash": "a7a329e1362ff9bd665218b3ca7ab39eac44a15a52202b17fb954a374d55239b",
   "counts": {
-    "kommende": 38,
-    "aktuelle": 208,
+    "kommende": 37,
+    "aktuelle": 209,
     "abgeschlossen": 0,
-    "news": 32
+    "news": 34
   },
   "total": 246,
   "source": "anisearch.de",
@@ -3465,5 +3480,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-26T12:16:39Z"
+  "updated_at": "2026-10-27T11:22:04Z"
 }
