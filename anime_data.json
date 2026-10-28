@@ -3213,6 +3213,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Neuer Teaser zum deutschen Kinostart von »Witch on the Holy Night«",
+      "url": "https://www.anime2you.de/news/1064788/witch-on-the-holy-night-kinostart-neuer-teaser/",
+      "source": "anime2you.de",
+      "published": "2026-10-27T17:10:22Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat heute einen neuen Teaser zum deutschen Kinostart des Films »Witch on the Holy Night« (jap.: »Mahoutsukai no Yoru«) veröffentlicht. Das Video fi…"
+    },
+    {
+      "title": "»Umamusume: Pretty Derby – Beginning of a New Era« kommt ins Kino",
+      "url": "https://www.anime2you.de/news/1064556/umamusume-pretty-derby-film-im-kino/",
+      "source": "anime2you.de",
+      "published": "2026-10-27T12:57:56Z",
+      "summary": "Der neueste Anime-Kinofilm aus dem »Umamusume: Pretty Derby«-Franchise wird demnächst durch den Filmverleih 24 Bilder auch in Deutschland auf der großen Leinwand zu sehen sein. Wir…"
+    },
+    {
       "title": "»Rascal Does Not Dream«-Finalfilm startet heute im Kino",
       "url": "https://www.anime2you.de/news/1064211/rascal-does-not-dream-of-a-dear-friend-startet-heute/",
       "source": "anime2you.de",
@@ -3435,20 +3449,6 @@
       "source": "anime2you.de",
       "published": "2026-09-29T13:25:06Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich elf neue Plüschfiguren zu »One Piece« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilder…"
-    },
-    {
-      "title": "Crunchyroll ergänzt drei Anime-Neuzugänge + Synchro",
-      "url": "https://www.anime2you.de/news/1054611/crunchyroll-overgeared-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-09-27T19:26:10Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm an diesem Wochenende mit drei Anime-Neuzugängen erweitert. Wir fassen zusammen. Drei Anime-Neuzugänge Ab sofort stehen die jeweil…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 40/2026",
-      "url": "https://www.anime2you.de/news/1054606/anime-tv-programm-40-2026/",
-      "source": "anime2you.de",
-      "published": "2026-09-27T19:22:16Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
   "timestamp": "2026-10-27T11:22:04Z",
@@ -3480,5 +3480,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-27T11:22:04Z"
+  "updated_at": "2026-10-28T11:55:50Z"
 }
