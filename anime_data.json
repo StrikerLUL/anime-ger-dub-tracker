@@ -118,19 +118,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 17546,
-      "title": "The Detective Is Already Dead: Staffel 2",
-      "url": "https://www.anisearch.de/anime/17546,tantei-wa-mou-shinde-iru-season-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17546_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 21575,
       "title": "The Iceblade Sorcerer Shall Rule the World Staffel 2",
       "url": "https://www.anisearch.de/anime/21575,hyouken-no-majutsushi-ga-sekai-o-suberu-ii",
@@ -1056,6 +1043,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 19448,
+      "title": "Magic Knight Rayearth (2026)",
+      "url": "https://www.anisearch.de/anime/19448,mahou-kishi-rayearth-2026",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19448_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-10-29T12:03:37Z",
+      "expires_at": "2027-10-29T12:03:37Z"
+    },
+    {
       "id": 19962,
       "title": "Magilumiere Inc. Staffel 2",
       "url": "https://www.anisearch.de/anime/19962,kabushikigaisha-magilumiere-dai-2-ki",
@@ -1574,6 +1574,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 17546,
+      "title": "The Detective Is Already Dead: Staffel 2",
+      "url": "https://www.anisearch.de/anime/17546,tantei-wa-mou-shinde-iru-season-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/17/17546_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 19292,
@@ -2801,7 +2814,8 @@
       "episodes": 11,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-29T12:03:37Z"
     },
     {
       "id": 19797,
@@ -3207,11 +3221,19 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-29T12:03:37Z"
     }
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Zwei Anime-Neuzugänge auf Deutsch bei Crunchyroll",
+      "url": "https://www.anime2you.de/news/1065119/crunchyroll-detective-is-already-dead-synchro-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-28T16:19:29Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Anime-Programm heute um zwei weitere Serien mit deutscher Synchronisation erweitert. Wir fassen zusammen. Zwei Neuzugänge auf Deutsch Bei…"
+    },
     {
       "title": "Neuer Teaser zum deutschen Kinostart von »Witch on the Holy Night«",
       "url": "https://www.anime2you.de/news/1064788/witch-on-the-holy-night-kinostart-neuer-teaser/",
@@ -3451,16 +3473,16 @@
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich elf neue Plüschfiguren zu »One Piece« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilder…"
     }
   ],
-  "timestamp": "2026-10-27T11:22:04Z",
-  "data_changed_at": "2026-10-27T11:22:04Z",
-  "data_hash": "a7a329e1362ff9bd665218b3ca7ab39eac44a15a52202b17fb954a374d55239b",
+  "timestamp": "2026-10-29T12:03:37Z",
+  "data_changed_at": "2026-10-29T12:03:37Z",
+  "data_hash": "80013a0b4f533d111752d62863b29bbec3773fe4004c65047bc326956357aea9",
   "counts": {
-    "kommende": 37,
-    "aktuelle": 209,
+    "kommende": 36,
+    "aktuelle": 211,
     "abgeschlossen": 0,
-    "news": 34
+    "news": 35
   },
-  "total": 246,
+  "total": 247,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3480,5 +3502,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-28T11:55:50Z"
+  "updated_at": "2026-10-29T12:03:37Z"
 }
