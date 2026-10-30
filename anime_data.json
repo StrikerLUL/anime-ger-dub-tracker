@@ -3464,13 +3464,6 @@
       "source": "anime2you.de",
       "published": "2026-10-03T19:15:59Z",
       "summary": "Der japanische Synchronsprecher Kenjiro Tsuda, der insbesondere als Kento Nanami aus »Jujutsu Kaisen« bekannt ist, hat in einem Rechtsstreit über KI-generierte Stimmen eine wichtig…"
-    },
-    {
-      "title": "Elf neue Plüschfiguren zu »One Piece« angekündigt",
-      "url": "https://www.anime2you.de/news/1051229/elf-neue-one-piece-plueschfiguren/",
-      "source": "anime2you.de",
-      "published": "2026-09-29T13:25:06Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich elf neue Plüschfiguren zu »One Piece« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste Bilder…"
     }
   ],
   "timestamp": "2026-10-29T12:03:37Z",
@@ -3480,7 +3473,7 @@
     "kommende": 36,
     "aktuelle": 211,
     "abgeschlossen": 0,
-    "news": 35
+    "news": 34
   },
   "total": 247,
   "source": "anisearch.de",
@@ -3502,5 +3495,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-29T12:03:37Z"
+  "updated_at": "2026-10-30T11:57:05Z"
 }
