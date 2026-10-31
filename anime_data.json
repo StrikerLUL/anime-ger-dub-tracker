@@ -40,19 +40,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 21161,
-      "title": "Firefly Wedding",
-      "url": "https://www.anisearch.de/anime/21161,hotaru-no-yomeiri",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21161_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 20953,
       "title": "Gals Can’t Be Kind to Otaku!?",
       "url": "https://www.anisearch.de/anime/20953,otaku-ni-yasashii-gal-wa-inai",
@@ -872,6 +859,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21161,
+      "title": "Firefly Wedding",
+      "url": "https://www.anisearch.de/anime/21161,hotaru-no-yomeiri",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21161_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 18686,
@@ -2293,7 +2293,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-10-31T11:30:42Z"
     },
     {
       "id": 19399,
@@ -3466,12 +3467,12 @@
       "summary": "Der japanische Synchronsprecher Kenjiro Tsuda, der insbesondere als Kento Nanami aus »Jujutsu Kaisen« bekannt ist, hat in einem Rechtsstreit über KI-generierte Stimmen eine wichtig…"
     }
   ],
-  "timestamp": "2026-10-29T12:03:37Z",
-  "data_changed_at": "2026-10-29T12:03:37Z",
-  "data_hash": "80013a0b4f533d111752d62863b29bbec3773fe4004c65047bc326956357aea9",
+  "timestamp": "2026-10-31T11:30:42Z",
+  "data_changed_at": "2026-10-31T11:30:42Z",
+  "data_hash": "2afe0d589bfb3a4e6255f03524716d21b9299127259e11ac94eeb82f6da30425",
   "counts": {
-    "kommende": 36,
-    "aktuelle": 211,
+    "kommende": 35,
+    "aktuelle": 212,
     "abgeschlossen": 0,
     "news": 34
   },
@@ -3495,5 +3496,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-30T11:57:05Z"
+  "updated_at": "2026-10-31T11:30:42Z"
 }
