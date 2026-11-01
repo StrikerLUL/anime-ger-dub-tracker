@@ -105,19 +105,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 21575,
-      "title": "The Iceblade Sorcerer Shall Rule the World Staffel 2",
-      "url": "https://www.anisearch.de/anime/21575,hyouken-no-majutsushi-ga-sekai-o-suberu-ii",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21575_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 19429,
       "title": "The Irregular at Magic High School: The Movie - Yotsuba Succession Arc",
       "url": "https://www.anisearch.de/anime/19429,gekijouban-mahouka-koukou-no-rettousei-yotsuba-keishou-hen",
@@ -129,19 +116,6 @@
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 21216,
-      "title": "The Vermilion Mask",
-      "url": "https://www.anisearch.de/anime/21216,shuiro-no-kamen",
-      "image": "https://cdn.anisearch.de/images/anime/cover/21/21216_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 16972,
@@ -1188,7 +1162,7 @@
     {
       "id": 21070,
       "title": "Mononoke the Movie: Chapter III - The Curse of the Serpent",
-      "url": "https://www.anisearch.de/anime/21070,gekijouban-mononoke-dai-san-shou-hebigami",
+      "url": "https://www.anisearch.de/anime/21070,gekijouban-mononoke-hebigami",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21070_400.webp",
       "info": "Film, 1 (2026)",
       "year": 2026,
@@ -1602,6 +1576,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 21575,
+      "title": "The Iceblade Sorcerer Shall Rule the World Staffel 2",
+      "url": "https://www.anisearch.de/anime/21575,hyouken-no-majutsushi-ga-sekai-o-suberu-ii",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21575_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
+    },
+    {
       "id": 20149,
       "title": "The Ramparts of Ice",
       "url": "https://www.anisearch.de/anime/20149,koori-no-jouheki",
@@ -1639,6 +1626,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21216,
+      "title": "The Vermilion Mask",
+      "url": "https://www.anisearch.de/anime/21216,shuiro-no-kamen",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21216_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 19669,
@@ -2960,7 +2960,8 @@
       "episodes": 12,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-01T12:28:06Z"
     },
     {
       "id": 19834,
@@ -3025,7 +3026,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-01T12:28:06Z"
     },
     {
       "id": 19708,
@@ -3228,6 +3230,34 @@
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Drei weitere Anime-Serien ab sofort auf Deutsch bei Crunchyroll",
+      "url": "https://www.anime2you.de/news/1066100/crunchyroll-firefly-wedding-synchro-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-10-31T17:22:02Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Anime-Programm in den letzten Tagen um drei neue Serien mit deutscher Synchronisation erweitert. Wir fassen zusammen. Drei Neuzugänge auf…"
+    },
+    {
+      "title": "»Dragon Ball Super: Beerus« bringt Stimmen verstorbener Sprecher zurück",
+      "url": "https://www.anime2you.de/news/1064844/dragon-ball-super-beerus-bringt-verstorbene-stimmen-zurueck/",
+      "source": "anime2you.de",
+      "published": "2026-10-31T16:21:48Z",
+      "summary": "Bei der Produktion von »Dragon Ball Super: Beerus« haben sich die Verantwortlichen dazu entschieden, die Stimmen mehrerer bereits verstorbener Synchronsprecher beizubehalten. Wie d…"
+    },
+    {
+      "title": "ProSieben MAXX wiederholt zweite »Eminence in Shadow«-Staffel",
+      "url": "https://www.anime2you.de/news/1066006/prosieben-maxx-eminence-in-shadow-staffel-2-wiederholung/",
+      "source": "anime2you.de",
+      "published": "2026-10-31T16:17:03Z",
+      "summary": "Der Free-TV-Sender ProSieben MAXX zeigt die zweite Staffel von »The Eminence in Shadow« (jap.: »Kage no Jitsuryokusha ni Naritakute!«) in wenigen Wochen erneut mit deutscher Sprach…"
+    },
+    {
+      "title": "IMAX-Fassung von »Godzilla Minus Zero« kommt nach Deutschland + Trailer",
+      "url": "https://www.anime2you.de/news/1066064/godzilla-minus-zero-imax-fassung-in-deutschland/",
+      "source": "anime2you.de",
+      "published": "2026-10-31T14:39:18Z",
+      "summary": "Die IMAX Corporation gab vor Kurzem bekannt, dass der kommende Film »Godzilla Minus Zero« auch in Deutschland im IMAX-Format auf der großen Leinwand gezeigt wird. Wir fassen nachfo…"
+    },
     {
       "title": "Zwei Anime-Neuzugänge auf Deutsch bei Crunchyroll",
       "url": "https://www.anime2you.de/news/1065119/crunchyroll-detective-is-already-dead-synchro-und-mehr/",
@@ -3467,14 +3497,14 @@
       "summary": "Der japanische Synchronsprecher Kenjiro Tsuda, der insbesondere als Kento Nanami aus »Jujutsu Kaisen« bekannt ist, hat in einem Rechtsstreit über KI-generierte Stimmen eine wichtig…"
     }
   ],
-  "timestamp": "2026-10-31T11:30:42Z",
-  "data_changed_at": "2026-10-31T11:30:42Z",
-  "data_hash": "2afe0d589bfb3a4e6255f03524716d21b9299127259e11ac94eeb82f6da30425",
+  "timestamp": "2026-11-01T12:28:06Z",
+  "data_changed_at": "2026-11-01T12:28:06Z",
+  "data_hash": "a0c8504a298f2b1597d32d8936822dcd80f4e4415122d3157b4ae13c10d2eafd",
   "counts": {
-    "kommende": 35,
-    "aktuelle": 212,
+    "kommende": 33,
+    "aktuelle": 214,
     "abgeschlossen": 0,
-    "news": 34
+    "news": 38
   },
   "total": 247,
   "source": "anisearch.de",
@@ -3496,5 +3526,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-10-31T11:30:42Z"
+  "updated_at": "2026-11-01T12:28:06Z"
 }
