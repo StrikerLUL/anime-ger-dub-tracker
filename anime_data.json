@@ -3231,6 +3231,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 45/2026",
+      "url": "https://www.anime2you.de/news/1066723/anime-tv-programm-45-2026/",
+      "source": "anime2you.de",
+      "published": "2026-11-01T23:15:18Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
+      "title": "ProSieben MAXX zeigt »Wandering Witch: Elainas Reise« als TV-Premiere",
+      "url": "https://www.anime2you.de/news/1066039/prosieben-maxx-zeigt-wandering-witch-elainas-reise/",
+      "source": "anime2you.de",
+      "published": "2026-11-01T19:08:13Z",
+      "summary": "Im Dezember 2026 kehrt die »Anime Night« zu ProSieben MAXX zurück. Passend dazu hat der Free-TV-Sender die deutsche TV-Premiere von »Wandering Witch: Elainas Reise« angekündigt. Wi…"
+    },
+    {
       "title": "Drei weitere Anime-Serien ab sofort auf Deutsch bei Crunchyroll",
       "url": "https://www.anime2you.de/news/1066100/crunchyroll-firefly-wedding-synchro-und-mehr/",
       "source": "anime2you.de",
@@ -3504,14 +3518,11 @@
     "kommende": 33,
     "aktuelle": 214,
     "abgeschlossen": 0,
-    "news": 38
+    "news": 40
   },
   "total": 247,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3526,5 +3537,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-01T12:28:06Z"
+  "updated_at": "2026-11-02T12:42:00Z"
 }
