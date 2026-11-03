@@ -1862,20 +1862,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19542,
-      "title": "Blue Exorcist: The Blue Night Saga",
-      "url": "https://www.anisearch.de/anime/19542,ao-no-exorcist-yosuga-hen",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19542_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-20T10:45:59Z"
-    },
-    {
       "id": 17925,
       "title": "Bullet/Bullet",
       "url": "https://www.anisearch.de/anime/17925,bullet-bullet",
@@ -2858,20 +2844,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19152,
-      "title": "Solo Leveling: Arise from the Shadow",
-      "url": "https://www.anisearch.de/anime/19152,ore-dake-level-up-na-ken-arise-from-the-shadow",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19152_400.webp",
-      "info": "TV-Serie, 13 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 13,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-20T10:45:59Z"
-    },
-    {
       "id": 19327,
       "title": "Spy × Family: Staffel 3",
       "url": "https://www.anisearch.de/anime/19327,spy-x-family-season-3",
@@ -3474,39 +3446,18 @@
       "source": "anime2you.de",
       "published": "2026-10-04T15:30:14Z",
       "summary": "Die Synchronsprecher von »The Apothecary Diaries« haben kurz vor dem Start der dritten Staffel über die Arbeit an den neuen Episoden gesprochen. Dabei verrieten Aoi Yuki und Tatsum…"
-    },
-    {
-      "title": "Prime Video ergänzt drei Anime-Neuzugänge auf Deutsch",
-      "url": "https://www.anime2you.de/news/1057464/prime-video-marronniers-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-04T11:15:50Z",
-      "summary": "Der Streaming-Dienst Prime Video hat sein Programm um drei Anime-Titel erweitert. Wir fassen nachfolgend zusammen. Drei Anime-Neuzugänge Bei den Neuzugängen handelt es sich um die…"
-    },
-    {
-      "title": "Filmkunstmesse: »Cocoon« gewinnt deutschen Jugendjury-Preis",
-      "url": "https://www.anime2you.de/news/1056252/cocoon-filmkunstmesse-jugendjury-preis/",
-      "source": "anime2you.de",
-      "published": "2026-10-04T11:00:33Z",
-      "summary": "Der Anime-Film »Cocoon – A Summer of Girlhood« wurde auf der Filmkunstmesse Leipzig 2026 von der Jugendjury ausgezeichnet. Wir fassen zusammen. Deutscher Kinostart für 2027 geplant…"
-    },
-    {
-      "title": "»Jujutsu Kaisen«-Star erzielt wichtiges Urteil gegen KI-Stimmen",
-      "url": "https://www.anime2you.de/news/1055960/jujutsu-kaisen-star-urteil-gegen-ki-stimmen/",
-      "source": "anime2you.de",
-      "published": "2026-10-03T19:15:59Z",
-      "summary": "Der japanische Synchronsprecher Kenjiro Tsuda, der insbesondere als Kento Nanami aus »Jujutsu Kaisen« bekannt ist, hat in einem Rechtsstreit über KI-generierte Stimmen eine wichtig…"
     }
   ],
-  "timestamp": "2026-11-02T14:25:55Z",
-  "data_changed_at": "2026-11-02T14:25:55Z",
-  "data_hash": "b86a27abd598d828c2b2a793f4b694bbc988923cba3aa9c2de103e5a26211c2b",
+  "timestamp": "2026-11-03T13:24:25Z",
+  "data_changed_at": "2026-11-03T13:24:25Z",
+  "data_hash": "0a2126a45f7fa592725721695ca5dabac09d5b1e8438c48c3474798d88039ab4",
   "counts": {
     "kommende": 33,
-    "aktuelle": 213,
+    "aktuelle": 211,
     "abgeschlossen": 0,
-    "news": 40
+    "news": 37
   },
-  "total": 246,
+  "total": 244,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3526,5 +3477,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-02T14:25:55Z"
+  "updated_at": "2026-11-03T13:24:25Z"
 }
