@@ -245,7 +245,8 @@
       "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-04T13:35:40Z"
     },
     {
       "id": 17380,
@@ -3425,27 +3426,6 @@
       "source": "anime2you.de",
       "published": "2026-10-05T16:28:15Z",
       "summary": "Der Streaming-Dienst Netflix hat heute die deutsche Sprachfassung der dritten Staffel von »Ranma 1/2« nachgereicht. Wir fassen zusammen. Erste Episode auf Deutsch Die Auftaktepisod…"
-    },
-    {
-      "title": "Crunchyroll erweitert Anime-Katalog um sechs Neuzugänge + Synchro",
-      "url": "https://www.anime2you.de/news/1057488/crunchyroll-reborn-as-a-space-mercenary-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-04T16:35:21Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm heute mit sechs weiteren Neuzugängen aufgestockt. Wir fassen nachfolgend zusammen. Sechs Anime-Neuzugänge Zu den heutigen Anime-N…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 41/2026",
-      "url": "https://www.anime2you.de/news/1057497/anime-tv-programm-41-2026/",
-      "source": "anime2you.de",
-      "published": "2026-10-04T15:36:29Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
-    },
-    {
-      "title": "Maomao-Sprecherin spricht über unangenehme »Apothecary Diaries«-Aufnahme",
-      "url": "https://www.anime2you.de/news/1056195/maomao-sprecherin-unangenehme-apothecary-diaries-aufnahme/",
-      "source": "anime2you.de",
-      "published": "2026-10-04T15:30:14Z",
-      "summary": "Die Synchronsprecher von »The Apothecary Diaries« haben kurz vor dem Start der dritten Staffel über die Arbeit an den neuen Episoden gesprochen. Dabei verrieten Aoi Yuki und Tatsum…"
     }
   ],
   "timestamp": "2026-11-03T13:24:25Z",
@@ -3455,7 +3435,7 @@
     "kommende": 33,
     "aktuelle": 211,
     "abgeschlossen": 0,
-    "news": 37
+    "news": 34
   },
   "total": 244,
   "source": "anisearch.de",
@@ -3477,5 +3457,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-03T13:24:25Z"
+  "updated_at": "2026-11-04T13:35:40Z"
 }
