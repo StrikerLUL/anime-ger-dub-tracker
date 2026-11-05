@@ -3190,6 +3190,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Zwei Anime-Neuzugänge ab sofort auf Deutsch bei Disney+",
+      "url": "https://www.anime2you.de/news/1067193/disney-plus-honey-lemon-soda-und-mehr-verfuegbar/",
+      "source": "anime2you.de",
+      "published": "2026-11-04T16:22:53Z",
+      "summary": "Der Streaming-Dienst Disney+ hat sein Anime-Programm in den letzten Tagen mit zwei weiteren Neuzugängen aufgestockt. Wir fassen die Details zusammen. Zwei Anime-Neuzugänge Zu den n…"
+    },
+    {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 45/2026",
       "url": "https://www.anime2you.de/news/1066723/anime-tv-programm-45-2026/",
       "source": "anime2you.de",
@@ -3419,13 +3426,6 @@
       "source": "anime2you.de",
       "published": "2026-10-08T14:15:31Z",
       "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man den Film zur Anime-Adaption von »The Apothecary Diaries« hierzulande im Rahmen einer Kooperation mit Sony Pictures Ente…"
-    },
-    {
-      "title": "Netflix reicht deutsche Synchro der dritten »Ranma 1/2«-Staffel nach",
-      "url": "https://www.anime2you.de/news/1057709/netflix-ranma-12-staffel-3-deutsche-synchro/",
-      "source": "anime2you.de",
-      "published": "2026-10-05T16:28:15Z",
-      "summary": "Der Streaming-Dienst Netflix hat heute die deutsche Sprachfassung der dritten Staffel von »Ranma 1/2« nachgereicht. Wir fassen zusammen. Erste Episode auf Deutsch Die Auftaktepisod…"
     }
   ],
   "timestamp": "2026-11-03T13:24:25Z",
@@ -3457,5 +3457,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-04T13:35:40Z"
+  "updated_at": "2026-11-05T13:48:59Z"
 }
