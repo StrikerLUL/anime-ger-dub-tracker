@@ -3081,20 +3081,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19454,
-      "title": "Unnamed Memory (Staffel 2)",
-      "url": "https://www.anisearch.de/anime/19454,unnamed-memory-act-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19454_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-23T10:55:49Z"
-    },
-    {
       "id": 19507,
       "title": "Vom Landei zum Schwertheiligen",
       "url": "https://www.anisearch.de/anime/19507,katainaka-no-ossan-kensei-ni-naru",
@@ -3189,6 +3175,27 @@
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Deutscher Trailer zu »There’s No Freaking Way I’ll Be Your Lover! Unless…«",
+      "url": "https://www.anime2you.de/news/1068225/theres-no-freaking-way-ill-be-your-lover-unless-synchro-trailer/",
+      "source": "anime2you.de",
+      "published": "2026-11-05T18:33:47Z",
+      "summary": "In wenigen Tagen bringt KSM Anime die Romance-Serie »There’s No Freaking Way I’ll Be Your Lover! Unless…« auf Blu-ray in den Handel. Passend dazu hat der Publisher nun einen deutsc…"
+    },
+    {
+      "title": "»Der Held ohne Klasse« stürmt die Netflix-Seriencharts",
+      "url": "https://www.anime2you.de/news/1068167/der-held-ohne-klasse-stuermt-netflix-seriencharts/",
+      "source": "anime2you.de",
+      "published": "2026-11-05T17:52:32Z",
+      "summary": "Der Fantasy-Anime »Der Held ohne Klasse: Der Aufstieg eines Talentlosen« erfreut sich auf Netflix großer Beliebtheit und ist seit einigen Tagen regelmäßig in den deutschen Top 10 d…"
+    },
+    {
+      "title": "Neue »ANIME HITS«-CD erobert die deutschen Charts mit Top-Platzierung",
+      "url": "https://www.anime2you.de/news/1068140/neue-anime-hits-cd-erobert-deutsche-charts/",
+      "source": "anime2you.de",
+      "published": "2026-11-05T17:15:27Z",
+      "summary": "Die im letzten Monat erschienene neue »ANIME HITS«-CD hat es in die deutschen Albumcharts geschafft und konnte sich dabei auf Anhieb eine der vorderen Platzierungen sichern. Wir fa…"
+    },
     {
       "title": "Zwei Anime-Neuzugänge ab sofort auf Deutsch bei Disney+",
       "url": "https://www.anime2you.de/news/1067193/disney-plus-honey-lemon-soda-und-mehr-verfuegbar/",
@@ -3428,16 +3435,16 @@
       "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man den Film zur Anime-Adaption von »The Apothecary Diaries« hierzulande im Rahmen einer Kooperation mit Sony Pictures Ente…"
     }
   ],
-  "timestamp": "2026-11-03T13:24:25Z",
-  "data_changed_at": "2026-11-03T13:24:25Z",
-  "data_hash": "0a2126a45f7fa592725721695ca5dabac09d5b1e8438c48c3474798d88039ab4",
+  "timestamp": "2026-11-06T13:33:14Z",
+  "data_changed_at": "2026-11-06T13:33:14Z",
+  "data_hash": "eb63dfdb529a6ec30632820ae48db0e8d652102083131f13bceda7fbce8329e8",
   "counts": {
     "kommende": 33,
-    "aktuelle": 211,
+    "aktuelle": 210,
     "abgeschlossen": 0,
-    "news": 34
+    "news": 37
   },
-  "total": 244,
+  "total": 243,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3457,5 +3464,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-05T13:48:59Z"
+  "updated_at": "2026-11-06T13:33:14Z"
 }
