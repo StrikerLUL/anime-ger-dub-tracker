@@ -771,6 +771,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 21051,
+      "title": "Devils’ Crest",
+      "url": "https://www.anisearch.de/anime/21051,demons-crest",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21051_400.webp",
+      "info": "Web, 12 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-11-07T12:13:44Z",
+      "expires_at": "2027-11-07T12:13:44Z"
+    },
+    {
       "id": 21585,
       "title": "Die sieben Ritter des Königreichs der Marronniers",
       "url": "https://www.anisearch.de/anime/21585,marronnier-oukoku-no-shichinin-no-kishi",
@@ -1555,10 +1568,10 @@
       "title": "The Detective Is Already Dead: Staffel 2",
       "url": "https://www.anisearch.de/anime/17546,tantei-wa-mou-shinde-iru-season-2",
       "image": "https://cdn.anisearch.de/images/anime/cover/17/17546_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
-      "episodes": 12,
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-20T10:23:42Z",
       "expires_at": "2027-09-20T10:23:42Z"
@@ -2479,20 +2492,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19470,
-      "title": "Magic Maker: How to Make Magic in Another World",
-      "url": "https://www.anisearch.de/anime/19470,magic-maker-isekai-mahou-no-tsukurikata",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19470_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-24T10:04:48Z"
-    },
-    {
       "id": 18808,
       "title": "Make a Girl",
       "url": "https://www.anisearch.de/anime/18808,make-a-girl",
@@ -2503,7 +2502,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-07T12:13:44Z"
     },
     {
       "id": 19601,
@@ -3176,6 +3176,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Zwei weitere Anime-Neuzugänge kostenlos auf Deutsch bei Pluto TV",
+      "url": "https://www.anime2you.de/news/1068729/pluto-tv-dr-stone-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-11-06T19:29:45Z",
+      "summary": "Der kostenlose Streaming-Dienst Pluto TV hat sein Anime-Angebot erneut mit zwei Neuzugängen aufgestockt. Wir fassen alle Details zusammen. Zwei Anime-Neuzugänge Nachdem Pluto TV be…"
+    },
+    {
+      "title": "Prime Video nimmt zwei Anime-Serien auf Deutsch ins Programm",
+      "url": "https://www.anime2you.de/news/1068059/prime-video-devils-crest-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-11-06T14:45:14Z",
+      "summary": "Der Streaming-Dienst Prime Video hat sein Anime-Angebot in den letzten Tagen um zwei neue Titel erweitert. Wir fassen die Details zusammen. Zwei Anime-Neuzugänge Die 13-teilige Ser…"
+    },
+    {
       "title": "Deutscher Trailer zu »There’s No Freaking Way I’ll Be Your Lover! Unless…«",
       "url": "https://www.anime2you.de/news/1068225/theres-no-freaking-way-ill-be-your-lover-unless-synchro-trailer/",
       "source": "anime2you.de",
@@ -3435,14 +3449,14 @@
       "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man den Film zur Anime-Adaption von »The Apothecary Diaries« hierzulande im Rahmen einer Kooperation mit Sony Pictures Ente…"
     }
   ],
-  "timestamp": "2026-11-06T13:33:14Z",
-  "data_changed_at": "2026-11-06T13:33:14Z",
-  "data_hash": "eb63dfdb529a6ec30632820ae48db0e8d652102083131f13bceda7fbce8329e8",
+  "timestamp": "2026-11-07T12:13:44Z",
+  "data_changed_at": "2026-11-07T12:13:44Z",
+  "data_hash": "0e84417096817db1c69b53dcc5d29955f075f74fe822826588a5e96473ec738a",
   "counts": {
     "kommende": 33,
     "aktuelle": 210,
     "abgeschlossen": 0,
-    "news": 37
+    "news": 39
   },
   "total": 243,
   "source": "anisearch.de",
@@ -3464,5 +3478,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-06T13:33:14Z"
+  "updated_at": "2026-11-07T12:13:44Z"
 }
