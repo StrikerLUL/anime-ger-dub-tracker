@@ -1,19 +1,6 @@
 {
   "kommende": [
     {
-      "id": 20716,
-      "title": "Black Clover: Staffel 2",
-      "url": "https://www.anisearch.de/anime/20716,black-clover-2nd-season",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20716_400.webp",
-      "info": "TV-Serie, 12 (2026)",
-      "year": 2026,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-20T10:23:42Z",
-      "expires_at": "2027-09-20T10:23:42Z"
-    },
-    {
       "id": 19132,
       "title": "Demon Slave: Staffel 2",
       "url": "https://www.anisearch.de/anime/19132,mato-seihei-no-slave-2",
@@ -587,6 +574,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20716,
+      "title": "Black Clover: Staffel 2",
+      "url": "https://www.anisearch.de/anime/20716,black-clover-2nd-season",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20716_400.webp",
+      "info": "TV-Serie, 12 (2026)",
+      "year": 2026,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-20T10:23:42Z",
+      "expires_at": "2027-09-20T10:23:42Z"
     },
     {
       "id": 20259,
@@ -2256,20 +2256,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19090,
-      "title": "Honey Lemon Soda",
-      "url": "https://www.anisearch.de/anime/19090,honey-lemon-soda",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19090_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-25T10:29:55Z"
-    },
-    {
       "id": 20255,
       "title": "Hände weg, Kotesashi-kun",
       "url": "https://www.anisearch.de/anime/20255,sawaranaide-kotesashi-kun",
@@ -3026,7 +3012,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-08T12:34:01Z"
     },
     {
       "id": 18521,
@@ -3175,6 +3162,20 @@
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Deutscher Synchronsprecher will Netflix wegen KI-Trainings verklagen",
+      "url": "https://www.anime2you.de/news/1067729/deutscher-synchronsprecher-will-netflix-verklagen/",
+      "source": "anime2you.de",
+      "published": "2026-11-07T17:32:17Z",
+      "summary": "Der Streit um den Einsatz künstlicher Intelligenz bei deutschen Synchronproduktionen spitzt sich weiter zu. Ein bekannter Synchronsprecher will nun rechtlich gegen Netflix vorgehen…"
+    },
+    {
+      "title": "Zwei Anime-Neuzugänge ab sofort auf Crunchyroll + Synchro",
+      "url": "https://www.anime2you.de/news/1068951/crunchyroll-black-clover-second-season-synchro-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-11-07T17:28:23Z",
+      "summary": "Der Streaming-Dienst Crunchyroll hat sein Angebot in den letzten Tagen um zwei Neuzugänge erweitert. Wir fassen die Details zusammen. Zwei neue Inhalte verfügbar Zu den neuesten Er…"
+    },
     {
       "title": "Zwei weitere Anime-Neuzugänge kostenlos auf Deutsch bei Pluto TV",
       "url": "https://www.anime2you.de/news/1068729/pluto-tv-dr-stone-und-mehr/",
@@ -3440,25 +3441,18 @@
       "source": "anime2you.de",
       "published": "2026-10-11T23:30:33Z",
       "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
-    },
-    {
-      "title": "Crunchyroll bringt »Apothecary Diaries«-Film in die deutschen Kinos",
-      "url": "https://www.anime2you.de/news/1058311/crunchyroll-apothecary-diaries-film-im-kino/",
-      "source": "anime2you.de",
-      "published": "2026-10-08T14:15:31Z",
-      "summary": "Der Streaming-Dienst Crunchyroll gab heute bekannt, dass man den Film zur Anime-Adaption von »The Apothecary Diaries« hierzulande im Rahmen einer Kooperation mit Sony Pictures Ente…"
     }
   ],
-  "timestamp": "2026-11-07T12:13:44Z",
-  "data_changed_at": "2026-11-07T12:13:44Z",
-  "data_hash": "0e84417096817db1c69b53dcc5d29955f075f74fe822826588a5e96473ec738a",
+  "timestamp": "2026-11-08T12:34:01Z",
+  "data_changed_at": "2026-11-08T12:34:01Z",
+  "data_hash": "08d69f8809b1118536d49c75aa9f95fc7fa6af53a0a26c393f0adce176999665",
   "counts": {
-    "kommende": 33,
+    "kommende": 32,
     "aktuelle": 210,
     "abgeschlossen": 0,
-    "news": 39
+    "news": 40
   },
-  "total": 243,
+  "total": 242,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3478,5 +3472,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-07T12:13:44Z"
+  "updated_at": "2026-11-08T12:34:01Z"
 }
