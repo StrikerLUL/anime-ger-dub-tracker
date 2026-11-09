@@ -2150,20 +2150,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 18974,
-      "title": "Dr. Stone: Science Future",
-      "url": "https://www.anisearch.de/anime/18974,dr-stone-science-future",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18974_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-26T12:16:39Z"
-    },
-    {
       "id": 20372,
       "title": "Dr. Stone: Science Future - Cour 2",
       "url": "https://www.anisearch.de/anime/20372,dr-stone-science-future-2025",
@@ -2214,20 +2200,6 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 19000,
-      "title": "From Bureaucrat to Villainess: Dad’s Been Reincarnated!",
-      "url": "https://www.anisearch.de/anime/19000,akuyaku-reijou-tensei-oji-san",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19000_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-26T12:16:39Z"
     },
     {
       "id": 19329,
@@ -3443,18 +3415,21 @@
       "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit fünf Simulcast-Neustarts und einer neuen deutschen Synchronfassung aufgestockt. Wir fassen zusammen. Sechs Anime-Neuzugänge Z…"
     }
   ],
-  "timestamp": "2026-11-08T12:34:01Z",
-  "data_changed_at": "2026-11-08T12:34:01Z",
-  "data_hash": "08d69f8809b1118536d49c75aa9f95fc7fa6af53a0a26c393f0adce176999665",
+  "timestamp": "2026-11-09T14:51:37Z",
+  "data_changed_at": "2026-11-09T14:51:37Z",
+  "data_hash": "14e0ea0af36a8276560f783f70c553ac2133aa81d572cf28787290c64aced5ab",
   "counts": {
     "kommende": 32,
-    "aktuelle": 210,
+    "aktuelle": 208,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 242,
+  "total": 240,
   "source": "anisearch.de",
   "sources": [
+    "anilist",
+    "anisearch",
+    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3469,5 +3444,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-09T13:07:49Z"
+  "updated_at": "2026-11-09T14:51:37Z"
 }
