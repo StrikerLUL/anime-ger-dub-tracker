@@ -3163,6 +3163,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 46/2026",
+      "url": "https://www.anime2you.de/news/1069143/anime-tv-programm-46-2026/",
+      "source": "anime2you.de",
+      "published": "2026-11-08T17:45:01Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
       "title": "Deutscher Synchronsprecher will Netflix wegen KI-Trainings verklagen",
       "url": "https://www.anime2you.de/news/1067729/deutscher-synchronsprecher-will-netflix-verklagen/",
       "source": "anime2you.de",
@@ -3434,13 +3441,6 @@
       "source": "anime2you.de",
       "published": "2026-10-13T18:24:56Z",
       "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit fünf Simulcast-Neustarts und einer neuen deutschen Synchronfassung aufgestockt. Wir fassen zusammen. Sechs Anime-Neuzugänge Z…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 42/2026",
-      "url": "https://www.anime2you.de/news/1060030/anime-tv-programm-42-2026/",
-      "source": "anime2you.de",
-      "published": "2026-10-11T23:30:33Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
   "timestamp": "2026-11-08T12:34:01Z",
@@ -3455,9 +3455,6 @@
   "total": 242,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3472,5 +3469,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-08T12:34:01Z"
+  "updated_at": "2026-11-09T13:07:49Z"
 }
