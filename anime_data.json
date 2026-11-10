@@ -775,10 +775,10 @@
       "title": "Devils’ Crest",
       "url": "https://www.anisearch.de/anime/21051,demons-crest",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21051_400.webp",
-      "info": "Web, 12 (2026)",
+      "info": "Web, 24 (2026)",
       "year": 2026,
       "type": "Web",
-      "episodes": 12,
+      "episodes": 24,
       "status": "aktuelle",
       "first_seen": "2026-11-07T12:13:44Z",
       "expires_at": "2027-11-07T12:13:44Z"
@@ -2123,20 +2123,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19138,
-      "title": "Die Tagebücher der Apothekerin: Staffel 2",
-      "url": "https://www.anisearch.de/anime/19138,kusuriya-no-hitorigoto-2025",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19138_400.webp",
-      "info": "TV-Serie, 24 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 24,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-27T11:22:04Z"
-    },
-    {
       "id": 16886,
       "title": "Disney Twisted-Wonderland: Die Serie - Episode of Heartslabyul",
       "url": "https://www.anisearch.de/anime/16886,disney-twisted-wonderland-the-animation-episode-of-heartslabyul",
@@ -3415,16 +3401,16 @@
       "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit fünf Simulcast-Neustarts und einer neuen deutschen Synchronfassung aufgestockt. Wir fassen zusammen. Sechs Anime-Neuzugänge Z…"
     }
   ],
-  "timestamp": "2026-11-09T14:51:37Z",
-  "data_changed_at": "2026-11-09T14:51:37Z",
-  "data_hash": "14e0ea0af36a8276560f783f70c553ac2133aa81d572cf28787290c64aced5ab",
+  "timestamp": "2026-11-10T14:03:52Z",
+  "data_changed_at": "2026-11-10T14:03:52Z",
+  "data_hash": "cc4f3fafe41c50e0899c2d0d7c7a89f9adca7ec02a8cc9e64849b95578253f6e",
   "counts": {
     "kommende": 32,
-    "aktuelle": 208,
+    "aktuelle": 207,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 240,
+  "total": 239,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3444,5 +3430,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-09T14:51:37Z"
+  "updated_at": "2026-11-10T14:03:52Z"
 }
