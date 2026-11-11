@@ -196,6 +196,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 20905,
+      "title": "There’s No Freaking Way I’ll Be Your Lover! Unless… (Episoden 13-17)",
+      "url": "https://www.anisearch.de/anime/20905,watashi-ga-koibito-ni-nareru-wake-nai-jan-muri-muri-muri-ja-nakatta-next-shine",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20905_400.webp",
+      "info": "Film, 1 (2025)",
+      "year": 2025,
+      "type": "Film",
+      "episodes": 1,
+      "status": "kommende",
+      "first_seen": "2026-11-11T13:20:52Z",
+      "expires_at": "2027-11-11T13:20:52Z"
+    },
+    {
       "id": 19712,
       "title": "Yaiba: Samurai Legend",
       "url": "https://www.anisearch.de/anime/19712,shin-samurai-den-yaiba",
@@ -3121,6 +3134,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Pluto TV nimmt zwei Anime-Neuzugänge auf Deutsch ins Programm",
+      "url": "https://www.anime2you.de/news/1069625/pluto-tv-shield-hero-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-11-10T15:02:23Z",
+      "summary": "Der kostenlose Streaming-Dienst Pluto TV hat sein Anime-Angebot erneut mit zwei Neuzugängen erweitert. Wir fassen alle Details zusammen. Zwei Anime-Neuzugänge Nachdem Pluto TV erst…"
+    },
+    {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 46/2026",
       "url": "https://www.anime2you.de/news/1069143/anime-tv-programm-46-2026/",
       "source": "anime2you.de",
@@ -3392,25 +3412,18 @@
       "source": "anime2you.de",
       "published": "2026-10-14T17:27:12Z",
       "summary": "Der Streaming-Dienst Disney+ hat sein Anime-Programm mit zwei weiteren Neuheiten aufgestockt. Wir fassen zusammen. Zwei Anime-Neuzugänge Zu den aktuellen Anime-Neuzugängen gehört d…"
-    },
-    {
-      "title": "Crunchyroll nimmt sechs Anime-Neuzugänge ins Programm + Synchro",
-      "url": "https://www.anime2you.de/news/1060717/crunchyroll-full-clearing-another-world-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-13T18:24:56Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit fünf Simulcast-Neustarts und einer neuen deutschen Synchronfassung aufgestockt. Wir fassen zusammen. Sechs Anime-Neuzugänge Z…"
     }
   ],
-  "timestamp": "2026-11-10T14:03:52Z",
-  "data_changed_at": "2026-11-10T14:03:52Z",
-  "data_hash": "cc4f3fafe41c50e0899c2d0d7c7a89f9adca7ec02a8cc9e64849b95578253f6e",
+  "timestamp": "2026-11-11T13:20:52Z",
+  "data_changed_at": "2026-11-11T13:20:52Z",
+  "data_hash": "1f6d530d6c30d850be3341d44fa0361395fce0a9a0c48451447e06cb28a6e28f",
   "counts": {
-    "kommende": 32,
+    "kommende": 33,
     "aktuelle": 207,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 239,
+  "total": 240,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3430,5 +3443,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-10T14:03:52Z"
+  "updated_at": "2026-11-11T13:20:52Z"
 }
