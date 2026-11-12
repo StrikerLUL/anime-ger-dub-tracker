@@ -2749,20 +2749,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19307,
-      "title": "Sakamoto Days",
-      "url": "https://www.anisearch.de/anime/19307,sakamoto-days",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19307_400.webp",
-      "info": "TV-Serie, 11 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 11,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-29T12:03:37Z"
-    },
-    {
       "id": 19797,
       "title": "Sakamoto Days: Teil 2",
       "url": "https://www.anisearch.de/anime/19797,sakamoto-days-2025",
@@ -3115,24 +3101,17 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 19079,
-      "title": "Übel Blatt",
-      "url": "https://www.anisearch.de/anime/19079,uebel-blatt",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19079_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-29T12:03:37Z"
     }
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Blu-ray-Termin der zweiten »Demon Slave«-Staffel + Vorbestellung",
+      "url": "https://www.anime2you.de/news/1070298/demon-slave-staffel-blu-ray-termin/",
+      "source": "anime2you.de",
+      "published": "2026-11-11T17:04:52Z",
+      "summary": "Der Publisher peppermint anime hat heute die ersten Details zum deutschen Disc-Release der zweiten Staffel von »Demon Slave: The Chained Soldier« (jap.: »Mato Seihei no Slave«) ver…"
+    },
     {
       "title": "Pluto TV nimmt zwei Anime-Neuzugänge auf Deutsch ins Programm",
       "url": "https://www.anime2you.de/news/1069625/pluto-tv-shield-hero-und-mehr/",
@@ -3405,25 +3384,18 @@
       "source": "anime2you.de",
       "published": "2026-10-14T17:30:58Z",
       "summary": "Wie verbreitet sind Anime und Manga in Deutschland – und wie viel Geld geben Fans dafür aus? Eine neue Studie untersucht die Nutzung und Konsumausgaben der 16- bis 45-Jährigen. Wir…"
-    },
-    {
-      "title": "Disney+ ergänzt einen neuen Simulcast und eine neue Synchro",
-      "url": "https://www.anime2you.de/news/1060828/disney-plus-dragon-ball-super-beerus-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-14T17:27:12Z",
-      "summary": "Der Streaming-Dienst Disney+ hat sein Anime-Programm mit zwei weiteren Neuheiten aufgestockt. Wir fassen zusammen. Zwei Anime-Neuzugänge Zu den aktuellen Anime-Neuzugängen gehört d…"
     }
   ],
-  "timestamp": "2026-11-11T13:20:52Z",
-  "data_changed_at": "2026-11-11T13:20:52Z",
-  "data_hash": "1f6d530d6c30d850be3341d44fa0361395fce0a9a0c48451447e06cb28a6e28f",
+  "timestamp": "2026-11-12T14:25:30Z",
+  "data_changed_at": "2026-11-12T14:25:30Z",
+  "data_hash": "6f5a0e3f7413ea667296b8a6a6be8f9d2f3ed66b2297604a0193e4a6b9e247ca",
   "counts": {
     "kommende": 33,
-    "aktuelle": 207,
+    "aktuelle": 205,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 240,
+  "total": 238,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3443,5 +3415,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-11T13:20:52Z"
+  "updated_at": "2026-11-12T14:25:30Z"
 }
