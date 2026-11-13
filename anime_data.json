@@ -3106,6 +3106,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Japan Post stoppt Versand von Onlinebestellungen nach Deutschland",
+      "url": "https://www.anime2you.de/news/1070362/japan-post-stoppt-versand-nach-deutschland/",
+      "source": "anime2you.de",
+      "published": "2026-11-12T17:15:57Z",
+      "summary": "Wer Anime-Merchandise, Manga oder andere Produkte direkt aus Japan bestellt, muss sich derzeit auf Einschränkungen beim Versand einstellen. Grund dafür sind neue Regelungen des jap…"
+    },
+    {
       "title": "Blu-ray-Termin der zweiten »Demon Slave«-Staffel + Vorbestellung",
       "url": "https://www.anime2you.de/news/1070298/demon-slave-staffel-blu-ray-termin/",
       "source": "anime2you.de",
@@ -3377,13 +3384,6 @@
       "source": "anime2you.de",
       "published": "2026-10-15T16:12:45Z",
       "summary": "Der Streaming-Dienst Netflix hat heute einen deutschen Synchro-Trailer zur zweiten »Cyberpunk: Edgerunners«-Serie veröffentlicht. Das Video findet ihr unten. Release im Oktober 202…"
-    },
-    {
-      "title": "Studie: Anime und Manga sind in Deutschland ein Milliardenmarkt",
-      "url": "https://www.anime2you.de/news/1058631/anime-manga-milliardenmarkt-in-deutschland/",
-      "source": "anime2you.de",
-      "published": "2026-10-14T17:30:58Z",
-      "summary": "Wie verbreitet sind Anime und Manga in Deutschland – und wie viel Geld geben Fans dafür aus? Eine neue Studie untersucht die Nutzung und Konsumausgaben der 16- bis 45-Jährigen. Wir…"
     }
   ],
   "timestamp": "2026-11-12T14:25:30Z",
@@ -3415,5 +3415,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-12T14:25:30Z"
+  "updated_at": "2026-11-13T13:44:33Z"
 }
