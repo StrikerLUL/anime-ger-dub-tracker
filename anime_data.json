@@ -41,7 +41,7 @@
     },
     {
       "id": 19877,
-      "title": "Hell Mode: The Hardcore Gamer Dominates in Another World with Garbage Balancing",
+      "title": "Hell Mode: Unterforderter Hardcore-Gamer findet die ultimative Challenge in einer anderen Welt",
       "url": "https://www.anisearch.de/anime/19877,hell-mode-yarikomi-suki-no-gamer-wa-hai-settei-no-isekai-de-musou-suru",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19877_400.webp",
       "info": "TV-Serie, 12 (2026)",
@@ -886,6 +886,19 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 21751,
+      "title": "Fool Night",
+      "url": "https://www.anisearch.de/anime/21751,fool-night",
+      "image": "https://cdn.anisearch.de/images/anime/cover/21/21751_400.webp",
+      "info": "Web, 12 (2026)",
+      "year": 2026,
+      "type": "Web",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-11-14T12:48:46Z",
+      "expires_at": "2027-11-14T12:48:46Z"
     },
     {
       "id": 19635,
@@ -2185,7 +2198,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-14T12:48:46Z"
     },
     {
       "id": 17386,
@@ -2238,20 +2252,6 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 18544,
-      "title": "I May Be a Guild Receptionist, but I’ll Solo Any Boss to Clock Out on Time",
-      "url": "https://www.anisearch.de/anime/18544,guild-no-uketsukejou-desu-ga-zangyou-wa-iya-na-no-de-boss-o-solo-toubatsu-shiyou-to-omoimasu",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18544_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-10-31T11:30:42Z"
     },
     {
       "id": 19399,
@@ -3106,6 +3106,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "polyband verliert Lizenz: Weltweites Aus für »Pokémon« auf DVD",
+      "url": "https://www.anime2you.de/news/1071426/polyband-verliert-pokemon-lizenz/",
+      "source": "anime2you.de",
+      "published": "2026-11-13T17:00:04Z",
+      "summary": "Die Veröffentlichung von »Pokémon« auf DVD und Blu-ray steht offenbar vor dem Aus. Laut dem deutschen Disc-Publisher polyband anime plant The Pokémon Company, künftig weltweit kein…"
+    },
+    {
+      "title": "Prime Video ergänzt zwei Anime-Neuzugänge auf Deutsch",
+      "url": "https://www.anime2you.de/news/1071396/prime-video-code-geass-akito-the-exiled-und-mehr/",
+      "source": "anime2you.de",
+      "published": "2026-11-13T15:51:49Z",
+      "summary": "Der Streaming-Dienst Prime Video hat sein Anime-Angebot heute um zwei neue Titel erweitert. Wir fassen alle Details zusammen. Zwei neue Anime-Titel verfügbar Zu den aktuellen Neuzu…"
+    },
+    {
       "title": "Japan Post stoppt Versand von Onlinebestellungen nach Deutschland",
       "url": "https://www.anime2you.de/news/1070362/japan-post-stoppt-versand-nach-deutschland/",
       "source": "anime2you.de",
@@ -3370,25 +3384,11 @@
       "source": "anime2you.de",
       "published": "2026-10-16T16:00:10Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zum Action-Anime »Fairy Tail« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir…"
-    },
-    {
-      "title": "Neue »Apothecary Diaries«-Plüschfigur von Jinshi vorgestellt",
-      "url": "https://www.anime2you.de/news/1056535/apothecary-diaries-plueschfigur-jinshi/",
-      "source": "anime2you.de",
-      "published": "2026-10-16T14:40:00Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat einen neuen Plüschanhänger zum Mystery-Anime »The Apothecary Diaries« angekündigt, der ab sofort im AKIBA PASS SHOP vorbestellt werd…"
-    },
-    {
-      "title": "Deutscher Synchro-Trailer zu »Cyberpunk: Edgerunners II« + Visual",
-      "url": "https://www.anime2you.de/news/1060922/cyberpunk-edgerunners-2-synchro-trailer/",
-      "source": "anime2you.de",
-      "published": "2026-10-15T16:12:45Z",
-      "summary": "Der Streaming-Dienst Netflix hat heute einen deutschen Synchro-Trailer zur zweiten »Cyberpunk: Edgerunners«-Serie veröffentlicht. Das Video findet ihr unten. Release im Oktober 202…"
     }
   ],
-  "timestamp": "2026-11-12T14:25:30Z",
-  "data_changed_at": "2026-11-12T14:25:30Z",
-  "data_hash": "6f5a0e3f7413ea667296b8a6a6be8f9d2f3ed66b2297604a0193e4a6b9e247ca",
+  "timestamp": "2026-11-14T12:48:46Z",
+  "data_changed_at": "2026-11-14T12:48:46Z",
+  "data_hash": "8155be1049fc4e0b05ca849e957d96db1446e7b15195bade8a25330a48ca76b9",
   "counts": {
     "kommende": 33,
     "aktuelle": 205,
@@ -3415,5 +3415,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-13T13:44:33Z"
+  "updated_at": "2026-11-14T12:48:46Z"
 }
