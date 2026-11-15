@@ -2866,20 +2866,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 18980,
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You (Staffel 2)",
-      "url": "https://www.anisearch.de/anime/18980,kimi-no-koto-ga-dai-dai-dai-dai-daisuki-na-100-nin-no-kanojo-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18980_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-11-01T12:28:06Z"
-    },
-    {
       "id": 19834,
       "title": "The After-Dinner Mysteries",
       "url": "https://www.anisearch.de/anime/19834,nazotoki-wa-dinner-no-ato-de",
@@ -2930,20 +2916,6 @@
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
       "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 17656,
-      "title": "The Rose of Versailles",
-      "url": "https://www.anisearch.de/anime/17656,versailles-no-bara-2025",
-      "image": "https://cdn.anisearch.de/images/anime/cover/17/17656_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film",
-      "episodes": 1,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-11-01T12:28:06Z"
     },
     {
       "id": 19708,
@@ -3105,6 +3077,13 @@
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Netflix bringt »KPop Demon Hunters«-Konzerte nach Deutschland + Termine",
+      "url": "https://www.anime2you.de/news/1071559/kpop-demon-hunters-konzerte-deutschland/",
+      "source": "anime2you.de",
+      "published": "2026-11-14T17:24:41Z",
+      "summary": "Netflix und AEG Presents gaben kürzlich die Termine der »KPop Demon Hunters Golden World Tour« bekannt. Die Konzertreise führt im nächsten Jahr auch nach Deutschland, Österreich un…"
+    },
     {
       "title": "polyband verliert Lizenz: Weltweites Aus für »Pokémon« auf DVD",
       "url": "https://www.anime2you.de/news/1071426/polyband-verliert-pokemon-lizenz/",
@@ -3377,25 +3356,18 @@
       "source": "anime2you.de",
       "published": "2026-10-17T16:20:14Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Schlüsselanhänger zu »Detektiv Conan« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen alle…"
-    },
-    {
-      "title": "»Fairy Tail« erhält neue Anhänger, Tragetasche und XXL-Mauspad",
-      "url": "https://www.anime2you.de/news/1061130/neues-fairy-tail-merchandise/",
-      "source": "anime2you.de",
-      "published": "2026-10-16T16:00:10Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zum Action-Anime »Fairy Tail« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir…"
     }
   ],
-  "timestamp": "2026-11-14T12:48:46Z",
-  "data_changed_at": "2026-11-14T12:48:46Z",
-  "data_hash": "8155be1049fc4e0b05ca849e957d96db1446e7b15195bade8a25330a48ca76b9",
+  "timestamp": "2026-11-15T13:16:11Z",
+  "data_changed_at": "2026-11-15T13:16:11Z",
+  "data_hash": "90461a0f502107d82d9e89b70fd1f7b6102f1ddeb9e0a211499f2926fa7c0d48",
   "counts": {
     "kommende": 33,
-    "aktuelle": 205,
+    "aktuelle": 203,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 238,
+  "total": 236,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3415,5 +3387,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-14T12:48:46Z"
+  "updated_at": "2026-11-15T13:16:11Z"
 }
