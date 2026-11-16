@@ -3078,6 +3078,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 47/2026",
+      "url": "https://www.anime2you.de/news/1072136/anime-tv-programm-47-2026/",
+      "source": "anime2you.de",
+      "published": "2026-11-15T21:00:23Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
       "title": "Netflix bringt »KPop Demon Hunters«-Konzerte nach Deutschland + Termine",
       "url": "https://www.anime2you.de/news/1071559/kpop-demon-hunters-konzerte-deutschland/",
       "source": "anime2you.de",
@@ -3349,13 +3356,6 @@
       "source": "anime2you.de",
       "published": "2026-10-18T13:00:27Z",
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich eine neue Plüschfigur der Protagonistin aus »Frieren: Beyond Journey’s End« angekündigt, die ab sofort im AKIBA PASS SHOP e…"
-    },
-    {
-      "title": "Zwei neue Acrylanhänger zu »Detektiv Conan« angekündigt",
-      "url": "https://www.anime2you.de/news/1061186/zwei-detektiv-conan-acrylanhaenger/",
-      "source": "anime2you.de",
-      "published": "2026-10-17T16:20:14Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Schlüsselanhänger zu »Detektiv Conan« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fassen alle…"
     }
   ],
   "timestamp": "2026-11-15T13:16:11Z",
@@ -3370,9 +3370,6 @@
   "total": 236,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3387,5 +3384,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-15T13:16:11Z"
+  "updated_at": "2026-11-16T12:58:39Z"
 }
