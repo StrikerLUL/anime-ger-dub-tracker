@@ -170,6 +170,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 20638,
+      "title": "Isekai Quartet 3",
+      "url": "https://www.anisearch.de/anime/20638,isekai-quartet-3",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20638_400.webp",
+      "info": "TV-Serie, 11 (2025)",
+      "year": 2025,
+      "type": "TV-Serie",
+      "episodes": 11,
+      "status": "kommende",
+      "first_seen": "2026-11-16T14:27:33Z",
+      "expires_at": "2027-11-16T14:27:33Z"
+    },
+    {
       "id": 19045,
       "title": "Nukitashi: Welcome to Love Island!",
       "url": "https://www.anisearch.de/anime/19045,nukitashi-the-animation",
@@ -3358,18 +3371,21 @@
       "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich eine neue Plüschfigur der Protagonistin aus »Frieren: Beyond Journey’s End« angekündigt, die ab sofort im AKIBA PASS SHOP e…"
     }
   ],
-  "timestamp": "2026-11-15T13:16:11Z",
-  "data_changed_at": "2026-11-15T13:16:11Z",
-  "data_hash": "90461a0f502107d82d9e89b70fd1f7b6102f1ddeb9e0a211499f2926fa7c0d48",
+  "timestamp": "2026-11-16T14:27:33Z",
+  "data_changed_at": "2026-11-16T14:27:33Z",
+  "data_hash": "26204589c1b92e49036f684dad2b8e93bea42773ab8e6500e1be17d51a45806e",
   "counts": {
-    "kommende": 33,
+    "kommende": 34,
     "aktuelle": 203,
     "abgeschlossen": 0,
     "news": 40
   },
-  "total": 236,
+  "total": 237,
   "source": "anisearch.de",
   "sources": [
+    "anilist",
+    "anisearch",
+    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3384,5 +3400,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-16T12:58:39Z"
+  "updated_at": "2026-11-16T14:27:33Z"
 }
