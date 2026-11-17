@@ -3091,6 +3091,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Netflix ersetzt Originalsongs in deutscher »KPop Demon Hunters«-Fassung",
+      "url": "https://www.anime2you.de/news/1072174/netflix-ersetzt-kpop-demon-hunters-originalsongs/",
+      "source": "anime2you.de",
+      "published": "2026-11-16T16:17:39Z",
+      "summary": "Der Streaming-Dienst Netflix hat die deutsche Synchronfassung des erfolgreichen Animationsfilms »KPop Demon Hunters« nachträglich überarbeitet. Die Songs sind ab sofort auf Deutsch…"
+    },
+    {
       "title": "TV-Guide: Anime im deutschen Fernsehen in KW 47/2026",
       "url": "https://www.anime2you.de/news/1072136/anime-tv-programm-47-2026/",
       "source": "anime2you.de",
@@ -3355,20 +3362,6 @@
       "source": "anime2you.de",
       "published": "2026-10-18T18:33:18Z",
       "summary": "Durch Einträge im Programmplan von ProSieben FUN wurde bekannt, dass der Pay-TV-Sender die Fantasy-Serie »Magical Girl Special Ops Asuka« in wenigen Wochen erneut mit deutscher Ver…"
-    },
-    {
-      "title": "AniMoon kündigt neue XXL-Acrylfigur zu »Goblin Slayer« an",
-      "url": "https://www.anime2you.de/news/1061538/animoon-goblin-slayer-xxl-acrylfigur/",
-      "source": "anime2you.de",
-      "published": "2026-10-18T13:05:04Z",
-      "summary": "Das deutsche Unternehmen AniMoon Publishing hat vor Kurzem eine neue Acrylfigur zum Fantasy-Anime »Goblin Slayer« vorgestellt. Wir fassen zusammen. Ab sofort erhältlich Die neue XX…"
-    },
-    {
-      "title": "Neue Plüschfigur der »Frieren«-Protagonistin angekündigt",
-      "url": "https://www.anime2you.de/news/1061247/frieren-protagonistin-sakami-plueschfigur/",
-      "source": "anime2you.de",
-      "published": "2026-10-18T13:00:27Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich eine neue Plüschfigur der Protagonistin aus »Frieren: Beyond Journey’s End« angekündigt, die ab sofort im AKIBA PASS SHOP e…"
     }
   ],
   "timestamp": "2026-11-16T14:27:33Z",
@@ -3378,7 +3371,7 @@
     "kommende": 34,
     "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 40
+    "news": 39
   },
   "total": 237,
   "source": "anisearch.de",
@@ -3400,5 +3393,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-16T14:27:33Z"
+  "updated_at": "2026-11-17T15:18:46Z"
 }
