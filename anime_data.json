@@ -248,20 +248,6 @@
       "expires_at": "2027-10-16T10:26:35Z"
     },
     {
-      "id": 19244,
-      "title": "Promise of Wizard",
-      "url": "https://www.anisearch.de/anime/19244,mahou-tsukai-no-yakusoku",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19244_400.webp",
-      "info": "TV-Serie, 12 (2024)",
-      "year": 2024,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-11-04T13:35:40Z"
-    },
-    {
       "id": 17380,
       "title": "Kubo Won’t Let Me Be Invisible",
       "url": "https://www.anisearch.de/anime/17380,kubo-san-wa-mob-o-yurusanai",
@@ -1659,10 +1645,10 @@
       "title": "The Ramparts of Ice: Staffel 2",
       "url": "https://www.anisearch.de/anime/21791,koori-no-jouheki-dai-2-ki",
       "image": "https://cdn.anisearch.de/images/anime/cover/21/21791_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
-      "episodes": 12,
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-09-28T12:34:21Z",
       "expires_at": "2027-09-28T12:34:21Z"
@@ -1737,10 +1723,10 @@
       "title": "Tokyo Revengers: War of the Three Titans",
       "url": "https://www.anisearch.de/anime/19353,tokyo-revengers-santen-sensou-hen",
       "image": "https://cdn.anisearch.de/images/anime/cover/19/19353_400.webp",
-      "info": "TV-Serie, 12 (2026)",
+      "info": "TV-Serie, 13 (2026)",
       "year": 2026,
       "type": "TV-Serie",
-      "episodes": 12,
+      "episodes": 13,
       "status": "aktuelle",
       "first_seen": "2026-10-03T10:55:26Z",
       "expires_at": "2027-10-03T10:55:26Z"
@@ -3341,39 +3327,18 @@
       "source": "anime2you.de",
       "published": "2026-10-19T15:05:03Z",
       "summary": "Die unerlaubte Nachahmung menschlicher Stimmen durch künstliche Intelligenz (KI) sorgt seit geraumer Zeit für Kritik. Nun hat sich eine der bekanntesten japanischen Anime-Synchrons…"
-    },
-    {
-      "title": "Zehn neue Minifiguren zu »Lord of Mysteries« vorgestellt",
-      "url": "https://www.anime2you.de/news/1058725/zehn-lord-of-mysteries-minifiguren/",
-      "source": "anime2you.de",
-      "published": "2026-10-19T10:20:54Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat kürzlich zehn neue Minifiguren zu »Lord of Mysteries« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erste…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 43/2026",
-      "url": "https://www.anime2you.de/news/1062070/anime-tv-programm-43-2026/",
-      "source": "anime2you.de",
-      "published": "2026-10-18T21:35:56Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
-    },
-    {
-      "title": "ProSieben FUN wiederholt »Magical Girl Special Ops Asuka«",
-      "url": "https://www.anime2you.de/news/1062104/prosieben-fun-magical-girl-special-ops-asuka-wiederholung/",
-      "source": "anime2you.de",
-      "published": "2026-10-18T18:33:18Z",
-      "summary": "Durch Einträge im Programmplan von ProSieben FUN wurde bekannt, dass der Pay-TV-Sender die Fantasy-Serie »Magical Girl Special Ops Asuka« in wenigen Wochen erneut mit deutscher Ver…"
     }
   ],
-  "timestamp": "2026-11-16T14:27:33Z",
-  "data_changed_at": "2026-11-16T14:27:33Z",
-  "data_hash": "26204589c1b92e49036f684dad2b8e93bea42773ab8e6500e1be17d51a45806e",
+  "timestamp": "2026-11-18T14:54:32Z",
+  "data_changed_at": "2026-11-18T14:54:32Z",
+  "data_hash": "99d15a507bcaf5b7fa9a210bfcf68e222b962187685ba5627cf90a13e62266b9",
   "counts": {
-    "kommende": 34,
+    "kommende": 33,
     "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 39
+    "news": 36
   },
-  "total": 237,
+  "total": 236,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3393,5 +3358,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-17T15:18:46Z"
+  "updated_at": "2026-11-18T14:54:32Z"
 }
