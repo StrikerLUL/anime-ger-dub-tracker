@@ -3077,6 +3077,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Offizielle Sammelkarten zu »Solo Leveling« vorgestellt + Bilder",
+      "url": "https://www.anime2you.de/news/1073340/offizielle-solo-leveling-sammelkarten/",
+      "source": "anime2you.de",
+      "published": "2026-11-18T17:15:52Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Sammelkarten zur Actionserie »Solo Leveling« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fasse…"
+    },
+    {
+      "title": "Netflix erhöht Zahlungen an Synchronsprecher und hält an KI-Regeln fest",
+      "url": "https://www.anime2you.de/news/1072370/netflix-erhoeht-zahlungen-an-synchronsprecher/",
+      "source": "anime2you.de",
+      "published": "2026-11-18T17:10:30Z",
+      "summary": "Während die KI-Regelungen von Netflix in der deutschen Synchronbranche weiterhin für Kritik sorgen, hat der Streaming-Dienst nun neue Vergütungsvereinbarungen geschlossen. Wir fass…"
+    },
+    {
       "title": "Netflix ersetzt Originalsongs in deutscher »KPop Demon Hunters«-Fassung",
       "url": "https://www.anime2you.de/news/1072174/netflix-ersetzt-kpop-demon-hunters-originalsongs/",
       "source": "anime2you.de",
@@ -3306,27 +3320,6 @@
       "source": "anime2you.de",
       "published": "2026-10-23T14:00:54Z",
       "summary": "Durch Einträge im Programmplan von ProSieben MAXX wurde bekannt, dass der Free-TV-Sender die sechste Staffel von »My Hero Academia« in wenigen Wochen erneut mit deutscher Sprachfas…"
-    },
-    {
-      "title": "Crunchyroll nimmt drei Anime-Neuzugänge ins Programm + Synchro",
-      "url": "https://www.anime2you.de/news/1062283/crunchyroll-your-letter-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-19T17:43:10Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm mit drei weiteren Anime-Titeln aufgestockt. Wir fassen die Details nachfolgend zusammen. Drei Anime-Neuzugänge Zu den Neuzugängen…"
-    },
-    {
-      "title": "Elf neue Merchandise-Produkte zu »Apothecary Diaries« angekündigt",
-      "url": "https://www.anime2you.de/news/1061032/apothecary-diaries-elf-merchandise-produkte/",
-      "source": "anime2you.de",
-      "published": "2026-10-19T16:50:52Z",
-      "summary": "Das deutsche Unternehmen Sakami Merchandise hat vor Kurzem neue Produkte zum Mystery-Anime »The Apothecary Diaries« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden…"
-    },
-    {
-      "title": "»Dragon Ball«-Sprecherin wehrt sich gegen KI-Nachahmungen",
-      "url": "https://www.anime2you.de/news/1061995/dragon-ball-sprecherin-unerlaubte-ki-nachahmungen/",
-      "source": "anime2you.de",
-      "published": "2026-10-19T15:05:03Z",
-      "summary": "Die unerlaubte Nachahmung menschlicher Stimmen durch künstliche Intelligenz (KI) sorgt seit geraumer Zeit für Kritik. Nun hat sich eine der bekanntesten japanischen Anime-Synchrons…"
     }
   ],
   "timestamp": "2026-11-18T14:54:32Z",
@@ -3336,7 +3329,7 @@
     "kommende": 33,
     "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 36
+    "news": 35
   },
   "total": 236,
   "source": "anisearch.de",
@@ -3358,5 +3351,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-18T14:54:32Z"
+  "updated_at": "2026-11-19T15:00:18Z"
 }
