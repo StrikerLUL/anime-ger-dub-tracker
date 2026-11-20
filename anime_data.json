@@ -3077,6 +3077,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Sieben neue Plüschanhänger zu »Haikyu!!« vorgestellt",
+      "url": "https://www.anime2you.de/news/1072580/sieben-haikyu-plueschanhaenger/",
+      "source": "anime2you.de",
+      "published": "2026-11-20T13:52:26Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat sieben neue Plüschanhänger zu »Haikyu!!« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellbar sind. Erste Bilder der Produkte…"
+    },
+    {
       "title": "Offizielle Sammelkarten zu »Solo Leveling« vorgestellt + Bilder",
       "url": "https://www.anime2you.de/news/1073340/offizielle-solo-leveling-sammelkarten/",
       "source": "anime2you.de",
@@ -3329,7 +3336,7 @@
     "kommende": 33,
     "aktuelle": 203,
     "abgeschlossen": 0,
-    "news": 35
+    "news": 36
   },
   "total": 236,
   "source": "anisearch.de",
@@ -3351,5 +3358,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-19T15:00:18Z"
+  "updated_at": "2026-11-20T14:42:57Z"
 }
