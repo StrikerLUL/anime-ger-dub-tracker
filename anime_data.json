@@ -196,32 +196,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19769,
-      "title": "There’s No Freaking Way I’ll Be Your Lover! Unless…",
-      "url": "https://www.anisearch.de/anime/19769,watashi-ga-koibito-ni-nareru-wake-naijan-murimuri-muri-ja-nakatta",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19769_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
-      "id": 20905,
-      "title": "There’s No Freaking Way I’ll Be Your Lover! Unless… (Episoden 13-17)",
-      "url": "https://www.anisearch.de/anime/20905,watashi-ga-koibito-ni-nareru-wake-nai-jan-muri-muri-muri-ja-nakatta-next-shine",
-      "image": "https://cdn.anisearch.de/images/anime/cover/20/20905_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film",
-      "episodes": 1,
-      "status": "kommende",
-      "first_seen": "2026-11-11T13:20:52Z",
-      "expires_at": "2027-11-11T13:20:52Z"
-    },
-    {
       "id": 19712,
       "title": "Yaiba: Samurai Legend",
       "url": "https://www.anisearch.de/anime/19712,shin-samurai-den-yaiba",
@@ -362,7 +336,8 @@
       "episodes": 12,
       "status": "kommende",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-21T13:59:17Z"
     },
     {
       "id": 289,
@@ -2448,20 +2423,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 18808,
-      "title": "Make a Girl",
-      "url": "https://www.anisearch.de/anime/18808,make-a-girl",
-      "image": "https://cdn.anisearch.de/images/anime/cover/18/18808_400.webp",
-      "info": "Film, 1 (2025)",
-      "year": 2025,
-      "type": "Film",
-      "episodes": 1,
-      "status": "aktuelle",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z",
-      "missing_since": "2026-11-07T12:13:44Z"
-    },
-    {
       "id": 19601,
       "title": "May I Ask for One Final Thing?",
       "url": "https://www.anisearch.de/anime/19601,saigo-ni-hitotsu-dake-onegai-shite-mo-yoroshii-deshou-ka",
@@ -2511,7 +2472,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-21T13:59:17Z"
     },
     {
       "id": 15094,
@@ -2693,7 +2655,8 @@
       "episodes": 1,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-21T13:59:17Z"
     },
     {
       "id": 19989,
@@ -2944,6 +2907,32 @@
       "missing_since": "2026-11-08T12:34:01Z"
     },
     {
+      "id": 19769,
+      "title": "There’s No Freaking Way I’ll Be Your Lover! Unless…",
+      "url": "https://www.anisearch.de/anime/19769,watashi-ga-koibito-ni-nareru-wake-naijan-murimuri-muri-ja-nakatta",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19769_400.webp",
+      "info": "TV-Serie, 12 (2025)",
+      "year": 2025,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-16T12:29:01Z",
+      "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
+      "id": 20905,
+      "title": "There’s No Freaking Way I’ll Be Your Lover! Unless… (Episoden 13-17)",
+      "url": "https://www.anisearch.de/anime/20905,watashi-ga-koibito-ni-nareru-wake-nai-jan-muri-muri-muri-ja-nakatta-next-shine",
+      "image": "https://cdn.anisearch.de/images/anime/cover/20/20905_400.webp",
+      "info": "Film, 1 (2025)",
+      "year": 2025,
+      "type": "Film",
+      "episodes": 1,
+      "status": "aktuelle",
+      "first_seen": "2026-11-11T13:20:52Z",
+      "expires_at": "2027-11-11T13:20:52Z"
+    },
+    {
       "id": 18521,
       "title": "To Be Hero X",
       "url": "https://www.anisearch.de/anime/18521,tu-bian-yingxiong-x",
@@ -3076,6 +3065,13 @@
   ],
   "abgeschlossen": [],
   "news": [
+    {
+      "title": "Offizielle Sammelkarten zu »Jujutsu Kaisen« vorgestellt + Bilder",
+      "url": "https://www.anime2you.de/news/1074073/offizielle-jujutsu-kaisen-sammelkarten/",
+      "source": "anime2you.de",
+      "published": "2026-11-21T10:40:48Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Sammelkarten zur Actionserie »Jujutsu Kaisen« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Wir fass…"
+    },
     {
       "title": "Sieben neue Plüschanhänger zu »Haikyu!!« vorgestellt",
       "url": "https://www.anime2you.de/news/1072580/sieben-haikyu-plueschanhaenger/",
@@ -3329,16 +3325,16 @@
       "summary": "Durch Einträge im Programmplan von ProSieben MAXX wurde bekannt, dass der Free-TV-Sender die sechste Staffel von »My Hero Academia« in wenigen Wochen erneut mit deutscher Sprachfas…"
     }
   ],
-  "timestamp": "2026-11-18T14:54:32Z",
-  "data_changed_at": "2026-11-18T14:54:32Z",
-  "data_hash": "99d15a507bcaf5b7fa9a210bfcf68e222b962187685ba5627cf90a13e62266b9",
+  "timestamp": "2026-11-21T13:59:17Z",
+  "data_changed_at": "2026-11-21T13:59:17Z",
+  "data_hash": "9ad99e00fc775d90528540c7a39f8488f29d70924a000f574cbfe85af0cd91c8",
   "counts": {
-    "kommende": 33,
-    "aktuelle": 203,
+    "kommende": 31,
+    "aktuelle": 204,
     "abgeschlossen": 0,
-    "news": 36
+    "news": 37
   },
-  "total": 236,
+  "total": 235,
   "source": "anisearch.de",
   "sources": [
     "anilist",
@@ -3358,5 +3354,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-20T14:42:57Z"
+  "updated_at": "2026-11-21T13:59:17Z"
 }
