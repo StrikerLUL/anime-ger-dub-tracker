@@ -3052,6 +3052,20 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Offizielle Sammelkarten zu »Haikyu!!« vorgestellt + Bilder",
+      "url": "https://www.anime2you.de/news/1074284/offizielle-haikyu-sammelkarten/",
+      "source": "anime2you.de",
+      "published": "2026-11-23T10:00:37Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise bringt neue Sammelkarten zur beliebten Sportserie »Haikyu!!« auf den Markt. Die Produkte können ab sofort im AKIBA PASS SHOP vorbestellt…"
+    },
+    {
+      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 48/2026",
+      "url": "https://www.anime2you.de/news/1075001/anime-tv-programm-48-2026/",
+      "source": "anime2you.de",
+      "published": "2026-11-23T00:35:20Z",
+      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
+    },
+    {
       "title": "Zwei neue Anime-Aktionen bei McDonald’s in Deutschland",
       "url": "https://www.anime2you.de/news/1073980/zwei-neue-anime-aktionen-mcdonalds/",
       "source": "anime2you.de",
@@ -3302,20 +3316,6 @@
       "source": "anime2you.de",
       "published": "2026-10-24T15:54:49Z",
       "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm um zwei Anime-Neustarts auf Deutsch erweitert. Wir fassen zusammen. Zwei Neuzugänge auf Deutsch Ab sofort können die jeweils erst…"
-    },
-    {
-      "title": "ProSieben FUN zeigt »Akame ga KILL!« als Pay-TV-Premiere",
-      "url": "https://www.anime2you.de/news/1063292/prosieben-fun-zeigt-akame-ga-kill/",
-      "source": "anime2you.de",
-      "published": "2026-10-23T14:30:36Z",
-      "summary": "Der Pay-TV-Sender ProSieben FUN nimmt im nächsten Monat die Actionserie »Akame ga KILL!« mit deutscher Sprachfassung in sein Programm auf. Wir fassen zusammen. Ab November 2026 »Ak…"
-    },
-    {
-      "title": "ProSieben MAXX wiederholt sechste »My Hero Academia«-Staffel",
-      "url": "https://www.anime2you.de/news/1063329/my-hero-academia-staffel-6-prosieben-maxx-wiederholung/",
-      "source": "anime2you.de",
-      "published": "2026-10-23T14:00:54Z",
-      "summary": "Durch Einträge im Programmplan von ProSieben MAXX wurde bekannt, dass der Free-TV-Sender die sechste Staffel von »My Hero Academia« in wenigen Wochen erneut mit deutscher Sprachfas…"
     }
   ],
   "timestamp": "2026-11-22T13:52:33Z",
@@ -3330,9 +3330,6 @@
   "total": 234,
   "source": "anisearch.de",
   "sources": [
-    "anilist",
-    "anisearch",
-    "jikan",
     "news"
   ],
   "version": "6.0",
@@ -3347,5 +3344,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-22T13:52:33Z"
+  "updated_at": "2026-11-23T15:03:28Z"
 }
