@@ -131,19 +131,6 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
-      "id": 19121,
-      "title": "Call of the Night: Season 2",
-      "url": "https://www.anisearch.de/anime/19121,yofukashi-no-uta-season-2",
-      "image": "https://cdn.anisearch.de/images/anime/cover/19/19121_400.webp",
-      "info": "TV-Serie, 12 (2025)",
-      "year": 2025,
-      "type": "TV-Serie",
-      "episodes": 12,
-      "status": "kommende",
-      "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
-    },
-    {
       "id": 19297,
       "title": "Die letzte Blüte",
       "url": "https://www.anisearch.de/anime/19297,housenka",
@@ -1902,6 +1889,19 @@
       "expires_at": "2027-09-16T12:29:01Z"
     },
     {
+      "id": 19121,
+      "title": "Call of the Night: Season 2",
+      "url": "https://www.anisearch.de/anime/19121,yofukashi-no-uta-season-2",
+      "image": "https://cdn.anisearch.de/images/anime/cover/19/19121_400.webp",
+      "info": "TV-Serie, 12 (2025)",
+      "year": 2025,
+      "type": "TV-Serie",
+      "episodes": 12,
+      "status": "aktuelle",
+      "first_seen": "2026-09-16T12:29:01Z",
+      "expires_at": "2027-09-16T12:29:01Z"
+    },
+    {
       "id": 18809,
       "title": "Campfire Cooking in Another World with My Absurd Skill: Staffel 2",
       "url": "https://www.anisearch.de/anime/18809,tondemo-skill-de-isekai-hourou-meshi-dai-2-ki",
@@ -2368,7 +2368,8 @@
       "episodes": 2,
       "status": "aktuelle",
       "first_seen": "2026-09-16T12:29:01Z",
-      "expires_at": "2027-09-16T12:29:01Z"
+      "expires_at": "2027-09-16T12:29:01Z",
+      "missing_since": "2026-11-25T16:36:28Z"
     },
     {
       "id": 20563,
@@ -3302,23 +3303,16 @@
       "source": "anime2you.de",
       "published": "2026-10-26T18:08:29Z",
       "summary": "Crunchyroll veranstaltet bereits in wenigen Tagen ein besonderes »Fan-Erlebnis« zum Start der zweiten Staffel von »Black Clover«. Wir fassen zusammen. Kostenloser Eintritt Der soge…"
-    },
-    {
-      "title": "TV-Guide: Anime im deutschen Fernsehen in KW 44/2026",
-      "url": "https://www.anime2you.de/news/1063795/anime-tv-programm-44-2026/",
-      "source": "anime2you.de",
-      "published": "2026-10-25T18:50:05Z",
-      "summary": "Passend zum Start der neuen Woche präsentieren wir euch unseren aktuellen Anime-TV-Guide für alle Free- und Pay-TV-Sender, damit ihr keine Sendung verpasst! Premieren und Highlight…"
     }
   ],
-  "timestamp": "2026-11-22T13:52:33Z",
-  "data_changed_at": "2026-11-22T13:52:33Z",
-  "data_hash": "a524d349f49446b37b18f949778c9f8fb60f602791e37d31edc24b73d7a1725b",
+  "timestamp": "2026-11-25T16:36:28Z",
+  "data_changed_at": "2026-11-25T16:36:28Z",
+  "data_hash": "772c2807f20212fbab28996296aa16c9e860e22e3c177e181af44a7c20605f51",
   "counts": {
-    "kommende": 31,
-    "aktuelle": 203,
+    "kommende": 30,
+    "aktuelle": 204,
     "abgeschlossen": 0,
-    "news": 37
+    "news": 36
   },
   "total": 234,
   "source": "anisearch.de",
@@ -3340,5 +3334,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-23T17:01:00Z"
+  "updated_at": "2026-11-25T16:36:28Z"
 }
