@@ -3053,6 +3053,13 @@
   "abgeschlossen": [],
   "news": [
     {
+      "title": "Sieben neue Plüschanhänger zu »Frieren« vorgestellt",
+      "url": "https://www.anime2you.de/news/1072379/sieben-frieren-plueschanhaenger/",
+      "source": "anime2you.de",
+      "published": "2026-11-25T16:33:36Z",
+      "summary": "Das deutsche Unternehmen Sakami Merchandise hat neue Plüschanhänger zu »Frieren: Beyond Journey’s End« angekündigt, die ab sofort im AKIBA PASS SHOP vorbestellt werden können. Erst…"
+    },
+    {
       "title": "Offizielle Sammelkarten zu »Haikyu!!« vorgestellt + Bilder",
       "url": "https://www.anime2you.de/news/1074284/offizielle-haikyu-sammelkarten/",
       "source": "anime2you.de",
@@ -3275,34 +3282,6 @@
       "source": "anime2you.de",
       "published": "2026-10-27T17:10:22Z",
       "summary": "Der Streaming-Dienst Crunchyroll hat heute einen neuen Teaser zum deutschen Kinostart des Films »Witch on the Holy Night« (jap.: »Mahoutsukai no Yoru«) veröffentlicht. Das Video fi…"
-    },
-    {
-      "title": "»Umamusume: Pretty Derby – Beginning of a New Era« kommt ins Kino",
-      "url": "https://www.anime2you.de/news/1064556/umamusume-pretty-derby-film-im-kino/",
-      "source": "anime2you.de",
-      "published": "2026-10-27T12:57:56Z",
-      "summary": "Der neueste Anime-Kinofilm aus dem »Umamusume: Pretty Derby«-Franchise wird demnächst durch den Filmverleih 24 Bilder auch in Deutschland auf der großen Leinwand zu sehen sein. Wir…"
-    },
-    {
-      "title": "»Rascal Does Not Dream«-Finalfilm startet heute im Kino",
-      "url": "https://www.anime2you.de/news/1064211/rascal-does-not-dream-of-a-dear-friend-startet-heute/",
-      "source": "anime2you.de",
-      "published": "2026-10-27T08:30:47Z",
-      "summary": "Mit »Rascal Does Not Dream of a Dear Friend« startet heute das große Finale der »Rascal Does Not Dream«-Reihe (jap.: »Seishun Buta Yarou Series«) in den deutschen Kinos. Wir fassen…"
-    },
-    {
-      "title": "Crunchyroll ergänzt zwei weitere Anime-Neuzugänge auf Deutsch",
-      "url": "https://www.anime2you.de/news/1064193/crunchyroll-psyren-synchro-und-mehr/",
-      "source": "anime2you.de",
-      "published": "2026-10-26T19:10:13Z",
-      "summary": "Der Streaming-Dienst Crunchyroll hat sein Programm kürzlich erneut mit zwei Anime-Neustarts auf Deutsch erweitert. Wir fassen zusammen. Zwei Neuzugänge auf Deutsch Bei den aktuelle…"
-    },
-    {
-      "title": "Crunchyroll bringt besonderes »Black Clover«-Erlebnis nach Deutschland",
-      "url": "https://www.anime2you.de/news/1064175/crunchyroll-black-clover-erlebnis-in-berlin/",
-      "source": "anime2you.de",
-      "published": "2026-10-26T18:08:29Z",
-      "summary": "Crunchyroll veranstaltet bereits in wenigen Tagen ein besonderes »Fan-Erlebnis« zum Start der zweiten Staffel von »Black Clover«. Wir fassen zusammen. Kostenloser Eintritt Der soge…"
     }
   ],
   "timestamp": "2026-11-25T16:36:28Z",
@@ -3312,7 +3291,7 @@
     "kommende": 30,
     "aktuelle": 204,
     "abgeschlossen": 0,
-    "news": 36
+    "news": 33
   },
   "total": 234,
   "source": "anisearch.de",
@@ -3334,5 +3313,5 @@
     "abgeschlossen: 160 Eintrag/Einträge entfernt, die bereits in 'aktuelle' stehen",
     "Filter greift nicht: 'aktuelle' und 'abgeschlossen' liefern zu 100% dieselben Anime – bitte CATEGORY_PARAMS in tracker/sources/anisearch.py gegen anisearch.de prüfen"
   ],
-  "updated_at": "2026-11-25T16:36:28Z"
+  "updated_at": "2026-11-26T16:09:36Z"
 }
